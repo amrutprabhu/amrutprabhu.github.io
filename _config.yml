@@ -17,9 +17,9 @@ theme: # leave it empty
 
 # social
 author: lorepirri
-image: /thumbnail-jumbo.png
+#image: /thumbnail-jumbo.png
 twitter:
-  username: lorepirri
+  username: amrutprabhu42
 
 plugins:
   - jekyll-target-blank

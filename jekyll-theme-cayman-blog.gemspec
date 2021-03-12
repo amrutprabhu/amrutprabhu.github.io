@@ -5,9 +5,9 @@ Gem::Specification.new do |s|
   s.name          = "no name"
   s.version       = "0.0.9"
   s.license       = "CC0-1.0"
-  s.authors       = ["Lorenzo Pirritano"]
-  s.email         = ["lorepirri@gmail.com"]
-  s.homepage      = "https://amrutprabhu.github.io"
+#   s.authors       = ["Lorenzo Pirritano"]
+#   s.email         = ["lorepirri@gmail.com"]
+  s.homepage      = ""
   s.summary       = "Nothing"
 
   s.files         = `git ls-files -z`.split("\x0").select do |f|
