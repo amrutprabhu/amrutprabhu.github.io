@@ -31,6 +31,11 @@ var fun = function lang(l) {
 }
 ```
 
+```java
+// Javascript code with syntax highlighting.
+integer i = 10;
+}
+```
 ```ruby
 # Ruby code with syntax highlighting
 GitHubPages::Dependencies.gems.each do |gem, version|
