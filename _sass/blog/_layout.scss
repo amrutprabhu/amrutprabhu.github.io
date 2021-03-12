@@ -144,5 +144,6 @@
 
 .post-link {
   display: block;
+  font-weight: bold;
   @include relative-font-size(1.5);
 }
