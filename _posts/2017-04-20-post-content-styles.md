@@ -3,7 +3,7 @@ layout: post
 title: "Post content styles"
 tagline: "This post demonstrates post content styles"
 categories: junk
-image: /thumbnail-mobile.png
+image: https://cdn.hashnode.com/res/hashnode/image/upload/v1618330010617/CI87ueTjP.jpeg
 author: "Bart Simpson"
 meta: "Springfield"
 ---
