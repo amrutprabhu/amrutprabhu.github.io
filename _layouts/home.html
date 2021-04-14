@@ -18,7 +18,10 @@ layout: default
         <span class="post-meta">{{ post.date | date: date_format }}</span>
 
         <h2>
-          <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.tagline }}">{{ post.tagline | escape }}</a>
+          <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.tagline }}" style="background-image:url(&quot;https://cdn.hashnode.com/res/hashnode/image/upload/v1618330010617/CI87ueTjP.jpeg?w=500&amp;h=263&amp;fit=crop&amp;crop=entropy&amp;auto=compress&quot;)">
+            
+            {{ post.title | escape }}
+          </a>
         </h2>
 
         {{ post.excerpt | markdownify | truncatewords: 30 }}
