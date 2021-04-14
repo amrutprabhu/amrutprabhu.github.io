@@ -6,7 +6,7 @@ A modern [Jekyll](https://jekyllrb.com/) theme focused on speed performance & SE
 
 > ⚠️ This theme is no longer actively maintained.
 
-![Sleek Jekyll Theme](./sleek.jpg)
+![Sleek Jekyll Theme](sleek.jpg)
 
 ## Features
 
