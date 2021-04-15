@@ -282,3 +282,19 @@ This theme is completely free and open source software. You may use it however y
 ## License
 
 Open sourced under the [MIT license](https://github.com/LeNPaul/Lagrange/blob/gh-pages/LICENSE.md).
+
+## Docker run 
+
+                                            
+```
+docker run --rm \
+--volume="$PWD:/srv/jekyll" \
+-it jekyll/jekyll:latest \
+jekyll build
+
+docker run --rm \
+--volume="$PWD:/srv/jekyll" \
+-p 4000:4000 \about.md
+-it jekyll/jekyll:latest \
+jekyll serve
+```
