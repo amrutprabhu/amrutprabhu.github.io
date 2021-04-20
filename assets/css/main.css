@@ -415,6 +415,19 @@ th, td {
 	color: #343434;
 }
 
+.fa-stack-overflow {
+  padding: 5px;
+	-o-transition:.5s;
+  	-ms-transition:.5s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.5s;
+  	transition: .5s;
+}
+
+.fa-stack-overflow:hover {
+	color: #343434;
+}
+
 .fa-linkedin {
   padding: 5px;
 	-o-transition:.5s;
