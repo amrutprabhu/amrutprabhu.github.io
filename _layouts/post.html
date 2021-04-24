@@ -1,18 +1,26 @@
 ---
 layout: default
 ---
-
+<style>
+ .static-avatar {
+  float: left;
+    margin: 5px;
+ }
+</style>
 <h1 style="line-height:1.1;">
   {{ page.title }}
 </h1>
-
-{% if page.image %}
-  <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
-{% endif %}
-
-{{ content }}
-
-<span class="post-date">
+<hr/>
+<div class="static-avatar"/>
+<img src="{{ site.github.url }}/assets/img/image.png"/>
+</div>
+<span class="post-date" style="font-size:0.8em; line-height:1.5em">
+  {% if page.author %}
+    {{ page.author }}
+  {% else %}
+    {{ site.author }}
+  {% endif %}
+  <br/>
   {{ site.data.settings.post_date_prefix }}
   {% assign d = page.date | date: "%-d"  %}
   {{ page.date | date: "%B" }}
@@ -22,13 +30,17 @@ layout: default
     {% when '3' or '23' %}{{ d }}rd
     {% else %}{{ d }}th{% endcase %},
   {{ page.date | date: "%Y" }}
-  by
-  {% if page.author %}
-    {{ page.author }}
-  {% else %}
-    {{ site.author }}
-  {% endif %}
+  - {% include read-time.html %}
 </span>
+
+<br/>
+{% if page.image %}
+  <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
+{% endif %}
+
+{{ content }}
+
+
 
 {% include social-sharing.html %}
 
