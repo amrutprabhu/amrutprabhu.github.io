@@ -294,7 +294,12 @@ jekyll build
 
 docker run --rm \
 --volume="$PWD:/srv/jekyll" \
--p 4000:4000 \about.md
+-p 4000:4000 \
 -it jekyll/jekyll:latest \
 jekyll serve
 ```
+
+contact form : 
+https://tripetto.com/product/
+https://www.responster.com/pricing/
+getform
