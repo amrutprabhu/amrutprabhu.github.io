@@ -2,11 +2,18 @@
 layout: default
 title: Home
 ---
-
+<style>
+  .fnt{
+  line-height:1.1;
+  margin-bottom:8px;
+  }
+</style>
 {% for post in paginator.posts %}
 <div class="posts">
-  <h1>
-    <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+  <h1 class="fnt">
+    <a href="{{ site.github.url }}{{ post.url }}">
+       {{ post.title }}
+    </a>
   </h1>
   {% if post.image %}
   <div class="thumbnail-container">
