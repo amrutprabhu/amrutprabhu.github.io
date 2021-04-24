@@ -11,28 +11,32 @@ layout: default
   {{ page.title }}
 </h1>
 <hr/>
-<div class="static-avatar"/>
-<img src="{{ site.github.url }}/assets/img/image.png"/>
+<p>
+<div class="post-date" style="line-height:1.4em;" >
+    <div class="static-avatar">
+      <img src="{{ site.github.url }}/assets/img/image.png"/>
+    </div>
+    <div>
+      {% if page.author %}
+        {{ page.author }}
+      {% else %}
+        {{ site.author }}
+      {% endif %}
+    </div>
+    <div >
+      {{ site.data.settings.post_date_prefix }}
+      {% assign d = page.date | date: "%-d"  %}
+      {{ page.date | date: "%B" }}
+      {% case d %}
+        {% when '1' or '21' or '31' %}{{ d }}st
+        {% when '2' or '22' %}{{ d }}nd
+        {% when '3' or '23' %}{{ d }}rd
+        {% else %}{{ d }}th{% endcase %},
+      {{ page.date | date: "%Y" }}
+      - {% include read-time.html %}
+    </div>
 </div>
-<span class="post-date" style="font-size:0.8em; line-height:1.5em">
-  {% if page.author %}
-    {{ page.author }}
-  {% else %}
-    {{ site.author }}
-  {% endif %}
-  <br/>
-  {{ site.data.settings.post_date_prefix }}
-  {% assign d = page.date | date: "%-d"  %}
-  {{ page.date | date: "%B" }}
-  {% case d %}
-    {% when '1' or '21' or '31' %}{{ d }}st
-    {% when '2' or '22' %}{{ d }}nd
-    {% when '3' or '23' %}{{ d }}rd
-    {% else %}{{ d }}th{% endcase %},
-  {{ page.date | date: "%Y" }}
-  - {% include read-time.html %}
-</span>
-
+</p>
 <br/>
 {% if page.image %}
   <img src="{{ site.github.url }}/assets/img/{{ page.image }}">

@@ -3,14 +3,19 @@ layout: default
 title: Home
 ---
 <style>
-  .fnt{
+  .title-font{
   line-height:1.1;
   margin-bottom:8px;
   }
+  .author-profile {
+  float: left;
+    margin: 5px;
+ }
+
 </style>
 {% for post in paginator.posts %}
 <div class="posts">
-  <h1 class="fnt">
+  <h1 class="title-font">
     <a href="{{ site.github.url }}{{ post.url }}">
        {{ post.title }}
     </a>
@@ -22,7 +27,16 @@ title: Home
   {% endif %}
   <p>
     {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
+    <div class="post-date" style="line-height:1.4em;">
+      <div class="author-profile"/>
+        <img src="{{ site.github.url }}/assets/img/image.png"/>
+      </div>
+      <div>
+        <div>{{ post.author }}</div>
+        <div><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</div>
+      </div>
+  </div>
+
   </p>
 </div>
 {% endfor %}
