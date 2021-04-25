@@ -2,7 +2,7 @@
 layout: post
 title: "Spring Boot: Boost JPA Bulk Insert Performance by 100x"
 author: "Amrut Prabhu"
-categories:[spring-boot, java, JPA]
+categories: [spring-boot, java, JPA]
 tags: [JPA,mysql,database,Spring Boot,Java]
 image: 2021-01-24/jpa-performance-boost.jpg
 ---
