@@ -518,3 +518,11 @@ th, td {
 .fa-rss-square:hover {
 	color: #ff6600;
 }
+
+.author-small-profile {
+  float: left;
+  margin: 5px;
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+ }
