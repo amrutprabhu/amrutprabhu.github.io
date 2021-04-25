@@ -1,0 +1,15 @@
+<!-- Twitter cards -->
+<meta name="twitter:creator" content="{{ site.twitter_handle }}">
+<meta name="twitter:title"   content="{{ page.title }}">
+
+{% if page.summary %}
+<meta name="twitter:description" content="{{ page.summary }}">
+{% else %}
+<meta name="twitter:description" content="{{ page.content | strip_html | truncate: 200  }}">
+{% endif %}
+
+{% if page.image %}
+<meta name="twitter:card"  content="summary_large_image">
+<meta name="twitter:image" content="{{ site.url }}/assets/img/{{ page.image }}">
+{% endif %}
+<!-- end of Twitter cards -->

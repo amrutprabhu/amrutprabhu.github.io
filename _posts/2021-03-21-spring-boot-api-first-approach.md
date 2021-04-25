@@ -2,7 +2,7 @@
 layout: post
 title: "Spring Boot: API First Approach"
 author: "Amrut Prabhu"
-categories: spring boot
+categories: [spring-boot, java]
 tags: [Spring Boot,Java,Open API 3,Swagger]
 image: blog-api-first/cover.jpg
 ---

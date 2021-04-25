@@ -23,6 +23,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 title:		           'RefactorFirst'
 description:	       'Build stuffs'
 author:              'Amrut Prabhu'
+twitter_handle:       '@amrutprabhu42'
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
