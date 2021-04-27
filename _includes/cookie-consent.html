@@ -20,7 +20,7 @@
 }
 
 </style>
-<div id="cookie-notice"><p>We would like to use third party cookies and scripts to improve the functionality of this website.</p><a id="cookie-notice-accept" class="green-accept">Approve</a><a href="/menu/privacy-policy" >More info</a></div>
+<div id="cookie-notice"><p>We would like to use third party cookies and scripts to improve the functionality of this website.</p><a id="cookie-notice-accept" class="green-accept">I Accept</a><a href="/menu/privacy-policy" >Privacy Policy</a></div>
 <script>
     function createCookie(name,value,days) {
         var expires = "";
@@ -43,9 +43,17 @@
     }
     function eraseCookie(name) {
         createCookie(name,"",-1);
+        deleteAllCookies();
         location.reload();
     }
-
+    function deleteAllCookies(){
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        cookieNames= cookie.split("=")
+        createCookie(cookieNames[0],"",-1);
+        }
+    }
     if(readCookie('cookie-notice-dismissed')=='true') {
             {% include js/google-analytics.js %}
     } else {

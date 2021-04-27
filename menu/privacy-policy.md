@@ -117,7 +117,9 @@ This means that GitHub collects minimal amount of Personal Data which they requi
 
 Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its Google advertising network.
 
-When you press "I Accept", you agree with this service start using [Google Analytics](https://marketingplatform.google.com/about/analytics/) to analyze traffic to this Service.
+This Service uses Google Analytics to help in improving this Service, to view how the users interact with the service, the number of views, page engagements, website navigation, etc.  
+
+When you press "I Accept", you agree with this Service start using [Google Analytics](https://marketingplatform.google.com/about/analytics/) to analyze traffic to this Service.
 
 Additional security measures were taken to ensure the privacy of the User’s Personal Data: accepting the terms of Google’s Data Processing Amendment, enabling an encrypted exchange of data by using HTTPS protocol, and enabling IP address anonymization for which [Google](https://support.google.com/analytics/answer/2763052) states.
 
@@ -143,10 +145,10 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 
 ## Opt-out
 
-Pressing _Stop Collecting Data_ button will stop all Usage Data from being collected and the notification _“add yous here“_ is going to reappear on the top of every page.
+Pressing _Stop Collecting Data_ button will stop all Usage Data from being collected and the notification _“We would like to use third party cookies and scripts to improve the functionality of this website.“_ is going to reappear on the top of every page.
 
 **_Visible notification means collecting Usage Data is disabled._**
 
 Old User’s Cookies might remain in the browser’s local storage, however, they will not be used.
 
-<a class="btn-opt-out" onClick="eraseCookie('cookie-notice-dismissed')">Stop Collecting Data </a>
+<a class="btn-opt-out" onClick="eraseCookie('')">Stop Collecting Data </a>
