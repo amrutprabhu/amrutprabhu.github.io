@@ -111,7 +111,7 @@ This Service is hosted using [GitHub](https://github.com/)’s service called Gi
 
 > _... GitHub may collect User Personal Information from visitors to your GitHub Pages website, including logs of visitor IP addresses, to comply with legal obligations, and to maintain the security and integrity of the Website and the Service._
 
-This means that GitHub collects minimal amount of Personal Data which they require for legal purposes. This is something neither me nor the User can avoid or disable. In addition, I have no access, overview, or control over this data. Using this Service implies the User agrees with this.
+This means that GitHub collects minimal amount of Personal Data which they require for legal purposes. This is something neither me nor the User can avoid or disable. In addition, the Service and Amrut Prabhu have no access, overview, or control over this data. Using this Service implies the User agrees with this.
 
 ### Google Analytics
 
@@ -145,10 +145,14 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 
 ## Opt-out
 
-Pressing _Stop Collecting Data_ button will stop all Usage Data from being collected and the notification _“We would like to use third party cookies and scripts to improve the functionality of this website.“_ is going to reappear on the top of every page.
+Pressing _Stop Collecting Data_ button will stop all Usage Data from being collected and the notification _“By clicking “I Accept”, you agree to the storing of cookies on your device to enhance site navigation and analyze site usage.“_ is going to reappear on the top of every page.
 
 **_Visible notification means collecting Usage Data is disabled._**
 
 Old User’s Cookies might remain in the browser’s local storage, however, they will not be used.
 
-<a class="btn-opt-out" onClick="eraseCookie('')">Stop Collecting Data </a>
+## Contact Us
+
+In case you have anything to ask about the privacy policy you can contact me at  <a href="mailto:contact@amrutprabhu.com">contact@amrutprabhu.com</a>
+
+<a class="btn-opt-out" onClick="eraseCookie('cookie-notice-dismissed')">Stop Collecting Data </a>
