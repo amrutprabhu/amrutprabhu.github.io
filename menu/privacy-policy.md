@@ -11,8 +11,8 @@ title: Privacy Policy
 	cursor:pointer;
 	color:#e4685d;
 	font-family:Arial;
-	font-size:15px;
-	padding:6px 15px;
+	font-size:12px;
+	padding:1px 10px;
 	text-decoration:none;
 }
 </style>
@@ -145,7 +145,7 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 
 ## Opt-out
 
-Pressing _Stop Collecting Data_ button will stop all Usage Data from being collected and the notification _“By clicking “I Accept”, you agree to the storing of cookies on your device to enhance site navigation and analyze site usage.“_ is going to reappear on the top of every page.
+Pressing _Stop Collecting Usage Data_ button will stop all Usage Data from being collected and the notification _“By clicking “I Accept”, you agree to the storing of cookies on your device to enhance site navigation and analyze site usage.“_ is going to reappear on the top of every page.
 
 **_Visible notification means collecting Usage Data is disabled._**
 
@@ -153,6 +153,6 @@ Old User’s Cookies might remain in the browser’s local storage, however, the
 
 ## Contact Us
 
-In case you have anything to ask about the privacy policy you can contact me at  <a href="mailto:contact@amrutprabhu.com">contact@amrutprabhu.com</a>
+In case you have anything to ask about the privacy policy you can contact me at  <a href="mailto:{{  site.contact_email }}">{{  site.contact_email }}</a>
 
-<a class="btn-opt-out" onClick="eraseCookie('cookie-notice-dismissed')">Stop Collecting Data </a>
+<a class="btn-opt-out" onClick="eraseCookie('cookie-notice-dismissed')">Stop Collecting Usage Data </a>

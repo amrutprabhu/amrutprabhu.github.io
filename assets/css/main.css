@@ -526,3 +526,21 @@ th, td {
   width: 30px;
   overflow: hidden;
  }
+
+.twitter-follow-btn {
+background-color:#47a3ff;
+border-radius:6px;
+border:1px solid #84bbf3;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-family:Arial;
+font-size:14px;
+font-weight:bold;
+padding:0px 10px;
+text-decoration:none;
+}
+.twitter-follow-btn:hover {
+background-color:#378de5;
+color:#ffffff;
+}
