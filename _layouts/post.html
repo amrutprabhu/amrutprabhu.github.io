@@ -36,7 +36,11 @@ layout: default
 {% if page.image %}
   <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
 {% endif %}
-
+{% if page.photo-credits %}
+<center>
+    <a href="{{ page.photo-credits }}" target="_blank" style="font-size:10px;color:grey;">Photo Credits</a>
+</center>
+{% endif %}
 {{ content }}
 
 
