@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Spring Boot: API First Approach"
+title: "Spring Boot: API First Design"
 author: "Amrut Prabhu"
-categories: [spring-boot, java]
+categories: [spring-boot, Java]
 tags: [Spring Boot,Java,Open API 3,Swagger]
 image: blog-api-first/cover.jpg
 ---
 
-In this blog, I take a practical approach to API first design with Open API 3 specification.
+In this blog, I take a practical approach to API first design with an example using Open API 3 specification.
 
 Firstly, I describe how I created the API definition, then how I created the server and the client code from the API definition. Then I will talk about some of the problems I faced.
 <br/>
@@ -138,7 +138,7 @@ There we have it now. You have successfully generated the client code and you ca
 
 There are quite a few bugs in the latest version of the plugin that I was using (5.0.1).
 
--   For  `spring`  generator, there are some unused imports from spring data that get added by the generator while creating the controller. Hence you would have to add spring data dependency, Even if you not using a database with the service. This may not be a big problem, because mostly you would have a database that you connect to with your service. You can check the current open bug  [here](https://github.com/OpenAPITools/openapi-generator/issues/8360).
+-   For  `spring`  generator, there is some unused imports from spring data that get added by the generator while creating the controller. Hence you would have to add spring data dependency, Even if you not using a database with the service. This may not be a big problem, because mostly you would have a database that you connect to with your service. You can check the current open bug  [here](https://github.com/OpenAPITools/openapi-generator/issues/8360).
 -   Usually, you would define the schema for request and response in the  `components`  section of the API definition file and then use the reference to these schemas in the API using the  `$ref:`  property. This is currently not working as excepted. The way to get around it was to define the inline schema for each request and response. Hence the model names get generated with a prefix  `Inline*`  . You can track this bug  [here](https://github.com/OpenAPITools/openapi-generator/issues/7922).
 
 If you use the older version, i.e,  `4.3.1`  ; it's free from these bugs and the plugin works well as expected.

@@ -8,7 +8,7 @@ image: mathew-schwartz-Jwj1KiuX42.jpg
 ---
 I have been mostly coding in Java all my life, But I stumbled upon Apache Airflow and I was keen to know more.
 
-So in this article, I would like to give you a jump-start understanding the basic concepts and creating a workflow pipeline from scratch.
+So in this article, I would like to give you a jump-start tutorial to understand the basic concepts and create a workflow pipeline from scratch.
 
 So let's get started!
 
@@ -57,9 +57,9 @@ Pretty simple workflow, But there are some useful concepts that I will explain a
 So let's start.
 <br/>
 <br/>
-# Running Airflow Locally with Docker
+# Running Apache Airflow Locally with Docker
 
-The official site provides a [docker-compose file](https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html#docker-compose-yaml) with all the components needed to run Airflow. Once you download the docker-compose file, You can start it using the docker-compose command.
+The official Airflow site provides a [docker-compose file](https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html#docker-compose-yaml) with all the components needed to run Airflow. Once you download the docker-compose file, You can start it using the docker-compose command.
 
 ```
 docker-compose up -d
@@ -219,7 +219,5 @@ And there we go. We just created a simple Airflow DAG workflow from scratch cove
 
 
 As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/airflow-workouts/blob/master/dags/user_data_processing.py). :)
-
-If you liked the article, share it, follow me on [Twitter](https://twitter.com/amrutprabhu42)
 
 Enjoy!!

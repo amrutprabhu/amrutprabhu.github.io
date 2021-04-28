@@ -2,7 +2,7 @@
 layout: post
 title: "Spring Boot: Handle AWS RDS JDBC password change or rotation without restarting"
 author: "Amrut Prabhu"
-categories: [spring-boot, java, AWS]
+categories: [spring-boot, Java, AWS]
 tags: [AWS,RDS,Secrets manager,Spring Boot,Java]
 image: 2020-11-05/aws-secrets-rotation.jpg
 ---
