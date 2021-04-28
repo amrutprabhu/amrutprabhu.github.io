@@ -5,6 +5,7 @@ author: "Amrut Prabhu"
 categories: [spring-boot, Java]
 tags: [Spring Boot,Java,Open API 3,Swagger]
 image: blog-api-first/cover.jpg
+photo-credits: https://unsplash.com/photos/bb-ys3oFql4
 ---
 
 In this blog, I take a practical approach to API first design with an example using Open API 3 specification.
