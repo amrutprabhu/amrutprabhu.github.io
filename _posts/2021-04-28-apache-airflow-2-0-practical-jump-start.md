@@ -4,9 +4,10 @@ title: "Apache Airflow 2.0: A Practical Jump Start"
 author: "Amrut Prabhu"
 categories: [airflow, python]
 tags: [python, airflow, Java]
-image: mathew-schwartz-Jwj1KiuX42.jpg
+image: airflow/airflow-cover.jpg
+photo-credits : https://unsplash.com/photos/BpEOwR57QEg
 ---
-I have been mostly coding in Java all my life, But I stumbled upon Apache Airflow and I was keen to know more.
+I have been mostly coding in Java all my life, and I stumbled upon Apache Airflow and I was keen to know more.
 
 So in this article, I would like to give you a jump-start tutorial to understand the basic concepts and create a workflow pipeline from scratch.
 
@@ -20,7 +21,7 @@ Workflows are created using python scripts, which define how your tasks are exec
 
 ![AirFlow DAG](/assets/img/airflow/dag.png)
 
-You can schedule the workflow execution based on the schedule you provide, which is based on the Unix cron schedule format. Once you create python scripts and place them in the dags folder of Airflow, Airflow will automatically create the workflow for you.
+The workflow execution is based on the schedule you provide, which is as per Unix cron schedule format. Once you create python scripts and place them in the dags folder of Airflow, Airflow will automatically create the workflow for you.
 
 How difficult are the python scripts?
 
@@ -36,19 +37,19 @@ A workflow is made up of tasks and each task is an operator. Now, what is an ope
 -   BranchOperator - used to create a branch in the workflow.
 -   DummyOperator - used to represent a dummy task.
 
-There are quite a few other operators which will help you to make an HTTP call, connect to a Postgres instance, connect to slack, etc. You can find more operators [here](https://airflow.apache.org/docs/apache-airflow/stable/python-api-ref.html#operators).
+There are quite a few other operators which will help you to make an HTTP call, connect to a Postgres instance, connect to slack, etc. You can find more operators [here](https://airflow.apache.org/docs/apache-airflow/stable/python-api-ref.html#operators){:target="_blank"}.
 
-Finally, with the theory done, Let’s do something exciting ie. create our first airflow DAG.
+Finally, with the theory done, Let’s do something exciting i.e. create our first Airflow DAG.
 <br/>
 <br/>
-# Creating our own Airflow DAG.
+# Creating an Airflow DAG.
 
 As an example, Let's create a workflow that does the following
 
 1.  Check if the URL is available
 2.  Fetches some data from an URL
 3.  Extract certain fields from it.
-4.  Echo the extracted fields into a bash command.
+4.  Print the extracted fields using the bash echo command.
 
 ![Example Airflow DAG](/assets/img/airflow/example_workflow.png)
 
@@ -57,9 +58,9 @@ Pretty simple workflow, But there are some useful concepts that I will explain a
 So let's start.
 <br/>
 <br/>
-# Running Apache Airflow Locally with Docker
+# Running Apache Airflow with Docker
 
-The official Airflow site provides a [docker-compose file](https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html#docker-compose-yaml) with all the components needed to run Airflow. Once you download the docker-compose file, You can start it using the docker-compose command.
+The official Airflow site provides a [docker-compose file](https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html#docker-compose-yaml){:target="_blank"} with all the components needed to run Airflow. Once you download the docker-compose file, You can start it using the docker-compose command.
 
 ```
 docker-compose up -d
@@ -73,6 +74,7 @@ Once your containers are up and running, a`dags` folder is created on your local
 First, we will create a skeleton of the workflow, i.e, in this case, is the DAG definition.
 ```python
 from airflow.models import DAG
+
 default_args = {
     'start_date': datetime(2020, 1, 1)
 }
@@ -103,7 +105,7 @@ To create the HttpSensor operator, We provide it with a task id, HTTP connection
 
 Airflow provides a mechanism, with which you can create and store some configurations that you can use across workflows. One such type is configuring “Connections”. Here you can provide various connections like AWS connections, ElasticSearch connection, Kubernetes cluster connections, etc.
 
-In our case, we would be using the HTTP connection option. Here we would provide the URL we want to trigger and setting the connection id to `user_api` .We want to call the URL [https://randomuser.me/api/](https://randomuser.me/api/), which will return a JSON response of some random user information.
+In our case, we would be using the HTTP connection option. Here we would provide the URL we want to trigger and setting the connection id to `user_api` .We want to call the URL [https://randomuser.me/api/](https://randomuser.me/api/){:target="_blank"}, which will return a JSON response of some random user information.
 
 ![Airflow Connection Creation](/assets/img/airflow/airflow-http-connection.png)
 
@@ -131,14 +133,14 @@ As you can see, we have the `task_id`to identify this task, the `http_conn_id` w
 
 That's it!
 
-Now you must be wondering what happens to the response. For this let's look into another concept called `xcom`
+Now you must be wondering what happens to the response. For this let's look into another concept called Xcoms
 <br/>
 <br/>
 # Xcoms
 
-Now, what are these Xcoms? Xcoms is a way you can share data between your tasks. It basically stores key-value pairs of the information you want to store that can be accessed by other tasks in a DAG.
+Xcoms is a way you can share data between your tasks. It basically stores key-value pairs of the information you want to store that can be accessed by other tasks in a DAG.
 
-The SimpleHttpOperator stores the response inside these Xcoms. Hence we will use another task to retrieve the value and process it. You can read more about Xcoms [here](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=xcom#xcoms)
+The SimpleHttpOperator stores the response inside these Xcoms. Hence we will use another task to retrieve the value and process it. You can read more about Xcoms [here](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=xcom#xcoms){:target="_blank"}
 
 Once the data is fetched, We are going to create a processor, which will process the data that was pushed into Xcoms by the previous task. We will do this using a python function and hence the new operator that we are going to use is the `PythonOperator`.
 
@@ -171,12 +173,12 @@ def _processing_user(ti):
     processed_user = json_normalize(user_map)
     Variable.set("user", processed_user)
 ```
-So in this function, we perform some basic things. We first get the information that our task `extracting_user` has pushed to Xcoms, using `xcom_pull` call. We then validate the input and extract some fields as a dictionary. Finally, we normalize the dictionary and add it to something called `Variables`. Now Let’s look at what are Variables.
+So this function receives a Task Instance (referred as `ti`). We use this task instance to get the information that our task `extracting_user` has pushed to Xcoms, using `xcom_pull` call. We then validate the input and extract some fields as a dictionary. Finally, we normalize the dictionary and add it to something called `Variables`. Let’s look at what are Variables.
 <br/>
 <br/>
 # Variables
 
-Variables are a way to store and extract some values that you would like to use across any DAG. It's basically a key-value store of arbitrary data. You can read more in detail about it [here](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=xcom#variables).
+Variables are a way to store and extract some values that you would like to use across any DAG. It's basically a key-value store of arbitrary data. You can read more in detail about it [here](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=xcom#variables){:target="_blank"}.
 
 Now that we have stored the values inside Variables, Let print them to the logs using the `echo` command. To do this we are going to use the `BashOperator`
 ```python
@@ -191,14 +193,14 @@ print_user = BashOperator(
 {% endraw %}
 ```
 
-Now in this, I will explain to you another concept called Templating.
+In this, I will explain to you another important concept called Templating.
 <br/>
 <br/>
 # Templating
 
-Airflow uses [Jinja Templating](https://jinja.palletsprojects.com/). As you have seen in the code above, I have used curly braces which allow me to materialize some values. In this case, I have extracted the `user` key from Variables (using `var` ) which I had stored using the previous task.
+Airflow uses [Jinja Templating](https://jinja.palletsprojects.com/){:target="_blank"}. As you have seen in the code above, I have used curly braces which allow me to materialize some values. In this case, I have extracted the `user` key from Variables (using `var` ) which I had stored using the previous task.
 
-Now how would you know if the particular operator supports templating? For this, you can search for “template_fields” in the API reference of the operator, Which will tell you which fields support templating. e.g You can have a look at the HttpSensor operator reference [here](https://airflow.apache.org/docs/apache-airflow-providers-http/stable/_api/airflow/providers/http/sensors/http/index.html).
+Now how would you know if the particular operator supports templating? For this, you can search for “template_fields” in the API reference of the operator, Which will tell you which fields support templating. e.g You can have a look at the HttpSensor operator reference [here](https://airflow.apache.org/docs/apache-airflow-providers-http/stable/_api/airflow/providers/http/sensors/http/index.html){:target="_blank"}.
 <br/>
 <br/>
 # Ordering Your Tasks
@@ -213,11 +215,11 @@ This means Task 1 will run before Task 2. In our case, we will order this as
 is_api_available >> fetch_user >> processing_user >> print_user
 ```
 
-And there we go. We just created a simple Airflow DAG workflow from scratch covering some of the important concepts of Airflow.
+And there we go. We just created a simple Airflow DAG workflow from scratch covering some of the important concepts of Airflow. Now, enable the DAG and hit run. It will start executing.
 
 ![Apache Airflow Successful Execution](/assets/img/airflow/airflow-dag-successful-run.png)
 
 
-As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/airflow-workouts/blob/master/dags/user_data_processing.py). :)
+As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/airflow-workouts/blob/master/dags/user_data_processing.py){:target="_blank"}. :)
 
 Enjoy!!
