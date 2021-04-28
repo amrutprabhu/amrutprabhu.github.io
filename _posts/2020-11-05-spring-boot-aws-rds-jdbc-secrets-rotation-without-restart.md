@@ -9,6 +9,7 @@ image: 2020-11-05/aws-secrets-rotation.jpg
 
 This article is about how you can handle AWS RDS secrets rotation without restarting your Spring Boot application.
 
+# Introduction
 I had this problem wherein I had to update my database connection whenever the database password was updated for my AWS RDS instance. This can be because of a monthly password rotation policy or may be the database credentials got compromised and you want all your running applications to keep running even when the database password are changed.
 
 To solve this kind of a problem, AWS provides a library that will handle this updating of the database connection without even restarting your Spring Boot application.
@@ -16,19 +17,23 @@ To solve this kind of a problem, AWS provides a library that will handle this up
 AWS has an open source library called  [AWS Secrets Manager JDBC](https://github.com/aws/aws-secretsmanager-jdbc), that handles database connection while your application is running and talking to the RDS instance.
 
 Let’s see how this works.
-
+<br/>
+<br/>
+# Solution
 Firstly, Add the following dependency in the build file. Considering maven, it would be as follows
-
-    <dependency>
-	    <groupId>com.amazonaws.secretsmanager</groupId>
-	    <artifactId>aws-secretsmanager-jdbc</artifactId>
-	    <version>1.0.5</version>
-	</dependency>
+```xml
+<dependency>
+    <groupId>com.amazonaws.secretsmanager</groupId>
+    <artifactId>aws-secretsmanager-jdbc</artifactId>
+    <version>1.0.5</version>
+</dependency>
+```
 Next, specify the JDBC datasource URL with the scheme  `jdbc-secretsmanager`  instead of  `jdbc`
-
-    spring:
-	  datasource:
-	    url: jdbc-secretsmanager:mysql://database-host:3306/rotate_db
+```properties
+spring:
+  datasource:
+    url: jdbc-secretsmanager:mysql://database-host:3306/rotate_db
+```
 
 Next, You need to specify the driver class name. For this article we will stick to MySQL RDS instance. So it’s going to be  `com.amazonaws.secretsmanager.sql.AWSSecretsManagerMySQLDrive`.
 
@@ -43,12 +48,13 @@ Next, Create an AWS secret for the RDS instance using the database credentials s
 Next, In the properties file  `application.yaml`, specify the secret name you just created as the username and you don’t have to specify any password as it’s now stored in the secrets manager.
 
 Your property file should look something like this.
-
-	spring:
-	  datasource:
-	    url: jdbc-secretsmanager:mysql://database-host:3306/rotate_db
-	    username: secret/rotation
-	    driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMySQLDriver
+```properties
+spring:
+  datasource:
+    url: jdbc-secretsmanager:mysql://database-host:3306/rotate_db
+    username: secret/rotation
+    driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMySQLDriver
+```
 
 Now, For the application to communicate with AWS and fetch the secret value, you would have to have AWS CLI setup and configured.  [Here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)  is the link to it.
 
@@ -61,19 +67,21 @@ Now start the application and it should be able to communicate with AWS Secrets 
 You can test this by clicking on the rotate secret option in the secret which will generate a new password for database and check the communication with the database.
 
 Here is a  [GitHub link](https://github.com/amrutprabhu/spring-boot-aws-rds-password-rotation)  to my implementation.
-
-**Bonus:**
+<br/>
+<br/>
+## Supports Liquibase Integration
 
 This also works if you have liquibase integration in place . You just have to specify the same URL in the liquibase configuration and the database secret as the username and the liquibase setup will work for you.
 
-	spring:
-	  datasource:
-	    url: jdbc-secretsmanager:mysql://database-host:3306/rotate_db
-	    username: secret/rotation
-	    driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMySQLDriver
+```properties
+spring:
+  datasource:
+    url: jdbc-secretsmanager:mysql://database-host:3306/rotate_db
+    username: secret/rotation
+    driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMySQLDriver
 
-	  liquibase:
-	    url: jdbc-secretsmanager:mysql://database-host:3306/rotate_db
-	    user: secret/rotation
-
+  liquibase:
+    url: jdbc-secretsmanager:mysql://database-host:3306/rotate_db
+    user: secret/rotation
+```
 Enjoy and have fun!
