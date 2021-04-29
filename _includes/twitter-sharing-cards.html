@@ -1,6 +1,12 @@
 <!-- Twitter cards -->
 <meta name="twitter:creator" content="@{{ site.twitter_handle }}">
+
+{% if page.title == "Home" %}
+<meta name="twitter:title"   content="Refactor First">
+<meta name="twitter:image:src" content="{{ site.github.url }}/favicon-192x192.png">
+{% else %}
 <meta name="twitter:title"   content="{{ page.title }}">
+{% endif %}
 
 {% if page.summary %}
 <meta name="twitter:description" content="{{ page.summary }}">
@@ -13,12 +19,10 @@
 {% if page.image %}
 <meta name="twitter:card"  content="summary_large_image">
 <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image }}">
-{% else %}
-<meta name="twitter:image:src" content="{{ site.github.url }}/android-chrome-192x192.png">
 {% endif %}
 
-<meta property="og:description" content="{{ page.content | strip_html | truncate: 200  }}">
-<meta property="og:site_name" content="refactorfirst.com">
-<meta property="og:title" content="{{ page.title }}">
-<meta property="og:type" content="article">
+<!--<meta property="og:description" content="{{ page.content | strip_html | truncate: 200  }}">-->
+<!--<meta property="og:site_name" content="refactorfirst.com">-->
+<!--<meta property="og:title" content="{{ page.title }}">-->
+<!--<meta property="og:type" content="article">-->
 <!-- end of Twitter cards -->
