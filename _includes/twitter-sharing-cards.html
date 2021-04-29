@@ -4,6 +4,7 @@
 {% if page.title == "Home" %}
 <meta name="twitter:title"   content="Refactor First">
 <meta name="twitter:image:src" content="{{ site.github.url }}/favicon-192x192.png">
+<meta name="twitter:description" content="Articles of software development">
 {% else %}
 <meta name="twitter:title"   content="{{ page.title }}">
 {% endif %}
@@ -11,7 +12,7 @@
 {% if page.summary %}
 <meta name="twitter:description" content="{{ page.summary }}">
 {% else %}
-    {% if page.content %}
+{% if page.content %}
 <meta name="twitter:description" content="{{ page.content | strip_html | truncate: 200  }}">
     {% endif %}
 {% endif %}
