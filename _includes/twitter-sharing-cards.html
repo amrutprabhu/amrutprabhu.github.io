@@ -13,8 +13,6 @@
 {% if page.image %}
 <meta name="twitter:card"  content="summary_large_image">
 <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image }}">
-{% else %}
-<meta name="twitter:image:src" content="{{ site.github.url }}/favicon-32x32.png">
 {% endif %}
 
 <meta property="og:description" content="{{ page.content | strip_html | truncate: 200  }}">
