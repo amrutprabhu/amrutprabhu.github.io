@@ -2,7 +2,7 @@
 layout: post
 title: "Apache Airflow 2.0: A Practical Jump Start"
 author: "Amrut Prabhu"
-categories: [airflow, python]
+categories: ""
 tags: [python, airflow, Java]
 image: airflow/airflow-cover.jpg
 photo-credits : https://unsplash.com/photos/BpEOwR57QEg
