@@ -8,9 +8,7 @@ image: airflow/airflow-cover.jpg
 photo-credits : https://unsplash.com/photos/BpEOwR57QEg
 applaud-link: apache-airflow-2-0-practical-jump-start.json
 ---
-I have been mostly coding in Java all my life, and I stumbled upon Apache Airflow and I was keen to know more.
-
-So in this article, I would like to give you a jump-start tutorial to understand the basic concepts and create a workflow pipeline from scratch.
+In this article, I would like to give you a jump-start tutorial to understand the basic concepts and create a workflow pipeline from scratch.
 
 So let's get started!
 
