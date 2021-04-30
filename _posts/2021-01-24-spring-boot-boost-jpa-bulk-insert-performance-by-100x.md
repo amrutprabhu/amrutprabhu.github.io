@@ -6,6 +6,7 @@ categories: ""
 tags: [JPA,mysql,database,Spring Boot,Java]
 image: 2021-01-24/jpa-performance-boost.jpg
 photo-credits: https://unsplash.com/photos/V6G6PZWPASo
+applaud-link: spring-boot-boost-jpa-insert.json
 ---
 
 I was facing a problem where I wanted to insert millions of records into the database, which needed to be imported from the file.

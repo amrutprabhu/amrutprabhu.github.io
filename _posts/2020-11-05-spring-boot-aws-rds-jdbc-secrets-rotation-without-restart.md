@@ -6,6 +6,7 @@ categories: ""
 tags: [AWS,RDS,Secrets manager,Spring Boot,Java]
 image: 2020-11-05/aws-secrets-rotation.jpg
 photo-credits: https://unsplash.com/photos/B_hAlVqataE
+applaud-link: spring-boot-aws-rds-secrets-rotation.json
 ---
 
 This article is about how you can handle AWS RDS secrets rotation without restarting your Spring Boot application.

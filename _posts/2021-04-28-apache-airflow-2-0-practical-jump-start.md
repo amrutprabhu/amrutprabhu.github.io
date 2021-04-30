@@ -6,6 +6,7 @@ categories: ""
 tags: [python, airflow, Java]
 image: airflow/airflow-cover.jpg
 photo-credits : https://unsplash.com/photos/BpEOwR57QEg
+applaud-link: apache-airflow-2-0-practical-jump-start.json
 ---
 I have been mostly coding in Java all my life, and I stumbled upon Apache Airflow and I was keen to know more.
 
