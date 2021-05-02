@@ -36,7 +36,7 @@ A workflow is made up of tasks and each task is an operator. Now, what is an ope
 -   BranchOperator - used to create a branch in the workflow.
 -   DummyOperator - used to represent a dummy task.
 
-There are quite a few other operators which will help you to make an HTTP call, connect to a Postgres instance, connect to slack, etc. You can find more operators [here](https://airflow.apache.org/docs/apache-airflow/stable/python-api-ref.html#operators){:target="_blank"}.
+There are quite a few other operators that will help you make an HTTP call, connect to a Postgres instance, connect to slack, etc. You can find more operators [here](https://airflow.apache.org/docs/apache-airflow/stable/python-api-ref.html#operators){:target="_blank"}.
 
 Finally, with the theory done, Let’s do something exciting i.e. create our first Airflow DAG.
 <br/>
@@ -102,7 +102,7 @@ with DAG('user_content_processing',
 ```
 To create the HttpSensor operator, We provide it with a task id, HTTP connection id, and endpoint. The task id identifies the task in the DAG, and the endpoint identifies the API to fetch. Now the third parameter i.e `http_conn_id` will require something to be explained.
 
-Airflow provides a mechanism, with which you can create and store some configurations that you can use across workflows. One such type is configuring “Connections”. Here you can provide various connections like AWS connections, ElasticSearch connection, Kubernetes cluster connections, etc.
+Airflow provides a mechanism to create and store some configurations that you can use across workflows. One such type is configuring “Connections”. Here you can provide various connections like AWS connections, ElasticSearch connection, Kubernetes cluster connections, etc.
 
 In our case, we would be using the HTTP connection option. Here we would provide the URL we want to trigger and setting the connection id to `user_api` .We want to call the URL [https://randomuser.me/api/](https://randomuser.me/api/){:target="_blank"}, which will return a JSON response of some random user information.
 
@@ -114,7 +114,7 @@ So with that, We just created our first task and learned some concepts.
 
 ![Airflow DAG task](/assets/img/airflow/airflow-first-dag-task.png)
 
-Now, once the first task execution succeeds, we want to execute the task that will make the actual call to get the details of a user. For this, we are going to make use of an HttpOperator called `SimpleHttpOperator`.
+Now, once the first task execution succeeds, we want to execute the task that will make the actual call to get user details. For this, we are going to make use of an HttpOperator called `SimpleHttpOperator`.
 
 ```python
 is_api_available = HttpSensor(
