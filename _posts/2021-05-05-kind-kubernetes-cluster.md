@@ -8,9 +8,9 @@ image: kind/kind-kubernetes.png
 photo-credits: 
 applaud-link: kind-kubernetes-cluster.json
 ---
-Recently I wanted to experiment with something on a Kubernetes cluster and I dint want to spin up a new cluster on AWS and wanted something quick.
+Recently I wanted to experiment with something on a Kubernetes cluster, and I didn't want to spin up a new cluster on AWS and wanted something quick.
 
-Till now, Minikube was the only thing I was using as a local Kubernetes cluster. But I start noticing performance degrade on my system as soon as I started using Minikube.
+Till now, Minikube was the only thing I was using as a local Kubernetes cluster. But I start noticing performance degradation on my system as soon as I started using Minikube.
 
 I came across another local Kubernetes cluster called [Kind](https://kind.sigs.k8s.io/) and I want to share my learnings about it.
 <br/>
@@ -58,7 +58,7 @@ Once it’s loaded, You can then reference the image directly in your Kubernetes
 <br/>
 ## Multi-Node Cluster
 
-This feature was fascinating to me, If you want to create a multi-node cluster, you can provide a config to create it.
+This feature was fascinating to me, If you want to create a multi-node cluster, you can provide config to create it.
 ```
 Kind create cluster --config config.yml
 ```  
@@ -73,7 +73,7 @@ nodes:
     - role: worker
     - role: worker
 ```
-In this config, I have asked it to create a cluster with a control plane and two worker nodes.
+I have asked it to create a cluster with a control plane and two worker nodes in this config.
 
 Now, you can further customize this to map node ports to your host port. This would be helpful in a situation wherein say you have `NodePort` service, and you want to access it directly from your local system.
 
@@ -91,7 +91,7 @@ nodes:
 <br/>
 ## Custom Worker Node images.
 
-Since Kind works with docker images, You can specify custom docker image that you would like to run. Currently, it uses the docker images provided by kind. This means you can provide a specific version of Kubernetes that you would like to run, just by changing the image tag. You can find all the Kind images here ([kindest/node](https://hub.docker.com/r/kindest/node)).
+Since Kind works with docker images, You can specify a custom docker image that you would like to run. Currently, it uses the docker images provided by kind. This means you can provide a specific version of Kubernetes that you would like to run, just by changing the image tag. You can find all the Kind images here ([kindest/node](https://hub.docker.com/r/kindest/node)).
 ```yml
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
@@ -107,6 +107,8 @@ Kind also provides functions that will allow your terminal to autocomplete your 
 kind completion zsh
 ```
 ![Kind AutoComplete](/assets/img/kind/kind-auto-complete.png)
+<br/>
+If you want to know more on how to configure auto-completion with ZSH you can refer to the repo documentation [here](https://github.com/zsh-users/zsh-completions) 
 <br/>
 <br/>
 ## Conclusion
