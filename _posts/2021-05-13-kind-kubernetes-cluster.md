@@ -91,7 +91,7 @@ nodes:
 <br/>
 ## Custom Worker Node images.
 
-Since Kind works with docker images, You can specify a custom docker image that you would like to run. Currently, it uses the docker images provided by kind. This means you can provide a specific version of Kubernetes that you would like to run, just by changing the image tag. You can find all the Kind images here ([kindest/node](https://hub.docker.com/r/kindest/node)).
+Since Kind works with docker images, You can specify a custom docker image that you would like to run. Currently, it uses the docker images provided by kind. This means you can provide a specific version of Kubernetes that you would like to run, just by changing the image tag. You can find all the Kind images [here](https://hub.docker.com/r/kindest/node)).
 ```yml
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
