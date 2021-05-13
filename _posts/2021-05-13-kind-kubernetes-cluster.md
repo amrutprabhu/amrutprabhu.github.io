@@ -45,7 +45,7 @@ You can also spin up multiple clusters using kind. You just need to specify a di
 <br/>
 ## Creating Pod with Custom Docker Images.
 
-In order to load a custom image you created on your machine, You don’t need to push the image to any repository. Rather just use the following command to load your custom image in the cluster.
+To load a custom image you created on your machine, You don’t need to push the image to any repository. Rather just use the following command to load your custom image in the cluster.
 
 ```
 Kind load docker-image <custom-image>:<tag>
