@@ -20,8 +20,8 @@ permalink:           none
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           'RefactorFirst'
-description:	       'Articles and tutorials around Java, Spring Boot, Software Development and Programming'
+title:		         'RefactorFirst'
+description:	     'Articles and tutorials about Java, Spring Boot, Software Development, and Programming. Learn about what is new in programming and look into how to optimize and write clean code.'
 author:              'Amrut Prabhu'
 twitter_handle:      'amrutprabhu42'
 contact_email:        'contact@refactorfirst.com'
