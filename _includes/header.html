@@ -3,7 +3,10 @@
         <a href="{{ site.github.url }}/">
             <img src="{{ site.github.url }}/favicon-32x32.png"/> {{ site.title }}
         </a>
-        <small class="masthead-subtitle">{{ site.description }}</small>
+        {% if page.title == "Home" %}
+        <p class="masthead-subtitle">{{ site.description }}</p>
+        <hr/>
+        {% endif %}
         {% include menu.html %}
     </h3>
 </header>

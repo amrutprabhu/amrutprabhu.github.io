@@ -21,7 +21,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           'RefactorFirst'
-description:	       'Build stuffs'
+description:	       'Articles and tutorials around Java, Spring Boot, Software Development and Programming'
 author:              'Amrut Prabhu'
 twitter_handle:      'amrutprabhu42'
 contact_email:        'contact@refactorfirst.com'
