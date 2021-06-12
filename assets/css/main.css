@@ -114,6 +114,13 @@ hr {
   color: #505050;
 }
 
+.masthead-header a {
+  font-size: 3.0rem;
+  text-decoration: none;
+  color: #505050;
+  vertical-align: middle;
+}
+
 .masthead-subtitle {
   color: #999;
   font-size:0.7em;
