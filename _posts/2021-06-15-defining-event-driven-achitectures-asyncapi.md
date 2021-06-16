@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Defining Event Driven Architectures - AsyncAPI"
+title: "Defining Event-Driven Architectures - AsyncAPI"
 author: "Amrut Prabhu"
 categories: ""
 tags: [Spring Boot,Java]
