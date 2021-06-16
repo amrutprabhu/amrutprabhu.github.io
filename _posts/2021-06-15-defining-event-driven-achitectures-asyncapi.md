@@ -181,4 +181,3 @@ In this article, we had a look at how an AsyncAPI definition looks like and also
 As to how we have OpenAPI as standards for documenting REST APIs, AsyncAPIs, I guess would become a standard for documenting asynchronous or event-driven architectures.
 
 As always, I have uploaded the generated code [here](https://github.com/amrutprabhu/async-api-workout).
-Feel free to share the article and join me on [Twitter](https://twitter.com/amrutprabhu42). You can also subscribe to my newsletter on [RefactorFirst.com](https://refactorfirst.com/)
