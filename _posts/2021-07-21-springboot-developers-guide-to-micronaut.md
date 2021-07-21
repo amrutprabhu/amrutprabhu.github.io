@@ -5,7 +5,7 @@ author: "Amrut Prabhu"
 categories: ""
 tags: [Spring Boot, Micronaut, Native Image, Java]
 image: spring-boot-micronaut-guide/spring-boot-micronaut.jpg
-photo-credits: ""
+photo-credits: 
 applaud-link: springboot-developers-guide-to-micronaut.json
 ---
 This is a guide for spring application developers, who want to get started with using Micronaut. With this guide, you will get enough information to work with Micronaut framework.
