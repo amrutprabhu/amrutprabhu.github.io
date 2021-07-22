@@ -21,7 +21,7 @@ With applications becoming cloud-native, we want quick start-up time and better 
 
 Micronaut is a framework that provides the above features, including the advantage of faster start-up time and lesser memory footprint by making use of Ahead Of Time (AOT) compilation.
 
-You can read my previous article on “Spring Boot developer’s guide to Micronaut”, wherein I explain the basic concepts of Micronaut and also create a Micronaut CRUD application example.
+You can read my previous article on “[A Spring Boot developer’s guide to Micronaut](/springboot-developers-guide-to-micronaut.html){:target="_blank"}, wherein I explain the basic concepts of Micronaut and also create a Micronaut CRUD application example.
 
 In this article, we would be talking about how we can boost the start-up performance using the Micronaut framework for the same example application from the previous article.
 
@@ -39,9 +39,9 @@ Now let's try to tune this to achieve higher performance.
 <br/>
 # Creating a Native Image
 
-To obtain even better performance, we would be creating a native image of the application, using a special JVM called the [GraalVM](https://www.graalvm.org/).
+To obtain even better performance, we would be creating a native image of the application, using a special JVM called the [GraalVM](https://www.graalvm.org/){:target="_blank"}.
 
-GraalVM provides this mechanism that helps to create a native image of the application which you can execute as a standalone executable. The build process builds the executable with all the required dependencies such that you don't need even the JVM to run the application.
+GraalVM provides this mechanism that helps to create a native image of the application which you can execute as a standalone executable. The build process builds the executable with all the required dependencies such that you don't need the JVM to run the application.
 
 To build this native image, I have used GraalVM CE 21.1.0 (build 11.0.11) which is for Java 11. We can then run the following command to build the image.
 ```
@@ -60,6 +60,6 @@ After executing the native image, I got the following statistics for a Micronaut
 
 This is a huge performance boost in start-up and response time compared to the application running on a JVM.
 
-You can try this out by yourself, I have uploaded the code to [GitHub](https://github.com/amrutprabhu/micronaut-workout/tree/master/MicronautApp).
+You can try this out by yourself, I have uploaded the code to [GitHub](https://github.com/amrutprabhu/micronaut-workout/tree/master/MicronautApp){:target="_blank"}.
 
-In my next article, I would be talking about the application's performance with Micronaut on AWS Lambda. So subscribe to my newsletter to know once the article out.
+In my next article, I would be talking about an application's performance with Micronaut on AWS Lambda. So subscribe to my newsletter to know once the article is published.

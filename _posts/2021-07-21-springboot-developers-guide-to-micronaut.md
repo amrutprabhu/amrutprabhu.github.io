@@ -15,16 +15,16 @@ This is a guide for spring application developers, who want to get started with 
 
 Micronaut is a framework, which has gained its name for faster startup time and is usually preferred for solutions with AWS Lambda. It uses Ahead Of Time (AOT) Compilation to determine what the application needs. The result of this is an application that has a smaller memory footprint, fast start-up time, and is reflection free.
 
-The Framework provides dependency injection, inversion of control (IOC), and Aspect-Oriented Programming (AOP) which is similar to that provided by Spring. Using Micronaut, you can create a command-line application, HTTP server application, and even message-driven application.
+The Framework provides dependency injection, inversion of control (IOC), and Aspect-Oriented Programming (AOP) which is similar to that provided by Spring. Using Micronaut, you can create a command-line application, HTTP server application, and even event-driven application.
 
 With this introduction, let's look into creating an application with Micronaut.
 
 <br/>
 # Creating a project
 
-To create a project you can directly go to [Micronaut’s launch](https://micronaut.io/launch) to create your project. This is similar to how spring provides a way to create a project using [https://start.spring.io.](http://start.spring.io.)
+To create a project you can directly go to [Micronaut’s launch](https://micronaut.io/launch){:target="_blank"} to create your project. This is similar to how spring provides a way to create a project using [https://start.spring.io.](http://start.spring.io.){:target="_blank"}
 
-You can alternatively install a command-line utility using SDKMan. The command-line utility does the same as the launch site. More details about this are [here](https://micronaut.io/download/)
+You can alternatively install a command-line utility using SDKMan. The command-line utility does the same as the launch site. More details about this are [here](https://micronaut.io/download/){:target="_blank"}
 
 While creating a project, add `Hibernate-JPA` feature because we will be creating a project with CRUD capabilities. Once you have generated the project, we will look at the various things you would normally do as a spring developer.
 
@@ -45,7 +45,7 @@ In addition to these, we have `@infrastructure` to define a bean that is critica
 
 To inject a particular bean, Micronaut supports the same injection mechanism like constructor based, setter based, name based, which is similar to what spring provides. In case of an `@autowire` , you would now use an `@inject` annotation.
 
-You can also have bean life cycle methods, conditional beans, bean qualifiers, etc, which are similar to those provided by spring. You can always read more about it in Micronaut’s documentation [here](https://docs.micronaut.io/latest/guide/#ioc).
+You can also have bean life cycle methods, conditional beans, bean qualifiers, etc, which are similar to those provided by spring. You can always read more about it in Micronaut’s documentation [here](https://docs.micronaut.io/latest/guide/#ioc){:target="_blank"}.
 
 <br/>
 ## Dependencies
@@ -168,6 +168,6 @@ Now to achieve the real boost in startup performance, we can create a Native ima
 
 Yes, **90 milliseconds** with JPA CRUD capabilities.
 
-To learn how to achieve this incredible initial startup time. You can read my next article “[Boost Java Application Performance With Micronaut Native Image](/boost-java-application-performance-with-micronaut.html)”.
+To learn how to achieve this incredible initial startup time. You can read my next article “[Boost Java Application Performance With Micronaut Native Image](/boost-java-application-performance-with-micronaut.html){:target="_blank"}”.
 
-As usual, I have uploaded the code for this article on [GitHub](https://github.com/amrutprabhu/micronaut-workout/tree/master/MicronautApp).
+As usual, I have uploaded the code for this article on [GitHub](https://github.com/amrutprabhu/micronaut-workout/tree/master/MicronautApp){:target="_blank"}.
