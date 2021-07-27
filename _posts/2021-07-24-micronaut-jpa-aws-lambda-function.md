@@ -47,7 +47,7 @@ The repository is a simple JPA repository as follows.
 @Repository  
 public interface OrderRepository extends JpaRepository<Order, Long>{ }
 ```
-![](https://cdn-images-1.medium.com/max/2400/1*KBxiBHDE6zwlZqsyeavNeQ.png)
+![Micronaut code](/assets/img/micronaut-jpa-aws-lambda-function/code.png)
 
 In the application.yml file, add data source properties to communicate with the AWS RDS instance.
 ```
@@ -70,7 +70,7 @@ With this, we can start creating a jar using `mvn clean package`.
 
 Next, we will create an AWS Lambda function with the runtime as Java 11, upload the jar, and set the handler function to `com.amrut.prabhu.OrderRequestHandler`.
 
-![](https://cdn-images-1.medium.com/max/1600/1*96zlRNPttA4L2F7ISfsY8g.png)
+![Micronaut AWS Function](/assets/img/micronaut-jpa-aws-lambda-function/micronaut-aws-function.png)
 
 Let’s test this with the following payload.
 ```
@@ -80,7 +80,7 @@ Let’s test this with the following payload.
 ```
 Here are the statistics I got with the Lamba configured with 512 MB ram.
 
-![](https://cdn-images-1.medium.com/max/2400/1*poH3XhW4pLgR-6hh3fI5ZA.png)
+![statistics](/assets/img/micronaut-jpa-aws-lambda-function/statistics.png)
 
 Now, this was what we got from the Lambda using the JVM runtime. Let’s look at improving this by creating a native image.
 
@@ -131,7 +131,7 @@ Creating the native image might take some time, Maybe around 3–5mins depending
 
 Once created, Let’s upload the zip and set the runtime to the custom runtime option “Provide your own bootstrap on Amazon Linux 2”. In the case of the handler function, It doesn’t matter if you do not set it, as the Lambda would use your native image bootstrap file to start the application.
 
-![](https://cdn-images-1.medium.com/max/1600/1*J_At9Tz9lqs_eoul6wGDiQ.png)
+![Micronaut AWS function native image](/assets/img/micronaut-jpa-aws-lambda-function/micronaut-aws-function-native.png)
 
 Now, On invoking the function with the same payload as above, we get a huge change in the performance.
 
@@ -139,7 +139,7 @@ The init duration is now reduced to **761 ms**. The execution time during the co
 
 Here are the statistics to compare between using a JVM runtime and the native image.
 
-![](https://cdn-images-1.medium.com/max/1600/1*z6u1RZDgR2JTzPGBQUyeog.png)
+![Micronaut AWS function Native Image statistics](/assets/img/micronaut-jpa-aws-lambda-function/micronaut-aws-function-native-image-statistics.png)
 
 So as you can see, we can achieve really high performance by building and using a native image.
 
