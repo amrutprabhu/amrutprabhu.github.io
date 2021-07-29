@@ -62,4 +62,4 @@ This is a huge performance boost in start-up and response time compared to the a
 
 You can try this out by yourself, I have uploaded the code to [GitHub](https://github.com/amrutprabhu/micronaut-workout/tree/master/MicronautApp){:target="_blank"}.
 
-In my next article, I would be talking about an application's performance with Micronaut on AWS Lambda. So subscribe to my newsletter to know once the article is published.
+In my next article, I would be talking about an application's performance with Micronaut on AWS Lambda. You can read about it here ["Micronaut JPA Function Performance on AWS Lambda"](https://refactorfirst.com/micronaut-jpa-aws-lambda-function.html).
