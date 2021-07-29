@@ -25,7 +25,7 @@ So let’s get started.
 
 In this, we would be creating a Micronaut function that takes an Order, persists on AWS RDS, and then returns the created ID.
 
-You can generate an application from [Micronaut’s launch](https://micronaut.io/launch). Here you select the project as “Function Application For Serverless” and in the features, add “Hibernate-JPA” and “AWS-Lambda”.
+You can generate an application from [Micronaut’s launch](https://micronaut.io/launch). Here you select the application type as “Function Application For Serverless” and in the features, add “Hibernate-JPA” and “AWS-Lambda”.
 
 Once you open the generated project, We will create our function handler by extending Micronaut’s Request handler `MicronautRequestHandler` and override the `execute` method.
 ```
