@@ -68,7 +68,7 @@ public class WebController {
 ```
 ![AWS Lambda Code](/assets/img/micronaut-lambda-application/code.png)
 
-We also would now change the database from MySQL to Postgres. For this, we would add the Postgres driver dependency and add the corresponding connection string in the properties file.
+We also would now change the database from MySQL to Postgres. For this, we would add the Postgres driver dependency and the corresponding connection string in the properties file.
 ```
 <dependency>  
   <groupId>org.postgresql</groupId>  
@@ -85,7 +85,7 @@ datasources:
     password: nopass  
     driverClassName: org.postgresql.Driver
 ```
-The reason I had to switch to Postgres was that the MySQL driver was unstable when using it in a native image. It could not deserialize the object properly when it was being fetched.
+I had to switch to Postgres because the MySQL driver was unstable when using it in a native image. It could not deserialize the object properly when it was being fetched.
 
 With this, we are ready to build the application and deploy it on the Lambda JVM runtime
 
@@ -132,7 +132,7 @@ Now we can then run the following command to build the image.
 ```
 ./mvnw clean package -Dpackaging=docker-native -Dmicronaut.runtime=lambda
 ```
-It may take around 3–5 mins to build the zip file containing the native image depending on the system you have.
+It may take around 3–5 minutes to build the zip file containing the native image depending on your system.
 
 Next, let's create an AWS lambda function with the custom runtime option “Provide your own bootstrap on Amazon Linux 2”, and then upload the zip file.
 
