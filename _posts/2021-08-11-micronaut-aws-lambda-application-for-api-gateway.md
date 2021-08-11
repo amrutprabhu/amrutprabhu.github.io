@@ -10,7 +10,7 @@ applaud-link: micronaut-aws-lambda-application-for-api-gateway.json
 ---
 In this article, we would be looking into how we can deploy a Micronaut application providing GET, PUT and POST which can be called using an API Gateway. Then we would compare its performance when deployed with JVM runtime and as a native image.
 
-### Introduction
+# Introduction
 
 In this article, I would be focusing on creating the application that can be deployed on an AWS Lambda and then call the application as if it's being called using an API Gateway.
 
@@ -18,7 +18,7 @@ I have previously written an article “here” which will help you to create a 
 
 With this let’s get started.
 
-### Code Modifications
+# Code Modifications
 
 Now from the application you just created or got from the GitHub repo above, We would make some modifications to the code to start serving requests.
 
@@ -89,7 +89,7 @@ I had to switch to Postgres because the MySQL driver was unstable when using it 
 
 With this, we are ready to build the application and deploy it on the Lambda JVM runtime
 
-### Deploying with JVM runtime.
+# Deploying with JVM runtime.
 
 Let’s build the application using `mvn clean package` , and then deploy it to an AWS Lambda using Java 11 runtime. Once created, set the handler function to a class provided by Micronaut i.e. `io.micronaut.function.aws.proxy.MicronautLambdaHandler` . Now, this class comes from the dependency `micronaut-function-aws-api-proxy` which we had already added previously.
 
@@ -120,7 +120,7 @@ Now with this, let's look at the statistics I got for lambda configured with 512
 
 Let’s now look at improving the application performance by creating a Native image.
 
-### Deploying Native Image on AWS Lambda with Custom Runtime
+## Deploying Native Image on AWS Lambda with Custom Runtime
 
 To build the native image, we would use a GraalVM JDK. I have used GraalVM CE 21.1.0 (build 11.0.11) for Java 11.
 
