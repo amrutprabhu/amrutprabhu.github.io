@@ -14,7 +14,7 @@ In this article, we would be looking into how we can deploy a Micronaut applicat
 
 In this article, I would be focusing on creating the application that can be deployed on an AWS Lambda and then call the application as if it's being called using an API Gateway.
 
-I have previously written an article “here” which will help you to create a Micronaut function handler from scratch. I would recommend you to read it if you want to start from the beginning. If you want to skip it, you can use the code directly from my [Github repo](https://github.com/amrutprabhu/micronaut-workout/tree/master/micronaut-lambda-function).
+I have previously written an article [here](https://refactorfirst.com/micronaut-jpa-aws-lambda-function.html) which will help you to create a Micronaut function handler from scratch. I would recommend you to read it if you want to start from the beginning. If you want to skip it, you can use the code directly from my [Github repo](https://github.com/amrutprabhu/micronaut-workout/tree/master/micronaut-lambda-function).
 
 With this let’s get started.
 
