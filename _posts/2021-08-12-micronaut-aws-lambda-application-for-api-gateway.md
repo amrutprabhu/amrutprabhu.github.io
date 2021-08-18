@@ -14,7 +14,7 @@ In this article, we would be looking into how we can deploy a Micronaut applicat
 
 In this article, I would be focusing on creating the application that can be deployed on an AWS Lambda and then call the application as if it's being called using an API Gateway.
 
-I have previously written an article [here](https://refactorfirst.com/micronaut-jpa-aws-lambda-function.html) which will help you to create a Micronaut function handler from scratch. I would recommend you to read it if you want to start from the beginning. If you want to skip it, you can use the code directly from my [Github repo](https://github.com/amrutprabhu/micronaut-workout/tree/master/micronaut-lambda-function).
+I have previously written an article [here](https://refactorfirst.com/micronaut-jpa-aws-lambda-function.html){:target="_blank"} which will help you to create a Micronaut function handler from scratch. I would recommend you to read it if you want to start from the beginning. If you want to skip it, you can use the code directly from my [Github repo](https://github.com/amrutprabhu/micronaut-workout/tree/master/micronaut-lambda-function){:target="_blank"}.
 
 With this let’s get started.
 
@@ -22,7 +22,7 @@ With this let’s get started.
 
 Now from the application you just created or got from the GitHub repo above, We would make some modifications to the code to start serving requests.
 
-We can apply a simple MVC pattern, wherein we can create a controller, a service that has some business logic and does the transformation from a DTO to a model, and then a repository to persist it. This pattern is totally optional to implement. You can also apply a Domain-Driven Design(DDD) pattern to structure your code. If you would like to see a simple DDD code structure pattern using Micronaut you can have a look at this [GitHub repo](https://github.com/amrutprabhu/micronaut-workout/tree/master/MicronautApp).
+We can apply a simple MVC pattern, wherein we can create a controller, a service that has some business logic and does the transformation from a DTO to a model, and then a repository to persist it. This pattern is totally optional to implement. You can also apply a Domain-Driven Design(DDD) pattern to structure your code. If you would like to see a simple DDD code structure pattern using Micronaut you can have a look at this [GitHub repo](https://github.com/amrutprabhu/micronaut-workout/tree/master/MicronautApp){:target="_blank"}.
 
 But we will keep things simple and call the repository directly from the controller, similar to our previous example wherein we called the repository from the handler function.
 
@@ -147,6 +147,8 @@ With native images, we get a significant improvement with the init time being on
 Here are the statistics I got.
 
 ![AWS Lambda native image statistics](/assets/img/micronaut-lambda-application/micronaut-aws-lambda-native-image-statistics.png)
+
+I have uploaded the code on [GitHub](https://github.com/amrutprabhu/micronaut-workout/tree/master/micronaut-lamdba-application){:target="_blank"}
 
 With this, we are at the end of series of articles exploring Micronaut. But this is not the end. I would be exploring more frameworks and Micronaut will be on my radar for new features.
 
