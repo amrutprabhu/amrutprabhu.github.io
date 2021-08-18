@@ -44,7 +44,7 @@ To obtain even better performance, we would be creating a native image of the ap
 GraalVM provides this mechanism that helps to create a native image of the application which you can execute as a standalone executable. The build process builds the executable with all the required dependencies such that you don't need the JVM to run the application.
 
 To build this native image, I have used GraalVM CE 21.1.0 (build 11.0.11) which is for Java 11. We can then run the following command to build the image.
-```
+```bash
 ./mvnw clean package -Dpackaging=native-image
 ```
 This will start building the native image and the build time would take around 3–5 mins depending on the system you have.

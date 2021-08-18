@@ -34,7 +34,7 @@ So the first change we will do is delete two classes.
 With this, we will be left with only the model and repository.
 
 Now, let's create our controller to handle the incoming request. I will create two methods, PUT to add orders and GET to get all the orders.
-```
+```java
 @Validated  
 @Controller  
 public class WebController {  
@@ -69,7 +69,7 @@ public class WebController {
 ![AWS Lambda Code](/assets/img/micronaut-lambda-application/code.png)
 
 We also would now change the database from MySQL to Postgres. For this, we would add the Postgres driver dependency and the corresponding connection string in the properties file.
-```
+```xml
 <dependency>  
   <groupId>org.postgresql</groupId>  
   <artifactId>postgresql</artifactId>  
@@ -77,7 +77,7 @@ We also would now change the database from MySQL to Postgres. For this, we would
 </dependency>
 ```
 ----------------------------------------------------------------
-```
+```properties
 datasources:  
   default:  
     url: jdbc:postgresql://database.ashdjsirje.eu-central-1.rds.amazonaws.com/orders_db?characterEncoding=UTF-8  
@@ -96,7 +96,7 @@ Let’s build the application using `mvn clean package` , and then deploy it to 
 ![lambda function definition](/assets/img/micronaut-lambda-application/lambda-function-application.png)
 
 Once we are ready, We can then trigger the lambda in the test section using the following payload.
-```
+```json
 {  
   "body": "{\"name\":\"Order from Lambda application\"}",  
   "resource": "/",  
@@ -105,7 +105,7 @@ Once we are ready, We can then trigger the lambda in the test section using the 
 }
 ```
 We can now also retrieve the persisted orders by making a GET call as follows.
-```
+```json
 {  
   "resource": "/",  
   "path": "/",  
@@ -125,11 +125,11 @@ Let’s now look at improving the application performance by creating a Native i
 To build the native image, we would use a GraalVM JDK. I have used GraalVM CE 21.1.0 (build 11.0.11) for Java 11.
 
 Before building, we have to set one extra property in the pom.xml file. we need to set the main class.
-```
+```xml
 <exec.mainClass>io.micronaut.function.aws.runtime.MicronautLambdaRuntime</exec.mainClass>
 ```
 Now we can then run the following command to build the image.
-```
+```bash
 ./mvnw clean package -Dpackaging=docker-native -Dmicronaut.runtime=lambda
 ```
 It may take around 3–5 minutes to build the zip file containing the native image depending on your system.

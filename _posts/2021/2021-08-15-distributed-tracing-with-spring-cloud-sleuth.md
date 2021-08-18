@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Micronaut JPA Application Performance on AWS Lambda"
+title: "Distributed Tracing with Spring Cloud Sleuth And Zipkin"
 author: "Amrut Prabhu"
 categories: ""
-tags: [Spring Boot, Micronaut, AWS, AWS Lambda, Native Image, Java]
+tags: [Spring Boot, Java]
 image: 2021/distributed-tracing-with-zipkin/cover.jpg
 photo-credits: https://unsplash.com/photos/d9ILr-dbEdg
-applaud-link: micronaut-aws-lambda-application-for-api-gateway.json
+applaud-link: distributed-tracing-with-spring-zipkin.json
 ---
 In this article, we would learn how we can implement distributed tracing and understand the key concepts of distributed tracing.
 
@@ -104,13 +104,13 @@ Once the application starts, call “Service 1” at `/path1` as follows
 curl -i http://localhost:8080/service/path1
 ```
 Now let’s look at the logs of “Service 1”.
-```
+```bash
 INFO [Service-1,222f3b00a283c75c,222f3b00a283c75c] 41114 --- [nio-8080-exec-1] c.a.p.distributedservice.Controller      : Incoming request at Service-1 for request /path1
 ```
 The log contains square brackets with three parts [ service name, trace id, span id ]. For the first incoming request, since there is no incoming trace id, the span id is the same as the trace id.
 
 Looking at the logs of “Service 2”, we see that we have a new span id for this request.
-```
+```bash
 INFO [Service-2,222f3b00a283c75c,13194db963293a22] 41052 --- [nio-8090-exec-1] c.a.p.distributedservice.Controller      : Incoming request at Service-2 at /path2
 ```
 I intercepted the request being sent out of “Service 1” to “Service 2” and found the following headers already present in the outgoing request.

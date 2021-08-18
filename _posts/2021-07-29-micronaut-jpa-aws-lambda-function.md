@@ -15,7 +15,7 @@ In this article, I would be talking about the performance statistics when runnin
 
 Micronaut became quite popular for their quick startup time because of the Ahead Of Time(AOT) compilation. It provides literally all the capabilities that SpringBoot provides like Aspect-Oriented programming, Dependency injection, etc.
 
-Now I have described how to create a Micronaut Application in my previous article “[A SpringBoot Developer’s Guide to Micronaut](https://refactorfirst.com/springboot-developers-guide-to-micronaut.html)”. I have also described how you can boost your application performance in another article “[Boot Java Application Performance with Micronaut Native Image](https://refactorfirst.com/boost-java-application-performance-with-micronaut.html)”.
+Now I have described how to create a Micronaut Application in my previous article “[A SpringBoot Developer’s Guide to Micronaut](https://refactorfirst.com/springboot-developers-guide-to-micronaut.html){:target="_blank"}”. I have also described how you can boost your application performance in another article “[Boot Java Application Performance with Micronaut Native Image](https://refactorfirst.com/boost-java-application-performance-with-micronaut.html){:target="_blank"}”.
 
 Today we would be looking at how we can create an AWS Lamda function with Micronaut and see its performance statistics when we deploy it on JVM runtime and as a Native Image on Amazon Linux custom runtime image.
 
@@ -25,10 +25,10 @@ So let’s get started.
 
 In this, we would be creating a Micronaut function that takes an Order, persists on AWS RDS, and then returns the created ID.
 
-You can generate an application from [Micronaut’s launch](https://micronaut.io/launch). Here you select the application type as “Function Application For Serverless” and in the features, add “Hibernate-JPA” and “AWS-Lambda”.
+You can generate an application from [Micronaut’s launch](https://micronaut.io/launch){:target="_blank"}. Here you select the application type as “Function Application For Serverless” and in the features, add “Hibernate-JPA” and “AWS-Lambda”.
 
 Once you open the generated project, We will create our function handler by extending Micronaut’s Request handler `MicronautRequestHandler` and override the `execute` method.
-```
+```java
 @Introspected  
 public class OrderRequestHandler extends MicronautRequestHandler<Order, Order> {  
   
@@ -43,14 +43,14 @@ public class OrderRequestHandler extends MicronautRequestHandler<Order, Order> {
 }
 ```
 The repository is a simple JPA repository as follows.
-```
+```java
 @Repository  
 public interface OrderRepository extends JpaRepository<Order, Long>{ }
 ```
 ![Micronaut code](/assets/img/micronaut-jpa-aws-lambda-function/code.png)
 
 In the application.yml file, add data source properties to communicate with the AWS RDS instance.
-```
+```properties
 datasources:  
   default:  
     url: jdbc:mysql://database.whgnes.eu-central1.rds.amazonaws.com:3306/ORDERS_DB?characterEncoding=UTF-8  
@@ -73,7 +73,7 @@ Next, we will create an AWS Lambda function with the runtime as Java 11, upload 
 ![Micronaut AWS Function](/assets/img/micronaut-jpa-aws-lambda-function/micronaut-aws-function.png)
 
 Let’s test this with the following payload.
-```
+```json
 {  
   "body": "{\"name\":\"Order from Lambda\"}"  
 }
@@ -89,7 +89,7 @@ Now, this was what we got from the Lambda using the JVM runtime. Let’s look at
 To support creating the native image, we would have to do some changes to the code above.
 
 Firstly, you will need to add a dependency to support creating the native image for the AWS lambda function
-```
+```xml
  <dependency>  
    <groupId>io.micronaut.aws</groupId>  
    <artifactId>micronaut-function-aws-custom-runtime</artifactId>  
@@ -97,7 +97,7 @@ Firstly, you will need to add a dependency to support creating the native image 
  </dependency>
 ```
 Next, You will need to create a custom initializer by extending `AbstractMicronautLambdaRuntime` .
-```
+```java
 public class OrderLambdaRuntime extends AbstractMicronautLambdaRuntime<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent, Order, Order> {
 
 public static void main(String[] args) {  
@@ -116,15 +116,15 @@ public static void main(String[] args) {
 }
 ```
 In addition to this, You will need to set the main class in the properties section of your pom.
-```
+```xml
 <exec.mainClass>com.amrut.prabhu.OrderLambdaRuntime</exec.mainClass>
 ```
 With this, you are done with your code changes.
 
-Next, To create the naive image, You need to set your default JDK to [GraalVM](https://www.graalvm.org/) JDK. I have used GraalVM CE 21.1.0 (build 11.0.11). You can easily install this using [SDKMan](https://sdkman.io/).
+Next, To create the naive image, You need to set your default JDK to [GraalVM](https://www.graalvm.org/){:target="_blank"} JDK. I have used GraalVM CE 21.1.0 (build 11.0.11). You can easily install this using [SDKMan](https://sdkman.io/){:target="_blank"}.
 
 Now let’s build the native image using the following command. Make sure you also have docker installed, as it makes use of the docker to download the AWS runtime image to build the native image.
-```
+```bash
 ./mvnw clean package -Dpackaging=docker-native -Dmicronaut.runtime=lambda
 ```
 Creating the native image might take some time, Maybe around 3–5mins depending on the system. The output is a zip file that contains the required bootstrap files to start the application.
@@ -143,10 +143,10 @@ Here are the statistics to compare between using a JVM runtime and the native im
 
 So as you can see, we can achieve really high performance by building and using a native image.
 
-You can have a look at the code on my [GitHub repo](https://github.com/amrutprabhu/micronaut-workout/tree/master/micronaut-lambda-function).
+You can have a look at the code on my [GitHub repo](https://github.com/amrutprabhu/micronaut-workout/tree/master/micronaut-lambda-function){:target="_blank"}.
 
-### More to come...
+### Next..
 
-Now, In this article, we used a single function to add an object to the RDS database. But what about cases wherein you would want to add as well as retrieve an object. For this, We will be looking into deploying a Micronaut application on AWS Lambda providing PUT and GET capabilities and see its performance.
+Now, In this article, we used a single function to add an object to the RDS database. But what about cases wherein you would want to add as well as retrieve an object. For this, We will be looking into deploying a Micronaut application on AWS Lambda providing PUT and GET capabilities and see its performance. you read my next article "[Micronaut JPA Application Performance on AWS Lambda](/micronaut-aws-lambda-application-for-api-gateway.html){:target="_blank"}"
 
 You can subscribe to my newsletter to get an email when I publish my articles
