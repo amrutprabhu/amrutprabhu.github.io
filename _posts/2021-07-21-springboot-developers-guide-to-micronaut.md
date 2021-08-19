@@ -51,7 +51,7 @@ You can also have bean life cycle methods, conditional beans, bean qualifiers, e
 ## Dependencies
 
 Now, I am creating a CRUD application that communicates with MySQL. The minimum dependencies from Micronaut I needed were
-```
+```xml
    <dependency>  
       <groupId>io.micronaut</groupId>  
       <artifactId>micronaut-inject</artifactId>  
@@ -79,7 +79,7 @@ Apart from these, I had to add `mysql-connector-java` driver to communicate with
 ## JPA configuration
 
 To create your entities, you can use the usual `javax.persistence` annotations to create your entities, define ids, columns, etc.
-```
+```java
 @Entity  
 @Table(name = "Orders")  
 public class Order {
@@ -89,7 +89,7 @@ public class Order {
     private Long id;
 ```
 Your data source and hibernate config also remains pretty much the same
-```
+```properties
 datasources:  
   default:  
     url: jdbc:mysql://localhost:3306/ORDER  
@@ -105,7 +105,7 @@ jpa:
         dialect: org.hibernate.dialect.MySQL8Dialect
 ```
 For querying your database, we get implementations from Micronaut for interfaces you create by extending interfaces like CRUDRepository or JPARepository. We also have JPA query support using the `@query` annotation. Here is the code for a JPA repository with an example query method.
-```
+```java
 @Repository  
 public interface OrderRepository extends CrudRepository<Order, Long> {  
   
@@ -117,7 +117,7 @@ public interface OrderRepository extends CrudRepository<Order, Long> {
 ## REST Controller
 
 A REST controller can be created using the `@controller` annotation and provide your GET, PUT, POST mappings using the `@get` , `@put` , `@post` annotations respectively. All of these annotations come from the `micronaut-http-client` dependency.
-```
+```java
 @Controller("/order")  
 public class WebController {  
   
@@ -141,7 +141,7 @@ public class WebController {
 # Performance
 
 With the above configuration, the application starts up in nearly **2 secs**.
-```
+```bash
 __  __ _                                  _     
 |  \/  (_) ___ _ __ ___  _ __   __ _ _   _| |_   
 | |\/| | |/ __| '__/ _ \| '_ \ / _` | | | | __|  
