@@ -3,10 +3,10 @@ layout: post
 title: "Distributed Tracing with Spring Cloud Sleuth And Zipkin"
 author: "Amrut Prabhu"
 categories: ""
-tags: [Spring Boot, Java]
+tags: [Spring Boot, Java, Distributed Tracing, Zipkin]
 image: 2021/distributed-tracing-with-zipkin/cover.jpg
 photo-credits: https://unsplash.com/photos/d9ILr-dbEdg
-applaud-link: distributed-tracing-with-spring-zipkin.json
+applaud-link: 2021/distributed-tracing-with-spring-zipkin.json
 ---
 In this article, we would learn how we can implement distributed tracing and understand the key concepts of distributed tracing.
 
