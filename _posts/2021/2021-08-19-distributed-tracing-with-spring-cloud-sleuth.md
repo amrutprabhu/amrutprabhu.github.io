@@ -67,13 +67,13 @@ public class Controller {
   
   logger.info("Request at {} for request /path1 ", applicationName);
   String response = restTemplate.getForObject("http://localhost:8090/service/path2", String.class);
-  return ResponseEntity._ok_("response from /path1 + "+ response);  
+  return ResponseEntity.ok("response from /path1 + "+ response);  
  }  
   
 @GetMapping("/path2")  
 public ResponseEntity path2(){
   logger.info("Request at {} at /path2", applicationName);
-  return ResponseEntity._ok_("response from /path2 ");  
+  return ResponseEntity.ok("response from /path2 ");  
 }
 ```
 Here I have created two paths, `Path1` calling `Path2` at a fixed port 8090. The idea here is to run two separate instances of the same application.
