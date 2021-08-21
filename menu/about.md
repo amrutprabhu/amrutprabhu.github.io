@@ -28,3 +28,4 @@ Follow me on Twitter <a href="https://twitter.com/{{ site.twitter_handle }}" cla
 
 - [asyncapi/generator-filters](https://github.com/asyncapi/generator-filters)
 - [asyncapi/java-spring-template](https://github.com/asyncapi/java-spring-template#contributors-)
+- [asyncapi/java-spring-cloud-stream-template](https://github.com/asyncapi/java-spring-cloud-stream-template)
