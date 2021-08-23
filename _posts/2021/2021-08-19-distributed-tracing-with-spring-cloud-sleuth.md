@@ -107,7 +107,7 @@ Now let’s look at the logs of “Service 1”.
 ```bash
 INFO [Service-1,222f3b00a283c75c,222f3b00a283c75c] 41114 --- [nio-8080-exec-1] c.a.p.distributedservice.Controller      : Incoming request at Service-1 for request /path1
 ```
-The log contains square brackets with three parts [ service name, trace id, span id ]. For the first incoming request, since there is no incoming trace id, the span id is the same as the trace id.
+The log contains square brackets with three parts [ Service name, Trace Id, Span Id ]. For the first incoming request, since there is no incoming trace id, the span id is the same as the trace id.
 
 Looking at the logs of “Service 2”, we see that we have a new span id for this request.
 ```bash
