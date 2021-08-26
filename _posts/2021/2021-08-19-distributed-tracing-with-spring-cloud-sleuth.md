@@ -179,3 +179,8 @@ In this, there are 4 points in the span.
 So with this, we have learned how we can integrate distributed tracing with spring cloud sleuth and also visualized the traces using Zipkin.
 
 I have uploaded the code on [GitHub](https://github.com/amrutprabhu/distributed-tracing-with-spring-boot/tree/main/distributed-tracing-spring-cloud-sleuth-zipkin){:target="_blank"}.
+
+## YouTube Video 
+You can have a visual walk-through in the video below.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m9a11SD8ITc" frameborder="0" allowfullscreen></iframe>
+<br/>

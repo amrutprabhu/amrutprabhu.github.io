@@ -171,3 +171,8 @@ Yes, **90 milliseconds** with JPA CRUD capabilities.
 To learn how to achieve this incredible initial startup time. You can read my next article “[Boost Java Application Performance With Micronaut Native Image](/boost-java-application-performance-with-micronaut.html){:target="_blank"}”.
 
 As usual, I have uploaded the code for this article on [GitHub](https://github.com/amrutprabhu/micronaut-workout/tree/master/MicronautApp){:target="_blank"}.
+
+## YouTube Video
+You can have a visual walk-through in the video below.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3k6dkgyGok8" frameborder="0" allowfullscreen></iframe>
+<br/>
