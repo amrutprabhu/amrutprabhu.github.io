@@ -147,6 +147,6 @@ You can have a look at the code on my [GitHub repo](https://github.com/amrutprab
 
 ### Next..
 
-Now, In this article, we used a single function to add an object to the RDS database. But what about cases wherein you would want to add as well as retrieve an object. For this, We will be looking into deploying a Micronaut application on AWS Lambda providing PUT and GET capabilities and see its performance. you read my next article "[Micronaut JPA Application Performance on AWS Lambda](/micronaut-aws-lambda-application-for-api-gateway.html){:target="_blank"}"
+Now, In this article, we used a single function to add an object to the RDS database. But what about cases wherein you would want to add as well as retrieve an object. For this, We will be looking into deploying a Micronaut application on AWS Lambda providing PUT and GET capabilities and see its performance. You can read this in my next article "[Micronaut JPA Application Performance on AWS Lambda](/micronaut-aws-lambda-application-for-api-gateway.html){:target="_blank"}"
 
 You can subscribe to my newsletter to get an email when I publish my articles
