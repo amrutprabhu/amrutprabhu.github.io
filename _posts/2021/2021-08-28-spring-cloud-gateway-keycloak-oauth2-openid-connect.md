@@ -14,9 +14,9 @@ In this article, we would be looking at how we can integrate Keycloak with Sprin
 <br/>
 # Introduction
 
-[Keycloak](https://www.keycloak.org/) is an open-source application, which provides identity and access management. It is sponsored by Redhat, whose commercial product is [Red Hat Single Sign-On (RH-SSO)](https://access.redhat.com/products/red-hat-single-sign-on) based on Keycloak.
+[Keycloak](https://www.keycloak.org/){:target="_blank"} is an open-source application, which provides identity and access management. It is sponsored by Redhat, whose commercial product is [Red Hat Single Sign-On (RH-SSO)](https://access.redhat.com/products/red-hat-single-sign-on){:target="_blank"} based on Keycloak.
 
-Keycloak supports various features out of the box like user registration, social media logins, 2-factor authentication, LDAP integration, etc. Apart from its various integration, it also provides some easy ways to customize user login UIs, forgot password option, email login option, etc with just a click of a button. You can read more about this in their documentation [here](https://www.keycloak.org/docs/latest/server_admin/)
+Keycloak supports various features out of the box like user registration, social media logins, 2-factor authentication, LDAP integration, etc. Apart from its various integration, it also provides some easy ways to customize user login UIs, forgot password option, email login option, etc with just a click of a button. You can read more about this in their documentation [here](https://www.keycloak.org/docs/latest/server_admin/){:target="_blank"}
 
 # Understanding Keycloak Concepts
 
@@ -36,7 +36,7 @@ With this, let's create a custom realm to handle our users.
 
 # Setting up Keycloak
 
-To start Keycloak, you can start it as a standalone application by downloading the binary or you can use the [Keycloak docker image](https://www.keycloak.org/getting-started/getting-started-docker). Today we will be using the docker image to start the application. I have created a simple Keycloak docker-compose file to start Keycloak and expose its port at 8080
+To start Keycloak, you can start it as a standalone application by downloading the binary or you can use the [Keycloak docker image](https://www.keycloak.org/getting-started/getting-started-docker){:target="_blank"}. Today we will be using the docker image to start the application. I have created a simple Keycloak docker-compose file to start Keycloak and expose its port at 8080
 ```yaml
 version: "3.1"  
 services:  
@@ -50,7 +50,7 @@ services:
 ```
 Now, you can start Keycloak using `docker-compose up`.
 
-Next, open the page at [http://localhost:8080,](http://localhost:8080,) click on “Administration Console” and log in using “admin” as the user and password(as set in the environment variables above). Once you log in, you are already in the master realm.
+Next, open the page at [http://localhost:8080](http://localhost:8080){:target="_blank"} click on “Administration Console” and log in using “admin” as the user and password(as set in the environment variables above). Once you log in, you are already in the master realm.
 
 Let’s create a new realm. Click on the master realm on the left side and then click add realm as shown in the picture.
 
@@ -62,9 +62,9 @@ Now, Give it a name, I have given it as “My-Realm”
 
 Now, we would be using all the default settings here.
 
-Next, let's create a client in the “Clients” section. We will use this client to communicate with Keycloack from our Spring Cloud Gateway application.
+Next, let's create a client in the “Clients” section. We will use this client to communicate with Keycloak from our Spring Cloud Gateway application.
 
-![Realm Client Settings](/assets/img/2021/spring-cloud-gateway-with-keycloak/client-settings.png)
+![Realm Client Settings](/assets/img/2021/spring-cloud-gateway-with-keycloak/create-client.png)
 
 Here we give it a client id “spring-gateway-client” and keep the client protocol as “OpenID-connect” and click save.
 
@@ -84,15 +84,18 @@ To do that, go to the “Users” section and click on “Add User”. Here I se
 
 Next, Click on the “Credentials” tabs and set a password as “test” with the “temporary” option turned off.
 
-![Keycloak User credentials](/assets/img/2021/spring-cloud-gateway-with-keycloak/client-secret.png)
+![Keycloak User credentials](/assets/img/2021/spring-cloud-gateway-with-keycloak/add-user-password.png)
 
+<br/>
 That's it. We have just created a realm with a client and a user. This is the most minimalistic configuration we have done that is enough to start integrating Keycloak with our application.
 
 With this, let’s create our Spring Cloud Gateway application to integrate the Keycloak client that we just created.
 
+<br/>
+
 # Creating an Application with Spring Cloud Gateway
 
-Let’s go to [https://start.spring.io](https://start.spring.io) and create an application with the following dependencies.
+Let’s go to [https://start.spring.io](https://start.spring.io){:target="_blank"} and create an application with the following dependencies.
 
 -   Gateway
 -   OAuth2 Client
@@ -188,7 +191,7 @@ With all the configuration done, Let’s start the application.
 
 ## Starting the application
 
-Since we set `server.port=9090`, the application starts at 9090. When we open [http://localhost:9090](http://localhost:9090) on the web browser, It immediately redirects to the login page from Keycloak as we are querying the root resource `/`.
+Since we set `server.port=9090`, the application starts at 9090. When we open [http://localhost:9090](http://localhost:9090){:target="_blank"} on the web browser, It immediately redirects to the login page from Keycloak as we are querying the root resource `/`.
 
 ![User Login](/assets/img/2021/spring-cloud-gateway-with-keycloak/user-login-page.png)
 
@@ -212,12 +215,12 @@ The OAuth2 flow is up to the request to get the access token. Once you get the a
 
 So with this, we were able to integrate the Spring Cloud Gateway with Keycloak and set up OAuth2 OpenId Connect to authenticate the user.
 
-I have uploaded the code integrating Keycloak on [GitHub](https://github.com/amrutprabhu/keycloak-spring-cloud-gateway-and-resource-server).
+I have uploaded the code integrating Keycloak on [GitHub](https://github.com/amrutprabhu/keycloak-spring-cloud-gateway-and-resource-server){:target="_blank"}.
 
 Wait... There is more to come up.
 
 Next, we will integrate a backend service to this API Gateway as an OAuth2 resource server and check the user for authorization. This will be in the next article I am currently working on.
 
-So, subscribe to my newsletter and also follow me on [Twitter](https://twitter.com/amrutprabhu42) to know once it’s published.
+So, subscribe to my newsletter and also follow me on [Twitter](https://twitter.com/amrutprabhu42){:target="_blank"} to know once it’s published.
 
 Enjoy!!
