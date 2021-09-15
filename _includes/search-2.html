@@ -1,0 +1,61 @@
+
+<style>
+  .namethis {
+  font-size: 1rem
+  }
+  .search-results {
+  border: 1px
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  function myFunction() {
+  var popup = document.getElementById("search");
+  popup.value = "";
+}
+</script>
+<!-- Search input field -->
+  <div class="main-search form-group mb-0 border-bottom">
+  <div class="input-group">
+    <input id="search" name="main_input" class="form-control border-0" placeholder="Search" type="text">
+<!--    <div class="input-group-append">-->
+<!--      <span class="input-group-text border-0"><i class="fa fa-search" aria-hidden="true"></i></span>-->
+<!--    </div>-->
+    <input type="button" onclick="myFunction()">
+  </div>
+</div>
+
+<!-- Search result container -->
+<div class="search-results">
+      <div id="results" >
+      </div>
+</div>
+  <!-- Script pointing to Jekyll Instant Search js -->
+  <script src="/simple-jekyll-search.min.js" type="text/javascript"></script>
+  <!-- Jekyll Instant Search Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search'),
+    resultsContainer: document.getElementById('results'),
+    searchResultTemplate: '<p><a style="font-size:1rem" href="{url}"><p>{title}</p></a></p>',
+    noResultsText: '<p>No results found!asdsds</p>',
+    json: '/search.json'
+  })
+  </script>
+<!--https://blog.webjeda.com/jekyll-data-tutorial/-->
+<!-- show site search results -->
+<!--<script>-->
+<!--  $(document).ready(function() {-->
+<!--    $('#search').on('blur', function() {-->
+<!--    $('.mydoor').fadeOut('medium');-->
+<!--   });-->
+
+<!--  $('#search').on('focus', function() {-->
+<!--      $('.mydoor').show();-->
+<!--  });-->
+
+<!--    });-->
+<!--  </script>-->
+
+<!--</body>-->
+<!--</html>-->
