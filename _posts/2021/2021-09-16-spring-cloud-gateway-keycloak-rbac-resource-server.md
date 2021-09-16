@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring Cloud Gateway — Resource Server with Keycloak"
+title: "Spring Cloud Gateway — Resource Server with Keycloak RBAC"
 author: "Amrut Prabhu"
 categories: ""
 tags: [Spring Boot, Java, Gateway, Keycloak, Oauth2, OpenId Connect, Resource Server]
@@ -9,7 +9,7 @@ photo-credits:
 applaud-link: 2021/spring-gateway-keycloak-resource-server.json
 ---
 
-In this article, we will be exploring how we can integrate a resource server with an API gateway that is integrated with Keycloak.
+In this article, we will be exploring how we can integrate a resource server with an API gateway that is integrated with Keycloak and enable role-based access control (RBAC).
 
 # Introduction
 
@@ -168,7 +168,7 @@ Once you log in, you get the response from the resource server containing the Us
 
 ## Conclusion
 
-In this article, we integrated a resource server with Spring Cloud Gateway application. We also Integrated Keycloak’s OAuth2 OpenId Connect (OIDC) for authentication in the API Gateway and also performed a role-based access control inside the resource server with the JWT token sent from the API Gateway.
+In this article, we integrated a resource server with Spring Cloud Gateway application. We also Integrated Keycloak’s OAuth2 OpenId Connect (OIDC) for authentication in the API Gateway and also performed a role-based access control (RBAC) inside the resource server with the JWT token sent from the API Gateway.
 
 I have uploaded the entire code integrating Keycloak, API Gateway, and resource server to my [Github repo](https://github.com/amrutprabhu/keycloak-spring-cloud-gateway-and-resource-server){:target="_blank"}.
 
