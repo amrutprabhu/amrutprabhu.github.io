@@ -12,9 +12,9 @@ In this article, we will explore how to implement distributed tracing using Jaeg
 
 # Introduction
 
-Jaeger is an open-source distributed tracing mechanism that helps to trace requests in distributed systems. It is based on [opentracing.io](https://opentracing.io/) specification and is a part of the [Cloud Native Computing Foundation](https://www.cncf.io/).
+Jaeger is an open-source distributed tracing mechanism that helps to trace requests in distributed systems. It is based on [opentracing](https://opentracing.io/) specification and is a part of the [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/).
 
-I have explained some of the key concepts of tracing in my previous article “[Distributed Tracing With Spring Cloud Sleuth](https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth.html)”.
+I have explained some key concepts of tracing in my previous article “[Distributed Tracing With Spring Cloud Sleuth](https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth.html)”.
 
 With this, let’s look at some code.
 
@@ -23,13 +23,13 @@ With this, let’s look at some code.
 Let’s create an application from [https://start.spring.io](https://start.spring.io) with only a single dependency “Spring Web”.
 
 Once you generate and download the code, we will add the following Jaeger dependency to the pom file which will help to generate and propagate the traces between the services.
-
+```xml
 <dependency>  
    <groupId>io.opentracing.contrib</groupId>  
    <artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>  
    <version>3.3.1</version>  
 </dependency>
-
+```
 With this, let's add a controller with some paths.
 ```java
 @RestController  
@@ -61,7 +61,7 @@ public class Controller {
     }  
 }
 ```
-Here, we have two endpoints `/path1` and `/path2` . The idea here is to use two instances of the same application. `/path1` internally calls `/path2` at a fixed port 8090.
+Here, we have two endpoints `/path1` and `/path2` . The idea here is to use two instances of the same application such that `/path1` calls `/path2` of another service at a fixed port 8090.
 
 For the spans to get connected to the same trace id, We need to create a RestTemplate bean to allow Jaeger to include an interceptor. This then helps to add traces to the outgoing request which will help to trace the entire request.
 ```java
@@ -139,6 +139,6 @@ I have uploaded the code on [GitHub](https://github.com/amrutprabhu/distributed-
 
 You can read about Distributed tracing using Zipkin my previous article [here](https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth.html).
 
-I keep exploring and learning new things. If you want to know the latest trends and improve your software development skills, then subscribe to my newsletter on [https://refactorfirst.com](https://refactorfirst.com/) and also follow me on [Twitter](https://twitter.com/amrutprabhu42).
+I keep exploring and learning new things. If you want to know the latest trends and improve your software development skills, then subscribe to my newsletter below and also follow me on [Twitter](https://twitter.com/amrutprabhu42).
 
 Enjoy!!
