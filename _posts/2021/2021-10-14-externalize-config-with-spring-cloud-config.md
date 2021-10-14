@@ -14,7 +14,7 @@ In this article, we would be looking at how we can externalize configs using Spr
 
 # Introduction
 
-One of the principles from the [12 Factor App](https://12factor.net/config){:target="_blank"}, states that we have to separate the configuration from the code. The configuration varies based on the environment and it's better to organize them based on the environment your application is running.
+One of the principles from the [12 Factor App](https://12factor.net/config){:target="_blank"}, states that we have to separate our application configuration from the code. The configuration varies based on the environment and it's better to organize them based on the environment your application is running.
 
 So in this article, we will be looking at how we can externalize configurations with Spring Cloud Config.
 
@@ -33,7 +33,7 @@ Let’s go to [https://start.spring.io](https://start.spring.io){:target="_blank
 
 -   Spring Cloud Config Server
 
-Once you open the project, we need to configure the application to allow it to serve configuration. Now, the server can be configured with quite a few backends with which you can organize any client’s application configuration. Here is a list of some of the supported backend.
+Once you open the project, we need to configure the application to allow it to serve configuration. Now, the server can be configured with quite a few backends with which you can organize any client’s configuration. Here is a list of some of the supported backend.
 
 -   Git URL
 -   AWS S3 bucket.
