@@ -3,7 +3,7 @@ layout: post
 title: "Integrate Caching with Spring Cache and Ehcache 3"
 author: "Amrut Prabhu"
 categories: ""
-tags: [Spring Boot, Java, Spring cache, ehcache, Jcache]
+tags: [Spring Boot, Java, Spring cache, ehcache 3, Jcache]
 image: 2021/spring-cache-ehcache-3/cover.jpg
 photo-credits: 
 applaud-link: 2021/spring-cache-ehcache-3.json
