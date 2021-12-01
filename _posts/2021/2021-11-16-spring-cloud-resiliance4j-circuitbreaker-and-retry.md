@@ -33,7 +33,7 @@ Let’s go to [https://start.spring.io](https://start.spring.io){:target="_blank
 ```
 Along with the circuit-breaker starter dependency, we need the spring aspects dependencies, as the retry and circuit breaker mechanism works using the Spring AOP concept.
 
-Next, we are going to add a service class which will make a REST call to an endpoint using a RestTemplate.
+Next, we are going to add a service class that will make a REST call to an endpoint using a RestTemplate.
 ```java
 @org.springframework.stereotype.Service
 public class Service {
@@ -267,7 +267,7 @@ If you carefully want to understand the working of the circuit breaker and retry
 
 With this, we just saw how we can integrate a Circuit Breaker and a Retry mechanism in a spring boot application. Similarly, we can integrate rate limiter, bulkhead, etc. You can read more about this in their documentation [here](https://resilience4j.readme.io/docs/getting-started){:target="_blank"}
 
-I have uploaded the code to my GitHub [repo](https://github.com/amrutprabhu/spring-resilience4j-circuit-breaker-and-retry){:target="_blank"}.
+As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/spring-resilience4j-circuit-breaker-and-retry){:target="_blank"}.
 
 I keep exploring and learning new things. If you want to know the latest trends and improve your software development skills, then subscribe to my newsletter below and also follow me on [Twitter](https://twitter.com/amrutprabhu42){:target="_blank"}.
 
