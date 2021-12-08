@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kafka Communication with Spring Boot"
+title: "Spring Boot With Kafka Communication"
 author: "Amrut Prabhu"
 categories: ""
 tags: [Spring Boot, Java, Spring cloud, circuit breaker, retry]
