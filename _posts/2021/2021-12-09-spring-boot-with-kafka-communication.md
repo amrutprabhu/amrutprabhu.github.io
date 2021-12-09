@@ -3,9 +3,9 @@ layout: post
 title: "Spring Boot With Kafka Communication"
 author: "Amrut Prabhu"
 categories: ""
-tags: [Spring Boot, Java, Spring cloud, circuit breaker, retry]
+tags: [Spring Boot, Java, Kafka, producer, consumer, scheduled]
 image: 2021/spring-boot-kafka-communication/cover.jpg
-photo-credits: ""
+photo-credits: 
 applaud-link: 2021/spring-boot-kafka-communication.json
 ---
 
@@ -56,7 +56,7 @@ public class KafkaProducer {
 ```
 Here I have created a producer which is scheduled to send a message every 2 secs. To send the message, we are making use of the KafkaTemplate.
 
-To send the message to the right Kafka broker, we need to provide some properties. For this, we are going to add some properties in the properties file as follows.
+To send the message to the right Kafka broker, we need to provide some configuration. For this, we are going to add some config settings in the properties file as follows.
 ```yaml
 spring:  
   kafka:  
@@ -123,9 +123,9 @@ public class KafkaConsumer {
   
     @KafkaListener(id = "my-client-application", topics = "${topic.name}")  
     public void consumer(ConsumerRecord<String, Message> consumerRecord) {  
-        System._out_.println("Consumed Record Details: " + consumerRecord);  
+        System.out.println("Consumed Record Details: " + consumerRecord);  
         Message message = consumerRecord.value();  
-        System._out_.println("Consumed Message" + message);  
+        System.out.println("Consumed Message" + message);  
     }  
 }
 ```
