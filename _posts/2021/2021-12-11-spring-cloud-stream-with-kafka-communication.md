@@ -67,11 +67,11 @@ Here the `in` refers to the consumer and `out` refers to the producer. The index
 
 It's understandable that for a consumer, it just can be a consumer function definition, as it would be invoked when there is a message in the topic.
 
-But what about the producer which is the supplier function? Who invokes that?
+<b> But what about the producer which is the supplier function? Who invokes that?</b>
 
 In this case, the supplier function is invoked by a default polling mechanism which is provided by the framework. It calls the supplier every second.
 
-Now What about the case where you want to send a message after doing something. Probably you want to store your entity in the database and then send out an event. Let’s look at that next.
+Now what about the case where you want to send a message after doing something. Probably you want to store your entity in the database and then send out an event. Let’s look at that next.
 
 ### Sending Messages on Demand
 
@@ -91,7 +91,7 @@ public class KafkaProducer {
 ```
 Here I have used the stream bridge to send messages, which is currently sending messages at an interval of 2 sec.
 
-Now, Since we are using the Kafka binder, We need to provide the properties to the binder in order to send the messages to the right broker and also set the serializer and deserializer. Let look at those configs.
+Now, Since we are using the Kafka binder, We need to provide properties to the binder in order to send messages to the right broker and also set the serializer and deserializer. Let's look at those configs.
 
 ### Kafka Binder Properties
 
@@ -169,10 +169,11 @@ spring:
         producer-out-0:  
             destination : first-topic  
             producer:  
-                useNativeEncoding: true _# Enables using the custom serializer_ consumer-in-0:  
+                useNativeEncoding: true # Enables using the custom serializer 
+        consumer-in-0:  
             destination : first-topic  
             consumer:  
-              use-native-decoding: true _# Enables using the custom deserializer_
+              use-native-decoding: true # Enables using the custom deserializer
 ```
 
 To use custom serializers, we need to set `useNativeEncoding` to true. Then you can set the serializer and the deserializer classes for each of the bindings under the Kafka binder section as shown above.
