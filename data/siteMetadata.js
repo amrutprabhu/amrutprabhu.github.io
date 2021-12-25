@@ -2,20 +2,21 @@ const siteMetadata = {
   title: 'Refactor First',
   author: 'Amrut Prabhu',
   headerTitle: 'Refactor First',
-  description: 'TODO',
+  description:
+    'Articles and tutorials about Java, Spring Boot, Kubernetes, Docker, Software Development, and Programming. Learn about what is new in programming and look into how to optimize and write clean code.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://refactorfirst.com',
   siteRepo: 'https://github.com/',
-  siteLogo: '/static/images/logo.png',
+  siteLogo: '/static/images/logo.png', //TODO
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  email: 'contact@refactorfirst.com',
+  github: 'https://github.com/amrutprabhu',
+  twitter: 'https://twitter.com/amrutprabhu42',
+  facebook: '',
+  youtube: '',
+  linkedin: 'https://www.linkedin.com/in/amrut-prabhu-722baa65/',
   locale: 'en-US',
   analytics: {
     // supports plausible, simpleAnalytics or googleAnalytics
