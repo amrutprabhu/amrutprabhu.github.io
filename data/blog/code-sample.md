@@ -1,11 +1,13 @@
 ---
-title: Sample .md file
+title: Spring Cloud Stream Kafka
 date: '2021-12-08'
 tags: ['markdown', 'code', 'features']
 draft: false
 summary: Example of a markdown file with code blocks and syntax highlighting
 imageUrl: /static/images/2021/spring-kafka-streams/cover.jpg
 images: ['/static/images/time-machine.jpg']
+actualUrl: 'auto-generated'
+customUrl: 'auto-generated'
 ---
 
 In this article, we will be looking into how we can communicate with Kafka Cluster using Spring Cloud Stream.
