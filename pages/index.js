@@ -44,7 +44,7 @@ export default function Blog({ posts, initialDisplayPosts, pagination, authorDet
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
         authorDetails={authorDetails}
-        title="All Posts- "
+        title="Articles "
       />
     </>
   )
