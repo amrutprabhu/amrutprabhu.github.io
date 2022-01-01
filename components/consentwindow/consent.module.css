@@ -1,0 +1,33 @@
+.consentname {
+  padding: 0rem 1rem 1rem;
+  display: block;
+  left: 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #222;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.consentname button {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: white;
+}
+
+.greenButton {
+  background: linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+  background: #74ad5a;
+  border: 1px solid #3b6e22;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 25px;
+  text-decoration: none;
+  margin-right: 10px;
+}
