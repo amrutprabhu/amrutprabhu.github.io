@@ -8,9 +8,13 @@ const DEFAULT_LAYOUT = 'PostLayout'
 
 export async function getStaticPaths() {
   const posts = getFiles('blog')
-  console.log(posts)
+  const urls = posts.map((locations) =>
+    locations
+      .split('/') // These two were added to get only the last part of the file name
+      .pop()
+  )
   return {
-    paths: posts.map((p) => ({
+    paths: urls.map((p) => ({
       params: {
         slug: formatSlug(p),
       },
