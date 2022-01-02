@@ -3,17 +3,10 @@ import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import Cookies from 'js-cookie'
-import Router from 'next/router'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { title } = frontMatter
 
-  function acceptCookies() {
-    //TODO: Fix this
-    Cookies.remove('cookie-*')
-    Router.reload(window.location.pathname)
-  }
   return (
     <SectionContainer>
       <BlogSEO url={`${siteMetadata.siteUrl}/privacy`} {...frontMatter} />
@@ -45,7 +38,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
           </div>
         </div>
       </article>
-      <a onClick={acceptCookies}>Stop Collectiing Usage Data</a>
     </SectionContainer>
   )
 }
