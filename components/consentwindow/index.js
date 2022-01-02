@@ -1,5 +1,5 @@
 import { Consent } from './consent'
-import { Cookies } from 'react-cookie-consent'
+import Cookies from 'js-cookie'
 import Analytics from '../analytics'
 
 export default function ConsentWindow() {
