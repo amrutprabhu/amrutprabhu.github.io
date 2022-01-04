@@ -6,6 +6,7 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import Script from 'next/script'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -28,6 +29,21 @@ const LayoutWrapper = ({ children }) => {
               </div>
             </Link>
           </div>
+          <Script
+            id="news1"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+              (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+                var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+                f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+                var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+                _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+                
+                var ml_account = ml('accounts', '3117349', 'p5v1c3m1v8', 'load');
+            `,
+            }}
+          />
           <div className="flex items-center text-base leading-5">
             <div className="hidden sm:block">
               {headerNavLinks.map((link) => (
@@ -45,6 +61,11 @@ const LayoutWrapper = ({ children }) => {
           </div>
         </header>
         <main className="mb-auto">{children}</main>
+        <div
+          className="ml-form-embed"
+          data-account="3117349:p5v1c3m1v8"
+          data-form="4015126:i6h8m5"
+        ></div>
         <Footer />
       </div>
     </SectionContainer>
