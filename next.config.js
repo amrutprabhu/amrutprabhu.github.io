@@ -5,13 +5,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app;
-  style-src 'self' 'unsafe-inline' *.googleapis.com cdn.jsdelivr.net;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app static.mailerlite.com cdn.mailerlite.com;
+  style-src 'self' 'unsafe-inline' *.googleapis.com cdn.jsdelivr.net static.mailerlite.com fonts.mailerlite.com cdn.mailerlite.com;
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
-  font-src 'self' fonts.gstatic.com cdn.jsdelivr.net;
-  frame-src giscus.app
+  font-src 'self' fonts.gstatic.com cdn.jsdelivr.net fonts.mailerlite.com;
+  frame-src giscus.app static.mailerlite.com
 `
 
 const securityHeaders = [
@@ -58,6 +58,11 @@ module.exports = withBundleAnalyzer({
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
   },
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
+  assetPrefix: '/',
   async headers() {
     return [
       {
