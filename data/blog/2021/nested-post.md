@@ -1,7 +1,7 @@
 ---
 title: 2021 / Nested
 date: '2021-10-02'
-tags: ['multi-author', 'next-js', 'feature']
+tags: ['multi-author', 'next-js', 'feature', 'markdown']
 draft: false
 summary: 'The blog template supports posts in nested sub-folders. This can be used to group posts of similar content e.g. a multi-part course. This post is itself an example of a nested route!'
 imageUrl: /static/images/time-machine.jpg
@@ -9,6 +9,7 @@ actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
 ---
 
+<TOCInline toc={props.toc} asDisclosure />
 A sample post with markdown.
 
 ## Inline Highlighting
