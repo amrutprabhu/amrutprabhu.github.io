@@ -16,7 +16,6 @@ const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day:
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { slug, fileName, date, title, tags, imageUrl } = frontMatter
-
   return (
     <SectionContainer>
       <BlogSEO
@@ -40,7 +39,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 </div>
               </dl>
               <div>
-                <PageTitle>{title}</PageTitle>
+                {/* <PageTitle>{`${title} | ${siteMetadata.title}`}</PageTitle> */}
 
                 <Image
                   alt={title}
