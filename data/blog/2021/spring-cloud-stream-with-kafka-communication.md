@@ -1,16 +1,19 @@
 ---
-title: Trail Blog Spring Cloud Stream Kafka
-date: '2021-12-08'
-tags: ['markdown', 'code', 'features']
+title: 'Spring Cloud Stream With Kafka'
+author: 'Amrut Prabhu'
+categories: ''
+tags: [Spring Boot, Java, Kafka, producer, consumer, scheduled]
+image: 2021/spring-cloud-stream-kafka/cover.jpg
+photo-credits:
+applaud-link: 2021/spring-boot-stream-kafka.json
+date: '2021-12-16'
 draft: false
-summary: Example of a markdown file with code blocks and syntax highlighting
-imageUrl: /static/images/2021/spring-kafka-streams/cover.jpg
-images: ['/static/images/time-machine.jpg']
+summary: 'fill this'
+imageUrl: /static/images/2021/spring-cloud-stream-kafka/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
 ---
 
-<TOCInline toc={props.toc} asDisclosure />
 In this article, we will be looking into how we can communicate with Kafka Cluster using Spring Cloud Stream.
 
 ## Introduction
@@ -203,7 +206,7 @@ java -jar \
 target/spring-cloud-stream-kafka-communication-0.0.1-SNAPSHOT.jar
 ```
 
-![spring cloud stream kafka](/static/images/2021/spring-kafka-streams/spring-cloud-stream-kafka-log.png)
+![spring cloud stream kafka](/static/images/2021/spring-cloud-stream-kafka/spring-cloud-stream-kafka-log.png)
 
 In the Logs, you can see the consumer is getting messages from the producer which we created using functional programming, and the producer which is using the stream bridge to send the messages.
 
