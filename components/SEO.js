@@ -6,7 +6,7 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage }) => {
   const router = useRouter()
   return (
     <Head>
-      <title>{title}</title>
+      <title>{`${title == siteMetadata.title ? 'Home' : title} | ${siteMetadata.title}`}</title>
       <meta name="robots" content="follow, index" />
       <meta name="description" content={description} />
       <meta property="og:url" content={`${siteMetadata.siteUrl}${router.asPath}`} />
@@ -35,7 +35,7 @@ export const PageSEO = ({ title, description }) => {
     <CommonSEO
       title={title}
       description={description}
-      ogType="website"
+      ogType="article"
       ogImage={ogImageUrl}
       twImage={twImageUrl}
     />
@@ -51,7 +51,7 @@ export const TagSEO = ({ title, description }) => {
       <CommonSEO
         title={title}
         description={description}
-        ogType="website"
+        ogType="article"
         ogImage={ogImageUrl}
         twImage={twImageUrl}
       />
