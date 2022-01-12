@@ -15,7 +15,7 @@ const discussUrl = (slug) =>
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, fileName, date, title, tags, imageUrl } = frontMatter
+  const { slug, fileName, date, title, tags, imageUrl, 'photo-credits': photoCredits } = frontMatter
   return (
     <SectionContainer>
       <BlogSEO
@@ -48,6 +48,13 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   width={744}
                   height={406}
                 />
+                <div className="text-primary-500 hover:text-primary-600 text-md dark:hover:text-primary-400">
+                  {photoCredits != '' && photoCredits != null ? (
+                    <Link href={photoCredits}> Photo Credits</Link>
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
               </div>
             </div>
           </header>
