@@ -3,7 +3,7 @@ name: Amrut Deploy to Github Pages
 on:
   push:
     branches:
-      - main
+      - master
 
   workflow_dispatch:
 
