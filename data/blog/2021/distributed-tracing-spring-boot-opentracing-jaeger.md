@@ -8,7 +8,7 @@ photo-credits:
 applaud-link: 2021/distributed-tracing-with-spring-cloud-jaeger.json
 date: '2021-09-23'
 draft: false
-summary: 'fill this'
+summary: 'We will explore how to implement distributed tracing using Jaeger and visualize the traces using Jaeger UI'
 imageUrl: /static/images/2021/distributed-tracing-with-jaeger/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

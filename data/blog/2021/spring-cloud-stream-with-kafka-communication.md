@@ -8,7 +8,7 @@ photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
 date: '2021-12-16'
 draft: false
-summary: 'fill this'
+summary: 'Here, we will be looking into how we can communicate with Kafka Cluster using Spring Cloud Stream'
 imageUrl: /static/images/2021/spring-cloud-stream-kafka/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
