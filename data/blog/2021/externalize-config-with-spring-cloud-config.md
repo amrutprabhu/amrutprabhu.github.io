@@ -144,8 +144,8 @@ On restarting the application and hitting the URL, we get the following output f
 
 We can customize the configuration using some reserved placeholders.
 
-- {application} — to refer to the client’s application name.
-- {profile} — to refer to the client’s application profile.
+- {application} - to refer to the client’s application name.
+- {profile} - to refer to the client’s application profile.
 
 Let use these placeholders to add some more repos.
 
