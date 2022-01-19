@@ -17,7 +17,7 @@ const LayoutWrapper = ({ children }) => {
             <Link href="/" aria-label="RefactorFirst">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <Image src="/static/favicons/new-icon.png" height={50} width={50} />
+                  <Image src="/static/favicons/icon.png" height={50} width={50} />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="h-6 text-2xl font-semibold sm:block">
@@ -29,11 +29,12 @@ const LayoutWrapper = ({ children }) => {
               </div>
             </Link>
           </div>
-          <Script
-            id="news1"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
+          <div className="mt-6">
+            <Script
+              id="news1"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
               (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
                 var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
                 f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
@@ -42,8 +43,9 @@ const LayoutWrapper = ({ children }) => {
                 
                 var ml_account = ml('accounts', '3117349', 'p5v1c3m1v8', 'load');
             `,
-            }}
-          />
+              }}
+            />
+          </div>
           <div className="flex items-center text-base leading-5">
             <div className="hidden sm:block">
               {headerNavLinks.map((link) => (

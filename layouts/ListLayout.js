@@ -66,7 +66,7 @@ export default function ListLayout({
                         <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
                           <Image
                             alt={title}
-                            src={imageUrl}
+                            src={`/${imageUrl}`}
                             className="object-cover object-center lg:h-58 md:h-36"
                             width={844}
                             height={406}
@@ -80,7 +80,7 @@ export default function ListLayout({
                           <div>{title}</div>
                         </Link>
                       </h3>
-                      <div className="flex flex-wrap mt-2 col-span-2">
+                      <div className="flex flex-wrap my-2 col-span-2">
                         {tags.map((tag) => (
                           <Tag key={tag} text={tag} />
                         ))}
@@ -102,7 +102,7 @@ export default function ListLayout({
                             <li className="flex items-center space-x-2" key={author.name}>
                               {author.avatar && (
                                 <Image
-                                  src={author.avatar}
+                                  src={`/${author.avatar}`}
                                   width="38px"
                                   height="38px"
                                   alt="avatar"

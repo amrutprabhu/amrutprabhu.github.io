@@ -39,15 +39,16 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 </div>
               </dl>
               <div>
-                {/* <PageTitle>{`${title} | ${siteMetadata.title}`}</PageTitle> */}
-
-                <Image
-                  alt={title}
-                  src={imageUrl}
-                  className="object-cover object-center lg:h-48 md:h-36"
-                  width={744}
-                  height={406}
-                />
+                <PageTitle>{title}</PageTitle>
+                <div className="mt-6">
+                  <Image
+                    alt={title}
+                    src={imageUrl}
+                    className="object-cover object-center lg:h-48 md:h-36"
+                    width={744}
+                    height={406}
+                  />
+                </div>
                 <div className="text-primary-500 hover:text-primary-600 text-md dark:hover:text-primary-400">
                   {photoCredits != '' && photoCredits != null ? (
                     <Link href={photoCredits}> Photo Credits</Link>
@@ -141,7 +142,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                           Next Article
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/blog/${next.slug}`}>{next.title}</Link>
+                          <Link href={`/${next.slug}`}>{next.title}</Link>
                         </div>
                       </div>
                     )}
