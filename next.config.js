@@ -53,13 +53,14 @@ const securityHeaders = [
 ]
 
 module.exports = withBundleAnalyzer({
+  basePath: '/new-blog-update', //Change this later
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   images: {
     loader: 'akamai',
-    path: '',
+    path: 'new-blog-update', // Change this later
   },
-  assetPrefix: '/new-blog-update/',
+  assetPrefix: '/new-blog-update/', // change this later
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
   },
