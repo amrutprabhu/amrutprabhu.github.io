@@ -58,7 +58,7 @@ module.exports = withBundleAnalyzer({
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   images: {
     loader: 'akamai',
-    path: 'new-blog-update', // Change this later
+    path: '/new-blog-update', // Change this later
   },
   assetPrefix: '/new-blog-update/', // change this later
   eslint: {
