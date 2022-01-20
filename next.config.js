@@ -63,11 +63,6 @@ module.exports = withBundleAnalyzer({
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
   },
-  images: {
-    loader: 'akamai',
-    path: '',
-  },
-  assetPrefix: '/',
   async headers() {
     return [
       {
