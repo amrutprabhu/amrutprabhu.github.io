@@ -147,4 +147,4 @@ Old User’s Cookies might remain in the browser’s local storage, however, the
 
 ## Contact Us
 
-In case you have anything to ask about the privacy policy you can contact me at <a href="mailto:contact@refactorfirst.com">contact@refactorfirst.com</a>
+In case you have anything to ask about the privacy policy you can contact me at [contact@refactorfirst.com](mailto:contact@refactorfirst.com)
