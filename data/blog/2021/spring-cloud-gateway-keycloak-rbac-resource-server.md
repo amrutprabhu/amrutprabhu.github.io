@@ -121,7 +121,7 @@ public class RealmRoleConverter implements Converter<Jwt, Collection<GrantedAuth
         return  realmAccess.get("roles").stream()
                 .map(roleName -> "ROLE_" + roleName)
                 .map(SimpleGrantedAuthority::new)
-                .collect(Collectors._toList_());
+                .collect(Collectors.toList());
     }
 }
 ```

@@ -45,7 +45,7 @@ With this, let's add a controller with some paths.
 @RequestMapping("/service")
 public class Controller {
 
-    private static final Logger _logger_ = LoggerFactory._getLogger_(Controller.class);
+    private static final Logger logger = LoggerFactory.getLogger(Controller.class);
     private RestTemplate restTemplate;
 
     @Value("${spring.application.name}")
@@ -58,15 +58,15 @@ public class Controller {
     @GetMapping("/path1")
     public ResponseEntity path1() {
 
-        _logger_.info("Incoming request at {} for request /path1 ", applicationName);
+        logger.info("Incoming request at {} for request /path1 ", applicationName);
         String response = restTemplate.getForObject("http://localhost:8090/service/path2", String.class);
-        return ResponseEntity._ok_("response from /path1 + " + response);
+        return ResponseEntity.ok("response from /path1 + " + response);
     }
 
     @GetMapping("/path2")
     public ResponseEntity path2() {
-        _logger_.info("Incoming request at {} at /path2", applicationName);
-        return ResponseEntity._ok_("response from /path2 ");
+        logger.info("Incoming request at {} at /path2", applicationName);
+        return ResponseEntity.ok("response from /path2 ");
     }
 }
 ```

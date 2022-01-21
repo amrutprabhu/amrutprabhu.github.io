@@ -211,4 +211,3 @@ I have uploaded the code on [GitHub](https://github.com/amrutprabhu/distributed-
 You can have a visual walk-through in the video below.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m9a11SD8ITc" frameborder="0" allowfullscreen></iframe>
-<br/>

@@ -165,7 +165,6 @@ Just as an example I have declared that I do not want to retry when an exception
 Now, these were some of the configuration properties for the Resilience4J Retry mechanism.
 
 Let’s look at yet another concept called the Circuit Breaker.
-<br/><br/>
 
 ## Integrating a Circuit Breaker
 
@@ -214,7 +213,6 @@ resilience4j:
        failure-rate-threshold: 60
 ```
 
-<br/>
 ### Understanding the Circuit Breaker Config
 
 Here, I am using a count-based sliding window, wherein the window size is of 5 events, and the failure and slowness threshold rate is 60%.
@@ -244,7 +242,6 @@ Now with the above config, let’s start the application and make a request to t
 ![no retry with circuit breaker](/static/images/2021/spring-resiliance4j-circuitbreaker-retry/no-retry-with-circuit-breaker.png)
 
 On making a request we see that it only tried once and directly returned us the fallback value. This is because the circuit breaker fallback method was called directly and the retry was not triggered. The reason for this is the order in which the spring aspects handling the two mechanisms are arranged.
-<br/>
 
 ### Circuit Breaker and Retry Aspects Order
 

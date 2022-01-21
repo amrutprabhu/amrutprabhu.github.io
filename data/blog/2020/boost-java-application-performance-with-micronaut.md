@@ -18,7 +18,6 @@ In this article, I would show how you can achieve an incredibly quick start-up t
 
 Yes, **90 milliseconds**.
 
-<br/>
 # Introduction
 
 Nowadays, we are all familiar with spring and spring boot to provide the best features of dependency inject, Inversion of control (IOC), Aspect Oriented Programming (AOP). But to provide these features, spring needs to do a bunch of stuff behind the scenes, such as wiring of objects, proxying objects, etc which takes some time when the application starts up.
@@ -31,7 +30,6 @@ You can read my previous article on “[A Spring Boot developer’s guide to Mic
 
 In this article, we would be talking about how we can boost the start-up performance using the Micronaut framework for the same example application from the previous article.
 
-<br/>
 # Performance out of the box
 
 Since Micronaut uses AOT compilation, this technique helps to reduce the start-up time. A normal CRUD application, which uses JPA with Hibernate to communicate with MYSQL takes about 2 secs to starts up.
@@ -42,7 +40,6 @@ But there is a catch here. The application may start up in 2 secs, but the first
 
 Now let's try to tune this to achieve higher performance.
 
-<br/>
 # Creating a Native Image
 
 To obtain even better performance, we would be creating a native image of the application, using a special JVM called the [GraalVM](https://www.graalvm.org/).
@@ -59,7 +56,6 @@ This will start building the native image and the build time would take around 3
 
 Once the build finishes, there will be an executable created in the target folder. You can execute it as any other executable and you don't need a JVM to run it.
 
-<br/>
 ## Performance Statistics
 
 After executing the native image, I got the following statistics for a Micronaut JPA application with CRUD capabilities.

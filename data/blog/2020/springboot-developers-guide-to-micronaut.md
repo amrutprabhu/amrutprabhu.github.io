@@ -16,7 +16,6 @@ customUrl: 'auto-generated'
 
 This is a guide for spring application developers, who want to get started with using Micronaut. With this guide, you will get enough information to work with Micronaut framework.
 
-<br/>
 # Introduction
 
 Micronaut is a framework, which has gained its name for faster startup time and is usually preferred for solutions with AWS Lambda. It uses Ahead Of Time (AOT) Compilation to determine what the application needs. The result of this is an application that has a smaller memory footprint, fast start-up time, and is reflection free.
@@ -25,7 +24,6 @@ The Framework provides dependency injection, inversion of control (IOC), and Asp
 
 With this introduction, let's look into creating an application with Micronaut.
 
-<br/>
 # Creating a project
 
 To create a project you can directly go to [Micronaut’s launch](https://micronaut.io/launch) to create your project. This is similar to how spring provides a way to create a project using [https://start.spring.io.](http://start.spring.io.)
@@ -34,7 +32,6 @@ You can alternatively install a command-line utility using SDKMan. The command-l
 
 While creating a project, add `Hibernate-JPA` feature because we will be creating a project with CRUD capabilities. Once you have generated the project, we will look at the various things you would normally do as a spring developer.
 
-<br/>
 ## Creating a bean
 
 Usually, in spring, you would create a bean using `@bean` , `@Restcontroller` , `@service` , `@repository`, etc. In Micronaut, we have some annotation that is similar to those. Let’s look at them.
@@ -53,7 +50,6 @@ To inject a particular bean, Micronaut supports the same injection mechanism lik
 
 You can also have bean life cycle methods, conditional beans, bean qualifiers, etc, which are similar to those provided by spring. You can always read more about it in Micronaut’s documentation [here](https://docs.micronaut.io/latest/guide/#ioc).
 
-<br/>
 ## Dependencies
 
 Now, I am creating a CRUD application that communicates with MySQL. The minimum dependencies from Micronaut I needed were
@@ -83,7 +79,6 @@ Now, I am creating a CRUD application that communicates with MySQL. The minimum 
 
 Apart from these, I had to add `mysql-connector-java` driver to communicate with MySQL.
 
-<br/>
 ## JPA configuration
 
 To create your entities, you can use the usual `javax.persistence` annotations to create your entities, define ids, columns, etc.
@@ -127,7 +122,6 @@ public interface OrderRepository extends CrudRepository<Order, Long> {
 }
 ```
 
-<br/>
 ## REST Controller
 
 A REST controller can be created using the `@controller` annotation and provide your GET, PUT, POST mappings using the `@get` , `@put` , `@post` annotations respectively. All of these annotations come from the `micronaut-http-client` dependency.
@@ -153,7 +147,6 @@ public class WebController {
     }
 ```
 
-<br/>
 # Performance
 
 With the above configuration, the application starts up in nearly **2 secs**.
@@ -195,4 +188,3 @@ As usual, I have uploaded the code for this article on [GitHub](https://github.c
 You can have a visual walk-through in the video below.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3k6dkgyGok8" frameborder="0" allowfullscreen></iframe>
-<br/>

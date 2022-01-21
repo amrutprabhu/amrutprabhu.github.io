@@ -29,17 +29,9 @@ Let’s look at the various parts of an AsyncAPI specification that are most use
 ![AsyncAPI definition sections](/static/images/2021/asyncapi/api-defition-sections.png) // TODO FIX this
 
 - <b>API version</b> — This defines the version of AsycnAPI. We will be dealing with version 2.0.0
-  <br/>
-  <br/>
 - <b>Info</b> — In this section, we define some metadata about the API.
-  <br/>
-  <br/>
 - <b>Servers</b> — In this section we define servers or brokers where we want to connect.
-  <br/>
-  <br/>
 - <b>Channels</b> — This section contains the messaging channel information. Here we define the type of messages sent on the topic/queue.
-  <br/>
-  <br/>
 - <b>Components</b> — This section defines the message definitions and we then refer to them inside the channel.
 
 There are also tags and external docs section, But right now it's not that important for a new start. You can always refer to the documentation about these sections in more detail [here](https://www.asyncapi.com/docs/specifications/v2.0.0#schema).

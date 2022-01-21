@@ -25,8 +25,6 @@ To solve this kind of a problem, AWS provides a library that will handle this up
 AWS has an open source library called [AWS Secrets Manager JDBC](https://github.com/aws/aws-secretsmanager-jdbc), that handles database connection while your application is running and talking to the RDS instance.
 
 Let’s see how this works.
-<br/>
-<br/>
 
 # Solution
 
@@ -81,8 +79,6 @@ Now start the application and it should be able to communicate with AWS Secrets 
 You can test this by clicking on the rotate secret option in the secret which will generate a new password for database and check the communication with the database.
 
 Here is a [GitHub link](https://github.com/amrutprabhu/spring-boot-aws-rds-password-rotation) to my implementation.
-<br/>
-<br/>
 
 ## Supports Liquibase Integration
 

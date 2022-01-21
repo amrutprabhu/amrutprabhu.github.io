@@ -86,8 +86,6 @@ We also would now change the database from MySQL to Postgres. For this, we would
 </dependency>
 ```
 
----
-
 ```properties
 datasources:
   default:

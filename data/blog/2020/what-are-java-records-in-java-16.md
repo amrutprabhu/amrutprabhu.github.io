@@ -58,8 +58,6 @@ public class Data {
 ```
 
 Let’s dig in further about records.
-<br/>
-<br/>
 
 # Initialization of records
 
@@ -99,15 +97,11 @@ public class Data {
 }
 ```
 
-<br/>
-
 # Record classes cannot be extended nor support extension.
 
 Record classes do not support extensions. You cannot extend it with any other class, not even a record class. The only implicit superclass it has is `java.lang.Record`. Defining this explicitly using extends will lead to compilation errors.
 
 Also, record classes are implicitly final. They cannot be declared abstract to allow further extensions. This means you cannot have any sub-records of a record.
-<br/>
-<br/>
 
 # Implementing Interfaces
 
@@ -117,23 +111,17 @@ Record classes allow you to implement interfaces. You can implement any interfac
 public record Data( int x, int y) implements Runnable, Serializable
 ```
 
-<br/>
-
 # Cannot define your own instance variables
 
 When you define the header, it represents the state of your record class. This means you cannot have any other instance variable inside the record. the only instance variable that would be created is the ones provided in the header component.
 
 However, you can have static variables inside records and can be accessed the same as classes by using the record class name.
-<br/>
-<br/>
 
 # Defining your own methods
 
 You can define your own methods that you would want to use inside a record. Even your own version of the accessor, equals, or even hashcode methods. But make sure you do no make changes that would result in breaking what immutability means.
 
 You can define static methods and static initializers also. These are the same as how we have it in class declarations.
-<br/>
-<br/>
 
 # Applying annotations.
 
@@ -146,8 +134,6 @@ Now, Something important about applying annotations. When defining the annotatio
 E.g if you apply a `@NotNull`annotation which actually applies to field, method, and constructor then it would get applied to the instance variable, the accessor method, and the constructor also.
 
 Now take the case where you explicitly define an annotation on your custom-defined accessor method or canonical constructor, then the annotations on these would only be applied to the corresponding method or constructor.
-<br/>
-<br/>
 
 ## Local records
 
