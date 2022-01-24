@@ -58,7 +58,7 @@ export default function PostPage({ posts, initialDisplayPosts, pagination, autho
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
         authorDetails={authorDetails}
-        title="All Posts"
+        title="Articles"
       />
     </>
   )
