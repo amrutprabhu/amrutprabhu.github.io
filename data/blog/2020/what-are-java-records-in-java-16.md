@@ -8,7 +8,7 @@ photo-credits: https://unsplash.com/photos/3vXOHr_fMi8
 applaud-link: java-16-records.json
 date: '2021-05-27'
 draft: false
-summary: 'To Be filled'
+summary: 'Here we look into What are Java Record and its uses'
 imageUrl: /static/images/2021/java-records/java-records-title.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

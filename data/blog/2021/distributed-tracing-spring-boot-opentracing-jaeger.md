@@ -8,13 +8,13 @@ photo-credits:
 applaud-link: 2021/distributed-tracing-with-spring-cloud-jaeger.json
 date: '2021-09-23'
 draft: false
-summary: 'We will explore how to implement distributed tracing using Jaeger and visualize the traces using Jaeger UI'
+summary: 'In this article, We will explore how to implement distributed tracing in a Spring Boot application using Jaeger and visualize the traces using Jaeger UI'
 imageUrl: /static/images/2021/distributed-tracing-with-jaeger/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
 ---
 
-In this article, we will explore how to implement distributed tracing using Jaeger and visualize the traces using Jaeger UI.
+In this article, we will explore how to implement distributed tracing using Jaeger in a Spring Boot Application and visualize the traces using Jaeger UI.
 
 # Introduction
 

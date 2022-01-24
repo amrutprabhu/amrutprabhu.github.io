@@ -8,7 +8,7 @@ photo-credits:
 applaud-link: boost-java-application-performance-with-micronaut.json
 date: '2021-07-22'
 draft: false
-summary: 'To Be filled'
+summary: 'In this article, we would see how we can achieve an incredibly quick start-up time for a Java application'
 imageUrl: /static/images/2021/micronaut-native-image-graalvm/micronaut-native-image-graalvm.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

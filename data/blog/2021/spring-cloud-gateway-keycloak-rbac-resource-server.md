@@ -8,7 +8,7 @@ photo-credits:
 applaud-link: 2021/spring-gateway-keycloak-resource-server.json
 date: '2021-09-16'
 draft: false
-summary: 'fill this'
+summary: 'In this article, we will be exploring how we can integrate a resource server with an API gateway that is integrated with Keycloak and enable role-based access control (RBAC)'
 imageUrl: /static/images/2021/spring-cloud-gateway-with-resource-server/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

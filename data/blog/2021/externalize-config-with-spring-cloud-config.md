@@ -8,7 +8,7 @@ photo-credits:
 applaud-link: 2021/externalizing-config-with-spring-cloud-config.json
 date: '2021-10-14'
 draft: false
-summary: 'fill this'
+summary: 'In this article, we would be looking at how we can externalize application configuration using Spring Cloud Config.'
 imageUrl: /static/images/2021/spring-cloud-config-server-git-backend/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

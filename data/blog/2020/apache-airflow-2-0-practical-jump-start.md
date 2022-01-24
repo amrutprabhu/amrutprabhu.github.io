@@ -8,7 +8,7 @@ photo-credits: https://unsplash.com/photos/BpEOwR57QEg
 applaud-link: apache-airflow-2-0-practical-jump-start.json
 date: '2021-04-28'
 draft: false
-summary: 'To Be filled'
+summary: 'In this article, I would like to give you a jump-start to understand the basic concepts and create a workflow pipeline from scratch.'
 imageUrl: /static/images/2021/airflow/airflow-cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

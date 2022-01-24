@@ -8,7 +8,7 @@ photo-credits: https://unsplash.com/photos/kK7uPfb2YWU
 applaud-link: 2021/spring-retry-circuit-breaker.json
 date: '2021-12-02'
 draft: false
-summary: 'fill this'
+summary: 'In this article, we will be looking into how we can integrate a circuit breaker and a retry mechanism, to handle failures while making synchronous calls to another service.'
 imageUrl: /static/images/2021/spring-resiliance4j-circuitbreaker-retry/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

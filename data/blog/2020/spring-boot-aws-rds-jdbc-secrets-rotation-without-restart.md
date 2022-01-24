@@ -8,7 +8,7 @@ photo-credits: https://unsplash.com/photos/B_hAlVqataE
 applaud-link: spring-boot-aws-rds-secrets-rotation.json
 date: '2020-11-05'
 draft: false
-summary: 'To Be filled'
+summary: 'Here, we see how we can handle AWS RDS secrets rotation without restarting your Spring Boot application'
 imageUrl: /static/images/2020/aws-secrets-rotation/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

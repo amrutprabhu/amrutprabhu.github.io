@@ -8,7 +8,7 @@ photo-credits:
 applaud-link: micronaut-aws-lambda-application-for-api-gateway.json
 date: '2021-08-12'
 draft: false
-summary: 'To Be filled'
+summary: 'In this article, we would be looking into how we can deploy a Micronaut application providing GET, PUT and POST which can be called using an API Gateway and check its performance'
 imageUrl: /static/images/2021/micronaut-lambda-application/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

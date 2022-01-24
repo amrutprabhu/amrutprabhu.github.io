@@ -8,7 +8,7 @@ photo-credits: ''
 applaud-link: 2021/spring-cache-ehcache-3.json
 date: '2021-11-02'
 draft: false
-summary: 'fill this'
+summary: 'In this article, we will look into some Spring Cache concepts and then integrate Ehcache 3.'
 imageUrl: /static/images/2021/spring-cache-ehcache-3/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

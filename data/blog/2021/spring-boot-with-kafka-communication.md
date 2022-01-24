@@ -8,7 +8,7 @@ photo-credits:
 applaud-link: 2021/spring-boot-kafka-communication.json
 date: '2021-12-09'
 draft: false
-summary: 'In this, we will be looking into how we can publish and subscribe to a Kafka topic using spring Kafka'
+summary: 'In this, we will be looking into how we can publish and subscribe to a Kafka topic using Spring Kafka'
 imageUrl: /static/images/2021/spring-boot-kafka-communication/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

@@ -8,7 +8,7 @@ photo-credits: https://unsplash.com/photos/w_vO_U6BUJc
 applaud-link: asyncapi-event-driven-architecture.json
 date: '2021-06-15'
 draft: false
-summary: 'To Be filled'
+summary: 'In this article, I am going to be talking about how we can define your event-driven architectures using the AsyncAPI definition'
 imageUrl: /static/images/2021/asyncapi/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

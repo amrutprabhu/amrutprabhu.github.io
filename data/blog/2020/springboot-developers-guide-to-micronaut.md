@@ -8,7 +8,7 @@ photo-credits:
 applaud-link: springboot-developers-guide-to-micronaut.json
 date: '2021-07-21'
 draft: false
-summary: 'To Be filled'
+summary: 'Here is a guide for Spring Boot developers to get started with Micronaut framework'
 imageUrl: /static/images/2021/spring-boot-micronaut-guide/spring-boot-micronaut.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

@@ -8,7 +8,7 @@ photo-credits: https://unsplash.com/photos/V6G6PZWPASo
 applaud-link: spring-boot-boost-jpa-insert.json
 date: '2021-01-24'
 draft: false
-summary: 'To Be filled'
+summary: 'Here we see how we can boost the bulk insert performance using JPA to insert large number of records into a database'
 imageUrl: /static/images/2021/boost-jpa-bulk-insert/jpa-performance-boost.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

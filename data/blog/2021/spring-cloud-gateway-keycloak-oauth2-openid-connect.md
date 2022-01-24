@@ -7,7 +7,7 @@ photo-credits: ''
 applaud-link: 2021/spring-gateway-oauth2-keycloak.json
 date: '2021-09-02'
 draft: false
-summary: 'fill this'
+summary: 'In this article, we would be looking at how we can integrate Keycloak with Spring Cloud Gateway using the OAuth2 OpenId Connect (OIDC).'
 imageUrl: /static/images/2021/spring-cloud-gateway-with-keycloak/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

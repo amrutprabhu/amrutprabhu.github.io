@@ -6,7 +6,7 @@ photo-credits: https://unsplash.com/photos/d9ILr-dbEdg
 applaud-link: 2021/distributed-tracing-with-spring-zipkin.json
 date: '2021-08-19'
 draft: false
-summary: 'We would learn how we can implement distributed tracing and understand the key concepts of distributed tracing'
+summary: 'We would learn how we can implement distributed tracing in a Spring Boot Application and understand the key concepts of distributed tracing'
 imageUrl: /static/images/2021/distributed-tracing-with-zipkin/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

@@ -8,7 +8,7 @@ photo-credits:
 applaud-link: kind-kubernetes-cluster.json
 date: '2021-05-13'
 draft: false
-summary: 'To Be filled'
+summary: 'Here we explore how to create a kubernetes cluster on your local machine'
 imageUrl: /static/images/2021/kind/kind-kubernetes.png
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

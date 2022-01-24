@@ -8,7 +8,7 @@ photo-credits:
 applaud-link: micronaut-jpa-aws-lambda-function.json
 date: '2021-07-29'
 draft: false
-summary: 'To Be filled'
+summary: 'In this article, we would be looking into some performance statistics when running a Micronaut Application on a JVM runtime versus a Native image on AWS Lambda function'
 imageUrl: /static/images/2021/micronaut-jpa-aws-lambda-function/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'

@@ -8,7 +8,7 @@ photo-credits: https://unsplash.com/photos/bb-ys3oFql4
 applaud-link: spring-boot-api-first-design.json
 date: '2021-03-21'
 draft: false
-summary: 'To Be filled'
+summary: 'Here we take a practical approach to API first design with an example using Open API 3 specification'
 imageUrl: /static/images/2021/blog-api-first/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
