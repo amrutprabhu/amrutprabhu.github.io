@@ -16,6 +16,7 @@ const GAScript = () => {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${siteMetadata.analytics.googleAnalyticsId}', {
+              'anonymize_ip': true, 'allowAdFeatures': false,
               page_path: window.location.pathname,
             });
         `}
