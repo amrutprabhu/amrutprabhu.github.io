@@ -15,7 +15,16 @@ const discussUrl = (slug) =>
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, fileName, date, title, tags, imageUrl, 'photo-credits': photoCredits } = frontMatter
+  const {
+    slug,
+    fileName,
+    date,
+    title,
+    tags,
+    imageUrl,
+    'photo-credits': photoCredits,
+    readingTime,
+  } = frontMatter
   return (
     <SectionContainer>
       <BlogSEO
@@ -56,6 +65,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     <div></div>
                   )}
                 </div>
+                <div className="mt-2 text-gray-500 dark:text-gray-400">{readingTime.text}</div>
               </div>
             </div>
           </header>
@@ -99,7 +109,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
-              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
+              <div className="pt-10 pb-8 prose text-md dark:prose-dark max-w-none">{children}</div>
               <hr />
               {/* <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="nofollow">

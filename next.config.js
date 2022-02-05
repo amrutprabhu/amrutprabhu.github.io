@@ -11,7 +11,7 @@ const ContentSecurityPolicy = `
   media-src 'none';
   connect-src *;
   font-src 'self' fonts.gstatic.com cdn.jsdelivr.net fonts.mailerlite.com;
-  frame-src giscus.app static.mailerlite.com
+  frame-src *.youtube.com giscus.app static.mailerlite.com
 `
 
 const securityHeaders = [
