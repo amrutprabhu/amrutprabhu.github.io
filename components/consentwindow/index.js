@@ -5,18 +5,10 @@ import Analytics from '../analytics'
 export default function ConsentWindow() {
   function renderComponent() {
     if (Cookies.get('cookie-consent') === 'true') {
-      return (
-        <div>
-          <Analytics />
-        </div>
-      )
+      return <Analytics />
     } else {
-      return (
-        <div>
-          <Consent />
-        </div>
-      )
+      return <Consent />
     }
   }
-  return <div>{renderComponent()}</div>
+  return <>{renderComponent()}</>
 }
