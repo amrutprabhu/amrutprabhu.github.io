@@ -1,7 +1,7 @@
 import Script from 'next/script'
 
 import siteMetadata from '@/data/siteMetadata'
-
+// Not used
 const GAScript = () => {
   return (
     <>

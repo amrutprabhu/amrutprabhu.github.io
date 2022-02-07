@@ -1,5 +1,5 @@
 import Script from 'next/script'
-
+// Not used
 const SimpleAnalyticsScript = () => {
   return (
     <>
