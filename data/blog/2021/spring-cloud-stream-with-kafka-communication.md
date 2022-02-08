@@ -197,7 +197,7 @@ spring:
 
 To use custom serializers, we need to set `useNativeEncoding` to true. Then you can set the serializer and the deserializer classes for each of the bindings under the Kafka binder section as shown above.
 
-You can find all supported properties that you provide to the Kafka binder in the `org.springframework.cloud.stream.binder.kafka.properties.KafkaBindingProperties`class.
+You can find all supported properties that you provide to the Kafka binder in the `org.springframework.cloud` `.stream.binder.kafka.properties` `.KafkaBindingProperties` class.
 
 With this let’s start the application with the following command.
 
