@@ -23,12 +23,19 @@ const siteMetadata = require('../data/siteMetadata')
                   .replace('pages/', '/')
                   .replace('data/blog', '')
                   .replace('public/', '/')
+                  .replace('2020/', '')
+                  .replace('2021/', '')
+                  .replace('2022/', '')
+                  .replace('2023/', '')
+                  .replace('2024/', '')
+                  .replace('2025/', '')
+                  .replace('2026/', '')
                   .replace('.js', '')
                   .replace('.mdx', '')
                   .replace('.md', '')
                   .replace('/feed.xml', '')
                 const route = path === '/index' ? '' : path
-                if (page === `pages/404.js` || page === `pages/[...slug].js`) {
+                if (page === `pages/404.js` || page === `pages/[slug].js`) {
                   return
                 }
                 return `
