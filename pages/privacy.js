@@ -12,7 +12,7 @@ export async function getStaticProps() {
 
 export default function Privacy({ privacyPolicyDetails }) {
   const { mdxSource, frontMatter } = privacyPolicyDetails
-  function acceptCookies() {
+  function deleteCookies() {
     //TODO: Fix this
     document.cookie.split(';').forEach((c) => {
       document.cookie = c
@@ -24,7 +24,7 @@ export default function Privacy({ privacyPolicyDetails }) {
   return (
     <div className="mb-10">
       <MDXLayoutRenderer layout={DEFAULT_LAYOUT} mdxSource={mdxSource} frontMatter={frontMatter} />
-      <Link href="javascript:;" className=" bg-rose-500 rounded p-2 " onClick={acceptCookies}>
+      <Link href="javascript:;" className=" bg-rose-500 rounded p-2 " onClick={deleteCookies}>
         Stop Collecting Usage Data
       </Link>
     </div>

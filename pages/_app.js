@@ -7,7 +7,7 @@ import Head from 'next/head'
 import siteMetadata from '@/data/siteMetadata'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
-import ConsentWindow from '@/components/consentwindow'
+import { Consent } from '../components/consentwindow/consent'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
       <LayoutWrapper>
         <Component {...pageProps} />
       </LayoutWrapper>
-      <ConsentWindow />
+      <Consent />
     </ThemeProvider>
   )
 }
