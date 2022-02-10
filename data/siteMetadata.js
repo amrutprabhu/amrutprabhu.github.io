@@ -10,7 +10,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/',
   siteLogo: '/static/images/favicons/icon.png', //TODO
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/twitter-card.jpg',
   email: 'contact@refactorfirst.com',
   github: 'https://github.com/amrutprabhu',
   twitter: 'https://twitter.com/amrutprabhu42',
