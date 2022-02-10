@@ -71,7 +71,6 @@ export function Consent() {
           }
 
           if(readCookie('cookie-notice-dismissed')=='true') {
-            console.log("removed")
             addAnalytics()
             document.getElementById('cookie-notice').style.display = 'none'
           } else {
