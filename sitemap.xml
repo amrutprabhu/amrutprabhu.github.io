@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://refactorfirst.com/about</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/posts</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/privacy</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/projects</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/apache-airflow-2-0-practical-jump-start</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/boost-java-application-performance-with-micronaut</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/defining-event-driven-achitectures-asyncapi</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/kind-kubernetes-cluster</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/micronaut-aws-lambda-application-for-api-gateway</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/micronaut-jpa-aws-lambda-function</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/spring-boot-api-first-design</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/spring-boot-aws-rds-jdbc-secrets-rotation-without-restart</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/spring-boot-boost-jpa-bulk-insert-performance-by-100x</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/springboot-developers-guide-to-micronaut</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/what-are-java-records-in-java-16</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/distributed-tracing-spring-boot-opentracing-jaeger</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/externalize-config-with-spring-cloud-config</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/spring-boot-spring-cache-with-ehcache-3</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/spring-boot-with-kafka-communication</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/spring-cloud-gateway-keycloak-rbac-resource-server</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/spring-cloud-resiliance4j-circuitbreaker-and-retry</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/spring-cloud-stream-with-kafka-communication</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/airflow</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/aws</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/aws-lambda</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/circuit-breaker</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/configuration</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/consumer</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/database</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/distributed-tracing</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/ehcache-3</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/gateway</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/jaeger</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/java</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/jcache</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/jpa</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/kafka</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/keycloak</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/kubernetes</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/micronaut</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/mysql</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/native-image</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/oauth2</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/open-api-3</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/openid-connect</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/producer</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/python</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/rds</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/resource-server</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/retry</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/scheduled</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/secrets-manager</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/spring-boot</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/spring-cache</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/spring-cloud</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/spring-cloud-config-server</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/swagger</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/zipkin</loc>
+  </url>
+</urlset>

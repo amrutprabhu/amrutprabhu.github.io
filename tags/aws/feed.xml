@@ -1,0 +1,44 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>RefactorFirst</title>
+      <link>https://refactorfirst.com</link>
+      <description>Articles and tutorials about Java, Spring Boot, Kubernetes, Docker, Software Development, and Programming. Learn about what is new in programming and look into how to optimize and write clean code.</description>
+      <language>en-us</language>
+      <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
+      <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
+      <lastBuildDate>Thu, 12 Aug 2021 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://refactorfirst.com/tags/aws/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://refactorfirst.com/micronaut-aws-lambda-application-for-api-gateway</guid>
+    <title>Micronaut JPA Application Performance on AWS Lambda</title>
+    <link>https://refactorfirst.com/micronaut-aws-lambda-application-for-api-gateway</link>
+    <description>In this article, we would be looking into how we can deploy a Micronaut application providing GET, PUT and POST which can be called using an API Gateway and check its performance</description>
+    <pubDate>Thu, 12 Aug 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Micronaut</category><category>AWS</category><category>AWS Lambda</category><category>Native Image</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/micronaut-jpa-aws-lambda-function</guid>
+    <title>Micronaut JPA Function Performance on AWS Lambda</title>
+    <link>https://refactorfirst.com/micronaut-jpa-aws-lambda-function</link>
+    <description>In this article, we would be looking into some performance statistics when running a Micronaut Application on a JVM runtime versus a Native image on AWS Lambda function</description>
+    <pubDate>Thu, 29 Jul 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Micronaut</category><category>AWS Lambda</category><category>AWS</category><category>Native Image</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-aws-rds-jdbc-secrets-rotation-without-restart</guid>
+    <title>Spring Boot: Handle AWS RDS JDBC password change or rotation without restarting</title>
+    <link>https://refactorfirst.com/spring-boot-aws-rds-jdbc-secrets-rotation-without-restart</link>
+    <description>Here, we see how we can handle AWS RDS secrets rotation without restarting your Spring Boot application</description>
+    <pubDate>Thu, 05 Nov 2020 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>AWS</category><category>RDS</category><category>Secrets manager</category><category>Spring Boot</category><category>Java</category>
+  </item>
+
+    </channel>
+  </rss>

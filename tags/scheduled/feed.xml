@@ -1,0 +1,34 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>RefactorFirst</title>
+      <link>https://refactorfirst.com</link>
+      <description>Articles and tutorials about Java, Spring Boot, Kubernetes, Docker, Software Development, and Programming. Learn about what is new in programming and look into how to optimize and write clean code.</description>
+      <language>en-us</language>
+      <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
+      <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
+      <lastBuildDate>Thu, 16 Dec 2021 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://refactorfirst.com/tags/scheduled/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://refactorfirst.com/spring-cloud-stream-with-kafka-communication</guid>
+    <title>Spring Cloud Stream With Kafka</title>
+    <link>https://refactorfirst.com/spring-cloud-stream-with-kafka-communication</link>
+    <description>Here, we will be looking into how we can communicate with a Kafka Cluster using Spring Cloud Stream</description>
+    <pubDate>Thu, 16 Dec 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Kafka</category><category>producer</category><category>consumer</category><category>scheduled</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-with-kafka-communication</guid>
+    <title>Spring Boot With Kafka Communication</title>
+    <link>https://refactorfirst.com/spring-boot-with-kafka-communication</link>
+    <description>In this, we will be looking into how we can publish and subscribe to a Kafka topic using Spring Kafka</description>
+    <pubDate>Thu, 09 Dec 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Kafka</category><category>producer</category><category>consumer</category><category>scheduled</category>
+  </item>
+
+    </channel>
+  </rss>

@@ -1,0 +1,214 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>RefactorFirst</title>
+      <link>https://refactorfirst.com</link>
+      <description>Articles and tutorials about Java, Spring Boot, Kubernetes, Docker, Software Development, and Programming. Learn about what is new in programming and look into how to optimize and write clean code.</description>
+      <language>en-us</language>
+      <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
+      <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
+      <lastBuildDate>Thu, 16 Dec 2021 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://refactorfirst.com/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://refactorfirst.com/spring-cloud-stream-with-kafka-communication</guid>
+    <title>Spring Cloud Stream With Kafka</title>
+    <link>https://refactorfirst.com/spring-cloud-stream-with-kafka-communication</link>
+    <description>Here, we will be looking into how we can communicate with a Kafka Cluster using Spring Cloud Stream</description>
+    <pubDate>Thu, 16 Dec 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Kafka</category><category>producer</category><category>consumer</category><category>scheduled</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-with-kafka-communication</guid>
+    <title>Spring Boot With Kafka Communication</title>
+    <link>https://refactorfirst.com/spring-boot-with-kafka-communication</link>
+    <description>In this, we will be looking into how we can publish and subscribe to a Kafka topic using Spring Kafka</description>
+    <pubDate>Thu, 09 Dec 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Kafka</category><category>producer</category><category>consumer</category><category>scheduled</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/spring-cloud-resiliance4j-circuitbreaker-and-retry</guid>
+    <title>Circuit Breaker And Retry with Spring Cloud Resiliance4j</title>
+    <link>https://refactorfirst.com/spring-cloud-resiliance4j-circuitbreaker-and-retry</link>
+    <description>In this article, we will be looking into how we can integrate a circuit breaker and a retry mechanism, to handle failures while making synchronous calls to another service.</description>
+    <pubDate>Thu, 02 Dec 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Spring cloud</category><category>circuit breaker</category><category>retry</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-spring-cache-with-ehcache-3</guid>
+    <title>Integrate Caching with Spring Cache and Ehcache 3</title>
+    <link>https://refactorfirst.com/spring-boot-spring-cache-with-ehcache-3</link>
+    <description>In this article, we will look into some Spring Cache concepts and then integrate Ehcache 3.</description>
+    <pubDate>Tue, 02 Nov 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Spring cache</category><category>ehcache 3</category><category>Jcache</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/externalize-config-with-spring-cloud-config</guid>
+    <title>Externalizing Application Configuration With Spring Cloud Config</title>
+    <link>https://refactorfirst.com/externalize-config-with-spring-cloud-config</link>
+    <description>In this article, we would be looking at how we can externalize application configuration using Spring Cloud Config.</description>
+    <pubDate>Thu, 14 Oct 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Configuration</category><category>Spring cloud config server</category><category>Spring cloud</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/distributed-tracing-spring-boot-opentracing-jaeger</guid>
+    <title>Distributed Tracing With Spring Cloud Jaeger</title>
+    <link>https://refactorfirst.com/distributed-tracing-spring-boot-opentracing-jaeger</link>
+    <description>In this article, We will explore how to implement distributed tracing in a Spring Boot application using Jaeger and visualize the traces using Jaeger UI</description>
+    <pubDate>Thu, 23 Sep 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Jaeger</category><category>Distributed Tracing</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/spring-cloud-gateway-keycloak-rbac-resource-server</guid>
+    <title>Spring Cloud Gateway — Resource Server with Keycloak RBAC</title>
+    <link>https://refactorfirst.com/spring-cloud-gateway-keycloak-rbac-resource-server</link>
+    <description>In this article, we will be exploring how we can integrate a resource server with an API gateway that is integrated with Keycloak and enable role-based access control (RBAC)</description>
+    <pubDate>Thu, 16 Sep 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Gateway</category><category>Keycloak</category><category>Oauth2</category><category>OpenId Connect</category><category>Resource Server</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect</guid>
+    <title>Spring Cloud Gateway Keycloak OAuth2 OIDC Integration</title>
+    <link>https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect</link>
+    <description>In this article, we would be looking at how we can integrate Keycloak with Spring Cloud Gateway using the OAuth2 OpenId Connect (OIDC).</description>
+    <pubDate>Thu, 02 Sep 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Gateway</category><category>Keycloak</category><category>Oauth2</category><category>OpenId Connect</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth</guid>
+    <title>Distributed Tracing with Spring Cloud Sleuth And Zipkin</title>
+    <link>https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth</link>
+    <description>We would learn how we can implement distributed tracing in a Spring Boot Application and understand the key concepts of distributed tracing</description>
+    <pubDate>Thu, 19 Aug 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Distributed Tracing</category><category>Zipkin</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/micronaut-aws-lambda-application-for-api-gateway</guid>
+    <title>Micronaut JPA Application Performance on AWS Lambda</title>
+    <link>https://refactorfirst.com/micronaut-aws-lambda-application-for-api-gateway</link>
+    <description>In this article, we would be looking into how we can deploy a Micronaut application providing GET, PUT and POST which can be called using an API Gateway and check its performance</description>
+    <pubDate>Thu, 12 Aug 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Micronaut</category><category>AWS</category><category>AWS Lambda</category><category>Native Image</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/micronaut-jpa-aws-lambda-function</guid>
+    <title>Micronaut JPA Function Performance on AWS Lambda</title>
+    <link>https://refactorfirst.com/micronaut-jpa-aws-lambda-function</link>
+    <description>In this article, we would be looking into some performance statistics when running a Micronaut Application on a JVM runtime versus a Native image on AWS Lambda function</description>
+    <pubDate>Thu, 29 Jul 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Micronaut</category><category>AWS Lambda</category><category>AWS</category><category>Native Image</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/boost-java-application-performance-with-micronaut</guid>
+    <title>Boost Java Application Performance With Micronaut Native Image</title>
+    <link>https://refactorfirst.com/boost-java-application-performance-with-micronaut</link>
+    <description>In this article, we would see how we can achieve an incredibly quick start-up time for a Java application</description>
+    <pubDate>Thu, 22 Jul 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Micronaut</category><category>Native Image</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/springboot-developers-guide-to-micronaut</guid>
+    <title>A SpringBoot Developer&#39;s Guide To Micronaut</title>
+    <link>https://refactorfirst.com/springboot-developers-guide-to-micronaut</link>
+    <description>Here is a guide for Spring Boot developers to get started with Micronaut framework</description>
+    <pubDate>Wed, 21 Jul 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Micronaut</category><category>Native Image</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/defining-event-driven-achitectures-asyncapi</guid>
+    <title>Defining Event-Driven Architectures - AsyncAPI</title>
+    <link>https://refactorfirst.com/defining-event-driven-achitectures-asyncapi</link>
+    <description>In this article, I am going to be talking about how we can define your event-driven architectures using the AsyncAPI definition</description>
+    <pubDate>Tue, 15 Jun 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/what-are-java-records-in-java-16</guid>
+    <title>What are Java Records</title>
+    <link>https://refactorfirst.com/what-are-java-records-in-java-16</link>
+    <description>Here we look into What are Java Record and its uses</description>
+    <pubDate>Thu, 27 May 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/kind-kubernetes-cluster</guid>
+    <title>Kind - A New Kubernetes Cluster</title>
+    <link>https://refactorfirst.com/kind-kubernetes-cluster</link>
+    <description>Here we explore how to create a kubernetes cluster on your local machine</description>
+    <pubDate>Thu, 13 May 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>kubernetes</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/apache-airflow-2-0-practical-jump-start</guid>
+    <title>Apache Airflow 2.0: A Practical Jump Start</title>
+    <link>https://refactorfirst.com/apache-airflow-2-0-practical-jump-start</link>
+    <description>In this article, I would like to give you a jump-start to understand the basic concepts and create a workflow pipeline from scratch.</description>
+    <pubDate>Wed, 28 Apr 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>python</category><category>airflow</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-api-first-design</guid>
+    <title>Spring Boot: API First Design</title>
+    <link>https://refactorfirst.com/spring-boot-api-first-design</link>
+    <description>Here we take a practical approach to API first design with an example using Open API 3 specification</description>
+    <pubDate>Sun, 21 Mar 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Open API 3</category><category>Swagger</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-boost-jpa-bulk-insert-performance-by-100x</guid>
+    <title>Spring Boot: Boost JPA Bulk Insert Performance by 100x</title>
+    <link>https://refactorfirst.com/spring-boot-boost-jpa-bulk-insert-performance-by-100x</link>
+    <description>Here we see how we can boost the bulk insert performance using JPA to insert large number of records into a database</description>
+    <pubDate>Sun, 24 Jan 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>JPA</category><category>mysql</category><category>database</category><category>Spring Boot</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-aws-rds-jdbc-secrets-rotation-without-restart</guid>
+    <title>Spring Boot: Handle AWS RDS JDBC password change or rotation without restarting</title>
+    <link>https://refactorfirst.com/spring-boot-aws-rds-jdbc-secrets-rotation-without-restart</link>
+    <description>Here, we see how we can handle AWS RDS secrets rotation without restarting your Spring Boot application</description>
+    <pubDate>Thu, 05 Nov 2020 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>AWS</category><category>RDS</category><category>Secrets manager</category><category>Spring Boot</category><category>Java</category>
+  </item>
+
+    </channel>
+  </rss>

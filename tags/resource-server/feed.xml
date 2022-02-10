@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>RefactorFirst</title>
+      <link>https://refactorfirst.com</link>
+      <description>Articles and tutorials about Java, Spring Boot, Kubernetes, Docker, Software Development, and Programming. Learn about what is new in programming and look into how to optimize and write clean code.</description>
+      <language>en-us</language>
+      <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
+      <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
+      <lastBuildDate>Thu, 16 Sep 2021 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://refactorfirst.com/tags/resource-server/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://refactorfirst.com/spring-cloud-gateway-keycloak-rbac-resource-server</guid>
+    <title>Spring Cloud Gateway — Resource Server with Keycloak RBAC</title>
+    <link>https://refactorfirst.com/spring-cloud-gateway-keycloak-rbac-resource-server</link>
+    <description>In this article, we will be exploring how we can integrate a resource server with an API gateway that is integrated with Keycloak and enable role-based access control (RBAC)</description>
+    <pubDate>Thu, 16 Sep 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Gateway</category><category>Keycloak</category><category>Oauth2</category><category>OpenId Connect</category><category>Resource Server</category>
+  </item>
+
+    </channel>
+  </rss>

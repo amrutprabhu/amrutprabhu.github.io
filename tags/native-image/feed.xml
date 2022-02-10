@@ -1,0 +1,54 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>RefactorFirst</title>
+      <link>https://refactorfirst.com</link>
+      <description>Articles and tutorials about Java, Spring Boot, Kubernetes, Docker, Software Development, and Programming. Learn about what is new in programming and look into how to optimize and write clean code.</description>
+      <language>en-us</language>
+      <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
+      <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
+      <lastBuildDate>Thu, 12 Aug 2021 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://refactorfirst.com/tags/native-image/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://refactorfirst.com/micronaut-aws-lambda-application-for-api-gateway</guid>
+    <title>Micronaut JPA Application Performance on AWS Lambda</title>
+    <link>https://refactorfirst.com/micronaut-aws-lambda-application-for-api-gateway</link>
+    <description>In this article, we would be looking into how we can deploy a Micronaut application providing GET, PUT and POST which can be called using an API Gateway and check its performance</description>
+    <pubDate>Thu, 12 Aug 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Micronaut</category><category>AWS</category><category>AWS Lambda</category><category>Native Image</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/micronaut-jpa-aws-lambda-function</guid>
+    <title>Micronaut JPA Function Performance on AWS Lambda</title>
+    <link>https://refactorfirst.com/micronaut-jpa-aws-lambda-function</link>
+    <description>In this article, we would be looking into some performance statistics when running a Micronaut Application on a JVM runtime versus a Native image on AWS Lambda function</description>
+    <pubDate>Thu, 29 Jul 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Micronaut</category><category>AWS Lambda</category><category>AWS</category><category>Native Image</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/boost-java-application-performance-with-micronaut</guid>
+    <title>Boost Java Application Performance With Micronaut Native Image</title>
+    <link>https://refactorfirst.com/boost-java-application-performance-with-micronaut</link>
+    <description>In this article, we would see how we can achieve an incredibly quick start-up time for a Java application</description>
+    <pubDate>Thu, 22 Jul 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Micronaut</category><category>Native Image</category><category>Java</category>
+  </item>
+
+  <item>
+    <guid>https://refactorfirst.com/springboot-developers-guide-to-micronaut</guid>
+    <title>A SpringBoot Developer&#39;s Guide To Micronaut</title>
+    <link>https://refactorfirst.com/springboot-developers-guide-to-micronaut</link>
+    <description>Here is a guide for Spring Boot developers to get started with Micronaut framework</description>
+    <pubDate>Wed, 21 Jul 2021 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Micronaut</category><category>Native Image</category><category>Java</category>
+  </item>
+
+    </channel>
+  </rss>
