@@ -4,7 +4,7 @@ avatar: /static/images/avatar-small.jpg
 avatarBig: /static/images/avatar-big.jpg
 occupation: Staff Engineer
 company: Personal
-email: address@yoursite.com
+email: contact@refactorfirst.com
 twitter: https://twitter.com/amrutprabhu42
 linkedin: https://www.linkedin.com/in/amrut-prabhu-722baa65/
 github: https://github.com/amrutprabhu
