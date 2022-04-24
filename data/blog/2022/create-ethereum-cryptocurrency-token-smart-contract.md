@@ -50,7 +50,7 @@ Once you install the tool, You can create a blank contract using the command
 truffle init
 ```
 
-This will create a structure of folder as below.
+This will create a structure of folders as below.
 
 ![truffle project](/static/images/2022/create-cryptocurrency-token-ethereum/folder-structure.jpg)
 
@@ -64,7 +64,7 @@ So let's install this using the following command.
 npm install @openzeppelin/contracts
 ```
 
-Smart Contracts are written using [Solidity](https://soliditylang.org/) language and has the file extension `.sol`. Let’s extend the [ERC-20](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20) contract to create our own contract called NiceToken.
+Smart Contracts are written using [Solidity](https://soliditylang.org/) language and have the file extension `.sol`. Let’s extend the [ERC-20](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20) contract to create our own contract called NiceToken.
 
 ```javascript
 pragma solidity ^0.8.2;
