@@ -1,5 +1,5 @@
 ---
-title: 'How to Create A Cryptocurrency Token Using Smart Contract for Absolute Beginner'
+title: 'How to Create A Cryptocurrency Token Using Smart Contract'
 author: 'Amrut Prabhu'
 categories: ''
 tags: [Cryptocurrency, Ethereum, smart contract, ganache, solidity]
