@@ -219,7 +219,7 @@ There we go, We achieved the following:-
 - Connected the local blockchain network to MetaMask Crypto Wallet.
 - Visualized the token balance using MetaMask Crypto Wallet for an account.
 
-In my next article, we will look into how we can create our own Blockchain Wallet to send and receive tokens from one account to another using Web3.
+In my next article [here](https://refactorfirst.com/create-cryptocurrency-wallet-with-web3), we will look into how we can create our own Cryptocurrency Wallet to send and receive tokens from one account to another using Web3.
 
 As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/ethereum-blockchain-wallet).
 
