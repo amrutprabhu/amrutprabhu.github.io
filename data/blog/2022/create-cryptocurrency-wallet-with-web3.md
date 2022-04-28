@@ -5,7 +5,7 @@ categories: ''
 tags: [Cryptocurrency, Ethereum, Web3, Smart Contract, Ganache, ReactJS]
 photo-credits: https://unsplash.com/photos/aFdTdWYXFd0
 applaud-link: 2021/todo.json
-date: '2022-04-17'
+date: '2022-04-28'
 draft: false
 summary: 'In this article, we will be creating a React app to view your crypto balance and transfer tokens from your account to another account.'
 imageUrl: /static/images/2022/create-cryptocurrency-wallet-with-web3/cover.jpg
