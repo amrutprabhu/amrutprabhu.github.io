@@ -113,7 +113,15 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/spring-boot-prometheus-grafana</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/airflow</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/apm</loc>
   </url>
 
   <url>
@@ -162,6 +170,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/gateway</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/grafana</loc>
   </url>
 
   <url>
@@ -218,6 +230,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/producer</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/prometheus</loc>
   </url>
 
   <url>

@@ -7,9 +7,19 @@
       <language>en-us</language>
       <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
       <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
-      <lastBuildDate>Thu, 16 Dec 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 16 Jun 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://refactorfirst.com/tags/java/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-prometheus-grafana</guid>
+    <title>Monitoring Spring Boot Application with Prometheus and Grafana</title>
+    <link>https://refactorfirst.com/spring-boot-prometheus-grafana</link>
+    <description> In this article, we will be looking into how we can monitor our Spring Boot application using Grafana. We would be looking into the whole setup and create a simple dashboard to view some metrics.</description>
+    <pubDate>Thu, 16 Jun 2022 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Prometheus</category><category>Grafana</category><category>APM</category>
+  </item>
+
   <item>
     <guid>https://refactorfirst.com/spring-cloud-stream-with-kafka-communication</guid>
     <title>Spring Cloud Stream With Kafka</title>
