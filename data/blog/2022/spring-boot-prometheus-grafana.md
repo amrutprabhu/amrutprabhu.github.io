@@ -6,7 +6,7 @@ tags: [Spring Boot, Java, Prometheus, Grafana, APM]
 image: 2022/spring-boot-prometheus-grafana/cover.jpg
 photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
-date: '2022-06-10'
+date: '2022-06-16'
 draft: false
 summary: ' In this article, we will be looking into how we can monitor our Spring Boot application using Grafana. We would be looking into the whole setup and create a simple dashboard to view some metrics.'
 imageUrl: /static/images/2022/spring-boot-prometheus-grafana/cover.jpg
@@ -30,7 +30,7 @@ Let’s go to [https://start.spring.io](https://start.spring.io) and create a si
 
 - Spring Boot Actuator (Ops)
 - Prometheus (Observability)
-- Spring Web ( Optional: only to create a simple REST controller.)
+- Spring Web (Optional: only to create a simple REST controller.)
 
 Next, we need to expose an actuator endpoint through which Prometheus will collect metrics data in the format that Prometheus understands. For this, we need to add the following properties.
 
@@ -112,8 +112,6 @@ services:
       - ./data/prometheus/config:/etc/prometheus/
     command:
       - '--config.file=/etc/prometheus/prometheus.yaml'
-    ports:
-      - 9090:9090
 ```
 
 Here, we have the config file mounted at the location `/etc/prometheus` and we use the location of the config file as an argument to the command. For simplicity, we are using the host network mode, so that Prometheus can access our application endpoint directly.
@@ -145,9 +143,6 @@ grafana:
     network_mode: host
     container_name: grafana
     restart: unless-stopped
-    user: root
-    ports:
-      - 3000:3000
     links:
       - prometheus:prometheus
     volumes:  - ./data/grafana:/var/lib/grafana
@@ -158,7 +153,7 @@ grafana:
 
 Here also we are making use of the host network mode, to make it easy for us and Grafana to access the Prometheus endpoint.
 
-Next, let's open the URL [http://localhost:3000](http://localhost:3000,) and access Grafana using the username and password as “admin”
+Next, let's open the URL `http://localhost:3000` and access Grafana using the username and password as “admin”
 
 ### Configuring Grafana Data Source
 
