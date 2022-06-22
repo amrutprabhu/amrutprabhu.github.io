@@ -199,4 +199,6 @@ In this article, we saw how we can monitor a Spring Boot application’s perform
 
 You can find the complete code and Dashboard Json on my GitHub repo [here](https://github.com/amrutprabhu/grafana-prometheus).
 
+I keep exploring and learning new things. If you want to know the latest trends and improve your software development skills, then subscribe to my newsletter below and also follow me on [Twitter](https://twitter.com/amrutprabhu42).
+
 Enjoy!!
