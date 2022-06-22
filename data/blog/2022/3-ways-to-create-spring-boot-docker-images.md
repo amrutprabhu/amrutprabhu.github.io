@@ -6,7 +6,7 @@ tags: [Spring Boot, Java, Docker, Maven]
 image: 2022/spring-boot-prometheus-grafana/cover.jpg
 photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
-date: '2022-06-16'
+date: '2022-06-23'
 draft: false
 summary: ' In this article, we would be looking into some of the ways to create docker images for a Spring Boot Application.'
 imageUrl: /static/images/2022/3-ways-to-create-docker-images/cover.jpg
