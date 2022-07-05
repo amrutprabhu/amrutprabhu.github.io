@@ -15,12 +15,6 @@ customUrl: 'auto-generated'
 
 This is a multi-part article on how you can create a Kubernetes Custom Resource Definition (CRD) and then create a Kubernetes controller to handle CRD instance creation requests. In this article, we would be exploring how we can create your own Kubernetes CRD.
 
-## Pre-requisites
-
-- A working Kubernetes cluster. (local or remote)  
-  If you don't have one, you can always run a [K3s](https://k3s.io/) cluster or you can use a Kind Kubernetes cluster. You can read about starting a Kind Kubernetes cluster [here](https://refactorfirst.com/kind-kubernetes-cluster).
-- Basic knowledge of working with “Kubectl” commands to create, get or delete a resource.
-
 ## Understanding How Kubernetes Works with Resources
 
 Before we move on to creating our first CRD and controller, we have to understand some concepts behind how Kubernetes resource management works.
@@ -36,6 +30,12 @@ Once the scheduler finds that a pod has to be created, it then inserts into the 
 Next, Kubelets running on the various worker nodes start calling the API server and check if any pods have to be created on that particular node. Kubelets are nothing but controllers themselves.
 
 So in this article, we will show you how you can create your own Kubernetes CRD, and then create an instance of the CRD.
+
+## Pre-requisites
+
+- A working Kubernetes cluster. (local or remote)  
+  If you don't have one, you can always run a [K3s](https://k3s.io/) cluster or you can use a Kind Kubernetes cluster. You can read about starting a Kind Kubernetes cluster [here](https://refactorfirst.com/kind-kubernetes-cluster).
+- Basic knowledge of working with “Kubectl” commands to create, get or delete a resource.
 
 ## Creating a Kubernetes Custom Resource Definition (CRD)
 
@@ -143,7 +143,7 @@ Now, in the above schema, I have specified only one property i.e `my-own-propert
 
 Let's look at how the CRD is mapped to our CRD instance.
 
-![](https://cdn-images-1.medium.com/max/800/1*-S6YHGlRAXksJQyzdX56hg.jpeg)
+![CRD to CRD instance Mapping](/static/images/2022/create-kubernetes-custom-resource-defintion-crd/crd-to-instance-map.jpg)
 
 As you can see above, the arrows make it simple to understand which property from the CRD maps to the CRD instance. This is how our custom resource definition is mapped to the actual instance YAML file.
 
@@ -157,7 +157,7 @@ In order to use our CRD, We will have to add it to our Kubernetes Cluster. Let�
 kubectl apply -f my-crd.yaml
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*-RnYNLBhE2UjdDsqiqT8hg.png)
+![CRD apply](/static/images/2022/create-kubernetes-custom-resource-defintion-crd/crd-apply.png)
 
 Now, after creating the CRD, we are going to create our first CRD instance. We will use the same instance YAML file from above.
 
@@ -170,13 +170,13 @@ spec:
   my-own-property: 'My first CRD instance'
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*of4gCh8zj8IfVIB4B3Jrrg.png)
+![CRD Instance Apply](/static/images/2022/create-kubernetes-custom-resource-defintion-crd/crd-instance-apply.png)
 
 ## Conclusion
 
 With this, we just created our first Kubernetes CRD and then created our first CRD instance.
 
-So, after creating the instance nothing really happened. Only the instance object was created and stored in the Kubernetes database.
+After creating the instance nothing really happened. Only the instance object was created and stored in the Kubernetes database.
 
 But we want it to do something when we create an instance.
 
@@ -184,6 +184,6 @@ For this, we will need to implement a controller that will handle creating insta
 
 You can find the code to the CRD on GitHub [here](https://github.com/amrutprabhu/kubernetes-custom-resource/tree/main/crd).
 
-So, subscribe to my newsletter at [https://refactorfirst.com](https://refactorfirst.com) and follow me on [Twitter](https://twitter.com/amrutprabhu42) to know when the article is published.
+So, subscribe to my newsletter below and follow me on [Twitter](https://twitter.com/amrutprabhu42) to know when the article is published.
 
 Enjoy!!
