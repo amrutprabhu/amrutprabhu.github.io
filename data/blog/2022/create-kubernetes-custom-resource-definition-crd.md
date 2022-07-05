@@ -172,8 +172,6 @@ spec:
 
 ![CRD Instance Apply](/static/images/2022/create-kubernetes-custom-resource-defintion-crd/crd-instance-apply.png)
 
-## Conclusion
-
 With this, we just created our first Kubernetes CRD and then created our first CRD instance.
 
 After creating the instance nothing really happened. Only the instance object was created and stored in the Kubernetes database.
