@@ -29,12 +29,12 @@ Once the scheduler finds that a pod has to be created, it then inserts into the 
 
 Next, Kubelets running on the various worker nodes start calling the API server and check if any pods have to be created on that particular node. Kubelets are nothing but controllers themselves.
 
-So in this article, we will show you how you can create your own Kubernetes CRD, and then create an instance of the CRD.
+So in this article, we will see how you can create your own Kubernetes CRD, and then create an instance of the CRD.
 
 ## Pre-requisites
 
 - A working Kubernetes cluster. (local or remote)  
-  If you don't have one, you can always run a [K3s](https://k3s.io/) cluster or you can use a Kind Kubernetes cluster. You can read about starting a Kind Kubernetes cluster [here](https://refactorfirst.com/kind-kubernetes-cluster).
+  If you don't have one, you can always run a [K3s](https://k3s.io/) cluster locally or you can use a Kind Kubernetes cluster. You can read about starting a Kind Kubernetes cluster [here](https://refactorfirst.com/kind-kubernetes-cluster).
 - Basic knowledge of working with “Kubectl” commands to create, get or delete a resource.
 
 ## Creating a Kubernetes Custom Resource Definition (CRD)
@@ -73,7 +73,7 @@ spec:
                   type: string
 ```
 
-This is the most minimalist definition to create your own Kubernetes CRD.
+This is the most minimalistic definition to create your own Kubernetes CRD.
 
 To understand this, Let’s break it up into two parts.
 
@@ -180,7 +180,7 @@ But we want it to do something when we create an instance.
 
 For this, we will need to implement a controller that will handle creating instance requests and do something with it. We will explore this in our next article.
 
-You can find the code to the CRD on GitHub [here](https://github.com/amrutprabhu/kubernetes-custom-resource/tree/main/crd).
+You can find CRD yaml files on GitHub [here](https://github.com/amrutprabhu/kubernetes-custom-resource/tree/main/crd).
 
 So, subscribe to my newsletter below and follow me on [Twitter](https://twitter.com/amrutprabhu42) to know when the article is published.
 
