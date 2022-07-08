@@ -1,10 +1,11 @@
-import { Consent } from './consent'
+import Consent from './consent'
 import Cookies from 'js-cookie'
 import Analytics from '../analytics'
-// Not used
-export default function ConsentWindow() {
+
+export default function ConsentWindowDecision() {
   function renderComponent() {
-    if (Cookies.get('cookie-consent') === 'true') {
+    // debugger
+    if (Cookies.get('cookie-notice-dismissed') === 'true') {
       return <Analytics />
     } else {
       return <Consent />
