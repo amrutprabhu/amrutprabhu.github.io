@@ -54,15 +54,18 @@ export default function ConsentWindowDecision() {
           // }
           
           if(readCookie('cookie-notice-dismissed')=='true') {
-            document.getElementById('cookie-notice').style.display = 'none'
+            if(document.getElementById('cookie-notice')){
+              document.getElementById('cookie-notice').style.display = 'none'
+            }
           } else {
-            document.getElementById('cookie-notice').style.display = 'block';
+           document.getElementById('cookie-notice').style.display = 'block';
+           document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+            createCookie('cookie-notice-dismissed','true',31);
+            document.getElementById('cookie-notice').style.display = 'none';
+            location.reload();
+        });
           }
-          document.getElementById('cookie-notice-accept').addEventListener("click",function() {
-              createCookie('cookie-notice-dismissed','true',31);
-              document.getElementById('cookie-notice').style.display = 'none';
-              location.reload();
-          });
+          
           `,
         }}
       />
