@@ -90,19 +90,16 @@ Let’s start with creating the first component which is the shared index inform
 
 ```java
 @Bean
-SharedIndexInformer<V1MyCrd> shareIndexInformer( SharedInformerFactory **sharedInformerFactory**, ApiClient **apiClient**) {
-
-GenericKubernetesApi<V1MyCrd, V1MyCrdList> **api** **=** **new
-**GenericKubernetesApi<>(**V1MyCrd**.**class**,
-**V1MyCrdList**.**class**,
-**"com.amrut.prabhu"**,
-**"v1"**,
-**"my-crds"**,
-apiClient);
-
-**return** **sharedInformerFactory**.sharedIndexInformerFor(api, **V1MyCrd**.**class**, 0);
-
+SharedIndexInformer<V1MyCrd> sharedIndexInformer(SharedInformerFactory sharedInformerFactory, ApiClient apiClient) {
+    GenericKubernetesApi<V1MyCrd, V1MyCrdList> api = new GenericKubernetesApi<>(V1MyCrd.class,
+            V1MyCrdList.class,
+            "com.amrut.prabhu",
+            "v1",
+            "my-crds",
+            apiClient);
+    return sharedInformerFactory.sharedIndexInformerFor(api, V1MyCrd.class, 0);
 }
+
 ```
 
 So here, we create an index informer, which will be having a reference of an APIClient to look for any created instances of the CRD.
