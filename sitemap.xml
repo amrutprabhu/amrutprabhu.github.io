@@ -121,6 +121,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/fix-keycloak-oauth2-oidc-logout-with-spring-cloud-gateway</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/java-spring-boot-kubernetes-controller</loc>
   </url>
 
