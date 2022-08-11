@@ -5,7 +5,7 @@ const siteMetadata = {
   description:
     'Articles and tutorials about Java, Spring Boot, Kubernetes, Docker, Software Development, and Programming. Learn about what is new in programming and look into how to optimize and write clean code.',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'light', // system, dark or light
   siteUrl: 'https://refactorfirst.com',
   siteRepo: 'https://github.com/',
   siteLogo: '/static/images/favicons/icon.png', //TODO
