@@ -29,11 +29,11 @@ With this, Let's create our server application.
 
 ## Creating an Application
 
-let’s go to [https://start.spring.io](https://start.spring.io) and create a spring boot application with the following dependency
+Let’s go to [https://start.spring.io](https://start.spring.io) and create a spring boot application with the following dependency
 
 - Spring Boot Starter Websockets
 
-Now, we would be using an embedded message broker. It will be an in-memory broker providing us with WebSocket capabilities. let’s add certain destinations to the broker. These destinations refer to the paths on which messages will be sent.
+Now, we would be using an embedded message broker. It will be an in-memory broker providing us with WebSocket capabilities. Let’s add certain destinations to the broker. These destinations refer to the paths on which messages will be sent.
 
 ```java
 @Configuration
@@ -82,7 +82,7 @@ public class Controller {
 
 Here we are accepting messages on the `/application` endpoint. This is actually a sub-destination on the application destination we defined earlier which was `/app` . This means the client has to send the message to the destination `/app/application` to reach this handler.
 
-Next, we forward the incoming message to `/all/messages`. Now all clients subscribing to the messages on this destination will get this message.
+Next, we forward the incoming message to `/all/messages`. Now all clients subscribing to the messages on this destination will get the messages intended to be sent to all the clients.
 
 Let’s look at the client code on the HTML page
 
@@ -113,7 +113,7 @@ function sendMessage() {
 
 It simply takes the text value from the text field and sends it to the broker’s application destination.
 
-This is all connected using a simple form as shown below. (change)
+This is all connected using a simple form as shown below.
 
 ![](/static/images/2022/spring-boot-websockets-notifications/simple-send-all-notification.png)
 
@@ -123,15 +123,15 @@ To test this, let’s send a push notification “Notification to all” to all 
 
 Here we have two clients connected and both clients receive the notification instantly.
 
-Now, here we are just displaying what we receive from the WebSocket, But you can customize this as a notification popup or as a notification tag using CSS and Javascript.
+Now, here we are just displaying what we receive from the WebSocket, but you can customize this as a notification popup or as a notification tag using CSS and Javascript.
 
-Now, this was how we can send notifications to all the users. What about sending notifications to a specific user?
+This was how we can send notifications to all the users. What about sending notifications to a specific user?
 
 Let’s look at that.
 
 ## Sending Push Notifications to Specific Users
 
-To receive a notification that is specific to a user, the user needs to be logged in and provide a valid session that identifies the user.
+To send notifications to a specific user, we would need the user id of the recipient. This means the recipient user needs to be logged in and provide a valid session that identifies the user against its user id.
 
 For this, we will integrate Spring Security. So let's add the following dependency.
 
@@ -158,7 +158,7 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
 @Bean
 public InMemoryUserDetailsManager userDetailsService() {
-    UserDetails user = User._withDefaultPasswordEncoder_()
+    UserDetails user = User.withDefaultPasswordEncoder()
             .username("test")
             .password("test")
             .roles("USER")
@@ -194,7 +194,7 @@ public class Controller {
 }
 ```
 
-Now in the `sendToSpecificUser` method, we accept messages sent using `/app/private` with the message and a user name to which the message has to be sent.
+Now in the `sendToSpecificUser` method, we accept messages sent using `/app/private`. The message contains the text to be sent to the recipient and the user id of the recipient.
 
 Now here comes the magic.
 
@@ -247,7 +247,7 @@ Here is a short demonstration of how it all works.
 
 ## Conclusion
 
-We just saw how we can send push notifications using the spring boot application with WebSockets and STOMP protocol. Instead of using the embedded broker, you can connect an external ActiveMQ instance as it supports STOMP protocol.
+We just saw how we can send push notifications using a spring boot application with WebSockets and STOMP protocol. Instead of using the embedded broker, you can connect an external ActiveMQ instance to the application as it supports STOMP protocol. We can then relay the messages to the external ActiveMQ instance via the application.
 
 You can find the entire code on my GitHub repo [here](https://github.com/amrutprabhu/spring-boot-websocket-stomp-push-notification).
 
