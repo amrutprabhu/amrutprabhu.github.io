@@ -133,6 +133,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/spring-boot-websockets-stomp-notifications</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/airflow</loc>
   </url>
 
@@ -229,6 +233,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/tags/message-broker</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/micronaut</loc>
   </url>
 
@@ -258,6 +266,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/prometheus</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/push-notifications</loc>
   </url>
 
   <url>
@@ -313,11 +325,19 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/tags/stomp</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/swagger</loc>
   </url>
 
   <url>
     <loc>https://refactorfirst.com/tags/web3</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/websockets</loc>
   </url>
 
   <url>

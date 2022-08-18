@@ -7,9 +7,19 @@
       <language>en-us</language>
       <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
       <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
-      <lastBuildDate>Thu, 11 Aug 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 18 Aug 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://refactorfirst.com/tags/spring-boot/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-websockets-stomp-notifications</guid>
+    <title>How to Send Push Notification With Spring Boot using Websockets and STOMP</title>
+    <link>https://refactorfirst.com/spring-boot-websockets-stomp-notifications</link>
+    <description> In this article, we look into how we can send push notifications to clients with spring boot using websockets and STOMP protocol using an embedded message broker.</description>
+    <pubDate>Thu, 18 Aug 2022 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>Websockets</category><category>STOMP</category><category>Push Notifications</category><category>Message Broker</category>
+  </item>
+
   <item>
     <guid>https://refactorfirst.com/fix-keycloak-oauth2-oidc-logout-with-spring-cloud-gateway</guid>
     <title>How To Fix Keycloak Oauth2 OIDC Logout With Spring Cloud Gateway</title>
