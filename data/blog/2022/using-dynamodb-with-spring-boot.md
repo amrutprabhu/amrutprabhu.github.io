@@ -73,7 +73,7 @@ Also, we will use Java 11 and not Java 17.
 
 This is because the Spring Data DynamoDB dependency makes use of AWS SDK version 1 and this version does not support Java 17 and onwards.
 
-To use Java 17, we would use Spring Cloud DynamoDB once it's released. I would be writing an article about it soon, so you can subscribe to my newsletter on [https://refactorfirst.com](https://refactorfirst.com) to know when it is out.
+To use Java 17, we would use Spring Cloud DynamoDB once it's released. I would be writing an article about it soon, so you can subscribe to my newsletter below to know when it is out.
 
 Next, we add the following Spring Data DynamoDB dependency which supports Spring Boot versions greater than 2.2.
 
@@ -87,7 +87,7 @@ Next, we add the following Spring Data DynamoDB dependency which supports Spring
 
 You can refer to the library’s GitHub repo [here](https://github.com/boostchicken/spring-data-dynamodb).
 
-## Defining a DyanamoDB Table
+## Defining a DynamoDB Table
 
 Let’s look at the following information that we wish to store.
 
@@ -405,7 +405,7 @@ We can also query the data using only the partition key as shown below.
 
 # Final Notes
 
-We currently communicated with DynamoDB Using a Spring Boot application via the Spring Data DynamoDB library. But there are a few things to keep in mind before using it.
+We currently communicated with DynamoDB using a Spring Boot application via the Spring Data DynamoDB library. But there are a few things to keep in mind before using it.
 
 - Currently, this library has been forked 3 times and only the third one currently supports the latest version of Spring boot.
 - This library uses AWS SDK version 1, which means we can use it only up to Java 16.
