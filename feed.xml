@@ -7,9 +7,19 @@
       <language>en-us</language>
       <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
       <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
-      <lastBuildDate>Thu, 18 Aug 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 01 Sep 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://refactorfirst.com/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://refactorfirst.com/using-dynamodb-with-spring-boot</guid>
+    <title>Using DynamoDB with Spring Boot</title>
+    <link>https://refactorfirst.com/using-dynamodb-with-spring-boot</link>
+    <description> In this article, we will look into how can communicate with AWS DynamoDB using a Spring Boot application and also understand some of the key concepts of DynamoDB.</description>
+    <pubDate>Thu, 01 Sep 2022 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Spring Boot</category><category>Java</category><category>AWS</category><category>DynamoDB</category><category>NoSQL</category>
+  </item>
+
   <item>
     <guid>https://refactorfirst.com/spring-boot-websockets-stomp-notifications</guid>
     <title>How to Send Push Notification With Spring Boot using Websockets and STOMP</title>

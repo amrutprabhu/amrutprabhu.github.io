@@ -137,6 +137,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/using-dynamodb-with-spring-boot</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/airflow</loc>
   </url>
 
@@ -178,6 +182,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/docker</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/dynamodb</loc>
   </url>
 
   <url>
@@ -246,6 +254,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/native-image</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/nosql</loc>
   </url>
 
   <url>
