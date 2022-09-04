@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import ListRecord from '@/components/ListRecord'
-
+import Image from '@/components/Image'
 export default function ListLayout({
   posts,
   title,
@@ -49,22 +49,35 @@ export default function ListLayout({
             </svg>
           </div>
         </div>
-        <ul>
-          {!filteredBlogPosts.length && 'No posts found.'}
-          {displayPosts.map((frontMatter) => {
-            return (
-              <ListRecord
-                key={frontMatter}
-                frontMatter={frontMatter}
-                authorDetails={authorDetails}
-              />
-            )
-          })}
-        </ul>
+        <div className="xl:flex">
+          <div>
+            <ul>
+              {!filteredBlogPosts.length && 'No posts found.'}
+              {displayPosts.map((frontMatter) => {
+                return (
+                  <ListRecord
+                    key={frontMatter}
+                    frontMatter={frontMatter}
+                    authorDetails={authorDetails}
+                  />
+                )
+              })}
+            </ul>
+            {pagination && pagination.totalPages > 1 && !searchValue && (
+              <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
+            )}
+          </div>
+          <div className="xl:mx-4">
+            <Image
+              alt="title"
+              src="/static/images/testing-spring-boot.png"
+              className="object-cover object-center w-96 h-96"
+              width={954}
+              height={1706}
+            />
+          </div>
+        </div>
       </div>
-      {pagination && pagination.totalPages > 1 && !searchValue && (
-        <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
-      )}
     </>
   )
 }
