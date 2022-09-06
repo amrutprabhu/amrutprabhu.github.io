@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import ListRecord from '@/components/ListRecord'
 import Image from '@/components/Image'
+import AdColumn from '@/components/AdColumn'
 export default function ListLayout({
   posts,
   title,
@@ -67,14 +68,8 @@ export default function ListLayout({
               <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
             )}
           </div>
-          <div className="xl:mx-4">
-            <Image
-              alt="title"
-              src="/static/images/testing-spring-boot.png"
-              className="object-cover object-center w-96 h-96"
-              width={954}
-              height={1706}
-            />
+          <div className="xl:ml-4 ">
+            <AdColumn />
           </div>
         </div>
       </div>

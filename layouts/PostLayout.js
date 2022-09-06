@@ -7,6 +7,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import AdColumn from '@/components/AdColumn'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -159,7 +160,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   </div>
                 )}
               </div>
-              <div className="pt-4 xl:pt-8">
+              <div className="pt-4 xl:pt-8 xl:mb-8 mb-4">
                 <Link
                   href="/"
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
@@ -167,6 +168,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   &larr; Back to the articles
                 </Link>
               </div>
+              <AdColumn />
             </footer>
           </div>
         </div>
