@@ -4,12 +4,12 @@ import Link from '@/components/Link'
 function AdColumn() {
   return (
     <div className="border-4 border-teal-500 rounded-lg p-1">
-      <Link href="https://www.google.com">
+      <Link href="https://transactions.sendowl.com/stores/15382/235788">
         <Image
           alt="title"
-          src="/static/images/promotion/testing-spring-boot.png"
+          src="/static/images/promotion/testing-toolbox-600x800.png"
           className="object-cover object-center "
-          width={954}
+          width={1054}
           height={1700}
         />
       </Link>
