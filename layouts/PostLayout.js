@@ -168,7 +168,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   &larr; Back to the articles
                 </Link>
               </div>
-              <AdColumn />
+              <AdColumn
+                imageLink="/static/images/promotion/testing-toolbox-600x800.png"
+                referalLink="https://transactions.sendowl.com/stores/15382/235788"
+              />
             </footer>
           </div>
         </div>

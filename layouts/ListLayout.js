@@ -69,7 +69,10 @@ export default function ListLayout({
             )}
           </div>
           <div className="xl:ml-4 ">
-            <AdColumn />
+            <AdColumn
+              imageLink="/static/images/promotion/testing-toolbox-600x800.png"
+              referalLink="https://transactions.sendowl.com/stores/15382/235788"
+            />
           </div>
         </div>
       </div>
