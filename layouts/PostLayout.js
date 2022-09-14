@@ -169,7 +169,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 </Link>
               </div>
               <AdColumn
-                imageLink="/static/images/promotion/testing-toolbox-600x800.png"
+                width="1054"
+                height="2100"
+                imageLink="/static/images/promotion/testing-spring-boot-applications-masterclass-architecture-524x733.png"
                 referalLink="https://transactions.sendowl.com/stores/15382/235788"
               />
             </footer>

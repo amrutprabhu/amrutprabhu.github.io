@@ -5,148 +5,61 @@ categories: ''
 tags: [Java, Spring Boot, Testing, Course]
 photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
-date: '2022-09-08'
+date: '2022-09-15'
 draft: false
 summary: 'This article is about my thoughts of using the Spring Boot Testing Masterclass course from rieckpil.de'
-imageUrl: /static/images/2022/remote-debugging-java-application/cover.jpg
+imageUrl: /static/images/2022/spring-boot-testing-masterclass/cover.png
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
 ---
 
-## Project Setup
+Java has been one of the oldest and most widely used programming languages. Many of our server-side applications are written using Java and Spring Boot.
 
-Let’s consider we have a Java application that provides some REST endpoints and you want to debug it using your IDE.
+To keep these applications up and running and evolve them reliably without breaking any existing requirements, we need to write “Tests”
 
-Let’s create a simple application in Spring Boot, that provides a simple REST endpoint.
+Now, when we think about writing tests in Java, we sometimes have some concerns.
 
-```java
-@RestController
-public class WebController {
-    @GetMapping("/")
-    public ResponseEntity get(){
-        return ResponseEntity.ok("All Works fine");
-    }
-}
-```
+- Where do we start? Unit tests, integration tests, component tests?
+- Are we writing the tests correctly?
+- Can we rely on the tests we write?
+- Are we using the right testing libraries?
 
-Now, we will create a docker image of this application with maven using Google’s JIB plugin.
+Hence there is always this notion of delivering features without writing tests.
 
-```xml
-<plugin>
-    <groupId>com.google.cloud.tools</groupId>
-    <artifactId>jib-maven-plugin</artifactId>
-    <version>3.2.1</version>
-    <configuration>
-        <from>
-            <image>openjdk:17</image>
-        </from>
-        <to>
-            <image>ghcr.io/amrutprabhu/${project.name}:${project.version}</image>
-        </to>
-    </configuration>
-    <executions>
-        <execution>
-            <phase>verify</phase>
-            <goals>
-                <goal>build</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
-```
+But this does not serve us well when we add new features to our application or make some breaking changes. Even if the tests are written but are not reliable, they serve no value to us.
 
-There are other plugins to dockerize your application and you can explore some of the popular ones in my article [here](https://refactorfirst.com/3-ways-to-create-spring-boot-docker-images).
+There is a famous saying.
 
-Now, when we run `mvn clean verify` , the docker image will be built and pushed to the GitHub repository.
+**_“Unreliable tests are the same as having no tests at all”._**
 
-## Deploying Docker Images on Kubernetes
+We can always search on the internet for resources on how to write good and reliable tests.
 
-Let’s consider you already have a Kubernetes cluster to deploy your application. If not, you can run a local Kubernetes cluster using [https://k3s.io](https://k3s.io/).
+**_But what if we can find it all in one place?_**
 
-We will be using this K3s cluster to deploy our application.
+This is where I would like to introduce you to the “[Testing Spring Boot Application Masterclass](https://transactions.sendowl.com/stores/13745/235788)” by [Philip Riecks](https://twitter.com/rieckpil).
 
-To deploy our application, we are going to create a simple helm chart with a deployment definition as follows.
+<a href="https://transactions.sendowl.com/stores/13745/235788" target="_blank">
+![](/static/images/2022/spring-boot-testing-masterclass/testing-spring-boot-applications-masterclass.png)
+</a>
+This course provides you with a comprehensive guide on how you can start and grow your knowledge on writing effective tests for your Spring Boot application.
 
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: application-deployment
-spec:
-  selector:
-    matchLabels:
-      app: application
-  template:
-    metadata:
-      labels:
-        app: application
-    spec:
-      containers:
-        - image: ghcr.io/amrutprabhu/remote-application:1.0.0-SNAPSHOT
-          imagePullPolicy: Always
-          ports:
-            - name: http
-              containerPort: 8080
-              protocol: TCP
-            - name: debug-port
-              containerPort: 5005
-              protocol: TCP
-          env:
-            - name: JAVA_TOOL_OPTIONS
-              value: '-Xdebug -agentlib:jdwp=transport=dt_socket,address=0.0.0.0:5005,server=y,suspend=n'
-```
+Here are the some of features of this course
 
-The most important thing for us is the environment variable `JAVA_TOOL_OPTIONS` set in the deployment.
+- A step-by-step guide starting from basic to advance features.
+- Real-world code testing, no hello world examples.
+- Understanding clear differences between various testing libraries.
+- The course also gives in-depth knowledge about the various testing options. Such as how he explains how to use `TestEntityManger` during JPA tests.
+- Code walkthrough before testing the code helps to set the context and brings in new knowledge.
+- At the end of each chapter, there is a short review to brush up on the concepts that we learn which are really helpful.
+- Most importantly if you have any questions, you can always reach out to Philip
 
-Since we are using OpenJDK images, the JVM will pick up this environment variable to allow you to attach a debugger to the port `5005` .
+Some of the things I learned from this course are
 
-Now, you can deploy the application using `helm install <location of the helm chart>`
+- Testing asynchronous handlers, such as consuming messages.
+- Creating custom application slices for testing various application slices.
+- End-to-end test with Selenide with the Testcontainers WebDriver module.
 
-Once you deploy the application, you need to port forward the port `5005`to attach our debugger.
-
-```shell
-kubectl port-forward <your pod name> 5005:5005
-```
-
-Similarly, we will port forward port 8080 to call our REST endpoint.
-
-## Attaching Remote Debugger with Intellij
-
-To attach a debugger, go to the run section in the right-hand corner and add a “Remote JVM debug” run configuration.
-
-![ intellij run config](/static/images/2022/remote-debugging-java-application/intellij-run-config.png)
-
-As you can see, the command line argument shown above is the same value we specified as the environment variable in the deployment file.
-
-That is it. You can now run the configuration and the debugger will be attached.
-
-![intellij debugging](/static/images/2022/remote-debugging-java-application/intellij-idea-debug.gif)
-
-## Attaching Remote Debugger with VSCode
-
-To attach a remote debugger using VScode, we need to add a launch configuration as below
-
-```json
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "java",
-      "name": "Remote debugging RemoteApplication", // name for you your configuration
-      "request": "attach",
-      "hostName": "localhost",
-      "projectName": "remote-application", //  your java project
-      "port": "5005" // port to attach to
-    }
-  ]
-}
-```
-
-To add this launch configuration, go to “Run and Debug” on the left bar, then click on the gear icon on the top to open “launch.json”.
-
-Once this is done, start the configuration and the debugger will be attached. Add your breakpoint and send a request on the endpoint for the debugger to pause the execution as shown below.
-
-![vscode debugging](/static/images/2022/remote-debugging-java-application/vscode-debug.gif)
+Go ahead and explore the [course](https://transactions.sendowl.com/stores/13745/235788) to become better at writing tests and advance your career in the world of Java and Spring Boot.
 
 I keep exploring and learning new things. If you want to know the latest trends and improve your software development skills, then subscribe to my newsletter below and also follow me on [Twitter](https://twitter.com/amrutprabhu42).
 
