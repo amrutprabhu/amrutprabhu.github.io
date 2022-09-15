@@ -1,5 +1,5 @@
 ---
-title: 'Spring Boot Testing Masterclass Course Review'
+title: 'Spring Boot Application Testing Masterclass Course Review'
 author: 'Amrut Prabhu'
 categories: ''
 tags: [Java, Spring Boot, Testing, Course]
@@ -7,7 +7,7 @@ photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
 date: '2022-09-15'
 draft: false
-summary: 'This article is about my thoughts on using the Spring Boot Testing Masterclass course from rieckpil.de'
+summary: 'This article is about my thoughts on using the Spring Boot Application Testing Masterclass course from rieckpil.de'
 imageUrl: /static/images/2022/spring-boot-testing-masterclass/cover.png
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
