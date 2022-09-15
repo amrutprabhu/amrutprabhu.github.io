@@ -73,7 +73,7 @@ export default function ListLayout({
               width="900"
               height="2150"
               imageLink="/static/images/promotion/testing-spring-boot-applications-masterclass.png"
-              referalLink="https://transactions.sendowl.com/stores/15382/235788"
+              referalLink="https://transactions.sendowl.com/stores/13745/235788"
             />
           </div>
         </div>
