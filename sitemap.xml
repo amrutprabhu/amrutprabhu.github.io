@@ -141,6 +141,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/springboot-testing-masterclass-course-review</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/using-dynamodb-with-spring-boot</loc>
   </url>
 
@@ -170,6 +174,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/consumer</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/course</loc>
   </url>
 
   <url>
@@ -346,6 +354,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/swagger</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/testing</loc>
   </url>
 
   <url>
