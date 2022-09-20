@@ -13,7 +13,7 @@ actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
 ---
 
-In this article, we will look into how we can fetch database secrets from the AWS Secrets Manager in a Spring Boot application to communicate with a database. Once we do that, we will then start a LocalStack instance to mimic the real AWS Secrets Manager service and make our application load secrets offline without communicating with the real AWS Secrets manager service. Lastly, we will write an integration test using TestContainers.
+In this article, we will look into how we can fetch database secrets from the AWS Secrets Manager in a Spring Boot application to communicate with a database. Once we do that, we will then start a LocalStack instance to mimic the real AWS Secrets Manager service and make our application load secrets offline without communicating with the real AWS Secrets Manager service. Lastly, we will write an integration test using TestContainers.
 
 ## Creating a Spring Boot Application
 
@@ -23,7 +23,7 @@ Let’s go to [https://start.spring.io](https://start.spring.io) and create an a
 - Spring Boot Starter Actuator (only to visualize the loaded properties)
 - Spring Boot Starter Data JPA (for database communication)
 
-Next, we will use the Spring Cloud AWS Secrets Manager dependency to fetch our secrets. Currently, it's not yet released for general availability but we will use the M2 version as of now.
+Next, we will use the Spring Cloud AWS Secrets Manager dependency to fetch our secrets. Currently, it's not yet released for general use but we will use the M2 version as of now.
 
 For this, we will use the Spring Cloud AWS dependency management to take care of our dependency versions.
 
@@ -50,9 +50,9 @@ Next, we will add the following dependency
 </dependency>
 ```
 
-With this, let's create some secrets on the AWS secrets manager
+With this, let's create some secrets on the AWS Secrets Manager
 
-## Creating Secrets on AWS Secrets manager
+## Creating Secrets on AWS Secrets Manager
 
 Let's create a secret using the AWS CLI configured in the system. In case you have not installed it, you can install it from [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) or you can also create the secret using the AWS console UI.
 
@@ -62,7 +62,7 @@ aws secretsmanager create-secret --name /secret/db-credential --secret-string '{
 
 With this, we will have a secret created with two key-value pairs as shown below.
 
-![](https://cdn-images-1.medium.com/max/1600/1*8hVH5upO12WhLlLJvTQAuQ.png)
+![AWS secret](/static/images/2022/spring-boot-aws-secrets-manager/aws-secret.png)
 
 ## Creating JPA Model Class
 
@@ -108,7 +108,7 @@ public class WebController {
 }
 ```
 
-#### AWS Secrets Manager Communication Configuration
+## AWS Secrets Manager Communication Configuration
 
 In the `application.yaml` we will add the following properties.
 
@@ -119,7 +119,7 @@ management:
     web:
       exposure:
         include:
-        - env
+          - env
 
 spring:
   datasource:
@@ -129,15 +129,15 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-
-#  AWS configuration cloud:
+  #  AWS configuration
+  cloud:
     aws:
       secretsmanager:
         region: eu-central-1
 
- credentials:
-        profile:
-          name: personal
+    credentials:
+      profile:
+        name: personal
 ```
 
 To communicate with AWS, we are going to be using the AWS profile credentials mechanism.
@@ -146,25 +146,27 @@ Now, I have AWS credentials configured under the profile called “personal” a
 
 Along with the credentials, we have two placeholder properties called`dbuser` and `dbpassword` which match exactly the keys in the secret we created on Secrets Manager
 
-With this, let’s start the application and the secrets will be fetched and placed in the placeholder `dbuser` and `dbpassword` . These are the same keys in the secret on Secrets Manager.
-
 Finally, we have configured management endpoints to show the application’s environment properties. We will use this endpoint to see what secret values got loaded.
 
-Now when we start the application and hit the actuator endpoint `http://localhost:8080/actuator/env` , we see the properties that are loaded from Secrets Manager.
+With this, let's start the application.
 
-![](https://cdn-images-1.medium.com/max/1600/1*mD6d-cwJs9Q6UpLXoVt-4w.png)
+The application starts up pulling the secrets from Secrets Manager and the values of the `dbuser` and `dbpassword` keys are used to communicate with the database.
 
-Now, let’s make some REST requests to Store and fetch data in our database.
+Now on accessing the actuator endpoint `http://localhost:8080/actuator/env` , we see the properties that are loaded from Secrets Manager.
 
-![](https://cdn-images-1.medium.com/max/1600/1*sx19__214pklTTyO6YHVUA.png)
+![secrets property view](/static/images/2022/spring-boot-aws-secrets-manager/secret-property-view.png)
 
-With this, we were able to pull the secrets from the AWS Secrets manager, view the loaded secrets using actuator endpoints, and then communicate with the database to store and fetch data.
+Now, let’s make some REST requests to store and fetch data from our database.
 
-Now, let's see how we can do the same but with LocalStack.
+![sample post request](/static/images/2022/spring-boot-aws-secrets-manager/sample-post-request.png)
+
+With this, we were able to pull the secrets from the AWS Secrets Manager, view the loaded secrets using actuator endpoints, and communicate with the database to store and fetch data.
+
+Now, let's see how we can do the same with LocalStack.
 
 ## Loading Secrets from LocalStack
 
-To load secrets from LocalStack, we will use the docker version of LocalStack and run it using docker-compose.
+To load secrets from LocalStack, we will use the docker version of LocalStack and run it using a docker-compose file.
 
 ```yaml
 version: '3.8'
@@ -180,7 +182,7 @@ services:
       - ./localstack-script:/docker-entrypoint-initaws.d  - "/var/run/docker.sock:/var/run/docker.sock"
 ```
 
-Here I am mounting a local volume that will contain the init script for creating the secrets in LocalStack. This init script contains the `awslocal` command which is a wrapper around the AWS CLI inside LocalStack. So it's the same command options to create the secret on AWS Secrets Manager but with the command `awslocal` provided by LocalStack.
+Here we are mounting a local volume that contains the init script for creating the secrets in LocalStack. This init script makes use of the `awslocal` command which is a wrapper around the AWS CLI inside LocalStack. We then give it the same command options to create the secret on AWS Secrets Manager but use the command `awslocal` provided by LocalStack.
 
 ```shell
 awslocal secretsmanager create-secret --name /secret/db-credential --secret-string '{"dbuser": "user1", "dbpassword": "password"}'
@@ -210,7 +212,7 @@ Every application that you develop needs to have some tests, so you can evolve y
 
 So let’s write an Integration test that will start the application by pulling secrets from Localstack using Testcontainers and then store and retrieve data from our database. We will also start the database using Testcontainers.
 
-Let’s look at the test setup we need to do.
+Let’s look at the test setup we need.
 
 ```java
 @SpringBootTest
@@ -236,11 +238,11 @@ class ApplicationIT {
 
 Here we start the two testcontainers, LocalStackContainer and MySQLcontainer.
 
-The LocalStackContainer has an instruction to copy an init script to the `docker-entrypoint-initaws.d` folder which will create the secret in LocalStack. It's the same script we had seen above while starting the docker compose
+The LocalStackContainer has an instruction to copy an init script to the `docker-entrypoint-initaws.d` folder which will create the secret in LocalStack. It's the same script we had seen above while starting the docker-compose file.
 
 Next, we have the MySQLContainer with a database name, a user, and a password configured for the database.
 
-Next, let’s initialize the properties with values from TestContainers
+Next, let’s initialize the properties with values from TestContainers.
 
 ```java
 @BeforeAll
@@ -299,8 +301,9 @@ Now, this is just one of the ways that you can test your code.
 
 If you want to learn how you can write good and reliable tests and want to master your skills in writing tests, I would highly recommend the course “[Testing Spring Boot Application Masterclass](https://transactions.sendowl.com/stores/13745/235788)” by [Philip Riecks](https://twitter.com/rieckpil).
 
-![](https://cdn-images-1.medium.com/max/1600/1*llshh_9_Zah-Id7xjzw4A.png)
-
+<a href="https://transactions.sendowl.com/stores/13745/235788" target="_blank">
+![](/static/images/2022/spring-boot-testing-masterclass/testing-spring-boot-applications-masterclass.png)
+</a>
 This course provides you with a comprehensive guide on how you can start and grow your knowledge on writing effective tests for your Spring Boot application.
 
 ## Conclusion
