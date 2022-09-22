@@ -13,7 +13,7 @@ actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
 ---
 
-In this article, we will look into how we can fetch database secrets from the AWS Secrets Manager in a Spring Boot application to communicate with a database. Once we do that, we will then start a LocalStack instance to mimic the real AWS Secrets Manager service and make our application load secrets offline without communicating with the real AWS Secrets Manager service. Lastly, we will write an integration test using TestContainers.
+In this article, we will look into how we can fetch database secrets from the AWS Secrets Manager in a Spring Boot application to communicate with a database. Once we do that, we will then start a LocalStack instance to mimic the real AWS Secrets Manager service and make our application load secrets offline without communicating with the real AWS Secrets Manager service. Lastly, we will write an integration test using Testcontainers.
 
 ## Creating a Spring Boot Application
 
@@ -108,7 +108,7 @@ public class WebController {
 }
 ```
 
-## AWS Secrets Manager Communication Configuration
+## AWS Secrets Manager Configuration
 
 In the `application.yaml` we will add the following properties.
 
@@ -138,15 +138,24 @@ spring:
     credentials:
       profile:
         name: personal
+
+  config:
+    import:
+      - aws-secretsmanager:/secret/db-credential
+      - optional:aws-secretsmanager:/secrets/optional-secret
 ```
 
-To communicate with AWS, we are going to be using the AWS profile credentials mechanism.
+Firstly, we have configured management endpoints to show the application’s environment properties. We will use this endpoint to see what secret values got loaded.
 
-Now, I have AWS credentials configured under the profile called “personal” and we will be using this profile name. There are quite a few ways of communicating with AWS and you can find them [here](https://docs.awspring.io/spring-cloud-aws/docs/3.0.0-SNAPSHOT/reference/html/index.html#credentials).
+Now, we have two placeholder properties called `dbuser` and `dbpassword` which match exactly the keys in the secret we created on Secrets Manager.
 
-Along with the credentials, we have two placeholder properties called`dbuser` and `dbpassword` which match exactly the keys in the secret we created on Secrets Manager
+Next, to communicate with AWS, we are going to be using the AWS profile credentials mechanism.
 
-Finally, we have configured management endpoints to show the application’s environment properties. We will use this endpoint to see what secret values got loaded.
+I have my AWS CLI configured with the AWS credentials under the profile called “personal” and we will be using this profile to communicate with AWS. There are quite a few ways of communicating with AWS and you can find them [here](https://docs.awspring.io/spring-cloud-aws/docs/3.0.0-SNAPSHOT/reference/html/index.html#credentials).
+
+Finally, we specify the secrets we want to fetch from the Secrets Manager under the `spring.config.import` property. To indicate the secrets are needed to be fetched from AWS Secrets Manager, we have to specify `aws-secretsmanager` before the list of secrets to be fetched.
+
+By default, the application needs access to the secrets on startup or the startup would fail. You can always specify an optional label to allow the application to start without failing if the secret does not exist, just as we did for the secret`/secret/optional-secret`.
 
 With this, let's start the application.
 
@@ -175,20 +184,22 @@ services:
   localstack:
     image: localstack/localstack
     ports:
-      - '4566:4566' # LocalStack endpoint environment:
+      - '4566:4566' # LocalStack endpoint
+    environment:
       - DOCKER_HOST=unix:///var/run/docker.sock
       - DEFAULT_REGION=eu-central-1
     volumes:
-      - ./localstack-script:/docker-entrypoint-initaws.d  - "/var/run/docker.sock:/var/run/docker.sock"
+      - ./localstack-script:/docker-entrypoint-initaws.d
+      - /var/run/docker.sock:/var/run/docker.sock
 ```
 
-Here we are mounting a local volume that contains the init script for creating the secrets in LocalStack. This init script makes use of the `awslocal` command which is a wrapper around the AWS CLI inside LocalStack. We then give it the same command options to create the secret on AWS Secrets Manager but use the command `awslocal` provided by LocalStack.
+Here we are mounting a local volume that contains an init script for creating the secrets in LocalStack. This init script makes use of the `awslocal` command which is a wrapper around the AWS CLI inside LocalStack. We then give it the same command options that we used before to create the secret on AWS Secrets Manager but this time we use the command `awslocal` provided by LocalStack.
 
 ```shell
 awslocal secretsmanager create-secret --name /secret/db-credential --secret-string '{"dbuser": "user1", "dbpassword": "password"}'
 ```
 
-Next, we will have to configure the LocalStack URL in our properties file.
+Next, we will have to configure the LocalStack URL in our properties file as shown below.
 
 ```yaml
 Spring:
@@ -236,13 +247,13 @@ class ApplicationIT {
 
 ```
 
-Here we start the two testcontainers, LocalStackContainer and MySQLcontainer.
+Here we start the two Testcontainers, LocalStackContainer and MySQLcontainer.
 
 The LocalStackContainer has an instruction to copy an init script to the `docker-entrypoint-initaws.d` folder which will create the secret in LocalStack. It's the same script we had seen above while starting the docker-compose file.
 
 Next, we have the MySQLContainer with a database name, a user, and a password configured for the database.
 
-Next, let’s initialize the properties with values from TestContainers.
+Next, let’s initialize the properties with values from Testcontainers.
 
 ```java
 @BeforeAll
@@ -261,7 +272,7 @@ static void properties(DynamicPropertyRegistry registry) {
 
 Here, we use the `@DynamicPropertySource` to bind the properties for the database URL and we use `@BeforeAll` , to set the properties for the LocalStackContainer.
 
-**So why are using `@BeforeAll` and not `@DynamicPropertySource` to set the property values for LocalStack?**
+**_So why are using `@BeforeAll` and not `@DynamicPropertySource` to set the property values for LocalStack?_**
 
 This is because `@DynamicPropertySource` does not work with Spring config import. If you set the AWS credentials properties using `@DynamicPropertySource` , they get loaded after the application is initialized and the application does not communicate with LocalStack. You can read about this issue [here](https://github.com/spring-projects/spring-boot/issues/26148).
 
@@ -309,6 +320,8 @@ This course provides you with a comprehensive guide on how you can start and gro
 ## Conclusion
 
 We just saw how we can fetch database credentials from AWS Secrets manager using Spring Cloud AWS Secrets Manager. We then looked at how we can work with LocalStack to fetch secrets and also wrote an integration test using Testcontainers.
+
+The entire code is uploaded to my GitHub repo [here](https://github.com/amrutprabhu/spring-boot-with-secrets-manager).
 
 I keep exploring and learning new things. If you want to know the latest trends and improve your software development skills, then subscribe to my newsletter below and also follow me on [Twitter](https://twitter.com/amrutprabhu42).
 
