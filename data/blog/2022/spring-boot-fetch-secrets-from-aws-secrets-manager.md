@@ -253,7 +253,7 @@ The LocalStackContainer has an instruction to copy an init script to the `docker
 
 Next, we have the MySQLContainer with a database name, a user, and a password configured for the database.
 
-Next, let’s initialize the properties with values from Testcontainers.
+Now let’s initialize the properties with values from Testcontainers.
 
 ```java
 @BeforeAll
@@ -278,7 +278,7 @@ This is because `@DynamicPropertySource` does not work with Spring config import
 
 So the best option, for now, is to set the properties using `System.setProperty` .
 
-Next, we will run the test and check if the application starts up, fetches secret values, and then make REST calls to save and fetch data.
+Finally, we will run the test and check if the application starts up, fetches secret values, and then make REST calls to save and fetch data.
 
 ```java
 @Test
