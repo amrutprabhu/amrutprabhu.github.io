@@ -21,7 +21,7 @@ GraphQL has its own advantages over the REST APIs such as
 
 - Requesting only what is required and not everything.
 - Preventing a cascade of calls to get the required data.
-- The client does not need to choose the REST path to call to fetch different resource data.
+- The client does not need to choose the REST path to fetch different resource data.
 - It helps in reducing the amount of data transmitted.
 
 These are just some of the advantages.
@@ -180,7 +180,7 @@ public List<Address> getAddress(Person person) {
 }
 ```
 
-#### Defining GraphQL Mutation API
+## Defining GraphQL Mutation API
 
 Let’s look at how we can define mutation operations.
 
@@ -271,7 +271,7 @@ GraphiQL internally makes a POST call to the endpoint `/graphql` to sent the que
 ```bash
 curl --location --request POST 'http://localhost:8080/graphql' \
 --header 'Content-Type: application/json' \
---data-raw '{"query":"query get_person{\n    person(id : 1){\n        id\n        name\n    \t\tphone\n    }\n}","variables":{}}'
+--data-raw '{"query":"query get_person{ person(id : 1){ id  name }}"}'
 ```
 
 You can always change this default path using the property `spring.graphql.path`
@@ -417,7 +417,7 @@ public class PersonGraphQlTest {
 }
 ```
 
-Here, I have a simple test, that makes use of mutation to add data and then query it using the query operation.
+Here, we have a simple test, that makes use of mutation to add data and then query it using the query operation.
 
 The document name “person-mutation” and “person-query” are GraphQL files present in the resources directory under the folder `graphql-test`
 
