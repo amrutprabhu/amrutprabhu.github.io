@@ -7,9 +7,19 @@
       <language>en-us</language>
       <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
       <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
-      <lastBuildDate>Thu, 22 Sep 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 29 Sep 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://refactorfirst.com/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-with-graphql</guid>
+    <title>Implementing GraphQL APIs in a Spring Boot Application</title>
+    <link>https://refactorfirst.com/spring-boot-with-graphql</link>
+    <description>In this article, we will look into defining a GraphQL schema, implement APIs and write integration tests.</description>
+    <pubDate>Thu, 29 Sep 2022 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Java</category><category>Spring Boot</category><category>GraphQL</category>
+  </item>
+
   <item>
     <guid>https://refactorfirst.com/spring-boot-fetch-secrets-from-aws-secrets-manager</guid>
     <title>How to Fetch Database Secrets From AWS Secrets Manager in a Spring Boot Application</title>

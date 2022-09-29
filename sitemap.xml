@@ -149,6 +149,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/spring-boot-with-graphql</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/using-dynamodb-with-spring-boot</loc>
   </url>
 
@@ -222,6 +226,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/grafana</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/graphql</loc>
   </url>
 
   <url>
