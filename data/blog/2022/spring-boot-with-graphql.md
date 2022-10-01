@@ -457,6 +457,6 @@ We saw how we can provide GraphQL APIs using a Spring Boot Application. We defin
 
 The entire code is uploaded to my GitHub repo [here](https://github.com/amrutprabhu/spring-boot-with-graphql).
 
-In my next article, we will look into using QueryDSL to provide GraphQL APIs in a Spring Boot application so make sure to follow me on [Twitter](https://twitter.com/amrutprabhu42) and also subscribe to my newsletter at [https://refactorfirst.com](https://refactorfirst.com/)
+I keep exploring and learning new things. If you want to know the latest trends and improve your software development skills, then subscribe to my newsletter below and also follow me on [Twitter](https://twitter.com/amrutprabhu42).
 
 Enjoy!!
