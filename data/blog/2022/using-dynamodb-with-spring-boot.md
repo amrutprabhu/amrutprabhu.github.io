@@ -11,6 +11,7 @@ summary: ' In this article, we will look into how can communicate with AWS Dynam
 imageUrl: /static/images/2022/spring-boot-dynamodb/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
+youtubeLink: https://www.youtube.com/embed/ZHo0UsW_r2U
 ---
 
 # Introduction
