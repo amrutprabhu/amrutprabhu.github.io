@@ -25,6 +25,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
     imageUrl,
     'photo-credits': photoCredits,
     readingTime,
+    youtubeLink,
   } = frontMatter
   return (
     <SectionContainer>
@@ -70,6 +71,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </div>
             </div>
           </header>
+
           <div
             className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
             style={{ gridTemplateRows: 'auto 1fr' }}
@@ -110,7 +112,24 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
-              <div className="pt-10 pb-8 prose text-md dark:prose-dark max-w-none">{children}</div>
+              <div className="pt-10 pb-8 prose text-md dark:prose-dark max-w-none">
+                <div>
+                  {youtubeLink && (
+                    <div className="xl:px-48">
+                      <iframe
+                        className="w-full aspect-video"
+                        src={youtubeLink}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                      <br />
+                    </div>
+                  )}
+                </div>
+                <div>{children}</div>
+              </div>
+
               <hr />
               {/* <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="nofollow">
