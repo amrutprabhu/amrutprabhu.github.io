@@ -182,13 +182,13 @@ spring:
         provider:
           my-keycloak-provider:
             issuer-uri: http://localhost:8080/auth/realms/My-Realm
-  registration:
-    keycloak-spring-gateway-client:
-      provider: my-keycloak-provider
-      client-id: spring-gateway-client
-      client-secret: fc36fd82-7042-4287-aef0-e9f8603abd02
-      authorization-grant-type: authorization_code
-      redirect-uri: '{baseUrl}/login/oauth2/code/keycloak'
+        registration:
+          keycloak-spring-gateway-client:
+            provider: my-keycloak-provider
+            client-id: spring-gateway-client
+            client-secret: fc36fd82-7042-4287-aef0-e9f8603abd02
+            authorization-grant-type: authorization_code
+            redirect-uri: '{baseUrl}/login/oauth2/code/keycloak'
 server:
   port: 9090
 ```
