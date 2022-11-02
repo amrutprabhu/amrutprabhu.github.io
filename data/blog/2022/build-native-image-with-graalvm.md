@@ -26,7 +26,7 @@ There are two ways you can build the native images
 - Using the Cloud Native Buildpacks mechanism which will create a container with a native executable.
 - Using GraalVM Native build tools.
 
-We will be exploring creating the native image using GraalVM Native build tools.
+We will be exploring creating a native image using GraalVM Native build tools.
 
 Before we create a native image, let's understand what a native image is.
 
@@ -42,7 +42,7 @@ To execute the application, all information required to run the application must
 
 During build time, the code is statically analyzed from the “main” method entry point using ahead-of-time processing (AOT). This means any class that is not reachable is not included in the native image. The classpath is fixed and no lazy loading happens at runtime.
 
-Features like reflection, resources, and proxy class information need to be provided to GraalVM during image creation. To do this, special files JSON config files called Hint files are created to tell GraalVM how to deal with it.
+Features like reflection, resources, and proxy class information need to be provided to GraalVM during image creation. To do this, special JSON config files called Hint files are created to tell GraalVM how to deal with it.
 
 **_What advantage does it give us?_**
 
@@ -58,7 +58,7 @@ With this overview, let’s create an application and explore what gets created.
 
 Let’s start by creating a simple application from [https://start.spring.io](https://start.spring.io), which has a REST endpoint and returns a static string.
 
-For this, we will add the Spring Web dependency and we are going to be using Spring Boot version 3.0.0.
+For this, we will add the Spring Web dependency and we will be using Spring Boot version 3.0.0.
 
 Let’s create a simple controller that returns a static string
 
@@ -134,7 +134,7 @@ That's pretty simple, right?
 
 Let's look at what is done behind the scenes to create this build.
 
-In the target folder, we usually would find the compiled classes of our application in the classes directory. But now we have some more classes.
+In the target folder, we would usually find compiled classes of our application in the classes directory. But now we have some more classes.
 
 ![proxy classes](/static/images/2022/build-native-image-with-graalvm/proxy-classes.png)
 
@@ -150,7 +150,7 @@ Finally, after creating all these files and classes, the native image is built u
 
 Let’s now look at its speed of execution.
 
-#### Performance metrics
+## Performance metrics
 
 Let’s start the application by building a normal executable jar with maven build and then find its performance numbers to compare it with the native image.
 
