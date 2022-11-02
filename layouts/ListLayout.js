@@ -50,7 +50,7 @@ export default function ListLayout({
             </svg>
           </div>
         </div>
-        <div className="xl:flex">
+        <div className="xl:flex content-wrapper">
           <div>
             <ul>
               {!filteredBlogPosts.length && 'No posts found.'}
@@ -68,7 +68,7 @@ export default function ListLayout({
               <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
             )}
           </div>
-          <div className="xl:ml-4 ">
+          <div>
             <AdColumn
               width="900"
               height="2150"

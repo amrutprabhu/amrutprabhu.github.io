@@ -19,3 +19,24 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
+
+@media (min-width: 700px) {
+  .content-wrapper > div:last-child {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .content-wrapper {
+    gap: 2rem;
+  }
+
+  .content-wrapper > div:first-child {
+    width: 75%;
+  }
+  .content-wrapper > div:last-child {
+    width: 25%;
+  }
+}
