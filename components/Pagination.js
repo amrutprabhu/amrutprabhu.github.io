@@ -39,7 +39,7 @@ export default function Pagination({ totalPages, currentPage }) {
               href={`/page/${currentPage + 1}`}
               className=" px-10 py-3  leading-4 rounded uppercase text-white bg-teal-500 hover:bg-teal-600 dark:hover:bg-teal-400"
             >
-              <button rel="next">Next ></button>
+              <button rel="next">Next &gt;</button>
             </Link>
           )}
         </div>
