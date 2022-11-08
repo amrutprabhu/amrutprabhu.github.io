@@ -7,19 +7,9 @@
       <language>en-us</language>
       <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
       <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
-      <lastBuildDate>Thu, 22 Sep 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 05 Nov 2020 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://refactorfirst.com/tags/secrets-manager/feed.xml" rel="self" type="application/rss+xml"/>
       
-  <item>
-    <guid>https://refactorfirst.com/spring-boot-fetch-secrets-from-aws-secrets-manager</guid>
-    <title>How to Fetch Database Secrets From AWS Secrets Manager in a Spring Boot Application</title>
-    <link>https://refactorfirst.com/spring-boot-fetch-secrets-from-aws-secrets-manager</link>
-    <description>In this article we will look into how we can fetch secrets from AWS Secrets Manager in a Spring Boot Application.</description>
-    <pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate>
-    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
-    <category>Java</category><category>Spring Boot</category><category>AWS</category><category>Database</category><category>Secrets Manager</category>
-  </item>
-
   <item>
     <guid>https://refactorfirst.com/spring-boot-aws-rds-jdbc-secrets-rotation-without-restart</guid>
     <title>Spring Boot: Handle AWS RDS JDBC password change or rotation without restarting</title>
