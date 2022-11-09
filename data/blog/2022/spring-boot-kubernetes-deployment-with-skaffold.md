@@ -5,10 +5,10 @@ categories: ''
 tags: [Java, Spring Boot, Kubernetes, Docker, Skaffold]
 photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
-date: '2022-10-10'
+date: '2022-11-10'
 draft: false
 summary: 'Here we explore creating and running a Skaffold pipeline for deployment on a Kubernetes Cluster'
-imageUrl: /static/images/2022/spring-boot-with-graphql/cover.jpg
+imageUrl: /static/images/2022/spring-boot-deployment-with-skaffold/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
 ---
