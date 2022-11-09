@@ -1,5 +1,5 @@
 ---
-title: 'Spring Boot Kubernetes Deployment with Helm, JIB, and Skaffold'
+title: 'Deploy Application on Kubernetes with Helm, JIB, and Skaffold'
 author: 'Amrut Prabhu'
 categories: ''
 tags: [Java, Spring Boot, Kubernetes, Docker, Skaffold]
