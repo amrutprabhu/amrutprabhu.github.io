@@ -125,6 +125,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/deploy-application-on-kubernetes-with-skaffold-helm-jib</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/fix-keycloak-oauth2-oidc-logout-with-spring-cloud-gateway</loc>
   </url>
 
@@ -326,6 +330,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/secrets-manager</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/skaffold</loc>
   </url>
 
   <url>
