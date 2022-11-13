@@ -92,7 +92,7 @@ scrape_configs:
     metrics_path: '/actuator/prometheus'
     scrape_interval: 2s
     static_configs:
-      - targets: ['localhost:8000']
+      - targets: ['localhost:8080']
         labels:
           application: 'My Spring Boot Application'
 ```
@@ -138,17 +138,16 @@ We are going to be using Grafana’s docker image and let’s add it to the dock
 
 ```yaml
 grafana:
-    image: grafana/grafana-oss:8.5.2
-    pull_policy: always
-    network_mode: host
-    container_name: grafana
-    restart: unless-stopped
-    links:
-      - prometheus:prometheus
-    volumes:  - ./data/grafana:/var/lib/grafana
-    environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin
-      - GF_SERVER_DOMAIN=localhost
+  image: grafana/grafana-oss:8.5.2
+  pull_policy: always
+  network_mode: host
+  container_name: grafana
+  restart: unless-stopped
+  volumes:
+    - ./data/grafana:/var/lib/grafana
+  environment:
+    - GF_SECURITY_ADMIN_PASSWORD=admin
+    - GF_SERVER_DOMAIN=localhost
 ```
 
 Here also we are making use of the host network mode, to make it easy for us and Grafana to access the Prometheus endpoint.
