@@ -1,5 +1,5 @@
 ---
-title: 'Introducing Network Problems With Toxiproxy'
+title: 'Create Network Problems With Toxiproxy'
 author: 'Amrut Prabhu'
 categories: ''
 tags: [Java, Spring Boot, Toxiproxy, Network]
@@ -7,17 +7,15 @@ photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
 date: '2022-11-17'
 draft: false
-summary: 'Here we look into using Toxiproxy to introduce some network problem with systems'
+summary: 'Here we look into using Toxiproxy to add network problems between systems communicating over the network'
 imageUrl: /static/images/2022/introducing-network-problems-with-toxiproxy/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
 ---
 
-In this article, we will look at how we can introduce problems within connections being made between systems.
-
 ## Introduction
 
-In modern software architecture, systems communicate with each other over the network. No matter if it is synchronous or asynchronous communication, handling and dealing with communication errors can be very difficult. The main reason is that it is not easy to produce these communication problems.
+In modern software architecture, systems communicate with each other over the network. No matter if it is synchronous or asynchronous communication, handling and dealing with communication errors can be very difficult. The main reason is that it is not easy to reproduce these communication problems.
 
 Today we will look at a tool called [Toxiproxy](https://github.com/Shopify/toxiproxy) with which you can simulate a wide variety of network-related problems.
 
