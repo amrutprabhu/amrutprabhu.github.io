@@ -125,6 +125,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/create-network-problems-with-toxiproxy</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/deploy-application-on-kubernetes-with-skaffold-helm-jib</loc>
   </url>
 
@@ -281,6 +285,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/tags/network</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/oauth2</loc>
   </url>
 
@@ -370,6 +378,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/testing</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/toxiproxy</loc>
   </url>
 
   <url>
