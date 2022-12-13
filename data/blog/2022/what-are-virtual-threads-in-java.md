@@ -3,7 +3,7 @@ title: 'What Are Virtual Threads In Java'
 author: 'Amrut Prabhu'
 categories: ''
 tags: [Java, JDK19, Virtual Threads, Multithreading]
-photo-credits:
+photo-credits: https://unsplash.com/photos/NLgqFA9Lg_E
 applaud-link: 2021/spring-boot-stream-kafka.json
 date: '2022-12-15'
 draft: false
