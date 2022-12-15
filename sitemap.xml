@@ -161,6 +161,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/what-are-virtual-threads-in-java</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/airflow</loc>
   </url>
 
@@ -249,6 +253,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/tags/jdk19</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/jpa</loc>
   </url>
 
@@ -274,6 +282,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/micronaut</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/multithreading</loc>
   </url>
 
   <url>
@@ -382,6 +394,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/toxiproxy</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/virtual-threads</loc>
   </url>
 
   <url>
