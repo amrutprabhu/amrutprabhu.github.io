@@ -21,19 +21,19 @@ Platform threads would basically be wrappers around the kernel threads and are u
 
 When a piece of code is running in a thread, the kernel thread is captured during the entire execution of the thread. If another thread wants to execute its code, it needs to capture a kernel thread to do its execution.
 
-This means, if you have more platform threads concurrently running than kernel threads, the performance would degrade as the threads will compete for the kernel-level threads and a lot of the time would be spent either waiting or for thread context switching.
+This means, if you have more platform threads concurrently running than kernel threads, the performance would degrade as the threads would compete for the kernel-level threads and a lot of the time would be spent either waiting or for thread context switching.
 
-Hence for optimal performance, the number of concurrently running threads should be limited to the number of kernel-level threads. These platform-level threads are scheduled by the OS scheduler and scheduling depends on the underlying OS.
+Hence for optimal performance, the number of concurrently running threads should be limited to the number of kernel-level threads. These platform-level threads are scheduled by the OS scheduler and the scheduling algorithm depends on the underlying OS.
 
-Let’s look at what Virtual threads bring into the Java ecosystem.
+Let’s look at what Virtual threads bring to the Java ecosystem.
 
 ## What are Virtual Threads?
 
-Virtual threads are lightweight threads that are not the same as platform threads. They are not expensive to create and must not be pooled. You can create as many threads as you want but avoid reusing them.
+Virtual threads are lightweight threads that are not the same as platform threads. They are not expensive to create and must not be pooled. You can create as many threads as you want and avoid reusing them.
 
 You can compare Virtual threads as Java’s equivalent to Goroutines in Golang. You can start using them by using the `--enable-preview` flag during compilation and running an application.
 
-Virtual threads help to improve throughput when you have a large number of tasks that are not CPU bound. I/O-intensive tasks are the primary ones that benefit from Virtual Threads. These tasks include things such as reading from Queues, Waiting for incoming web requests, Database queries, etc.
+Virtual threads help to improve throughput when you have a large number of tasks that are not CPU bound. I/O-intensive tasks are the primary ones that benefit from Virtual Threads. These tasks include things such as reading from queues, waiting for incoming web requests, database queries, etc.
 
 ## How Virtual Threads Work
 
@@ -43,13 +43,11 @@ For scheduling these threads, the JDK provides a work-stealing `ForkJoinPool` sc
 
 By default, the number of platform-level threads available to the scheduler is equal to the number of kernel-level threads. This can be changed with the system property `jdk.virtualThreadScheduler.maxPoolSize` .
 
-![](https://cdn-images-1.medium.com/max/800/1*oMYpe3FHsbNSs0IDDFQVlw.png)
-
-Let's look at some of the concepts related to Virtual threads.
+![Virtual threads understanding](/static/images/2022/what-are-virtual-threads/virtual-threads.png)
 
 ## Virtual Threads vs Platform Threads
 
-Virtual threads are daemon threads by default and **cannot** be changed by setting `Thread.setDaemon(false)` . They always have a fixed priority and are set to normal priority. As of now, setting the `Thread.setPriority(int)` has no effect but might change in later versions of JDK.
+Virtual threads are daemon threads by default and **cannot** be changed by setting `Thread.setDaemon(false)` . They always have a fixed priority and are set to normal priority. As of now, setting the `Thread.setPriority(int)` has no effect but might change in later versions of the JDK.
 
 Virtual threads do not support the `stop()`, `suspend()`, or `resume()` methods and would throw an exception if invoked.
 
@@ -68,6 +66,7 @@ When it comes to garbage collections, Virtual threads are not [GC roots](https:/
 We just saw some of the concepts of Virtual threads and how they can be useful in increasing the throughput of non-CPU bound tasks. Virtual threads are cheap to create and we don't need to pool them.
 
 We can expect more changes coming up for Virtual threads in the upcoming JDK releases.
+
 I keep exploring and learning new things. If you want to know the latest trends and improve your software development skills, then subscribe to my newsletter below and also follow me on [Twitter](https://twitter.com/amrutprabhu42).
 
 Enjoy!!
