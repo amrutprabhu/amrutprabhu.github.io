@@ -149,6 +149,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/spring-boot-fetch-secrets-from-aws-secrets-manager</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/spring-boot-prometheus-grafana</loc>
   </url>
 
@@ -158,6 +162,10 @@
 
   <url>
     <loc>https://refactorfirst.com/spring-boot-with-graphql</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/using-dynamodb-with-spring-boot</loc>
   </url>
 
   <url>
@@ -210,6 +218,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/docker</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/dynamodb</loc>
   </url>
 
   <url>
@@ -298,6 +310,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/network</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/nosql</loc>
   </url>
 
   <url>
