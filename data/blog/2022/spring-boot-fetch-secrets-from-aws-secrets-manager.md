@@ -2,7 +2,7 @@
 title: 'How to Fetch Database Secrets From AWS Secrets Manager in a Spring Boot Application'
 author: 'Amrut Prabhu'
 categories: ''
-tags: [Java, Spring Boot, AWS, Database, Secrets Manager]
+tags: [Java, Spring Boot, Spring Cloud, AWS, Database, Secrets Manager]
 photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
 date: '2022-09-22'
