@@ -7,6 +7,11 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage }) => {
   return (
     <Head>
       <title>{`${title == siteMetadata.title ? 'Home' : title} | ${siteMetadata.title}`}</title>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7490174059724719"
+        crossOrigin="anonymous"
+      ></script>
       <meta name="robots" content="follow, index" />
       <meta name="description" content={description} />
       <meta property="og:url" content={`${siteMetadata.siteUrl}${router.asPath}`} />
