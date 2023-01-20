@@ -1,25 +1,21 @@
 ---
-title: 'Jump Start A Spring Boot Application With AWS Lambda Snap Start'
+title: 'Kick Start Spring Boot On AWS Lambda with Snap Start'
 author: 'Amrut Prabhu'
 categories: ''
 tags: [Java, Spring Boot, AWS, AWS Lambda, Spring Cloud, Spring Cloud Functions]
 photo-credits: https://unsplash.com/photos/NLgqFA9Lg_E
 applaud-link: 2021/spring-boot-stream-kafka.json
-date: '2023-01-05'
+date: '2023-01-26'
 draft: false
-summary: 'We will look into the concepts of Virtual threads that are provided as a preview feature in JDK 19'
-imageUrl: /static/images/2023/kick-start-spring-boot-on-lambda/snapstart.png
+summary: 'We will look into how we can create an AWS Lambda with Terraform and run a Spring Boot application to view its performance with the Snap Start option enabled'
+imageUrl: /static/images/2023/kick-start-spring-boot-on-lambda/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
 ---
 
-# Kick Start Spring Boot On AWS Lambda with Snap Start
-
-In this article, we will look into how we can create an AWS Lambda and run a Spring Boot application to view its performance with the Snap Start option enabled. We will create the Lambda function with Terraform and use Spring Cloud Functions to handle incoming requests.
-
 ## Introduction
 
-Starting any Java application on AWS lambda incurs a lot of initialization time because the JVM has to start up and then load the application.
+Starting any Java application on AWS lambda incurs a significant amount of initialization time because the JVM has to start up and then load the application.
 
 Now, if you want to use frameworks like SpringBoot which has its own initialization time, then the benefit of the Lambda function for executing quickly is lost. Hence AWS brought in a new feature called Snap Start during reinvent 2022 which will reduce these initialization times to very low numbers.
 
@@ -29,7 +25,7 @@ Today we will create a Lambda function using Terraform, deploy a Spring Boot app
 
 When the Snap Start option is enabled, the published code is started and after initialization, a snapshot of the memory is taken and cached. This snapshot is then loaded for every fresh invocation of the Lambda function thereby eliminating the time during cold initialization.
 
-Now let’s create our Spring boot application to handle the lambda invocation requests.
+Now let’s create our Spring Boot application to handle the lambda invocation requests.
 
 ## Creating Spring Boot Application With Spring Cloud Function
 
@@ -108,15 +104,17 @@ Here we are using the Spring Cloud function’s handler function to handle the i
 
 If you want to create an API Gateway invoking the lambda, you can find the entire code on my GitHub repo [here](https://github.com/amrutprabhu/spring-boot-lambda-snap-start).
 
-With this, Let’s check the performance with the Snap Start option enabled.
+With this, let's look at the cold start of a normal application without the Snap Start option enabled.
+
+![AWS Lambda Normal Execution](/static/images/2023/kick-start-spring-boot-on-lambda/normal.png)
+
+It takes nearly around 4500 ms just for initialization as shown above.
+
+Now let's check the performance with the Snap Start option enabled.
 
 ![AWS Lambda with Snap Start](/static/images/2023/kick-start-spring-boot-on-lambda/snapstart.png)
 
 The restoration time, which replaces now the initialization time takes only around 288 ms during a cold start.
-
-While a cold start of a normal application without the Snap Start option enabled takes nearly around 4500 ms just for initialization as shown below.
-
-![AWS Lambda Normal Execution](/static/images/2023/kick-start-spring-boot-on-lambda/normal.png)
 
 ## Conclusion
 
