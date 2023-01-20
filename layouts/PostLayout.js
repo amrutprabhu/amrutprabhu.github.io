@@ -191,7 +191,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 width="1054"
                 height="2100"
                 imageLink="/static/images/promotion/testing-spring-boot-applications-masterclass-architecture-524x733.png"
-                referalLink="https://transactions.sendowl.com/stores/13745/235788"
+                referalLink="https://www.copecart.com/products/521411d4/p/techapk42"
               />
             </footer>
           </div>

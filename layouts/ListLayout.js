@@ -73,7 +73,7 @@ export default function ListLayout({
               width="900"
               height="2150"
               imageLink="/static/images/promotion/testing-spring-boot-applications-masterclass.png"
-              referalLink="https://transactions.sendowl.com/stores/13745/235788"
+              referalLink="https://www.copecart.com/products/521411d4/p/techapk42"
             />
           </div>
         </div>
