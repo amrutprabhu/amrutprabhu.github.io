@@ -196,26 +196,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   referalLink="https://www.copecart.com/products/521411d4/p/techapk42"
                 />
               </div>
-
-              <div className="bg-cyan-500 hidden xl:block">
-                <ins
-                  className="adsbygoogle"
-                  style={{ display: 'block' }}
-                  data-ad-client="ca-pub-7490174059724719"
-                  data-ad-slot="8862054574"
-                  data-ad-format="auto"
-                  data-full-width-responsive="true"
-                ></ins>
-                <Script
-                  id="add"
-                  strategy="afterInteractive"
-                  dangerouslySetInnerHTML={{
-                    __html: `
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            `,
-                  }}
-                />
-              </div>
             </footer>
           </div>
         </div>
