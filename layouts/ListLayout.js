@@ -3,6 +3,7 @@ import Pagination from '@/components/Pagination'
 import ListRecord from '@/components/ListRecord'
 import Image from '@/components/Image'
 import AdColumn from '@/components/AdColumn'
+import Script from 'next/script'
 export default function ListLayout({
   posts,
   title,
@@ -69,12 +70,35 @@ export default function ListLayout({
             )}
           </div>
           <div>
-            <AdColumn
-              width="900"
-              height="2150"
-              imageLink="/static/images/promotion/testing-spring-boot-applications-masterclass.png"
-              referalLink="https://www.copecart.com/products/521411d4/p/techapk42"
-            />
+            <div>
+              <AdColumn
+                width="900"
+                height="2150"
+                imageLink="/static/images/promotion/testing-spring-boot-applications-masterclass.png"
+                referalLink="https://www.copecart.com/products/521411d4/p/techapk42"
+              />
+            </div>
+
+            <div className="bg-slate-800">
+              <ins
+                className="adsbygoogle"
+                //  className='block'
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-7490174059724719"
+                data-ad-slot="6310228644"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
+              <Script
+                id="add"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            `,
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
