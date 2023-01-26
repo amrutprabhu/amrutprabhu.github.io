@@ -8,6 +8,7 @@ import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import AdColumn from '@/components/AdColumn'
+import Script from 'next/script'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -187,12 +188,34 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   &larr; Back to the articles
                 </Link>
               </div>
-              <AdColumn
-                width="1054"
-                height="2100"
-                imageLink="/static/images/promotion/testing-spring-boot-applications-masterclass-architecture-524x733.png"
-                referalLink="https://www.copecart.com/products/521411d4/p/techapk42"
-              />
+              <div>
+                <AdColumn
+                  width="1054"
+                  height="2100"
+                  imageLink="/static/images/promotion/testing-spring-boot-applications-masterclass-architecture-524x733.png"
+                  referalLink="https://www.copecart.com/products/521411d4/p/techapk42"
+                />
+              </div>
+
+              <div className="bg-cyan-500 hidden xl:block">
+                <ins
+                  className="adsbygoogle"
+                  style={{ display: 'block' }}
+                  data-ad-client="ca-pub-7490174059724719"
+                  data-ad-slot="6310228644"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"
+                ></ins>
+                <Script
+                  id="add"
+                  strategy="afterInteractive"
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            `,
+                  }}
+                />
+              </div>
             </footer>
           </div>
         </div>
