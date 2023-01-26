@@ -81,13 +81,22 @@ export default function ListLayout({
 
             <div className="bg-green-500">
               <ins
-                className="adsbygoogle"
+                className="adsbygoogle1"
                 style={{ display: 'block' }}
                 data-ad-client="ca-pub-7490174059724719"
                 data-ad-slot="1649763058"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
               ></ins>
+              <Script
+                id="add1"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                (adsbygoogle1 = window.adsbygoogle1 || []).push({});
+            `,
+                }}
+              />
             </div>
             <div className="bg-cyan-500 hidden xl:block">
               <ins
