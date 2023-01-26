@@ -17,7 +17,7 @@
     <description>In this article we will look into how we can fetch secrets from AWS Secrets Manager in a Spring Boot Application.</description>
     <pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate>
     <author>contact@refactorfirst.com (Amrut Prabhu)</author>
-    <category>Java</category><category>Spring Boot</category><category>AWS</category><category>Database</category><category>Secrets Manager</category>
+    <category>Java</category><category>Spring Boot</category><category>Spring Cloud</category><category>AWS</category><category>Database</category><category>Secrets Manager</category>
   </item>
 
   <item>

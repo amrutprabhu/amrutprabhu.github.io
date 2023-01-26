@@ -7,9 +7,19 @@
       <language>en-us</language>
       <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
       <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
-      <lastBuildDate>Thu, 12 Aug 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 26 Jan 2023 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://refactorfirst.com/tags/aws-lambda/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://refactorfirst.com/jump-start-spring-boot-applciaiton-with-aws-lambda-snap-start</guid>
+    <title>Kick Start Spring Boot On AWS Lambda with Snap Start</title>
+    <link>https://refactorfirst.com/jump-start-spring-boot-applciaiton-with-aws-lambda-snap-start</link>
+    <description>We will look into how we can create an AWS Lambda with Terraform and run a Spring Boot application to view its performance with the Snap Start option enabled</description>
+    <pubDate>Thu, 26 Jan 2023 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Java</category><category>Spring Boot</category><category>AWS</category><category>AWS Lambda</category><category>Spring Cloud</category><category>Spring Cloud Functions</category>
+  </item>
+
   <item>
     <guid>https://refactorfirst.com/micronaut-aws-lambda-application-for-api-gateway</guid>
     <title>Micronaut JPA Application Performance on AWS Lambda</title>

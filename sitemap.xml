@@ -173,6 +173,12 @@
   </url>
 
   <url>
+    <loc
+      >https://refactorfirst.com/jump-start-spring-boot-applciaiton-with-aws-lambda-snap-start</loc
+    >
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/airflow</loc>
   </url>
 
@@ -394,6 +400,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/spring-cloud-config-server</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/spring-cloud-functions</loc>
   </url>
 
   <url>
