@@ -70,7 +70,7 @@ export default function ListLayout({
             )}
           </div>
           <div>
-            <div>
+            <div className="hidden xl:block">
               <AdColumn
                 width="900"
                 height="2150"
@@ -79,10 +79,19 @@ export default function ListLayout({
               />
             </div>
 
-            <div className="bg-slate-800">
+            <div className="bg-green-500">
               <ins
                 className="adsbygoogle"
-                //  className='block'
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-7490174059724719"
+                data-ad-slot="1649763058"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
+            </div>
+            <div className="bg-cyan-500 hidden xl:block">
+              <ins
+                className="adsbygoogle"
                 style={{ display: 'block' }}
                 data-ad-client="ca-pub-7490174059724719"
                 data-ad-slot="6310228644"
