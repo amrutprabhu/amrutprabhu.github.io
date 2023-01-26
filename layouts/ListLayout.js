@@ -78,7 +78,7 @@ export default function ListLayout({
                 referalLink="https://www.copecart.com/products/521411d4/p/techapk42"
               />
             </div>
-            <div className="bg-cyan-500 hidden xl:block">
+            <div className="hidden xl:block">
               <ins
                 className="adsbygoogle"
                 style={{ display: 'block' }}
@@ -87,6 +87,34 @@ export default function ListLayout({
                 data-ad-format="auto"
                 data-full-width-responsive="true"
               ></ins>
+              <Script
+                id="add1"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                    `,
+                }}
+              />
+            </div>
+            <div className="bg-green-500">
+              <ins
+                className="adsbygoogle"
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-7490174059724719"
+                data-ad-slot="1649763058"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
+              <Script
+                id="add1"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                  `,
+                }}
+              />
             </div>
           </div>
         </div>
