@@ -189,7 +189,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   &larr; Back to the articles
                 </Link>
               </div>
-              <div>
+              <div className="hidden xl:block">
                 <AdColumn
                   width="1054"
                   height="2100"
