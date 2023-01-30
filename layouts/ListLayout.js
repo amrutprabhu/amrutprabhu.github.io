@@ -4,6 +4,7 @@ import ListRecord from '@/components/ListRecord'
 import Image from '@/components/Image'
 import AdColumn from '@/components/AdColumn'
 import Script from 'next/script'
+import AdsSection from '@/components/AdsSection'
 export default function ListLayout({
   posts,
   title,
@@ -78,46 +79,8 @@ export default function ListLayout({
                 referalLink="https://www.copecart.com/products/521411d4/p/techapk42"
               />
             </div>
-            <div key="ad1" className="hidden xl:block">
-              <ins
-                id="add_1"
-                className="adsbygoogle"
-                style={{ display: 'block' }}
-                data-ad-client="ca-pub-7490174059724719"
-                data-ad-slot="6310228644"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              ></ins>
-              <Script
-                id="add1"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                  __html: `
-                      (adsbygoogle = window.adsbygoogle || []).push({});
-                    `,
-                }}
-              />
-            </div>
-            <div key="ad2" className="bg-green-500">
-              <ins
-                id="add_2"
-                className="adsbygoogle"
-                style={{ display: 'block' }}
-                data-ad-client="ca-pub-7490174059724719"
-                data-ad-slot="1649763058"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              ></ins>
-              <Script
-                id="add2"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                  `,
-                }}
-              />
-            </div>
+            <AdsSection id="ad1" slot="6310228644" />
+            <AdsSection id="ad2" slot="1649763058" />
           </div>
         </div>
       </div>
