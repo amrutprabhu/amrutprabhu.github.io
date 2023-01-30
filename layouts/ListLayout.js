@@ -78,8 +78,9 @@ export default function ListLayout({
                 referalLink="https://www.copecart.com/products/521411d4/p/techapk42"
               />
             </div>
-            <div className="hidden xl:block">
+            <div key="ad1" className="hidden xl:block">
               <ins
+                id="add_1"
                 className="adsbygoogle"
                 style={{ display: 'block' }}
                 data-ad-client="ca-pub-7490174059724719"
@@ -97,8 +98,9 @@ export default function ListLayout({
                 }}
               />
             </div>
-            <div className="bg-green-500">
+            <div key="ad2" className="bg-green-500">
               <ins
+                id="add_2"
                 className="adsbygoogle"
                 style={{ display: 'block' }}
                 data-ad-client="ca-pub-7490174059724719"
@@ -107,7 +109,7 @@ export default function ListLayout({
                 data-full-width-responsive="true"
               ></ins>
               <Script
-                id="add1"
+                id="add2"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                   __html: `
