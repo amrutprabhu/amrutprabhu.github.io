@@ -2,9 +2,11 @@ import React, { useEffect } from 'react'
 
 function AdsSection({ id, slot }) {
   useEffect(() => {
-    if (window.adsbygoogle) {
-      window.adsbygoogle.push({})
+    if (!window.adsbygoogle) {
+      return
     }
+
+    window.adsbygoogle.push({})
   }, [])
 
   return (
