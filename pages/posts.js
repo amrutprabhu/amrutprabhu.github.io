@@ -9,6 +9,7 @@ export async function getStaticProps() {
 }
 
 export default function posts({ posts }) {
+  var yearheader = ''
   return (
     <>
       <PageSEO
@@ -26,6 +27,17 @@ export default function posts({ posts }) {
           const { slug, date, title } = frontMatter
           return (
             <>
+              {/* Year header */}
+              {yearheader != new Date(frontMatter.date).getFullYear() && (
+                <>
+                  <div className="mt-5 p-2">
+                    <h1 className="font-extrabold text-xl">
+                      {(yearheader = new Date(frontMatter.date).getFullYear())}
+                    </h1>
+                  </div>
+                  <hr />
+                </>
+              )}
               <div className="mt-3">
                 <Link href={`/${slug}`}>
                   <div className="grid grid-cols-8 hover:bg-teal-500 hover:dark:bg-slate-500 rounded p-4">
