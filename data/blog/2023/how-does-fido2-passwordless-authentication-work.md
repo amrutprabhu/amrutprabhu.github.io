@@ -38,7 +38,7 @@ With FIDO2 you can combine hardware-based authentication with an additional fact
 
 Let's look at the interaction between the client and the server during registration
 
-![](/static/images/2023/fido2-authentication-with-keycloak/FIDO2.png)
+![FIDO2 Authentication registration](/static/images/2023/fido2-authentication-with-keycloak/FIDO2.png)
 
 As you can see in the diagram, the client initiates a registration process with the server which returns a challenge JWT. The WebAuthn APIs implemented in the browser find the available authenticators and asks the user to select an authenticator. This could be your phone or the laptop itself.
 
@@ -48,7 +48,7 @@ The server then validates the signature using the received public key and stores
 
 Now let's look at how the authentication flow works.
 
-![](/static/images/2023/fido2-authentication-with-keycloak/FIDO2-authentication.png)
+![FIDO2 Authentication mechanism](/static/images/2023/fido2-authentication-with-keycloak/FIDO2-authentication.png)
 
 When the user wants to authenticate, the client initiates the login, and the server now sends a challenge JWT.
 
@@ -60,9 +60,15 @@ Using this private key, it now signs the challenge JWT and sends the signature t
 
 On the server side, the server finds the appropriate public key of the user which was provided during registration, and verifies the signature. If the signature is valid, it allows the login to be successful.
 
-In my next article, we will look into how we can set up this passwordless authentication using Keycloak.
+<b> Next...</b>
 
-You can also read about implementing Keycloak OAuth2 OIDC Integration in my article [here](https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect).
+We will look into how we can set up FIDO2 passwordless authentication using Keycloak in my next article.
+
+If you’re looking for more articles to expand your knowledge of software development, here are three additional recommendations:
+
+- [Spring Boot: AWS RDS JDBC password rotation without restarting](https://refactorfirst.com/spring-boot-aws-rds-jdbc-secrets-rotation-without-restart).
+- [Spring Cloud Stream With Kafka](https://refactorfirst.com/spring-cloud-stream-with-kafka-communication).
+- [Caching with Spring Cache and Ehcache 3](https://refactorfirst.com/spring-boot-spring-cache-with-ehcache-3).
 
 I keep exploring and learning new things. If you want to know the latest trends and improve your software development skills, then subscribe to my newsletter below and also follow me on [Twitter](https://twitter.com/amrutprabhu42).
 
