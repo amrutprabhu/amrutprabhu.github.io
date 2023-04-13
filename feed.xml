@@ -7,9 +7,19 @@
       <language>en-us</language>
       <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
       <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
-      <lastBuildDate>Thu, 26 Jan 2023 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 13 Apr 2023 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://refactorfirst.com/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://refactorfirst.com/how-does-fido2-passwordless-authentication-work</guid>
+    <title>FIDO2 Passwordless Authentication With Keycloack - Part 1</title>
+    <link>https://refactorfirst.com/how-does-fido2-passwordless-authentication-work</link>
+    <description>In this article we will look into understaing how FIDO2 passwordless authentication works</description>
+    <pubDate>Thu, 13 Apr 2023 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Keycloak</category><category>Passwordless</category><category>Authentication</category><category>FIDO2</category>
+  </item>
+
   <item>
     <guid>https://refactorfirst.com/kick-start-spring-boot-application-with-aws-lambda-snap-start</guid>
     <title>Kick Start Spring Boot On AWS Lambda with Snap Start</title>

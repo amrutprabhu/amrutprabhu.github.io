@@ -173,6 +173,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/how-does-fido2-passwordless-authentication-work</loc>
+  </url>
+
+  <url>
     <loc
       >https://refactorfirst.com/kick-start-spring-boot-application-with-aws-lambda-snap-start</loc
     >
@@ -184,6 +188,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/apm</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/authentication</loc>
   </url>
 
   <url>
@@ -236,6 +244,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/ethereum</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/fido2</loc>
   </url>
 
   <url>
@@ -332,6 +344,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/openid-connect</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/passwordless</loc>
   </url>
 
   <url>
