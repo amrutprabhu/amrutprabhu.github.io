@@ -14,7 +14,7 @@
     <guid>https://refactorfirst.com/how-does-fido2-passwordless-authentication-work</guid>
     <title>FIDO2 Passwordless Authentication With Keycloak - Part 1</title>
     <link>https://refactorfirst.com/how-does-fido2-passwordless-authentication-work</link>
-    <description>In this article we will look into understaing how FIDO2 passwordless authentication works</description>
+    <description>In this article we will look into understanding how FIDO2 passwordless authentication works</description>
     <pubDate>Thu, 13 Apr 2023 00:00:00 GMT</pubDate>
     <author>contact@refactorfirst.com (Amrut Prabhu)</author>
     <category>Keycloak</category><category>Passwordless</category><category>Authentication</category><category>FIDO2</category>
