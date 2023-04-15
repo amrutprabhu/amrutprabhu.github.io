@@ -18,7 +18,7 @@ This article is the second part of understating what is a FIDO2 passwordless aut
 
 You can read all about FIDO2 authentication and how it works in my first article “FIDO2 Passwordless Authentication With Keycloack — Part 1”.
 
-Let's look at how we can implement FIDO2 passwordless authentication with Keycloak.
+Let's dive into looking at how we can implement FIDO2 passwordless authentication with Keycloak.
 
 **TL;DR:** If you want to start using the Keycloak config with FIDO2 passwordless authentication directly, you can refer to it from my GitHub repo [here](https://github.com/amrutprabhu/fido2-keycloak-authentication).
 
@@ -41,7 +41,7 @@ services:
       - KEYCLOAK_ADMIN_PASSWORD=admin
 ```
 
-On starting the Keycloak instance and logging into the admin console using the admin/admin credentials, we will create a new realm called FIDO2.
+On starting the Keycloak instance and logging into the admin console using the "admin/admin" credentials, we will create a new realm called FIDO2.
 
 Once you create the realm, navigate to the “Authentication” section which is on the left side panel.
 
@@ -83,7 +83,7 @@ For this, click on the bindings tab, and for the “Browser Flow” option selec
 
 Next, we will set this as the default action.
 
-For this, click on the “Required Actions” tab, then click on the “Register” button, select “WebAuthn Register Passwordless” and mark this as the default action as shown below.
+For this, click on the “Required Actions” tab, then click on the “Register” button on the right, select “WebAuthn Register Passwordless” and mark this as the default action as shown below.
 
 ![Keycloak FIDO2 Authentication required](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part5.jpg)
 
@@ -97,17 +97,17 @@ For this let’s go to the client section and create a simple client named “pa
 
 ![Keycloak Client](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part6.jpg)
 
-This URL will help us to use the client in the browser to perform registration and login without creating a client application from scratch to test the entire authentication flow.
+This Keycloak URL will help us to use the client in the browser to perform registration and login without creating a client application from scratch to test the entire authentication flow.
 
-Lastly, we need to enable user registrations.
+With all of this done, we will now enable user registrations..
 
-For this, click in the “Realm settings” section and select the login tab. Here enable the “User Registration” option.
+For this, click on the “Realm settings” section and select the login tab. Here enable the “User Registration” option.
 
 ![Keycloak User Registration](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part7.jpg)
 
-That is all you need to now start using the Keycloak client which now has the passwordless authentication mechanism configured at the realm level.
+That is all you need to start using the Keycloak client which now has the passwordless authentication mechanism configured at the realm level.
 
-Now, let's test this.
+Let's test this.
 
 ## Testing the Passwordless Authentication.
 
@@ -123,9 +123,9 @@ After saving this, you will get two options as below.
 
 Now, let’s click on the “Sign in” button.
 
-Once we click on it, we will be directed to the login screen.
+Once we click on it, we will be directed to the login screen. But we do not have any users registered.
 
-But we do not have any users registered. So let’s register one by clicking on the “Register” link on the login screen.
+So let’s register one by clicking on the “Register” link on the login screen.
 
 ![Keycloak user registeration](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part10.jpg)
 
@@ -155,7 +155,7 @@ Now let’s try logging in.
 
 ## Login in with Passwordless Authentication
 
-Once you click the “sign-in” from the Keycloak URL, you will be presented with a login form as shown below
+Once you click the “sign-in” button from the Keycloak URL, you will be presented with a login form as shown below
 
 ![FIDO2 login](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part15.jpg)
 
@@ -167,9 +167,9 @@ Once you verify your identity with your fingerprint or laptop password, you will
 
 You can view a live demo of the entire setup in the Youtube video above.
 
-You can read quite some interesting articles to increase your knowledge of software development.
+**Next...**
 
-I would recommend reading the following articles.
+If you're a software developer looking to expand your knowledge and skills, I would highly recommend these three articles:
 
 - [Keycloak OAuth2 OIDC Integration](https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect)
 - [Kick Start Spring Boot On AWS Lambda](https://refactorfirst.com/kick-start-spring-boot-application-with-aws-lambda-snap-start)
