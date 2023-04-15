@@ -1,14 +1,14 @@
 ---
-title: 'FIDO2 Passwordless Authentication With Keycloack - Part 2'
+title: 'FIDO2 Passwordless Authentication With Keycloak - Part 2'
 author: 'Amrut Prabhu'
 categories: ''
 tags: [Keycloak, Authentication, Passwordless, FIDO2]
 photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
-date: '2023-04-19'
+date: '2023-04-20'
 draft: false
 summary: 'In this article, we will explore how we can implement FIDO2 passwordless authentication using Keycloak.'
-imageUrl: /static/images/2023/fido2-authentication-with-keycloak/cover.jpg
+imageUrl: /static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
 youtubeLink: https://www.youtube.com/embed/VAP4mc6R1Do
@@ -16,13 +16,13 @@ youtubeLink: https://www.youtube.com/embed/VAP4mc6R1Do
 
 This article is the second part of understating what is a FIDO2 passwordless authentication and how it works.
 
-You can read all about FIDO2 authentication and how it works in my first article “FIDO2 Passwordless Authentication With Keycloack — Part 1”.
+You can read all about FIDO2 authentication and how it works in my first article “FIDO2 Passwordless Authentication With Keycloak — Part 1”.
 
 Let's dive into looking at how we can implement FIDO2 passwordless authentication with Keycloak.
 
 **TL;DR:** If you want to start using the Keycloak config with FIDO2 passwordless authentication directly, you can refer to it from my GitHub repo [here](https://github.com/amrutprabhu/fido2-keycloak-authentication).
 
-## Set Up FIDO2 Authentication in Keycloack
+## Set Up FIDO2 Authentication in Keycloak
 
 For this, we will start an instance of Keycloak using docker-compose.
 
@@ -45,7 +45,7 @@ On starting the Keycloak instance and logging into the admin console using the "
 
 Once you create the realm, navigate to the “Authentication” section which is on the left side panel.
 
-![Keycloak Authentication Flow](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part1.jpg)
+![Keycloak Authentication Flow](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part1.jpg)
 
 As you can see in the Flows tab, we have the “Browser” flow.
 
@@ -55,7 +55,7 @@ Once you do that, give it a new name called “FIDO2 Flow”.
 
 Next, delete the “Forms” row using the “Actions” link on the right-hand side.
 
-![Keycloak FIDO2 Authentication](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part2.jpg)
+![Keycloak FIDO2 Authentication](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part2.jpg)
 
 Now, let's add a new flow.
 
@@ -71,7 +71,7 @@ In the same manner, we will add the next execution i.e the “WebAuthn Passwordl
 
 Once you add this, mark both executions as required as shown in the image below.
 
-![Keycloak FIDO2 Authentication](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part3.jpg)
+![Keycloak FIDO2 Authentication](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part3.jpg)
 
 With this, we set up the authentication flow to include first the username form and then the WebAuthn passwordless authenticator.
 
@@ -79,13 +79,13 @@ Now let’s bind this new flow we just created as the browser flow.
 
 For this, click on the bindings tab, and for the “Browser Flow” option select the “FIDO2 flow” that we previously created.
 
-![Keycloak FIDO2 Authentication Binding](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part4.jpg)
+![Keycloak FIDO2 Authentication Binding](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part4.jpg)
 
 Next, we will set this as the default action.
 
 For this, click on the “Required Actions” tab, then click on the “Register” button on the right, select “WebAuthn Register Passwordless” and mark this as the default action as shown below.
 
-![Keycloak FIDO2 Authentication required](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part5.jpg)
+![Keycloak FIDO2 Authentication required](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part5.jpg)
 
 With all of this, we just configured a new authentication mechanism to allow passwordless authentication.
 
@@ -95,7 +95,7 @@ Next, we will now create a client to test this passwordless authentication.
 
 For this let’s go to the client section and create a simple client named “passwordless-client” and give it the URL [https://www.keycloak.org/app/](https://www.keycloak.org/app/)
 
-![Keycloak Client](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part6.jpg)
+![Keycloak Client](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part6.jpg)
 
 This Keycloak URL will help us to use the client in the browser to perform registration and login without creating a client application from scratch to test the entire authentication flow.
 
@@ -103,7 +103,7 @@ With all of this done, we will now enable user registrations..
 
 For this, click on the “Realm settings” section and select the login tab. Here enable the “User Registration” option.
 
-![Keycloak User Registration](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part7.jpg)
+![Keycloak User Registration](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part7.jpg)
 
 That is all you need to start using the Keycloak client which now has the passwordless authentication mechanism configured at the realm level.
 
@@ -115,11 +115,11 @@ For this let’s navigate to the URL [https://www.keycloak.org/app/](https://www
 
 Here we will enter the details of our Keycloak instance URL, the client id, and the realm name.
 
-![Keycloak Login](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part8.jpg)
+![Keycloak Login](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part8.jpg)
 
 After saving this, you will get two options as below.
 
-![Keycloak login](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part9.jpg)
+![Keycloak login](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part9.jpg)
 
 Now, let’s click on the “Sign in” button.
 
@@ -127,25 +127,25 @@ Once we click on it, we will be directed to the login screen. But we do not have
 
 So let’s register one by clicking on the “Register” link on the login screen.
 
-![Keycloak user registeration](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part10.jpg)
+![Keycloak user registeration](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part10.jpg)
 
 Once we register, it will ask you to set up your security key registration as shown below.
 
-![Keycloak security key registration](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part11.jpg)
+![Keycloak security key registration](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part11.jpg)
 
 On clicking register, it will show you the available authenticators.
 
-![Keycloak FIDO2 Authenticator](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part12.jpg)
+![Keycloak FIDO2 Authenticator](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part12.jpg)
 
 You can either select the default authenticator (i.e your laptop itself) or you can try another way and select a different authenticator device( e.g your mobile phone).
 
 In this case, we will use the laptop itself and click continue.
 
-![Fingerprint verification](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part13.jpg)
+![Fingerprint verification](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part13.jpg)
 
 Once you authenticate with your fingerprint or password of your laptop, you will be asked to give the authenticator a name.
 
-![Keycloak Authenticator name](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part14.jpg)
+![Keycloak Authenticator name](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part14.jpg)
 
 Let’s give it the name “My Laptop”.
 
@@ -157,11 +157,11 @@ Now let’s try logging in.
 
 Once you click the “sign-in” button from the Keycloak URL, you will be presented with a login form as shown below
 
-![FIDO2 login](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part15.jpg)
+![FIDO2 login](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part15.jpg)
 
 Enter the username and click “Sign In”. You should be prompted to select the authenticator.
 
-![FIDO2 Passwordless Login](/static/images/2023/fido2-authentication-with-keycloak/fido2-passwordless-authentication-part16.jpg)
+![FIDO2 Passwordless Login](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part16.jpg)
 
 Once you verify your identity with your fingerprint or laptop password, you will be logged in.
 
