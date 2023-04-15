@@ -7,7 +7,7 @@ photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
 date: '2023-04-13'
 draft: false
-summary: 'In this article we will look into understaing how FIDO2 passwordless authentication works'
+summary: 'In this article we will look into understanding how FIDO2 passwordless authentication works'
 imageUrl: /static/images/2023/fido2-authentication-with-keycloak/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
