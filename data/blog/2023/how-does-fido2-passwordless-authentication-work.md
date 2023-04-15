@@ -1,5 +1,5 @@
 ---
-title: 'FIDO2 Passwordless Authentication With Keycloack - Part 1'
+title: 'FIDO2 Passwordless Authentication With Keycloak - Part 1'
 author: 'Amrut Prabhu'
 categories: ''
 tags: [Keycloak, Passwordless, Authentication, FIDO2]
@@ -15,7 +15,7 @@ customUrl: 'auto-generated'
 
 This is a two-part article on understanding and implementing FIDO2 passwordless authentication with Keycloak
 
-In this article, we will be exploring how passwordless authentication works between the client and the server. In my next article “FIDO2 Passwordless Authentication With Keycloack — Part 2”, we will explore how we can implement it in Keycloak.
+In this article, we will be exploring how passwordless authentication works between the client and the server. In my next article “FIDO2 Passwordless Authentication With Keycloak — Part 2”, we will explore how we can implement it in Keycloak.
 
 ## Introduction
 
