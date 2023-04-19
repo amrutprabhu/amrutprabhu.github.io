@@ -62,7 +62,7 @@ On the server side, the server finds the appropriate public key of the user whic
 
 <b> Next...</b>
 
-We will look into how we can set up FIDO2 passwordless authentication using Keycloak in my next article.
+In my next article, We will look into how we can [set up FIDO2 passwordless authentication using Keycloak](https://refactorfirst.com/how-does-fido2-passwordless-authentication-work) .
 
 If you’re looking for more articles to expand your knowledge of software development, here are three additional recommendations:
 
