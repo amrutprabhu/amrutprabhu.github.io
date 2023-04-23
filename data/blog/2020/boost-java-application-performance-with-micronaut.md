@@ -26,7 +26,7 @@ With applications becoming cloud-native, we want quick start-up time and better 
 
 Micronaut is a framework that provides the above features, including the advantage of faster start-up time and lesser memory footprint by making use of Ahead Of Time (AOT) compilation.
 
-You can read my previous article on “[A Spring Boot developer’s guide to Micronaut](/springboot-developers-guide-to-micronaut.html), wherein I explain the basic concepts of Micronaut and also create a Micronaut CRUD application example.
+You can read my previous article on “[A Spring Boot developer’s guide to Micronaut](https://refactorfirst.com/springboot-developers-guide-to-micronaut), wherein I explain the basic concepts of Micronaut and also create a Micronaut CRUD application example.
 
 In this article, we would be talking about how we can boost the start-up performance using the Micronaut framework for the same example application from the previous article.
 
@@ -66,4 +66,4 @@ This is a huge performance boost in start-up and response time compared to the a
 
 You can try this out by yourself, I have uploaded the code to [GitHub](https://github.com/amrutprabhu/micronaut-workout/tree/master/MicronautApp).
 
-In my next article, I would be talking about an application's performance with Micronaut on AWS Lambda. You can read about it here ["Micronaut JPA Function Performance on AWS Lambda"](https://refactorfirst.com/micronaut-jpa-aws-lambda-function.html).
+In my next article, I would be talking about an application's performance with Micronaut on AWS Lambda. You can read about it here ["Micronaut JPA Function Performance on AWS Lambda"](https://refactorfirst.com/micronaut-jpa-aws-lambda-function).

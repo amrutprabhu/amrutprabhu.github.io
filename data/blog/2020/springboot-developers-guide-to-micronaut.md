@@ -179,7 +179,7 @@ Now to achieve the real boost in startup performance, we can create a Native ima
 
 Yes, **90 milliseconds** with JPA CRUD capabilities.
 
-To learn how to achieve this incredible initial startup time. You can read my next article “[Boost Java Application Performance With Micronaut Native Image](/boost-java-application-performance-with-micronaut.html)”.
+To learn how to achieve this incredible initial startup time. You can read my next article “[Boost Java Application Performance With Micronaut Native Image](https://refactorfirst.com/boost-java-application-performance-with-micronaut)”.
 
 As usual, I have uploaded the code for this article on [GitHub](https://github.com/amrutprabhu/micronaut-workout/tree/master/MicronautApp).
 

@@ -20,7 +20,7 @@ In this article, we will explore how to implement distributed tracing using Jaeg
 
 Jaeger is an open-source distributed tracing mechanism that helps to trace requests in distributed systems. It is based on [opentracing](https://opentracing.io/) specification and is a part of the [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/).
 
-I have explained some key concepts of tracing in my previous article “[Distributed Tracing With Spring Cloud Sleuth](https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth.html)”.
+I have explained some key concepts of tracing in my previous article “[Distributed Tracing With Spring Cloud Sleuth](https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth)”.
 
 With this, let’s look at some code.
 
@@ -163,7 +163,7 @@ Today we explored how we can integrate Jaeger which is based on OpenTracing with
 
 I have uploaded the code on [GitHub](https://github.com/amrutprabhu/distributed-tracing-with-spring-boot/tree/main/distributed-tracing-spring-cloud-jaeger).
 
-You can read about Distributed tracing using Zipkin my previous article [here](https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth.html).
+You can read about Distributed tracing using Zipkin my previous article [here](https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth).
 
 I keep exploring and learning new things. If you want to know the latest trends and improve your software development skills, then subscribe to my newsletter below and also follow me on [Twitter](https://twitter.com/amrutprabhu42).
 
