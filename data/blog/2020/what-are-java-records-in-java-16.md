@@ -63,7 +63,7 @@ Let’s dig in further about records.
 
 When we declare a normal class without any constructor the compiler provides a default constructor with no arguments. In the case of records, an implicit canonical constructor based on the record components is provided.
 
-You can explicitly create a canonical constructor by yourself do things like e.g validations but there is a more concise way to do that. Let’s have a look.
+You can explicitly create a canonical constructor by yourself and do things like e.g validations but there is a more concise way to do that. Let’s have a look.
 
 ```java
 public record Data(int x, int y) {
@@ -113,15 +113,15 @@ public record Data( int x, int y) implements Runnable, Serializable
 
 # Cannot define your own instance variables
 
-When you define the header, it represents the state of your record class. This means you cannot have any other instance variable inside the record. the only instance variable that would be created is the ones provided in the header component.
+When you define the header, it represents the state of your record class. This means you cannot have any other instance variable inside the record. the only instance variable that would be created is the one provided in the header component.
 
-However, you can have static variables inside records and can be accessed the same as classes by using the record class name.
+However, you can have static variables inside records that can be accessed the same as classes by using the record class name.
 
 # Defining your own methods
 
-You can define your own methods that you would want to use inside a record. Even your own version of the accessor, equals, or even hashcode methods. But make sure you do no make changes that would result in breaking what immutability means.
+You can define your own methods that you would want to use inside a record. Even your own version of the accessor, equals, or even hashcode methods. But make sure you do not make changes that would result in breaking what immutability means.
 
-You can define static methods and static initializers also. These are the same as how we have it in class declarations.
+You can define static methods and static initializers also. These are the same as how we have them in our class declarations.
 
 # Applying annotations.
 
@@ -131,7 +131,7 @@ Now, Something important about applying annotations. When defining the annotatio
 - In the case of the target is a method, It would be applied to the accessor method.
 - If the annotation refers to the header arguments, then they would refer to the parameters of the canonical constructor arguments.
 
-E.g if you apply a `@NotNull`annotation which actually applies to field, method, and constructor then it would get applied to the instance variable, the accessor method, and the constructor also.
+E.g if you apply a `@NotNull`annotation which actually applies to the field, method, and constructor then it would get applied to the instance variable, the accessor method, and the constructor also.
 
 Now take the case where you explicitly define an annotation on your custom-defined accessor method or canonical constructor, then the annotations on these would only be applied to the corresponding method or constructor.
 

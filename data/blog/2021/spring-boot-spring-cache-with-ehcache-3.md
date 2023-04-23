@@ -163,7 +163,7 @@ With this, we just saw some major concepts of Spring Cache i.e Cacheable, CacheP
 
 Now by default, Since there is no additional provider, Spring Cache makes use of the JCache which is the default provider present on the classpath when the `Spring-Cache-Starter` is added as a dependency. It is nothing but a simple ConcurrentHashMap.
 
-Now there are quite a few [supported cache providers](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.caching.provider) that we can integrate with spring cache like Redis, Couchbase, Hazelcast, etc. Today we will check out how we can integrate Ehcache 3.
+Now there are quite a few [supported cache providers](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.caching.provider) that we can integrate with Spring cache like Redis, Couchbase, Hazelcast, etc. Today we will check out how we can integrate Ehcache 3.
 
 ## Integrating Ehcache 3 with Spring Spring Cache
 
@@ -215,7 +215,7 @@ Here we have done some configuration to define a cache `cacheStore` with some pr
 
 The rest of the application remains the same and with this, we have just integrated Ehcache 3 with our Spring Boot application.
 
-Now let’s start the application and make calls to the generate endpoint.
+Now let’s start the application and make calls to the generated endpoint.
 
 ![spring cache with ehcache 3](/static/images/2021/spring-cache-ehcache-3/spring-cache-ehcache-3.png)
 

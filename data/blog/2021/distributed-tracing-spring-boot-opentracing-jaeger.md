@@ -18,7 +18,7 @@ In this article, we will explore how to implement distributed tracing using Jaeg
 
 # Introduction
 
-Jaeger is an open-source distributed tracing mechanism that helps to trace requests in distributed systems. It is based on [opentracing](https://opentracing.io/) specification and is a part of the [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/).
+Jaeger is an open-source distributed tracing mechanism that helps to trace requests in distributed systems. It is based on [OpenTracing](https://opentracing.io/) specifications and is a part of the [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/).
 
 I have explained some key concepts of tracing in my previous article “[Distributed Tracing With Spring Cloud Sleuth](https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth)”.
 
@@ -96,7 +96,7 @@ services:
       - 14268:14268
 ```
 
-We can communicate with Jaeger using either via UDP or TCP. After starting the docker image using `docker-compose up` , we can access the UI using the URL [http://localhost:16686/](http://localhost:16686/)
+We can communicate with Jaeger using either UDP or TCP. After starting the docker image using `docker-compose up` , we can access the UI using the URL [http://localhost:16686/](http://localhost:16686/)
 
 Now, let's add some properties to allow the application to send the traces to the Jaeger server. We will communicate via TCP, so make sure that we send the traces to the other TCP port. i.e 14268
 

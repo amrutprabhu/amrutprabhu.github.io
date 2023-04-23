@@ -83,7 +83,7 @@ It's understandable that for a consumer, it just can be a consumer function defi
 
 In this case, the supplier function is invoked by a default polling mechanism which is provided by the framework. It calls the supplier every second.
 
-Now what about the case where you want to send a message after doing something. Probably you want to store your entity in the database and then send out an event. Let’s look at that next.
+Now what about the case where you want to send a message after doing something? Probably you want to store your entity in the database and then send out an event. Let’s look at that next.
 
 ### Sending Messages on Demand
 
@@ -105,7 +105,7 @@ public class KafkaProducer {
 
 Here I have used the stream bridge to send messages, which is currently sending messages at an interval of 2 sec.
 
-Now, Since we are using the Kafka binder, We need to provide properties to the binder in order to send messages to the right broker and also set the serializer and deserializer. Let's look at those configs.
+Now, since we are using the Kafka binder, we need to provide properties to the binder in order to send messages to the right broker and also set the serializer and deserializer. Let's look at those configs.
 
 ### Kafka Binder Properties
 
@@ -128,7 +128,7 @@ spring:
     destination: first-topic
 ```
 
-Now, since we are using a custom class to send and receive messages, We need to create a custom serializer and deserializer as follows.
+Now, since we are using a custom class to send and receive messages, we need to create a custom serializer and deserializer as follows.
 
 ```java
 public class MessageSerializer implements Serializer<Message> {
@@ -197,7 +197,7 @@ spring:
 
 To use custom serializers, we need to set `useNativeEncoding` to true. Then you can set the serializer and the deserializer classes for each of the bindings under the Kafka binder section as shown above.
 
-You can find all supported properties that you provide to the Kafka binder in the `org.springframework.cloud` `.stream.binder.kafka.properties` `.KafkaBindingProperties` class.
+You can find all the supported properties that you provide to the Kafka binder in the `org.springframework.cloud` `.stream.binder.kafka.properties` `.KafkaBindingProperties` class.
 
 With this let’s start the application with the following command.
 
@@ -208,7 +208,7 @@ target/spring-cloud-stream-kafka-communication-0.0.1-SNAPSHOT.jar
 
 ![spring cloud stream kafka](/static/images/2021/spring-cloud-stream-kafka/spring-cloud-stream-kafka-log.png)
 
-In the Logs, you can see the consumer is getting messages from the producer which we created using functional programming, and the producer which is using the stream bridge to send the messages.
+In the logs, you can see the consumer is getting messages from the producer which we created using functional programming, and the producer which is using the stream bridge to send the messages.
 
 ## Conclusion
 

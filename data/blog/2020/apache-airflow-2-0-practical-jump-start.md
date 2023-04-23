@@ -22,26 +22,26 @@ So let's get started!
 
 Apache Airflow is an orchestration tool that helps you to programmatically create and handle task execution into a single workflow. It then handles monitoring its progress and takes care of scheduling future workflows depending on the schedule defined.
 
-Workflows are created using python scripts, which define how your tasks are executed. They are usually defined as Directed Acyclic Graphs(DAG).
+Workflows are created using Python scripts, which define how your tasks are executed. They are usually defined as Directed Acyclic Graphs(DAG).
 
 ![AirFlow DAG](/static/images/2021/airflow/dag.png)
 
-The workflow execution is based on the schedule you provide, which is as per Unix cron schedule format. Once you create python scripts and place them in the dags folder of Airflow, Airflow will automatically create the workflow for you.
+The workflow execution is based on the schedule you provide, which is as per the Unix cron schedule format. Once you create Python scripts and place them in the dags folder of Airflow, Airflow will automatically create the workflow for you.
 
-How difficult are the python scripts?
+How difficult are the Python scripts?
 
 Well, not difficult but pretty straightforward. Let me explain this.
 
 # Key Concepts
 
-A workflow is made up of tasks and each task is an operator. Now, what is an operator? An operator a python class that does some work for you. These classes are provided by airflow itself. Some basic operators are
+A workflow is made up of tasks and each task is an operator. Now, what is an operator? An operator is a Python class that does some work for you. These classes are provided by airflow itself. Some basic operators are
 
 - BashOperator - used to run bash commands.
-- PythonOperator - used to run a python function you define.
+- PythonOperator - used to run a Python function you define.
 - BranchOperator - used to create a branch in the workflow.
 - DummyOperator - used to represent a dummy task.
 
-There are quite a few other operators that will help you make an HTTP call, connect to a Postgres instance, connect to slack, etc. You can find more operators [here](https://airflow.apache.org/docs/apache-airflow/stable/python-api-ref.html#operators).
+There are quite a few other operators that will help you make an HTTP call, connect to a Postgres instance, connect to Slack, etc. You can find more operators [here](https://airflow.apache.org/docs/apache-airflow/stable/python-api-ref.html#operators).
 
 Finally, with the theory done, Let’s do something exciting i.e. create our first Airflow DAG.
 
@@ -68,7 +68,7 @@ The official Airflow site provides a [docker-compose file](https://airflow.apach
 docker-compose up -d
 ```
 
-Once your containers are up and running, a`dags` folder is created on your local machine where you placed the docker-compose.yml file. We are going to use this `dags` folder to place our python workflows. You can access the Airflow web UI using the URL `localhost:8080`
+Once your containers are up and running, a`dags` folder is created on your local machine where you placed the docker-compose.yml file. We are going to use this `dags` folder to place our Python workflows. You can access the Airflow web UI using the URL `localhost:8080`
 
 # Creating your DAG Definition
 
@@ -105,17 +105,17 @@ with DAG('user_content_processing',
     )
 ```
 
-To create the HttpSensor operator, We provide it with a task id, HTTP connection id, and endpoint. The task id identifies the task in the DAG, and the endpoint identifies the API to fetch. Now the third parameter i.e `http_conn_id` will require something to be explained.
+To create the HttpSensor operator, we provide it with a task id, HTTP connection id, and endpoint. The task id identifies the task in the DAG, and the endpoint identifies the API to fetch. Now the third parameter i.e `http_conn_id` will require something to be explained.
 
-Airflow provides a mechanism to create and store some configurations that you can use across workflows. One such type is configuring “Connections”. Here you can provide various connections like AWS connections, ElasticSearch connection, Kubernetes cluster connections, etc.
+Airflow provides a mechanism to create and store some configurations that you can use across workflows. One such type is configuring “Connections”. Here you can provide various connections like AWS connections, ElasticSearch connections, Kubernetes cluster connections, etc.
 
-In our case, we would be using the HTTP connection option. Here we would provide the URL we want to trigger and setting the connection id to `user_api` .We want to call the URL [https://randomuser.me/api/](https://randomuser.me/api/), which will return a JSON response of some random user information.
+In our case, we would be using the HTTP connection option. Here we would provide the URL we want to trigger and set the connection id to `user_api` .We want to call the URL [https://randomuser.me/api/](https://randomuser.me/api/), which will return a JSON response of some random user information.
 
 ![Airflow Connection Creation](/static/images/2021/airflow/airflow-http-connection.png)
 
 Finally, with this configured, the task is ready to make a call to the URL with the endpoint provided.
 
-So with that, We just created our first task and learned some concepts.
+So with that, we just created our first task and learned some concepts.
 
 ![Airflow DAG task](/static/images/2021/airflow/airflow-first-dag-task.png)
 
@@ -146,7 +146,7 @@ Xcoms is a way you can share data between your tasks. It basically stores key-va
 
 The SimpleHttpOperator stores the response inside these Xcoms. Hence we will use another task to retrieve the value and process it. You can read more about Xcoms [here](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=xcom#xcoms)
 
-Once the data is fetched, We are going to create a processor, which will process the data that was pushed into Xcoms by the previous task. We will do this using a python function and hence the new operator that we are going to use is the `PythonOperator`.
+Once the data is fetched, We are going to create a processor, which will process the data that was pushed into Xcoms by the previous task. We will do this using a Python function and hence the new operator that we are going to use is the `PythonOperator`.
 
 ```python
 fetch_user = SimpleHttpOperator(
@@ -161,7 +161,7 @@ processing_user = PythonOperator(
 
 ![DAG Tasks](/static/images/2021/airflow/airflow-dag-tasks.png)
 
-The `PythonOperator` is a simple operator, that takes the `task_id` and a python callable function. Let’s look at the function.
+The `PythonOperator` is a simple operator, that takes the `task_id` and a Python callable function. Let’s look at the function.
 
 ```python
 def _processing_user(ti):
@@ -185,7 +185,7 @@ So this function receives a Task Instance (referred as `ti`). We use this task i
 
 Variables are a way to store and extract some values that you would like to use across any DAG. It's basically a key-value store of arbitrary data. You can read more in detail about it [here](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=xcom#variables).
 
-Now that we have stored the values inside Variables, Let print them to the logs using the `echo` command. To do this we are going to use the `BashOperator`
+Now that we have stored the values inside Variables, let's print them to the logs using the `echo` command. To do this we are going to use the `BashOperator`
 
 ```python
 {% raw %}

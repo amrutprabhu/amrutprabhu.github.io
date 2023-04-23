@@ -34,7 +34,7 @@ Once the role is created, we will then assign this role to our “test” user. 
 
 ![Keycloak assign role](/static/images/2021/spring-cloud-gateway-with-resource-server/assign-role-to-user.png)
 
-We can remove the defaults roles that are already present, but I would leave them for now.
+We can remove the default roles that are already present, but I would leave them for now.
 
 With this, we are done with allowing the user “test” to access the product resource from the Keycloak side.
 
@@ -63,7 +63,7 @@ public class Controller {
 }
 ```
 
-Here I am protecting the GET call with the “product_read” role which we had created in Keycloak. This means if the user can access the resource only if it has the role “product_read”.
+Here I am protecting the GET call with the “product_read” role which we had created in Keycloak. This means that the user can access the resource only if it has the role “product_read”.
 
 Next, We will add some properties to `application.yaml`
 
@@ -161,7 +161,7 @@ spring:
 
 Here we are setting a route for any path request matching `/product` will be directed to the resource server (product-service) that is running at localhost at port 9191.
 
-In the default-filters section, we would have to add “TokenRelay”, so that the API Gateway passes the JWT access token to the resource server.
+In the "default-filters" section, we would have to add “TokenRelay”, so that the API Gateway passes the JWT access token to the resource server.
 
 With these properties, we are set to now run both the applications, i.e the API gateway and the product service.
 
