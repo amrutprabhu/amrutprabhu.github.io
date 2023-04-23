@@ -20,7 +20,7 @@ In this article, I would be talking about the performance statistics when runnin
 
 Micronaut became quite popular for their quick startup time because of the Ahead Of Time(AOT) compilation. It provides literally all the capabilities that SpringBoot provides like Aspect-Oriented programming, Dependency injection, etc.
 
-Now I have described how to create a Micronaut Application in my previous article “[A SpringBoot Developer’s Guide to Micronaut](https://refactorfirst.com/springboot-developers-guide-to-micronaut.html)”. I have also described how you can boost your application performance in another article “[Boot Java Application Performance with Micronaut Native Image](https://refactorfirst.com/boost-java-application-performance-with-micronaut.html)”.
+Now I have described how to create a Micronaut Application in my previous article “[A SpringBoot Developer’s Guide to Micronaut](https://refactorfirst.com/springboot-developers-guide-to-micronaut)”. I have also described how you can boost your application performance in another article “[Boot Java Application Performance with Micronaut Native Image](https://refactorfirst.com/boost-java-application-performance-with-micronaut)”.
 
 Today we would be looking at how we can create an AWS Lamda function with Micronaut and see its performance statistics when we deploy it on JVM runtime and as a Native Image on Amazon Linux custom runtime image.
 
@@ -168,6 +168,6 @@ You can have a look at the code on my [GitHub repo](https://github.com/amrutprab
 
 ### Next..
 
-Now, In this article, we used a single function to add an object to the RDS database. But what about cases wherein you would want to add as well as retrieve an object. For this, We will be looking into deploying a Micronaut application on AWS Lambda providing PUT and GET capabilities and see its performance. You can read this in my next article "[Micronaut JPA Application Performance on AWS Lambda](/micronaut-aws-lambda-application-for-api-gateway.html)"
+Now, In this article, we used a single function to add an object to the RDS database. But what about cases wherein you would want to add as well as retrieve an object. For this, We will be looking into deploying a Micronaut application on AWS Lambda providing PUT and GET capabilities and see its performance. You can read this in my next article "[Micronaut JPA Application Performance on AWS Lambda](https://refactorfirst.com/micronaut-aws-lambda-application-for-api-gateway)"
 
 You can subscribe to my newsletter to get an email when I publish my articles

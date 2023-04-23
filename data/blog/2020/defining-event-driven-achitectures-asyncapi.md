@@ -18,7 +18,7 @@ In this article, I am going to be talking about how we can define your event-dri
 
 ## Introduction
 
-A while ago, I published an [article](https://refactorfirst.com/spring-boot-api-first-design.html) about how you can document REST APIs using Open API 3 specification. This was for synchronous APIs.
+A while ago, I published an [article](https://refactorfirst.com/spring-boot-api-first-design) about how you can document REST APIs using Open API 3 specification. This was for synchronous APIs.
 
 Today we are going to look at how we can describe asynchronous APIs that we create when we design event-driven architectures.
 

@@ -18,7 +18,7 @@ In this article, we will be exploring how we can integrate a resource server wit
 
 # Introduction
 
-In my previous article “[Spring Cloud Gateway Keycloak OAuth2 OIDC Integration](https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect.html)”, I have shown how we can integrate Keycloak with Spring Cloud Gateway. Now in this article, we will extend this further to integrate a resource server, such that a client(e.g browser) can access a resource only when he has the correct role to access the resource on the server. This is a continuation of the previous article [Spring Cloud Gateway Keycloak OAuth2 OIDC Integration](https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect.html), So I recommend reading it.
+In my previous article “[Spring Cloud Gateway Keycloak OAuth2 OIDC Integration](https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect)”, I have shown how we can integrate Keycloak with Spring Cloud Gateway. Now in this article, we will extend this further to integrate a resource server, such that a client(e.g browser) can access a resource only when he has the correct role to access the resource on the server. This is a continuation of the previous article [Spring Cloud Gateway Keycloak OAuth2 OIDC Integration](https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect), So I recommend reading it.
 
 So let’s get started.
 
@@ -42,7 +42,7 @@ Now Let’s create the resource server.
 
 ## Creating a Resource Server
 
-Since we already have the code for the gateway application we will use the same and add a resource server to it. If you haven’t read my previous [article](https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect.html), then you can directly use the API Gateway code from my [Github repo](https://github.com/amrutprabhu/keycloak-spring-cloud-gateway-and-resource-server/tree/main/spring-cloud-gateway-keycloak-oauth2).
+Since we already have the code for the gateway application we will use the same and add a resource server to it. If you haven’t read my previous [article](https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect), then you can directly use the API Gateway code from my [Github repo](https://github.com/amrutprabhu/keycloak-spring-cloud-gateway-and-resource-server/tree/main/spring-cloud-gateway-keycloak-oauth2).
 
 To create the resource server, let's go to [https://start.spring.io](https://start.spring.io) and create an application called “product-service” with the following dependencies.
 
