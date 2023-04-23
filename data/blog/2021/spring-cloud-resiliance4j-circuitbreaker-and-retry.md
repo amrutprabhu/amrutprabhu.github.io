@@ -18,7 +18,7 @@ In this article, we will be looking into how we can integrate a circuit breaker 
 
 ## Introduction
 
-With the growing number of services, services might need to communicate with other servers synchronously and hence become dependent on the upstream service. Any problems while communicating with the upstream services, will propagate to the downstream services.
+With the growing number of services, services might need to communicate with other servers synchronously and hence become dependent on the upstream service. Any problems while communicating with the upstream services will propagate to the downstream services.
 
 To protect the services from such problems, we can use some of the patterns to protect the service. So, today we are going to look into two of these, i.e the Circuit Breaker and the Retry mechanism.
 
@@ -227,7 +227,7 @@ Now, in the above config, if in 5 calls, 60% of the calls fail or are slow ( i.e
 
 > Now, what is this HALF-OPEN state?
 
-This state is like an evaluation state, where we check based on a limited number of permitted calls if the circuit breaker moves to either OPEN or CLOSED state. Based on the permitted number of calls, if the number of slow or failures exceeds the slowness or failure threshold then the circuit breaker moves back to the OPEN state or else moves it to the CLOSED state.
+This state is like an evaluation state, where we check based on a limited number of permitted calls if the circuit breaker moves to either an OPEN or CLOSED state. Based on the permitted number of calls, if the number of slow or failures exceeds the slowness or failure threshold then the circuit breaker moves back to the OPEN state or else moves to the CLOSED state.
 
 For example, In the above config, since we have set the number of permitted calls in HALF_OPEN state as 3, at least 2 calls need to succeed in order for the circuit breaker to move back to the CLOSED state and allow the calls to the upstream server.
 
@@ -245,7 +245,7 @@ On making a request we see that it only tried once and directly returned us the 
 
 ### Circuit Breaker and Retry Aspects Order
 
-As the implementation of the circuit breaker and retry mechanism work by making use of spring’s method-based AOP mechanism, the aspects handling the two different mechanisms have a certain order.
+As the implementation of the circuit breaker and retry mechanism work by making use of Spring’s method-based AOP mechanism, the aspects handling the two different mechanisms have a certain order.
 
 By default, the retry mechanism has lower priority and hence it warps around the circuit breaker aspect.
 
@@ -283,7 +283,7 @@ resilience4j:
         failure-rate-threshold: 60
 ```
 
-The higher the order value, the higher is the priority. You can read about the default priority order in the documentation [here](https://resilience4j.readme.io/docs/getting-started-3#aspect-order).
+The higher the order value, the higher the priority. You can read about the default priority order in the documentation [here](https://resilience4j.readme.io/docs/getting-started-3#aspect-order).
 
 With this when we run the application, we get the following output.
 
@@ -295,7 +295,7 @@ If you carefully want to understand the working of the circuit breaker and retry
 
 ### Conclusion
 
-With this, we just saw how we can integrate a Circuit Breaker and a Retry mechanism in a spring boot application. Similarly, we can integrate rate limiter, bulkhead, etc. You can read more about this in their documentation [here](https://resilience4j.readme.io/docs/getting-started)
+With this, we just saw how we can integrate a Circuit Breaker and a Retry mechanism in a spring boot application. Similarly, we can integrate a rate limiter, bulkhead, etc. You can read more about this in their documentation [here](https://resilience4j.readme.io/docs/getting-started)
 
 As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/spring-resilience4j-circuit-breaker-and-retry).
 

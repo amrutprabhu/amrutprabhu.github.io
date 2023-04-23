@@ -18,13 +18,13 @@ In this article, we will be looking into how we can publish and subscribe to a K
 
 ## Introduction
 
-Kafka over the years has gained a lot in popularity for its high throughput and real-time asynchronous messaging. It's considered a de facto standard for streaming of events and provides fault-tolerant storage that is stable, reliable, and scalable.
+Kafka over the years has gained a lot in popularity for its high throughput and real-time asynchronous messaging. It's considered a de facto standard for streaming events and provides fault-tolerant storage that is stable, reliable, and scalable.
 
 So today we will be looking into how we can communicate with Kafka from a Spring Boot application to send and receive messages or events.
 
 ## Creating a Producer
 
-Let’s go to [https://start.spring.io](https://start.spring.io) and create an application adding the `spring-kafka` dependency as bellow.
+Let’s go to [https://start.spring.io](https://start.spring.io) and create an application adding the `spring-kafka` dependency as below.
 
 ```xml
 <dependency>
@@ -86,7 +86,7 @@ topic:
   name: 'first-topic'
 ```
 
-Here, we have set the broker properties, the value serializer, and deserializer properties. You can find all supported properties in this class `org.springframework.boot.autoconfigure.kafka.KafkaProperties`.
+Here, we have set the broker properties, the value serializer, and the deserializer properties. You can find all supported properties in this class `org.springframework.boot.autoconfigure.kafka.KafkaProperties`.
 
 Now, Since I am using a custom message class, I need to provide a custom serializer and deserializer for sending and receiving the message.
 
@@ -127,7 +127,7 @@ public class MessageDeSerializer implements Deserializer<Message> {
 
 ## Creating a Consumer
 
-Along with the producer, we have set some consumer properties. So let's create a consumer for the topic.
+Along with the producer, we have set up some consumer properties. So let's create a consumer for the topic.
 
 ```java
 @Component
@@ -161,7 +161,7 @@ You can find more config options in the documentation [here](https://docs.spring
 
 In this article, We saw how we can read and send messages on a Kafka topic using Spring-Kafka.
 
-In my next article, I would be using Spring Cloud Streams to communicate with Kafka. So make sure you subscribe to my newsletter below to know when I publish it.
+In my next article, I would be using [Spring Cloud Streams to communicate with Kafka](https://refactorfirst.com/spring-cloud-stream-with-kafka-communication). So make sure you subscribe to my newsletter below to know when I publish it.
 
 As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/kafka-workouts/tree/master/spring-kafka-communication-service).
 

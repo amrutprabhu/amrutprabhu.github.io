@@ -18,7 +18,7 @@ In this article, I am going to be talking about how we can define your event-dri
 
 ## Introduction
 
-A while ago, I published an [article](https://refactorfirst.com/spring-boot-api-first-design) about how you can document REST APIs using Open API 3 specification. This was for synchronous APIs.
+A while ago, I published an [article](https://refactorfirst.com/spring-boot-api-first-design) about how you can document REST APIs using Open API 3 specifications. This was for synchronous APIs.
 
 Today we are going to look at how we can describe asynchronous APIs that we create when we design event-driven architectures.
 
@@ -30,11 +30,11 @@ Let’s look at the various parts of an AsyncAPI specification that are most use
 
 - <b>API version</b> — This defines the version of AsycnAPI. We will be dealing with version 2.0.0
 - <b>Info</b> — In this section, we define some metadata about the API.
-- <b>Servers</b> — In this section we define servers or brokers where we want to connect.
+- <b>Servers</b> — In this section, we define servers or brokers with which we want to connect.
 - <b>Channels</b> — This section contains the messaging channel information. Here we define the type of messages sent on the topic/queue.
 - <b>Components</b> — This section defines the message definitions and we then refer to them inside the channel.
 
-There are also tags and external docs section, But right now it's not that important for a new start. You can always refer to the documentation about these sections in more detail [here](https://www.asyncapi.com/docs/specifications/v2.0.0#schema).
+There are also tags and an external docs section, But right now it's not that important for a new start. You can always refer to the documentation about these sections in more detail [here](https://www.asyncapi.com/docs/specifications/v2.0.0#schema).
 
 If you are already familiar with the OpenAPI definition, then these sections are more or less the same. Here is a nice page to understand the similarity between [OpenAPI and AsyncAPI](https://www.asyncapi.com/docs/getting-started/coming-from-openapi).
 
@@ -85,9 +85,9 @@ components:
 
 Now, In this, I am creating an API definition to connect to Kafka, wherein a producer is publishing a transaction event to a Kafka topic named `banking.transaction.000`
 
-## How to Read the AsyncAPI definition
+## How to Read the AsyncAPI Definition
 
-Usually, when we dealt with OpenAPI 3 specification for synchronous communication, We always knew who was the server and the client. The server implements the OpenAPI definition and the client uses the definition to know how to interact with the server.
+Usually, when we dealt with OpenAPI 3 specifications for synchronous communication, We always knew who was the server and the client. The server implements the OpenAPI definition and the client uses the definition to know how to interact with the server.
 
 Now, there is a difference in the case of asynchronous communication. We don't have a nation of servers and clients. An application can consume an event and also emit an event.
 
@@ -117,11 +117,11 @@ So with this understanding, Let’s generate some code.
 
 ## Code generation
 
-AsyncAPI provides templates to create code from the API definition. There are quite a few code generation templates for languages like Java, Nodejs, and python. You can also generate an HTML page for the API definition using the HTML template. You can find the list of templates [here](https://github.com/asyncapi/generator#list-of-official-generator-templates)
+AsyncAPI provides templates to create code from the API definition. There are quite a few code generation templates for languages like Java, Nodejs, and Python. You can also generate an HTML page for the API definition using the HTML template. You can find the list of templates [here](https://github.com/asyncapi/generator#list-of-official-generator-templates)
 
 We will be generating our code in Java using the Spring framework.
 
-To generate the code from the template, we would have to use an async generator command, which we can install by command-line or use a docker image to run the command. You can find more details about the installation [here](https://www.asyncapi.com/generator).
+To generate the code from the template, we would have to use an async generator command, which we can install by command line or use a docker image to run the command. You can find more details about the installation [here](https://www.asyncapi.com/generator).
 
 To install the command line utility, run the following command:
 
@@ -184,8 +184,8 @@ In this case, We have the `CommandLinePublisher` that publishes a message to Kaf
 
 ## Conclusion
 
-In this article, we had a look at how an AsyncAPI definition looks like and also generate code using a code template. Some things can be a bit tricky to understand but they have wonderful documentation which you can refer to [here](https://www.asyncapi.com/docs/specifications/v2.0.0). I feel the code templates need some improvement but I can understand the templates are still in their early stages.
+In this article, we had a look at what an AsyncAPI definition looks like and also generate code using a code template. Some things can be a bit tricky to understand but they have wonderful documentation which you can refer to [here](https://www.asyncapi.com/docs/specifications/v2.0.0). I feel the code templates need some improvement but I can understand the templates are still in their early stages.
 
-As to how we have OpenAPI as standards for documenting REST APIs, AsyncAPIs, I guess would become a standard for documenting asynchronous or event-driven architectures.
+As to how we have OpenAPI as a standard for documenting REST APIs, AsyncAPIs, I guess would become a standard for documenting asynchronous or event-driven architectures.
 
 As always, I have uploaded the generated code [here](https://github.com/amrutprabhu/async-api-workout).

@@ -16,9 +16,9 @@ customUrl: 'auto-generated'
 
 I was facing a problem where I wanted to insert millions of records into the database, which needed to be imported from the file.
 
-So, I did some research around this, and I would like to share with you what I found which helped me improve the insert records throughput by nearly 100 times.
+So, I did some research on this, and I would like to share with you what I found which helped me improve the insert records throughput by nearly 100 times.
 
-Initially, when I was just trying to do bulk insert using spring JPA’s `saveAll` method, I was getting a performance of about 185 seconds per 10,000 records. After doing the following changes below, the performance to insert 10,000 records was just in 4.3 seconds.
+Initially, when I was just trying to do bulk insert using Spring JPA’s `saveAll` method, I was getting a performance of about 185 seconds per 10,000 records. After doing the following changes below, the performance to insert 10,000 records was just 4.3 seconds.
 
 Yes, **4.3** Seconds for **10k** records.
 
@@ -26,7 +26,7 @@ So, to achieve this, I had to change the way I was inserting data.
 
 ## 1. Change the Number of Records While Inserting
 
-When I was inserting initially, I was pushing all the 10k records from the list directly by calling the `saveAll` method. I changed this to the batch size of 30. You could also increase the batch size to even 60, but it doesn’t half the time taken to insert records. See the table below.
+When I was inserting initially, I was pushing all the 10k records from the list directly by calling the `saveAll` method. I changed this to a batch size of 30. You could also increase the batch size to even 60, but it doesn’t half the time taken to insert records. See the table below.
 
 For this, you need to set the hibernate property `batch_size=30` .
 
@@ -65,7 +65,7 @@ for (int i = 0; i < totalObjects; i = i + batchSize) {
 }
 ```
 
-This reduced the time by a little; it dropped from 185 secs to 153 Secs. That's approximately an 18% improvement.
+This reduced the time by a little; it dropping from 185 secs to 153 Secs. That's approximately an 18% improvement.
 
 ## 3. Change the ID Generation Strategy
 
@@ -73,7 +73,7 @@ This reduced the time by a little; it dropped from 185 secs to 153 Secs. That's 
 
 Initially, I was using the `@GeneratedValue` annotation with strategy i.e `GenerationType.IDENTITY` on my entity class.
 
-Hibernate has a disabled batch update with this strategy because it has to make a select call to get the id from the database to insert each row. You can read more about it [here](https://docs.jboss.org/hibernate/orm/4.3/manual/en-US/html/ch15.html).
+Hibernate has a disabled batch updates with this strategy because it has to make a select call to get the id from the database to insert each row. You can read more about it [here](https://docs.jboss.org/hibernate/orm/4.3/manual/en-US/html/ch15.html).
 
 I changed the strategy to `SEQUENCE` and provided a sequence generator.
 
@@ -85,9 +85,9 @@ public class Book {
     private Long id;
 ```
 
-This drastically changed the insert performance, as Hibernate was able to leverage bulk insert.
+This drastically changed the insert performance, as Hibernate was able to leverage bulk inserts.
 
-From the previous performance improvement of 153 secs, the time to insert 10k records reduced to only **9 secs**. That's an increase in performance by nearly **95%.**
+From the previous performance improvement of 153 secs, the time to insert 10k records was reduced to only **9 secs**. That's an increase in performance of nearly **95%.**
 
 **Note: MySQL doesn’t support creating sequences**.
 

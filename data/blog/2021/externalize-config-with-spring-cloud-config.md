@@ -18,7 +18,7 @@ In this article, we would be looking at how we can externalize configs using Spr
 
 # Introduction
 
-One of the principles from the [12 Factor App](https://12factor.net/config), states that we have to separate our application configuration from the code. The configuration varies based on the environment and it's better to organize them based on the environment your application is running.
+One of the principles of the [12 Factor App](https://12factor.net/config), states that we have to separate our application configuration from the code. The configuration varies based on the environment and it's better to organize them based on the environment your application is running.
 
 So in this article, we will be looking at how we can externalize configurations with Spring Cloud Config.
 
@@ -37,7 +37,7 @@ Let’s go to [https://start.spring.io](https://start.spring.io) and create a pr
 
 - Spring Cloud Config Server
 
-Once you open the project, we need to configure the application to allow it to serve configuration. Now, the server can be configured with quite a few backends with which you can organize any client’s configuration. Here is a list of some of the supported backend.
+Once you open the project, we need to configure the application to allow it to serve configuration. Now, the server can be configured with quite a few backends with which you can organize any client’s configuration. Here is a list of some of the supported backends.
 
 - Git URL
 - AWS S3 bucket.
@@ -147,7 +147,7 @@ We can customize the configuration using some reserved placeholders.
 - `{application}` - to refer to the client’s application name.
 - `{profile}` - to refer to the client’s application profile.
 
-Let use these placeholders to add some more repos.
+Let's use these placeholders to add some more repositories.
 
 ```yaml
 prod-properies-repo:
@@ -163,13 +163,13 @@ any-request-repo:
     - spring-cloud-config-server-setup/configs-location/{application}/{profile}
 ```
 
-Now here, the first repo has the profile name as the subdirectory to search for when the request comes in for the`prod` profile.
+Now here, the first repository has the profile name as the subdirectory to search for when the request comes in for the`prod` profile.
 
 In the second one, if any other request comes in, then it would use the client application name and the profile subdirectory tree. Here is how the folders are organized.
 
 ![git folder structure](/static/images/2021/spring-cloud-config-server-git-backend/git-folder-structure.png)
 
-Now with the new repos added, let’s restart the application and test the output.
+Now with the new repositories added, let’s restart the application and test the output.
 
 ![prod profile call](/static/images/2021/spring-cloud-config-server-git-backend/prod-profile.png)
 
@@ -196,7 +196,7 @@ Let’s create a client for this.
 For this, We will create an application using [https://start.spring.io](https://start.spring.io) with the following dependencies.
 
 - Spring Cloud Starter Config
-- Spring Boot Web Starter (required only for tomcat server)
+- Spring Boot Web Starter (required only for Tomcat server)
 
 Now, let's add some properties to the `application.yaml` file.
 
@@ -252,7 +252,7 @@ You can then change the files locally and test your config server.
 
 # Conclusion
 
-We just saw how to configure a spring cloud config server with a git repository backend and use it to start a client application. There have been some changes since spring cloud version 2020.0 and this example demonstrates the integration.
+We just saw how to configure a Spring Cloud config server with a git repository backend and use it to start a client application. There have been some changes since Spring Cloud version 2020.0 and this example demonstrates the integration.
 
 As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/spring-boot-external-configuration-options/tree/master/spring-cloud-config-server-setup).
 
