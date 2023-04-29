@@ -1,5 +1,5 @@
 ---
-title: 'Connect MongoDB with a Spring Boot Application Using Spring Data'
+title: 'Spring Boot With MongoDB Using Spring Data'
 author: 'Amrut Prabhu'
 categories: ''
 tags: [MongoDB, Spring Boot, Spring Data, Mongo Express, NoSQL]

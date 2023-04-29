@@ -34,7 +34,7 @@ export default function ListRecord({ frontMatter, authorDetails }) {
                   <Tag key={tag} text={tag} />
                 ))}
               </div>
-              <div className="prose text-gray-500 max-w-none dark:text-gray-400 col-span-2">
+              <div className="prose text-black max-w-none dark:text-gray-200 col-span-2">
                 {summary}
                 <br />
                 <Link
