@@ -5,7 +5,7 @@ categories: ''
 tags: [MongoDB, Spring Boot, Spring Data, Mongo Express, NoSQL]
 photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
-date: '2023-04-27'
+date: '2023-05-04'
 draft: false
 summary: 'In this article, we will look at how we can start a local MongoDB instance using Docker and then communicate with it using a Spring Boot Application'
 imageUrl: /static/images/2023/connect-mongodb-with-spring-boot/cover.jpg
@@ -57,7 +57,7 @@ public interface ProductRepository extends MongoRepository<Product, String> {
 }
 ```
 
-Next, Let's create a controller that will help us to make REST calls to store and retrieve data from the MongoDB database.
+Next, let's create a controller that will help us to make REST calls to store and retrieve data from the MongoDB database.
 
 ```Java
  @PostMapping("/products")
