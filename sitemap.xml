@@ -187,6 +187,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/spring-boot-with-mongodb-using-spring-data</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/airflow</loc>
   </url>
 
@@ -319,6 +323,14 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/tags/mongo-express</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/mongodb</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/multithreading</loc>
   </url>
 
@@ -424,6 +436,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/spring-cloud-functions</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/spring-data</loc>
   </url>
 
   <url>

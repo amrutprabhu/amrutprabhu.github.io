@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>RefactorFirst</title>
+      <link>https://refactorfirst.com</link>
+      <description>Articles and tutorials about Java, Spring Boot, Kubernetes, Docker, Software Development, and Programming. Learn about what is new in programming and look into how to optimize and write clean code.</description>
+      <language>en-us</language>
+      <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
+      <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
+      <lastBuildDate>Thu, 04 May 2023 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://refactorfirst.com/tags/spring-data/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-with-mongodb-using-spring-data</guid>
+    <title>Spring Boot With MongoDB Using Spring Data</title>
+    <link>https://refactorfirst.com/spring-boot-with-mongodb-using-spring-data</link>
+    <description>In this article, we will look at how we can start a local MongoDB instance using Docker and then communicate with it using a Spring Boot Application</description>
+    <pubDate>Thu, 04 May 2023 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>MongoDB</category><category>Spring Boot</category><category>Spring Data</category><category>Mongo Express</category><category>NoSQL</category>
+  </item>
+
+    </channel>
+  </rss>
