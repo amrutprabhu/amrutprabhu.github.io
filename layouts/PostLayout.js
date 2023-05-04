@@ -44,7 +44,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <dl className="space-y-10">
                 <div>
                   <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-100">
                     <time dateTime={date}>
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                     </time>
@@ -69,7 +69,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     <div></div>
                   )}
                 </div>
-                <div className="mt-2 text-gray-500 dark:text-gray-400">{readingTime.text}</div>
+                <div className="mt-2 text-gray-500 dark:text-gray-100">{readingTime.text}</div>
               </div>
             </div>
           </header>
@@ -114,7 +114,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
-              <div className="pt-10 pb-8 prose text-md dark:prose-dark max-w-none">
+              <div className="pt-10 pb-8 prose text-lg leading-8	 dark:prose-dark max-w-none">
                 <div>
                   {youtubeLink && (
                     <div className="xl:px-48">
