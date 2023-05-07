@@ -26,7 +26,7 @@ With this, let’s look at how we can communicate with MongoDB using a Spring Bo
 Let’s go to [https://start.spring.io](https://start.spring.io) and create a new project with the following dependencies.
 
 - Spring Data MongoDB
-- Spring Web ( Only required for REST endpoints)
+- Spring Web (Only required for REST endpoints)
 
 Once you unpack the project we will create a new model to store data in MongoDB.
 
@@ -167,6 +167,8 @@ curl --location 'http://localhost:8080/product/64316b3b4525f4467dc61531'
 ![rest response](/static/images/2023/connect-mongodb-with-spring-boot/rest-response.png)
 
 With this, we were just able to store and retrieve documents from a MongoDB instance using a Spring Boot Application.
+
+You can find the entire project on my GitHub repo [here](https://github.com/amrutprabhu/spring-boot-3-with-mongodb)
 
 **Next...**
 
