@@ -5,7 +5,7 @@ categories: ''
 tags: [Distributed Tracing, Spring Boot, Java, Jaeger]
 photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
-date: '2023-05-04'
+date: '2023-05-11'
 draft: false
 summary: 'In this article, we will look at how we can export distributed traces using Opentelemetry to Jaeger from a Spring Boot Application'
 imageUrl: /static/images/2023/distributed-tracing-opentelemetry-jaeger/cover.jpg
@@ -19,11 +19,9 @@ If you are not familiar with distributed tracing, you can read [this](https://re
 
 The Opentracing project has been archived, as a result of it being merged with OpenCensus to form a single universal framework for application tracing and metrics.
 
-This new framework is called OpenTelemetry.
+This new framework is called [OpenTelemetry](https://opentelemetry.io/docs/what-is-opentelemetry/).
 
 OpenTelemetry (OTel) is an open-source framework for collecting and analyzing observability data, like traces and metrics, from distributed systems. It provides APIs and libraries for developers to instrument their applications, gain insights into system performance, and integrate with various observability tools.
-
-You can always read more about OpenTelemetry [here](https://opentelemetry.io/docs/what-is-opentelemetry/).
 
 Let’s look at how we can send distributed traces to Jaeger using Opentelemetry.
 
@@ -187,6 +185,8 @@ INFO [Service-1,9b888edfe46d05bfe3bd06f690bff0af,012c9c0ff054e356] 17505 --- [ni
 Service-2 log:
 INFO [Service-2,9b888edfe46d05bfe3bd06f690bff0af,cf99518ce5d57ac9] 22322 --- [nio-8090-exec-1] com.amrut.prabhu.Controller: Incoming request at Service-2 at /path2
 ```
+
+You can find the complete code on my GitHub repository [here](https://github.com/amrutprabhu/distributed-tracing-with-spring-boot/tree/main/distributed-tracing-spring-boot-opentelemetry-jaeger).
 
 **Next …**
 
