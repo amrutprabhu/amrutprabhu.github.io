@@ -1,13 +1,13 @@
 ---
-title: 'AWS with LocalStack using Docker Compose'
+title: 'Local AWS with LocalStack using Docker Compose'
 author: 'Amrut Prabhu'
 categories: ''
 tags: [AWS, docker, localstack, docker compose]
 photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
-date: '2023-04-27'
+date: '2023-05-11'
 draft: false
-summary: 'This is a quick article to set up and run LocalStack using docker-compose.'
+summary: 'In this short article, we will look at how you can mimic the behavior of communicating with AWS locally using LocalStack with docker-compose.'
 imageUrl: /static/images/2023/localstack-with-docker-compose/cover.jpg
 actualUrl: 'auto-generated'
 customUrl: 'auto-generated'
@@ -37,7 +37,7 @@ As part of starting LocalStack, we will also mount a directory that will contain
 
 LocalStack provide a CLI called `awslocal` which is a wrapper around the AWS CLI.
 
-So we will use this CLI to create an S3 bucket.
+So we will use this CLI to create an S3 bucket on startup.
 
 ## Creating an S3 bucket in LocalStack
 
@@ -82,12 +82,20 @@ With this, we started LocalStack and created a new S3 bucket.
 
 Now, let's copy a sample file to the S3 bucket using the AWS CLI from our machine.
 
-If you have not set up the AWS CLI, you can set it up using this [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html). Once you do that, run `aws configure` and provide any random value for secret-key and access-key.
+If you have not set up the AWS CLI, you can set it up using this [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
-aws s3 cp samplefile.txt s3://my-bucket \  
+Once you do that, run `aws configure` and provide any random value for "secret-key" and "access-key" as the credentials are not required to communicate with LocalStack.
+
+In my opinion, it would be good to specify a profile name while configuring the credential using aws configure --profile profile_name
+
+```shell
+aws s3 cp samplefile.txt s3://my-bucket \
 --endpoint-url http://localhost:4566
+```
 
 Here while using the AWS CLI, we specify the LocalStack URL so we interact with LocalStack rather than the actual AWS services.
+
+With this, we just communicated with LocalStack using AWS CLI.
 
 If you’re looking for more articles to expand your knowledge in software development, here are three additional recommendations
 
