@@ -7,9 +7,19 @@
       <language>en-us</language>
       <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
       <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
-      <lastBuildDate>Thu, 23 Sep 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 11 May 2023 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://refactorfirst.com/tags/jaeger/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://refactorfirst.com/distributed-tracing-with-opentelemetry-jaeger-in-spring-boot</guid>
+    <title>Distributed Tracing With OpenTelemetry and Jaeger In Spring Boot 3</title>
+    <link>https://refactorfirst.com/distributed-tracing-with-opentelemetry-jaeger-in-spring-boot</link>
+    <description>In this article, we will look at how we can export distributed traces using Opentelemetry to Jaeger from a Spring Boot Application</description>
+    <pubDate>Thu, 11 May 2023 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>Distributed Tracing</category><category>Spring Boot</category><category>Java</category><category>Jaeger</category>
+  </item>
+
   <item>
     <guid>https://refactorfirst.com/distributed-tracing-spring-boot-opentracing-jaeger</guid>
     <title>Distributed Tracing With Spring Cloud Jaeger</title>

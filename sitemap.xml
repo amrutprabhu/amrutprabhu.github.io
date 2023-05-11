@@ -173,6 +173,12 @@
   </url>
 
   <url>
+    <loc
+      >https://refactorfirst.com/distributed-tracing-with-opentelemetry-jaeger-in-spring-boot</loc
+    >
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/how-does-fido2-passwordless-authentication-work</loc>
   </url>
 
