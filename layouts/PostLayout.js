@@ -10,6 +10,7 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import AdColumn from '@/components/AdColumn'
 import Script from 'next/script'
 import AdsSection from '@/components/AdsSection'
+import ShareButtons from '@/components/PostShare'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -20,7 +21,7 @@ const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day:
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const {
     slug,
-    fileName,
+    customUrl,
     date,
     title,
     tags,
@@ -32,7 +33,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   return (
     <SectionContainer>
       <BlogSEO
-        url={`${siteMetadata.siteUrl}/${slug}`}
+        url={`${siteMetadata.siteUrl}/${customUrl}`}
         authorDetails={authorDetails}
         {...frontMatter}
       />
@@ -130,6 +131,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   )}
                 </div>
                 <div>{children}</div>
+                <div>
+                  <ShareButtons title={title} url={`${siteMetadata.siteUrl}/${customUrl}`} />
+                </div>
               </div>
 
               <hr />
