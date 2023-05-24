@@ -65,7 +65,17 @@ const MobileNav = () => {
                 className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
                 onClick={onToggleNav}
               >
-                {link.title}
+                {link.title == 'Newsletter' ? (
+                  <span className="relative pr-1 mr-1">
+                    {link.title}
+                    <span className="text-xs m-0.5 text-red-400 font-bold leading-none absolute top-0">
+                      NEW
+                    </span>
+                  </span>
+                ) : (
+                  link.title
+                )}
+                {/* {link.title} */}
               </Link>
             </div>
           ))}
