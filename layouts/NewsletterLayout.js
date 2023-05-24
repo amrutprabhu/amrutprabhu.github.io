@@ -10,6 +10,7 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import AdColumn from '@/components/AdColumn'
 import Script from 'next/script'
 import AdsSection from '@/components/AdsSection'
+import ShareButtons from '@/components/PostShare'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -20,7 +21,7 @@ const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day:
 export default function NewsletterLayout({ frontMatter, authorDetails, next, prev, children }) {
   const {
     slug,
-    fileName,
+    customUrl,
     date,
     title,
     tags,
@@ -56,7 +57,7 @@ export default function NewsletterLayout({ frontMatter, authorDetails, next, pre
                 <div className="mt-6">
                   <Image
                     alt={title}
-                    src={imageUrl}
+                    src={`${imageUrl}`}
                     className="object-cover object-center lg:h-48 md:h-36"
                     width={744}
                     height={406}
@@ -86,7 +87,7 @@ export default function NewsletterLayout({ frontMatter, authorDetails, next, pre
                     <li className="flex items-center space-x-2" key={author.name}>
                       {author.avatar && (
                         <Image
-                          src={author.avatar}
+                          src={`${siteMetadata.siteUrl}/${author.avatar}`}
                           width="38px"
                           height="38px"
                           alt="avatar"
@@ -130,6 +131,9 @@ export default function NewsletterLayout({ frontMatter, authorDetails, next, pre
                   )}
                 </div>
                 <div>{children}</div>
+                <div>
+                  <ShareButtons title={title} url={`${siteMetadata.siteUrl}/${customUrl}`} />
+                </div>
               </div>
 
               <hr />
