@@ -15,7 +15,9 @@ customUrl: 'auto-generated'
 
 ## Introduction
 
-Since you are already here, I assume you already know about the AWS S3 bucket. But to refresh your memory here are some of the key highlights;
+Since you are here, I assume you know about the AWS S3 bucket.
+
+But to refresh your memory here are some of the key highlights.
 
 - AWS S3 is a highly scalable and secure object storage service provided by AWS.
 - It allows you to store and retrieve data of any type and size of files from anywhere in the world using AWS CLI or web interfaces.
