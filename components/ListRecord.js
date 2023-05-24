@@ -16,7 +16,7 @@ export default function ListRecord({ frontMatter, authorDetails }) {
                   <Image
                     alt={title}
                     src={`/${imageUrl}`}
-                    className="object-cover object-center lg:h-58 md:h-36"
+                    className="object-cover object-center rounded-xl lg:h-58 md:h-36"
                     width={844}
                     height={406}
                   />
