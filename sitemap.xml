@@ -197,6 +197,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/spring-cloud-aws-s3-localstack</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/airflow</loc>
   </url>
 
@@ -214,6 +218,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/aws-lambda</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/aws-s3</loc>
   </url>
 
   <url>
@@ -442,6 +450,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/spring-cloud-functions</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/spring-clous-aws</loc>
   </url>
 
   <url>
