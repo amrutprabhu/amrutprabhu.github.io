@@ -58,7 +58,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <Image
                     alt={title}
                     src={imageUrl}
-                    className="object-cover object-center lg:h-48 md:h-36"
+                    className="object-cover object-center lg:h-48 md:h-36 rounded-2xl"
                     width={744}
                     height={406}
                   />
