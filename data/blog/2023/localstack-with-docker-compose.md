@@ -5,7 +5,7 @@ categories: ''
 tags: [AWS, docker, localstack, docker compose]
 photo-credits:
 applaud-link: 2021/spring-boot-stream-kafka.json
-date: '2023-05-18'
+date: '2023-06-01'
 draft: false
 summary: 'In this quick article, we will look at how you can mimic the behavior of communicating with AWS locally using LocalStack with docker-compose.'
 imageUrl: /static/images/2023/localstack-with-docker-compose/cover.jpg
