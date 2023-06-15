@@ -193,6 +193,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/spring-boot-3-with-docker-compose-support</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/spring-boot-with-mongodb-using-spring-data</loc>
   </url>
 
@@ -254,6 +258,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/docker</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/docker-compose</loc>
   </url>
 
   <url>

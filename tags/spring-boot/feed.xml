@@ -7,9 +7,19 @@
       <language>en-us</language>
       <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
       <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
-      <lastBuildDate>Thu, 25 May 2023 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 15 Jun 2023 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://refactorfirst.com/tags/spring-boot/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://refactorfirst.com/spring-boot-3-with-docker-compose-support</guid>
+    <title>Spring Boot 3.1 Docker Compose Support</title>
+    <link>https://refactorfirst.com/spring-boot-3-with-docker-compose-support</link>
+    <description>We will have a look at the new Spring Boot 3.1 feature supporting Docker Compose files on startup. No need to start Docker compose separately again</description>
+    <pubDate>Thu, 15 Jun 2023 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>docker</category><category>docker compose</category><category>Spring Boot</category><category>Spring Data</category><category>MySQL</category>
+  </item>
+
   <item>
     <guid>https://refactorfirst.com/spring-cloud-aws-s3-localstack</guid>
     <title>Spring Cloud AWS 3.0 S3 with Spring Boot and Localstack</title>
