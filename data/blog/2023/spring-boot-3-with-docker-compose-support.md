@@ -1,5 +1,5 @@
 ---
-title: 'Spring Boot 3 Docker Compose Support'
+title: 'Spring Boot 3.1 Docker Compose Support'
 author: 'Amrut Prabhu'
 categories: ''
 tags: [docker, docker compose, Spring Boot, Spring Data, MySQL]
