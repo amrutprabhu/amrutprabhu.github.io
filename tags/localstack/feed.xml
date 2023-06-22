@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>RefactorFirst</title>
+      <link>https://refactorfirst.com</link>
+      <description>Articles and tutorials about Java, Spring Boot, Kubernetes, Docker, Software Development, and Programming. Learn about what is new in programming and look into how to optimize and write clean code.</description>
+      <language>en-us</language>
+      <managingEditor>contact@refactorfirst.com (Amrut Prabhu)</managingEditor>
+      <webMaster>contact@refactorfirst.com (Amrut Prabhu)</webMaster>
+      <lastBuildDate>Thu, 22 Jun 2023 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://refactorfirst.com/tags/localstack/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://refactorfirst.com/localstack-with-docker-compose</guid>
+    <title>Local AWS with LocalStack using Docker Compose</title>
+    <link>https://refactorfirst.com/localstack-with-docker-compose</link>
+    <description>In this quick article, we will look at how you can mimic the behavior of communicating with AWS locally using LocalStack with docker-compose.</description>
+    <pubDate>Thu, 22 Jun 2023 00:00:00 GMT</pubDate>
+    <author>contact@refactorfirst.com (Amrut Prabhu)</author>
+    <category>AWS</category><category>docker</category><category>localstack</category><category>docker compose</category>
+  </item>
+
+    </channel>
+  </rss>

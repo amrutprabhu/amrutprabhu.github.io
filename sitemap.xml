@@ -189,6 +189,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/localstack-with-docker-compose</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/setup-fido2-passwordless-authentication-with-keycloak</loc>
   </url>
 
@@ -330,6 +334,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/kubernetes</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/localstack</loc>
   </url>
 
   <url>
