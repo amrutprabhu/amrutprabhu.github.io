@@ -205,6 +205,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/spring-boot-with-redis-stack-and-redis-insight</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/spring-cloud-aws-s3-localstack</loc>
   </url>
 
@@ -418,6 +422,22 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/reactjs</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/redis-hash</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/redis-insight</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/redis-json</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/redis-search</loc>
   </url>
 
   <url>
