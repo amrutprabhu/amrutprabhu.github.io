@@ -17,7 +17,12 @@ const LayoutWrapper = ({ children }) => {
             <Link href="/" aria-label="RefactorFirst">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <Image src="//static/favicons/icon.png" height={50} width={50} />
+                  <Image
+                    src="/static/favicons/icon.png"
+                    alt="RefactorFirst"
+                    height={50}
+                    width={50}
+                  />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="h-6 text-2xl font-semibold sm:block">
