@@ -5,13 +5,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com giscus.app static.mailerlite.com cdn.mailerlite.com cdnjs.buymeacoffee.com;
-  style-src 'self' 'unsafe-inline' *.googleapis.com  cdn.jsdelivr.net static.mailerlite.com fonts.mailerlite.com cdn.mailerlite.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' pagead2.googlesyndication.com *.googletagmanager.com giscus.app assets.mlcdn.com groot.mailerlite.com assets.mailerlite.com cdn.mailerlite.com cdnjs.buymeacoffee.com;
+  style-src 'self' 'unsafe-inline' *.googleapis.com  cdn.jsdelivr.net assets.mlcdn.com assets.mailerlite.com fonts.mailerlite.com cdn.mailerlite.com;
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
   font-src 'self' fonts.gstatic.com cdn.jsdelivr.net fonts.mailerlite.com bmc-cdn.nyc3.digitaloceanspaces.com;
-  frame-src *.youtube.com giscus.app static.mailerlite.com www.buymeacoffee.com;
+  frame-src *.youtube.com giscus.app assets.mailerlite.com www.buymeacoffee.com;
 `
 
 const securityHeaders = [
