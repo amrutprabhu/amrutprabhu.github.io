@@ -40,14 +40,12 @@ const LayoutWrapper = ({ children }) => {
               strategy="afterInteractive"
               dangerouslySetInnerHTML={{
                 __html: `
-              (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
-                var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
-                f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
-                var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
-                _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
-                
-                var ml_account = ml('accounts', '3117349', 'p5v1c3m1v8', 'load');
-            `,
+                  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+                    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+                    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+                    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+                    ml('account', '531390');
+                    `,
               }}
             />
           </div>
@@ -68,11 +66,7 @@ const LayoutWrapper = ({ children }) => {
           </div>
         </header>
         <main className="mb-auto">{children}</main>
-        <div
-          className="ml-form-embed"
-          data-account="3117349:p5v1c3m1v8"
-          data-form="4015126:i6h8m5"
-        ></div>
+        <div className="ml-embedded" data-form="rRtdd0"></div>
         <Footer />
       </div>
     </SectionContainer>
