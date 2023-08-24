@@ -213,6 +213,10 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/spring-cloud-kafka-streams-aggregate-join-windowing</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/airflow</loc>
   </url>
 
@@ -333,7 +337,19 @@
   </url>
 
   <url>
+    <loc>https://refactorfirst.com/tags/kafka-stream</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/kakfa</loc>
+  </url>
+
+  <url>
     <loc>https://refactorfirst.com/tags/keycloak</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/kstream</loc>
   </url>
 
   <url>
@@ -486,6 +502,10 @@
 
   <url>
     <loc>https://refactorfirst.com/tags/spring-cloud-functions</loc>
+  </url>
+
+  <url>
+    <loc>https://refactorfirst.com/tags/spring-cloud-stream</loc>
   </url>
 
   <url>
