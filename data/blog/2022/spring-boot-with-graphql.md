@@ -28,6 +28,8 @@ These are just some of the advantages.
 
 Today we will look into how we can provide GraphQL APIs with a Spring Boot application
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Creating an Application
 
 Let’s go to [https://start.spring.io](https://start.spring.io) and create an application with the following dependencies
@@ -126,6 +128,8 @@ public enum AddressType {
 }
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 Finally, we have the two repositories as below.
 
 ```java
@@ -199,6 +203,8 @@ public Address addAddress(@Argument(name = "address") Address address) {
 Here, we follow the same principle as the `@QueryMapping` annotation. We use the `@MutationMapping` annotation to map the mutation name to the handler.
 
 With this, we have all the handlers in place.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ## Enabling GraphiQL UI
 
@@ -277,6 +283,8 @@ curl --location --request POST 'http://localhost:8080/graphql' \
 You can always change this default path using the property `spring.graphql.path`
 
 Let’s look at how errors are handled.
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 ## GraphQL Error Handling
 
@@ -383,6 +391,8 @@ With this handler in place, the error now looks like this.
 }
 ```
 
+<AdsFlows id="adflow5" slot="9474283966" />
+
 ![Query with error](/static/images/2022/spring-boot-with-graphql/query-with-error.gif)
 
 With this, we just looked at how we can use GraphQL to query data, change it and also define a custom error handler.
@@ -442,6 +452,8 @@ query get_person($id: Int!){
     }
 }
 ```
+
+<AdsFlows id="adflow6" slot="1404222257" />
 
 Since we are using a variable `$id` to pass data from the test, we have to define the type of variable. Hence as part of the query name, we define the variable type in the arguments.
 

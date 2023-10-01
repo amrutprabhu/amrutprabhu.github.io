@@ -21,6 +21,8 @@ Push notification is a form of real-time messaging, wherein a website could info
 
 Today, we would look into using WebSockets to implement push notifications and for this, we would use the STOMP protocol over WebSockets to communicate between client and server.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 # What is STOMP?
 
 STOMP stands for Simple Text Oriented Messaging Protocol. As WebSockets is a low-level protocol, which uses frames to communicate data, STOMP is a higher-level protocol that defines how certain frame types can interpret the data. These include frame types like CONNECT, SEND, ACK, etc. This way it's much easier to work with WebSockets to send, receive and interpret data.
@@ -59,6 +61,8 @@ In the first part, we enable a broker with two destinations `/all` and `/specifi
 Next, we set the application destination i.e `/app` , which will provide us to send messages to the application.
 
 In the second part, we register STOMP endpoints. One with SockJS enabled and the other just for WebSocket. This is done because not all browsers support WebSockets and when it's not available we can fall back to using SockJS.
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 ## Sending Push Notifications to All
 
@@ -116,6 +120,8 @@ It simply takes the text value from the text field and sends it to the broker’
 This is all connected using a simple form as shown below.
 
 ![](/static/images/2022/spring-boot-websockets-notifications/simple-send-all-notification.png)
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 To test this, let’s send a push notification “Notification to all” to all the connected clients.
 
@@ -194,6 +200,8 @@ public class Controller {
 }
 ```
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 Now in the `sendToSpecificUser` method, we accept messages sent using `/app/private`. The message contains the text to be sent to the recipient and the user id of the recipient.
 
 Now here comes the magic.
@@ -244,6 +252,8 @@ In the above image, we are providing a message to the specific user and also spe
 Here is a short demonstration of how it all works.
 
 ![spring boot websocket example](/static/images/2022/spring-boot-websockets-notifications/spring-boot-websocket-example.gif)
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 ## Conclusion
 

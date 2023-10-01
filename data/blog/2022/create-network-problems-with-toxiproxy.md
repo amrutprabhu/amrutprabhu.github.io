@@ -30,6 +30,8 @@ For this, we will create a Spring Boot application from [https://start.spring.io
 
 Once we generate the project, we will add a controller that fetches all the posts from the database.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ```java
 @RestController
 public class WebController {
@@ -76,6 +78,8 @@ Here, if you see, we are exposing port 3306 for the MySQL container.
 
 Now, let's create a proxy with Toxiproxy
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 ## Starting Toxiproxy
 
 Before we create a proxy, we need to start the Toxiproxy server.
@@ -114,6 +118,8 @@ With this, we can now start our application and communicate with the database vi
 
 Let’s look at how much time it takes to get a response for the endpoint to communicate with the database via the proxy.
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 ![time without proxy](/static/images/2022/introducing-network-problems-with-toxiproxy/time-without-proxy.png)
 
 ## Introducing network problems
@@ -147,6 +153,8 @@ Finally, we can remove the toxic with the following command.
 ```shell
 toxiproxy-cli toxic remove -n latency_downstream db-proxy
 ```
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 Another feature that Toxiproxy provides is that you can communicate with the running server with a set of REST calls as shown below.
 
@@ -199,6 +207,8 @@ Next, let's write a test that will introduce a timeout and then catch the except
 
     }
 ```
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 ## Conclusion
 

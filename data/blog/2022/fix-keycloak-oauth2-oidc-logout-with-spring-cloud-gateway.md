@@ -30,6 +30,8 @@ When we try to logout using the `/logout` path, the user just logs out from the 
 
 So here is a quick article on how to fix this issue.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Fixing the Logout Issue with Keycloak
 
 Firstly, we need to add a logout handler to the API gateway's security settings.
@@ -95,6 +97,8 @@ return http.build();
 }
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 ## Understanding this a little deeper
 
 To understand this more deeper, Let’s have a look at the function `onLogoutSuccess` inside the `OidcClientInitiatedServerLogoutSuccessHandler`
@@ -121,6 +125,8 @@ public Mono<Void> onLogoutSuccess(WebFilterExchange exchange, Authentication aut
 ```
 
 In this function, you see that when the user logs out on the API gateway, on its success the token from the authenticated user is first checked if it was an `oidcuser`. It then finds the registered client from the client registration repository and then calls the end session endpoint of the Keycloak server.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ## Conclusion
 
