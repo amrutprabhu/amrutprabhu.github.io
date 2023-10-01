@@ -105,17 +105,6 @@ You can read this article [here](https://refactorfirst.com/spring-cloud-stream-w
 
 I would recommend reading it as it will make it easier to understand the next section in which we will be exploring how we can deal with Kafka Streams or KStreams
 
-  <div>
-      <ins class="adsbygoogle"
-           style={{display:'block', textAlign:'center'}}
-           data-ad-layout="in-article"
-           data-ad-format="fluid"
-           data-ad-client="ca-pub-7490174059724719"
-           data-ad-slot="9474283966"
-           id="adflow2">
-     </ins>
-  </div>
-
 ## Creating a KStream or Kafka Stream Transformation
 
 Let’s consider we want to create a handler that will transfer an input stream and send it out to another Kafka Stream
@@ -196,17 +185,6 @@ While the output sent to the topic `second-topic` looks like this:
 ![second-kafka-stream-output](/static/images/2023/spring-cloud-kafka-stream-aggregate-join-window/second-kafka-stream-output.webp)
 
 The images above is using the following format to show the contents of the Kafka topic.
-
-  <div>
-      <ins class="adsbygoogle"
-           style={{display:'block', textAlign:'center'}}
-           data-ad-layout="in-article"
-           data-ad-format="fluid"
-           data-ad-client="ca-pub-7490174059724719"
-           data-ad-slot="1404222257"
-           id="adflow3">
-     </ins>
-  </div>
 
 ```shell
 Partition: <Topic partition number> : Offset: <Topic offset> : <Key> : <Value>
@@ -294,17 +272,6 @@ Here we also provide three things.
 - The binding specifies the input and output topic.
 - The binding function definition under the property `spring.cloud.function.definiton`
 - Finally the consumer properties under `spring.cloud.stream.kafka.streams` specifying the key and value serializer and deserializer.
-
-  <div>
-      <ins class="adsbygoogle"
-           style={{display:'block', textAlign:'center'}}
-           data-ad-layout="in-article"
-           data-ad-format="fluid"
-           data-ad-client="ca-pub-7490174059724719"
-           data-ad-slot="2523816518"
-           id="adflow4">
-     </ins>
-  </div>
 
 With this, the data will be produced every 10 seconds on the `third-topic` as shown below.
 
