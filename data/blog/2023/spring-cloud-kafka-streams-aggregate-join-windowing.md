@@ -111,7 +111,7 @@ I would recommend reading it as it will make it easier to understand the next se
            data-ad-layout="in-article"
            data-ad-format="fluid"
            data-ad-client="ca-pub-7490174059724719"
-           data-ad-slot="8168941152"
+           data-ad-slot="9474283966"
            id="adflow2">
      </ins>
   </div>
@@ -203,7 +203,7 @@ The images above is using the following format to show the contents of the Kafka
            data-ad-layout="in-article"
            data-ad-format="fluid"
            data-ad-client="ca-pub-7490174059724719"
-           data-ad-slot="8168941152"
+           data-ad-slot="1404222257"
            id="adflow3">
      </ins>
   </div>
@@ -301,7 +301,7 @@ Here we also provide three things.
            data-ad-layout="in-article"
            data-ad-format="fluid"
            data-ad-client="ca-pub-7490174059724719"
-           data-ad-slot="8168941152"
+           data-ad-slot="2523816518"
            id="adflow4">
      </ins>
   </div>
@@ -397,7 +397,7 @@ The rest is the same as adding the function definition and the serializer and de
            data-ad-layout="in-article"
            data-ad-format="fluid"
            data-ad-client="ca-pub-7490174059724719"
-           data-ad-slot="8168941152"
+           data-ad-slot="2393870295"
            id="adflow5">
      </ins>
   </div>
