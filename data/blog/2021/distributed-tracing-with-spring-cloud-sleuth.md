@@ -24,6 +24,8 @@ But not all that shines is gold, right? It's the same thing with microservices. 
 
 So in the case of distributed systems, the concept of distributed tracing helps with tracing a request.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 # What is Distributed Tracing?
 
 Distributed tracing is a mechanism with which we can trace a particular request throughout a distributed system. It allows us to track how a request progresses from one system to another thereby completing the user’s request.
@@ -82,6 +84,8 @@ public ResponseEntity path2(){
 }
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 Here I have created two paths, `Path1` calling `Path2` at a fixed port 8090. The idea here is to run two separate instances of the same application.
 
 Now to allow sleuth to inject headers into the outgoing request, we need the RestTemplate to be injected as a bean rather than initializing it directly. This will allow sleuth to add an interceptor to the RestTemplate to inject a header with the trace id and span id into the outgoing request.
@@ -124,6 +128,8 @@ INFO [Service-1,222f3b00a283c75c,222f3b00a283c75c] 41114 --- [nio-8080-exec-1] c
 ```
 
 The log contains square brackets with three parts [ Service name, Trace Id, Span Id ]. For the first incoming request, since there is no incoming trace id, the span id is the same as the trace id.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 Looking at the logs of “Service 2”, we see that we have a new span id for this request.
 
@@ -177,6 +183,8 @@ spring:
     baseUrl: http://localhost:9411
 ```
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 With this done, let's start both the applications using the same commands from above.
 
 On placing a request to “Service 1” at the path `/path1` we get the following traces.
@@ -199,6 +207,8 @@ In this, there are 4 points in the span.
 - And finally, the last point when “Server 2” finished.
 
 ![Tracing span details](/static/images/2021/distributed-tracing-with-zipkin/distributed-tracing-details.jpg)
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 # Conclusion
 

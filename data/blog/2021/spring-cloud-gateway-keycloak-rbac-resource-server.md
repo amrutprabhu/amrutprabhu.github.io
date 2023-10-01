@@ -22,6 +22,8 @@ In my previous article “[Spring Cloud Gateway Keycloak OAuth2 OIDC Integration
 
 So let’s get started.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Adding a custom keycloak role to the user.
 
 Let’s add a role to the user in order to allow it to access the resource server.
@@ -43,6 +45,8 @@ Now Let’s create the resource server.
 ## Creating a Resource Server
 
 Since we already have the code for the gateway application we will use the same and add a resource server to it. If you haven’t read my previous [article](https://refactorfirst.com/spring-cloud-gateway-keycloak-oauth2-openid-connect), then you can directly use the API Gateway code from my [Github repo](https://github.com/amrutprabhu/keycloak-spring-cloud-gateway-and-resource-server/tree/main/spring-cloud-gateway-keycloak-oauth2).
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 To create the resource server, let's go to [https://start.spring.io](https://start.spring.io) and create an application called “product-service” with the following dependencies.
 
@@ -107,6 +111,8 @@ public class ResourceServerConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 Here, we have added the`@EnableGlobalMethodSecurity` annotation, to enable method-level security in our application.
 
 We then create a custom authorities converter. This converter will take out the keycloak roles (that are set as claims) from the JWT token and set them as authorities in spring security for role-based access.
@@ -159,6 +165,8 @@ spring:
             - Path=/product/**
 ```
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 Here we are setting a route for any path request matching `/product` will be directed to the resource server (product-service) that is running at localhost at port 9191.
 
 In the "default-filters" section, we would have to add “TokenRelay”, so that the API Gateway passes the JWT access token to the resource server.
@@ -186,6 +194,8 @@ Once you log in, you get the response from the resource server containing the Us
 ## Conclusion
 
 In this article, we integrated a resource server with Spring Cloud Gateway application. We also Integrated Keycloak’s OAuth2 OpenId Connect (OIDC) for authentication in the API Gateway and also performed a role-based access control (RBAC) inside the resource server with the JWT token sent from the API Gateway.
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 I have uploaded the entire code integrating Keycloak, API Gateway, and resource server to my [Github repo](https://github.com/amrutprabhu/keycloak-spring-cloud-gateway-and-resource-server).
 

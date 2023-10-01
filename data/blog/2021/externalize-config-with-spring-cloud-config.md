@@ -31,6 +31,8 @@ Spring cloud config consists of two parts.
 
 Let’s look at how we can set up the spring cloud config server to provide configuration to any application.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Spring Cloud Config Server
 
 Let’s go to [https://start.spring.io](https://start.spring.io) and create a project with the following dependencies.
@@ -67,6 +69,8 @@ spring:
         git:
           uri: https://github.com/amrutprabhu/spring-boot-external-configuration-options
 ```
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 This is the most minimalistic configuration required to use a git repo as a store for our client configurations.
 
@@ -120,6 +124,8 @@ spring:
                 - spring-cloud-config-server-setup/configs-location
 ```
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 Now, here I have specified a repo name `staging-properties-repo` with a repo URI, a search path, and a pattern. For this example, I am using the same git repo, but you can use a completely different git repo that you want.
 
 Now, here we can specify a pattern which is of the following format : `{client's application name}/{client's application profile}` . As it's a pattern you can use wild card patterns. e.g
@@ -162,6 +168,8 @@ any-request-repo:
   search-paths:
     - spring-cloud-config-server-setup/configs-location/{application}/{profile}
 ```
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 Now here, the first repository has the profile name as the subdirectory to search for when the request comes in for the`prod` profile.
 
@@ -225,6 +233,8 @@ With this let’s build the application and run it using the following command w
 java -jar target/config-client-service-0.0.1-SNAPSHOT.jar \
 --spring.profiles.active=prod
 ```
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 The client starts with port 9090, which is what was defined in the prod profile properties file.
 

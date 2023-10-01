@@ -33,6 +33,8 @@ Let’s go to [https://start.spring.io](https://start.spring.io) and create an a
 </dependency>
 ```
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 Now let’s create a producer that will send messages to a Kafka topic.
 
 ```java
@@ -85,6 +87,8 @@ spring:
 topic:
   name: 'first-topic'
 ```
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 Here, we have set the broker properties, the value serializer, and the deserializer properties. You can find all supported properties in this class `org.springframework.boot.autoconfigure.kafka.KafkaProperties`.
 
@@ -142,6 +146,8 @@ public class KafkaConsumer {
 }
 ```
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 Here we have created a component, with a method annotated with `KafkaListener`. This method will be invoked whenever there is a message on the Kafka topic.
 
 So with this let's start the application.
@@ -162,6 +168,8 @@ You can find more config options in the documentation [here](https://docs.spring
 In this article, We saw how we can read and send messages on a Kafka topic using Spring-Kafka.
 
 In my next article, I would be using [Spring Cloud Streams to communicate with Kafka](https://refactorfirst.com/spring-cloud-stream-with-kafka-communication). So make sure you subscribe to my newsletter below to know when I publish it.
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/kafka-workouts/tree/master/spring-kafka-communication-service).
 
