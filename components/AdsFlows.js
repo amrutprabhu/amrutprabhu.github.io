@@ -12,15 +12,6 @@ function AdsFlows({ id, slot }) {
   return (
     <>
       <div className={`adsbygoogle-${id}`}>
-        {/* <ins
-          className="adsbygoogle"
-          style={{ display: 'block' }}
-          data-ad-client="ca-pub-7490174059724719"
-          data-ad-slot={slot}
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-          id={id}
-        /> */}
         <ins
           className="adsbygoogle"
           style={{ display: 'block', textAlign: 'center' }}

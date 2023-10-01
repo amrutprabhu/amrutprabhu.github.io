@@ -353,6 +353,8 @@ Here, if you look carefully, in the binding we specify two inputs and one output
 
 The rest is the same as adding the function definition and the serializer and deserializer properties as we did for the other bindings above.
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 When we run this, it produces the following messages on the `fourth-topic`
 
 ![fourth-kafka-stream-join-output](/static/images/2023/spring-cloud-kafka-stream-aggregate-join-window/fourth-kafka-stream-join-output.webp)
