@@ -66,6 +66,9 @@ Hence we will create a simple supplier bean that will supply values as a produce
            data-ad-slot="8168941152"
            id="adflow1">
      </ins>
+    <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+     </script>
   </div>
 
 Here I am creating a producer that will send a message called MyEvent which has a name and department that will be chosen randomly.
@@ -120,6 +123,9 @@ So our producer above is emitting events and now we will transform them and send
            data-ad-slot="9474283966"
            id="adflow2">
      </ins>
+     <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+     </script>
   </div>
 
 Now the transformation is as simple as defining the following functional bean.
@@ -368,6 +374,7 @@ spring:
 Here, if you look carefully, in the binding we specify two inputs and one output.
 
 The rest is the same as adding the function definition and the serializer and deserializer properties as we did for the other bindings above.
+<br/>
 
   <div>
       <ins class="adsbygoogle"
@@ -378,7 +385,11 @@ The rest is the same as adding the function definition and the serializer and de
            data-ad-slot="2393870295"
            id="adflow5">
      </ins>
+     <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+     </script>
   </div>
+  <br/>
 
 When we run this, it produces the following messages on the `fourth-topic`
 
