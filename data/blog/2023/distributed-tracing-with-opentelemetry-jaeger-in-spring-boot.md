@@ -23,6 +23,8 @@ This new framework is called [OpenTelemetry](https://opentelemetry.io/docs/what-
 
 OpenTelemetry (OTel) is an open-source framework for collecting and analyzing observability data, like traces and metrics, from distributed systems. It provides APIs and libraries for developers to instrument their applications, gain insights into system performance, and integrate with various observability tools.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 Let’s look at how we can send distributed traces to Jaeger using Opentelemetry.
 
 ## Creating an application
@@ -79,6 +81,8 @@ Next, we will create two endpoints in our application in the Controller class.
 The idea here is to run the same application two times with different ports, such that one application calls the other applications on a different path.
 
 When we invoke the `/path1` endpoint, it will further call the `/path2` endpoint on the predefined port 8090 of the server running on localhost.
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 Now to export the spans to Jaeger, we need to create a span exporter bean as follows.
 
@@ -144,6 +148,8 @@ target/Distributed-Service-0.0.1-SNAPSHOT.jar \
 --server.port=8080
 ```
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 ```bash
 java -jar \
 target/Distributed-Service-0.0.1-SNAPSHOT.jar \
@@ -180,6 +186,8 @@ Service-1 log:
 
 INFO [Service-1,9b888edfe46d05bfe3bd06f690bff0af,012c9c0ff054e356] 17505 --- [nio-8080-exec-2] com.amrut.prabhu.Controller: Incoming request at Service-1 for request /path1
 ```
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 ```bash
 Service-2 log:

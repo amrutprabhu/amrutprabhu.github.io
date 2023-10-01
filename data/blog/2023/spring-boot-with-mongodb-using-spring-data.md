@@ -19,6 +19,8 @@ MongoDB is one of the popular NoSQL databases that is designed to store, manage 
 
 MongoDB is ideal for handling unstructured or semi-structured data that does not fit into the rows and columns format of a traditional relational database. Its also known for its high performance and scalability, making it a popular choice for modern web and mobile applications that require fast and efficient data storage and retrieval.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 With this, let’s look at how we can communicate with MongoDB using a Spring Boot Application.
 
 ## Creating a Spring Boot Application With MongoDB
@@ -56,6 +58,8 @@ We will create a simple repository that will allow us to use JPA to store data i
 public interface ProductRepository extends MongoRepository<Product, String> {
 }
 ```
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 Next, let's create a controller that will help us to make REST calls to store and retrieve data from the MongoDB database.
 
@@ -110,6 +114,8 @@ services:
 We will also be spinning up Mongo Express to provide us with a UI to communicate with MongoDB directly.
 
 Once we start the docker image, we can access the Mongo Express UI at the location [http://localhost:8081.](http://localhost:8081.)
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ![](/static/images/2023/connect-mongodb-with-spring-boot/mongo-express.png)
 
@@ -167,6 +173,8 @@ curl --location 'http://localhost:8080/product/64316b3b4525f4467dc61531'
 ![rest response](/static/images/2023/connect-mongodb-with-spring-boot/rest-response.png)
 
 With this, we were just able to store and retrieve documents from a MongoDB instance using a Spring Boot Application.
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 You can find the entire project on my GitHub repo [here](https://github.com/amrutprabhu/spring-boot-3-with-mongodb)
 

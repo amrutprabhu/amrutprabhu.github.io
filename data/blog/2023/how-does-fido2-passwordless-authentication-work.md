@@ -30,6 +30,8 @@ FIDO2 is comprised of two standardized components.
 
 The two work together and are required to achieve a passwordless experience for login.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 WebAuthn is the main component of FIDO2. It is a set of standards and APIs that allows a browser to communicate with the operating system to deal with cryptographic keys. WebAuthn is however developed by the W3C and the combination of FIDO with WebAuthn brings in FIDO2.
 
 With FIDO2 you can combine hardware-based authentication with an additional factor such as a PIN or fingerprint. The purpose of the PIN or fingerprint would be to unlock the Security Key so it can perform cryptographic tasks. This PIN or fingerprint is stored locally on the device and would never be sent across the network.
@@ -57,6 +59,8 @@ The browser then invokes the WebAuthn API with the challenge, which then prompts
 On selecting the authenticator and granting access using either the pin or fingerprint, the WebAuthn API now gets the private key that was stored previously on the device.
 
 Using this private key, it now signs the challenge JWT and sends the signature to the server.
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 On the server side, the server finds the appropriate public key of the user which was provided during registration, and verifies the signature. If the signature is valid, it allows the login to be successful.
 
