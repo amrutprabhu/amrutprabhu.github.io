@@ -201,7 +201,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   referalLink="https://www.copecart.com/products/521411d4/p/techapk42"
                 />
               </div>
-              {/* <AdsSection id="ad3" slot="8862054574" /> */}
+              <AdsSection id="ad3" slot="8862054574" />
               {/* <AdsSection id="ad4" slot="6180491852" /> */}
             </footer>
           </div>
