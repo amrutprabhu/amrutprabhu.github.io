@@ -147,6 +147,8 @@ spring:
           destination: second-topic
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 Here, we do three things.
 
 - We specify the binding for our enhancer. We specify the topics from which we want to read and write messages to
@@ -263,6 +265,8 @@ Here we also provide three things.
 - The binding specifies the input and output topic.
 - The binding function definition under the property `spring.cloud.function.definiton`
 - Finally the consumer properties under `spring.cloud.stream.kafka.streams` specifying the key and value serializer and deserializer.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 With this, the data will be produced every 10 seconds on the `third-topic` as shown below.
 

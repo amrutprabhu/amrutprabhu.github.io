@@ -27,8 +27,8 @@ function AdsFlows({ id, slot }) {
           data-ad-layout="in-article"
           data-ad-format="fluid"
           data-ad-client="ca-pub-7490174059724719"
-          data-ad-slot="8168941152"
-          id="adflow1"
+          data-ad-slot={slot}
+          id={id}
         ></ins>
       </div>
     </>
