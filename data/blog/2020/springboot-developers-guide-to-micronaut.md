@@ -24,6 +24,8 @@ The Framework provides dependency injection, inversion of control (IOC), and Asp
 
 With this introduction, let's look into creating an application with Micronaut.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 # Creating a project
 
 To create a project you can directly go to [Micronaut’s launch](https://micronaut.io/launch) to create your project. This is similar to how spring provides a way to create a project using [https://start.spring.io.](http://start.spring.io.)
@@ -49,6 +51,8 @@ In addition to these, we have `@infrastructure` to define a bean that is critica
 To inject a particular bean, Micronaut supports the same injection mechanism like constructor based, setter based, name based, which is similar to what spring provides. In case of an `@autowire` , you would now use an `@inject` annotation.
 
 You can also have bean life cycle methods, conditional beans, bean qualifiers, etc, which are similar to those provided by spring. You can always read more about it in Micronaut’s documentation [here](https://docs.micronaut.io/latest/guide/#ioc).
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 ## Dependencies
 
@@ -110,6 +114,8 @@ jpa:
         show_sql: true
         dialect: org.hibernate.dialect.MySQL8Dialect
 ```
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 For querying your database, we get implementations from Micronaut for interfaces you create by extending interfaces like CRUDRepository or JPARepository. We also have JPA query support using the `@query` annotation. Here is the code for a JPA repository with an example query method.
 
@@ -176,6 +182,8 @@ Here are the statistics.
 ![Statistics](/static/images/2021/spring-boot-micronaut-guide/stats.png)
 
 Now to achieve the real boost in startup performance, we can create a Native image. With a native image, you can get a startup time of about 90 ms.
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 Yes, **90 milliseconds** with JPA CRUD capabilities.
 

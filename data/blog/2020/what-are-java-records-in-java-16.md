@@ -33,6 +33,8 @@ Now, When we create a record, we get the following:-
 
 So an equivalent class would be like this:
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ```java
 public class Data {
 
@@ -97,6 +99,8 @@ public class Data {
 }
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 # Record classes cannot be extended nor support extension.
 
 Record classes do not support extensions. You cannot extend it with any other class, not even a record class. The only implicit superclass it has is `java.lang.Record`. Defining this explicitly using extends will lead to compilation errors.
@@ -134,6 +138,8 @@ Now, Something important about applying annotations. When defining the annotatio
 E.g if you apply a `@NotNull`annotation which actually applies to the field, method, and constructor then it would get applied to the instance variable, the accessor method, and the constructor also.
 
 Now take the case where you explicitly define an annotation on your custom-defined accessor method or canonical constructor, then the annotations on these would only be applied to the corresponding method or constructor.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ## Local records
 

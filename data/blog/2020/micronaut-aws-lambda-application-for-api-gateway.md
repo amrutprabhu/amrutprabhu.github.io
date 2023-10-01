@@ -24,6 +24,8 @@ I have previously written an article [here](https://refactorfirst.com/micronaut-
 
 With this let’s get started.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 # Code Modifications
 
 Now from the application you just created or got from the GitHub repo above, We would make some modifications to the code to start serving requests.
@@ -74,6 +76,8 @@ public class WebController {
     }
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 ![AWS Lambda Code](/static/images/2021/micronaut-lambda-application/code.png)
 
 We also would now change the database from MySQL to Postgres. For this, we would add the Postgres driver dependency and the corresponding connection string in the properties file.
@@ -102,6 +106,8 @@ With this, we are ready to build the application and deploy it on the Lambda JVM
 # Deploying with JVM runtime.
 
 Let’s build the application using `mvn clean package` , and then deploy it to an AWS Lambda using Java 11 runtime. Once created, set the handler function to a class provided by Micronaut i.e. `io.micronaut.function.aws.proxy.MicronautLambdaHandler` . Now, this class comes from the dependency `micronaut-function-aws-api-proxy` which we had already added previously.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ![lambda function definition](/static/images/2021/micronaut-lambda-application/lambda-function-application.png)
 
@@ -143,6 +149,8 @@ Before building, we have to set one extra property in the pom.xml file. we need 
 ```xml
 <exec.mainClass>io.micronaut.function.aws.runtime.MicronautLambdaRuntime</exec.mainClass>
 ```
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 Now we can then run the following command to build the image.
 

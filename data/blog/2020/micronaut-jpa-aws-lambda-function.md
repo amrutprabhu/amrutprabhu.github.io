@@ -26,6 +26,8 @@ Today we would be looking at how we can create an AWS Lamda function with Micron
 
 So let’s get started.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ### Micronaut Function On AWS Lambda
 
 In this, we would be creating a Micronaut function that takes an Order, persists on AWS RDS, and then returns the created ID.
@@ -76,6 +78,8 @@ jpa:
         show_sql: true
         dialect: org.hibernate.dialect.MySQL8Dialect
 ```
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 With this, we can start creating a jar using `mvn clean package`.
 
@@ -132,6 +136,8 @@ public static void main(String[] args) {
 }
 ```
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 In addition to this, You will need to set the main class in the properties section of your pom.
 
 ```xml
@@ -155,6 +161,8 @@ Once created, Let’s upload the zip and set the runtime to the custom runtime o
 ![Micronaut AWS function native image](/static/images/2021/micronaut-jpa-aws-lambda-function/micronaut-aws-function-native.png)
 
 Now, On invoking the function with the same payload as above, we get a huge change in the performance.
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 The init duration is now reduced to **761 ms**. The execution time during the cold start remains the same i.e 1215 ms. But for subsequent calls, The response time is less than half of the previous results ie. **14 ms**.
 
