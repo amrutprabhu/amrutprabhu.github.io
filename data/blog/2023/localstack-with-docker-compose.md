@@ -35,6 +35,8 @@ With this docker-compose file, we can start LocalStack and make queries using th
 
 As part of starting LocalStack, we will also mount a directory that will contain scripts to create some resources.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 LocalStack provide a CLI called `awslocal` which is a wrapper around the AWS CLI.
 
 So we will use this CLI to create an S3 bucket on startup.
@@ -85,6 +87,8 @@ Now, let's copy a sample file to the S3 bucket using the AWS CLI from our machin
 If you have not set up the AWS CLI, you can set it up using this [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 Once you do that, run `aws configure` and provide any random value for "secret-key" and "access-key" as the credentials are not required to communicate with LocalStack.
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 In my opinion, it would be good to specify a profile name while configuring the credential using aws configure --profile profile_name
 

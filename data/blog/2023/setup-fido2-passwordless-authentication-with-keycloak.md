@@ -22,6 +22,8 @@ Let's dive into looking at how we can implement FIDO2 passwordless authenticatio
 
 **TL;DR:** If you want to start using the Keycloak config with FIDO2 passwordless authentication directly, you can refer to it from my GitHub repo [here](https://github.com/amrutprabhu/fido2-keycloak-authentication).
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Set Up FIDO2 Authentication in Keycloak
 
 For this, we will start an instance of Keycloak using docker-compose.
@@ -59,6 +61,8 @@ Next, delete the “Forms” row using the “Actions” link on the right-hand 
 
 Now, let's add a new flow.
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 We will create a new authentication flow in which we will display to the user the username form and then ask for a passwordless authenticator.
 
 For this, add a new flow using the “Add Flow” button and give a new name “FIDO Authentication” and mark it as required.
@@ -82,6 +86,8 @@ For this, click on the bindings tab, and for the “Browser Flow” option selec
 ![Keycloak FIDO2 Authentication Binding](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part4.jpg)
 
 Next, we will set this as the default action.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 For this, click on the “Required Actions” tab, then click on the “Register” button on the right, select “WebAuthn Register Passwordless” and mark this as the default action as shown below.
 
@@ -125,6 +131,8 @@ Now, let’s click on the “Sign in” button.
 
 Once we click on it, we will be directed to the login screen. But we do not have any users registered.
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 So let’s register one by clicking on the “Register” link on the login screen.
 
 ![Keycloak user registeration](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part10.jpg)
@@ -158,6 +166,8 @@ Now let’s try logging in.
 Once you click the “sign-in” button from the Keycloak URL, you will be presented with a login form as shown below
 
 ![FIDO2 login](/static/images/2023/fido2-passwordless-auth-with-keycloak-implementation/fido2-passwordless-authentication-part15.jpg)
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 Enter the username and click “Sign In”. You should be prompted to select the authenticator.
 

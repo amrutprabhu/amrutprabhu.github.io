@@ -21,6 +21,8 @@ Now, if you want to use frameworks like SpringBoot which has its own initializat
 
 Today we will create a Lambda function using Terraform, deploy a Spring Boot application and look at its cold initialization time with the Snap Start option enabled.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## How does Snap Start Option work?
 
 When the Snap Start option is enabled, the published code is started and after initialization, a snapshot of the memory is taken and cached. This snapshot is then loaded for every fresh invocation of the Lambda function thereby eliminating the time during cold initialization.
@@ -75,6 +77,8 @@ To do this, we have to add the following configuration to our `pom.xml` file.
  </build>
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 When you build your application, you will get a jar with `-aws` . We need to use this jar in our Lambda function.
 
 With this, we are ready with our code, now let’s create our Lambda function using terraform.
@@ -111,6 +115,8 @@ With this, let's look at the cold start of a normal application without the Snap
 It takes nearly around 4500 ms just for initialization as shown above.
 
 Now let's check the performance with the Snap Start option enabled.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ![AWS Lambda with Snap Start](/static/images/2023/kick-start-spring-boot-on-lambda/snapstart.png)
 

@@ -25,6 +25,8 @@ Go to [https://start.spring.io](https://start.spring.io) and create a new projec
 
 We will create a simple JPA application that communicates with MySQL.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 For this, add the following dependencies.
 
 - Spring Web ( only required to make REST endpoints)
@@ -85,6 +87,8 @@ public class Model {
 }
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 And create an endpoint to accept data and store it in the database.
 
 ```java
@@ -130,6 +134,8 @@ spring:
     hibernate:
       ddl-auto: create
 ```
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 Here are the application logs
 

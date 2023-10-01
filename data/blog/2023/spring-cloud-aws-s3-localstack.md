@@ -26,6 +26,8 @@ But to refresh your memory here are some of the key highlights.
 
 With this quick introduction, let’s see how we can communicate with an AWS S3 bucket using Spring Cloud AWS S3 3.0.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Creating S3 Bucket in LocalStack with Docker Compose.
 
 We will be using LocalStack to simulate working with the real AWS services.
@@ -73,6 +75,8 @@ spring-boot-with-s3-localstack-1  | }
 ```
 
 Notice the URL that is displayed. We will talk about it below.
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 Now, since our S3 bucket is created, we will now use Spring Cloud AWS S3 to put a file in our S3 bucket.
 
@@ -138,6 +142,8 @@ spring:
         static: eu-central-1
 ```
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 Since we will be using Localstack, we have added the Localstack URL.
 
 If you look closely, we have specified the URL without the bucket because we will be specifying our bucket in the spring resource.
@@ -199,6 +205,8 @@ Date: Sat, 13 May 2023 14:30:25 GMT
     "name" : "amrut"
 }
 ```
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 With this, we were able to store the file on the S3 bucket with the JSON that we just sent.
 
@@ -278,6 +286,8 @@ class SpringBootWithS3ApplicationTests {
 
     }
 ```
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 Here we first start the LocalStack container using Testcontainers and then we set the properties of the container as the system properties.
 
