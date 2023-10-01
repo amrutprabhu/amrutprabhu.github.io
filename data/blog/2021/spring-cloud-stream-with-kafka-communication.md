@@ -24,6 +24,8 @@ There are quite many binder implementations like e.g Kafka, RabbitMQ, AWS SNS, A
 
 Today we would be using the Kafka Binder to communicate with Kafka.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ### Creating a Producer and Consumer
 
 Let’s go to [https://start.spring.io](https://start.spring.io) and create an application with the spring cloud streams dependency.
@@ -70,6 +72,8 @@ spring:
 
 Since we used the functional programming way for defining the producer and the consumer, the binder names need to be of a particular format.
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 ```properties
 consumer : <functionName> + -in- + <index>
 producer : <functionName> + -out- + <index>
@@ -106,6 +110,8 @@ public class KafkaProducer {
 Here I have used the stream bridge to send messages, which is currently sending messages at an interval of 2 sec.
 
 Now, since we are using the Kafka binder, we need to provide properties to the binder in order to send messages to the right broker and also set the serializer and deserializer. Let's look at those configs.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ### Kafka Binder Properties
 
@@ -195,6 +201,8 @@ spring:
             use-native-decoding: true # Enables using the custom deserializer
 ```
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 To use custom serializers, we need to set `useNativeEncoding` to true. Then you can set the serializer and the deserializer classes for each of the bindings under the Kafka binder section as shown above.
 
 You can find all the supported properties that you provide to the Kafka binder in the `org.springframework.cloud` `.stream.binder.kafka.properties` `.KafkaBindingProperties` class.
@@ -213,6 +221,8 @@ In the logs, you can see the consumer is getting messages from the producer whic
 ## Conclusion
 
 In this article, we saw how we can use Spring Cloud Streams to send and receive messages from a Kafka topic. We saw how we define the binders and then used the Kafka binder dependency to send messages to the Kafka broker.
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/kafka-workouts/tree/master/spring-cloud-stream-kafka-communication).
 

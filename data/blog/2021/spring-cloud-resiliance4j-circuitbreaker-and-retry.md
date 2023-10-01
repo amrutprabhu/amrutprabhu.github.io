@@ -24,6 +24,8 @@ To protect the services from such problems, we can use some of the patterns to p
 
 Let's first look at the Retry mechanism.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Integrating Retry
 
 Let’s go to [https://start.spring.io](https://start.spring.io) and create a simple spring boot application with the following dependencies.
@@ -80,6 +82,8 @@ public class Controller {
 }
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 Now, let's look at the retry configuration.
 
 ```yaml
@@ -123,6 +127,8 @@ The exponent backoff works in the following way:
 ```shell
 wait-duration * (exponential-backoff-multiplier ^ (retry iteration count))
 ```
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 So with the above configuration, The reties will occur at the following times.
 
@@ -213,6 +219,8 @@ resilience4j:
        failure-rate-threshold: 60
 ```
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 ### Understanding the Circuit Breaker Config
 
 Here, I am using a count-based sliding window, wherein the window size is of 5 events, and the failure and slowness threshold rate is 60%.
@@ -283,6 +291,8 @@ resilience4j:
         failure-rate-threshold: 60
 ```
 
+<AdsFlows id="adflow5" slot="9474283966" />
+
 The higher the order value, the higher the priority. You can read about the default priority order in the documentation [here](https://resilience4j.readme.io/docs/getting-started-3#aspect-order).
 
 With this when we run the application, we get the following output.
@@ -296,6 +306,8 @@ If you carefully want to understand the working of the circuit breaker and retry
 ### Conclusion
 
 With this, we just saw how we can integrate a Circuit Breaker and a Retry mechanism in a spring boot application. Similarly, we can integrate a rate limiter, bulkhead, etc. You can read more about this in their documentation [here](https://resilience4j.readme.io/docs/getting-started)
+
+<AdsFlows id="adflow6" slot="1404222257" />
 
 As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/spring-resilience4j-circuit-breaker-and-retry).
 

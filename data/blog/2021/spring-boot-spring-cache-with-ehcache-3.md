@@ -45,6 +45,8 @@ public class WebService {
 }
 ```
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 Now here for an incoming request, we have called a service to generate a person with a name. Let’s look at the service class.
 
 ```java
@@ -76,6 +78,8 @@ Once the first call is made, the logger from the function `generatePerson` gener
 
 2021-10-24 09:29:18.646  INFO 22022 --- [nio-8080-exec-1] c.a.prabhu.Springcachingservice.Service  : Generated Person: Person{id='d04c8531-1054-4773-9410-8b351f4cd785', name='jim', address='Switzerland'}
 ```
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 ### CachePut
 
@@ -125,6 +129,8 @@ As you can see, the person Id for the first two calls changes. This because `cac
 Now, when we call the person endpoint to fetch the person, it fetches the last value which is stored in the `cacheStore` cache.
 
 With this, let’s look at how we can evict a cache key-value pair. For this, we have another annotation called `cacheEvict` .
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ### CacheEvict
 
@@ -181,6 +187,8 @@ To integrate Ehcache 3, We need to add the following two dependencies.
 </dependency>
 ```
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 We will not specify its version here, as the spring starter knows which dependency version is compatible.
 
 By default, Spring Cache only supports Ehcache 2. x version, hence we have to add some configuration to make it work with version 3.
@@ -226,6 +234,8 @@ So as you can see in the output, the cache entry for “Jim” expired after 10 
 ## Conclusion
 
 In this article, we explored the main concepts of Spring Cache and then integrated Ehcache 3 provider. We then configured the cache size, the cache expiry, and checked its output. You can read more in-depth about the Spring Cache concepts on the official site [here](https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#cache).
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/spring-cache-with-ehcache-3).
 

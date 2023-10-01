@@ -24,6 +24,8 @@ I have explained some key concepts of tracing in my previous article “[Distrib
 
 With this, let’s look at some code.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ### Implementing Jaeger Tracing
 
 Let’s create an application from [https://start.spring.io](https://start.spring.io) with only a single dependency “Spring Web”.
@@ -82,6 +84,8 @@ For the spans to get connected to the same trace id, We need to create a RestTem
    }
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 With this done, Let’s start a Jaeger Server locally using docker. For this, I have created a docker-compose file with the port mappings.
 
 ```yaml
@@ -137,6 +141,8 @@ Let’s look at the logs of “Service 1”.
 INFO 69938 --- [nio-8080-exec-1] i.j.internal.reporters.LoggingReporter   : Span reported: ed70bbaa2bd5b42f:c7c94163fc95fc1e:ed70bbaa2bd5b42f:1 - GET
 ```
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 The tracing is of the format [Root Span Id, Current Span Id, Parent Span Id]. In this case, since “Service 1” is the originating service, the parent span Id “ed70bbaa2bd5b42f” is also the root span id.
 
 Now, let’s look at the logs of “Service 2”.
@@ -156,6 +162,8 @@ When we dig deeper, we see more details on each of the spans.
 ![](https://cdn-images-1.medium.com/max/788/1*9FaCYTl_nm605xcjguwWbQ.png)
 
 Here, the root span id “ed70bbaa2bd5b42f” spans across the entire request. The other two span ids refer to the individual services.
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 ### Conclusion
 
