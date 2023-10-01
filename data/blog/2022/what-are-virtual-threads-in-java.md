@@ -22,7 +22,7 @@ Platform threads would basically be wrappers around the kernel threads and are u
 When a piece of code is running in a thread, the kernel thread is captured during the entire execution of the thread. If another thread wants to execute its code, it needs to capture a kernel thread to do its execution.
 
 This means, if you have more platform threads concurrently running than kernel threads, the performance would degrade as the threads would compete for the kernel-level threads and a lot of the time would be spent either waiting or for thread context switching.
-
+<AdsFlows id="adflow1" slot="8168941152" />
 Hence for optimal performance, the number of concurrently running threads should be limited to the number of kernel-level threads. These platform-level threads are scheduled by the OS scheduler and the scheduling algorithm depends on the underlying OS.
 
 Let’s look at what Virtual threads bring to the Java ecosystem.
@@ -49,6 +49,8 @@ By default, the number of platform-level threads available to the scheduler is e
 
 Virtual threads are daemon threads by default and **cannot** be changed by setting `Thread.setDaemon(false)` . They always have a fixed priority and are set to normal priority. As of now, setting the `Thread.setPriority(int)` has no effect but might change in later versions of the JDK.
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 Virtual threads do not support the `stop()`, `suspend()`, or `resume()` methods and would throw an exception if invoked.
 
 JDK 19 provides a new executor service `Executor.newVirtualThreadPerTaskExecutor()` that creates Virtual threads for every submitted task. Alternatively, you can start a Virtual thread using `Thread.startVirtualThread(Runnable)`. You can use `Thread.isVirtual()` to find out whether a thread is a Virtual thread or not.
@@ -60,6 +62,8 @@ In these cases, if the Virtual thread would be doing some blocking operation, th
 Finally, in terms of memory allocation, Virtual threads are stored on the heap as stack chunks. They can grow or shrink as the application progresses.
 
 When it comes to garbage collections, Virtual threads are not [GC roots](https://www.baeldung.com/java-gc-roots). This means if a Virtual thread is doing a blocking operation and no other thread has a reference to it, then the Virtual thread could be garbage collected.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ## Conclusion
 

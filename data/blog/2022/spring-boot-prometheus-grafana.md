@@ -24,6 +24,8 @@ Today we will be looking at two open-source tools called [Grafana](https://grafa
 
 With this, Let’s start by creating an application and monitor it using Grafana.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Creating a Spring Boot Application
 
 Let’s go to [https://start.spring.io](https://start.spring.io) and create a simple application with the following dependencies.
@@ -82,6 +84,8 @@ The first part i.e `jvm_memory_used_bytes` is called the label, while the fields
 
 Next, Let's configure Prometheus to read this data.
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 ## Configuring Prometheus
 
 To start Prometheus, we will be using a Prometheus docker image and provide it with some configuration to gather the metrics data from our application. It does so by creating jobs that will scrape data from an endpoint. So let’s define the job in the `prometheus.yaml`configuration file as below.
@@ -132,6 +136,8 @@ So with this, the data is getting ingested into Prometheus every 2 seconds.
 
 Now let's visualize this using Grafana.
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 ## Visualizing Metrics in Grafana
 
 We are going to be using Grafana’s docker image and let’s add it to the docker-compose file.
@@ -172,6 +178,8 @@ Next, let's query for a label in the metric browser i.e `logback_events_total`
 
 As you can see here, we get counts of all types of logs. These counts are currently from our application’s startup logs and are shown in a time-series format.
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 Let’s drill down to only view the warning logs. For this, we would have to add the attribute `level=”warn”` as below.
 
 ![Grafana Warning logs](/static/images/2022/spring-boot-prometheus-grafana/logback-warn-logs.png)
@@ -191,6 +199,8 @@ Let’s save this panel and there we go. We just created our first Grafana Dashb
 Now, We don’t need to create dashboards from scratch. Rather there are quite many community-provided dashboards. This is what I really liked. Hence you can use a full-fledged dashboard for spring boot applications from [here](https://grafana.com/grafana/dashboards/6756). However, I did find some problems while trying to use it as data was not getting visualized properly. So I updated the dashboard and you can find the JSON to the dashboard in my GitHub repo [here](https://github.com/amrutprabhu/grafana-prometheus/blob/main/Spring%20Boot%20Statistics%20Dashboard.json).
 
 ![Grafana full fledged dashboard](/static/images/2022/spring-boot-prometheus-grafana/spring-boot-application-metrics-view.png)
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 ## Conclusion
 

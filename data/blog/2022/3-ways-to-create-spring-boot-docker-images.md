@@ -28,6 +28,8 @@ So today we would be looking at three mechanisms to build your docker images for
 2.  Fabric8 Maven Plugin
 3.  JIB maven plugin
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ### Creating an Application
 
 Let’s go to [https://start.spring.io](https://start.spring.io) and create an application with only the spring-web dependency.
@@ -65,6 +67,8 @@ The only thing you would have to do is call `image-build` goal on your spring bo
 ```shell
 mvn spring-boot:build-image
 ```
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 This will pull the base builder image from BuildPacks to detect the type of application and select build packs for the application. It then uses the selected build packs and builds your final image.
 
@@ -146,6 +150,8 @@ Let’s Look at yet another way of building Images.
 </plugin>
 ```
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 The configuration section is pretty straightforward. Let's look at some of the important ones in the `<build>` section.
 
 Here we specify the base image, using the `<from>` tag and then specify how the image is assembled in the `<assembly>` section.
@@ -196,6 +202,8 @@ Let's look at the [JIB plugin](https://github.com/GoogleContainerTools/jib) from
 </build>
 ```
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 Here, we specify the base image we want in the `<from>` tag and the final image name we wish to have in the `<to>` tag.
 
 Now, I have used the `dockerBuild` goal in the `<execution>` section, so that the docker image is built to my local docker daemon. If you use the `build` goal, the JIB plugin will build the docker image and also push it to the respective repository. It supports all the major repositories like docker.io, AWS ECR, Google GCR, Azure ACR, etc. For this, you can set the authentication mechanism to push the image. You can read about this [here](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin#authentication-methods).
@@ -214,6 +222,8 @@ If you see in the images above, the layers are created as follows
 - Layer 4: Contains the `jib-classpath-file` containing classpath information and the `jib-main-class-file` containing the name of the fully qualified main class that will be executed.
 
 You can always customize how the image is built by finding the options in this [link](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin#extended-usage)
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 ## Conclusion
 

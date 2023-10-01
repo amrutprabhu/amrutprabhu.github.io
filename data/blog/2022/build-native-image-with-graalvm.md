@@ -30,6 +30,8 @@ We will be exploring creating a native image using GraalVM Native build tools.
 
 Before we create a native image, let's understand what a native image is.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## What is a Native Image
 
 A native image is a standalone executable of a Java application. We no longer need to create an executable jar nor require a JVM to run it.
@@ -53,6 +55,8 @@ When we execute the native image, everything included in the native image is loa
 It also has its share of drawbacks like e.g you cannot use `@profile` or conditional bean loading using `@ConditionalOnProperty`
 
 With this overview, let’s create an application and explore what gets created.
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 ## Creating an Application
 
@@ -130,6 +134,8 @@ Top 10 packages in code area:                               Top 10 object types 
 ------------------------------------------------------------------------------------------------------------------------
 ```
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 That's pretty simple, right?
 
 Let's look at what is done behind the scenes to create this build.
@@ -149,6 +155,8 @@ In the META-INF folder, under the application’s package, you would find the `r
 Finally, after creating all these files and classes, the native image is built using GraalVM.
 
 Let’s now look at its speed of execution.
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 ## Performance metrics
 
@@ -181,6 +189,8 @@ Here is a full comparison between the two.
 That's a huge improvement in performance in terms of startup time.
 
 Now obviously the number may vary a bit based on different machines and also depends on how complex the application is. But still, there would be a significant amount of performance improvement.
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 ### Conclusion
 

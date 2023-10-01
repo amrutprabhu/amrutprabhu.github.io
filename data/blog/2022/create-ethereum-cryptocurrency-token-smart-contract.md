@@ -30,6 +30,8 @@ So in this article, we will create a new token that is based on the [ERC-20](htt
 
 With this let's get started.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Creating A Smart Contract
 
 Now, what is a Smart Contract?
@@ -82,6 +84,8 @@ contract NiceToken is ERC20 {
 }
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 It's a simple contract just extending the ERC-20 contract wherein we specify the name of our token and the symbol for our token.
 
 With this, let’s compile this with truffle.
@@ -117,6 +121,8 @@ module.exports = {
 ```
 
 With this done, let’s create a migration script that will deploy the contract we created to the Ethereum Blockchain network.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ## Deploying the Smart Contract to the Blockchain.
 
@@ -181,6 +187,8 @@ Now when I look at Ganache, I see nothing changed, but a few Ether was reduced f
 
 So where did the 200 NiceToken values go?
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 To visualize the tokens we are going to make use of a Cryptocurrency Wallet called [MetaMask](https://metamask.io/).
 
 ## Visualizing Cryptocurrency In A Crypto Wallet
@@ -208,6 +216,8 @@ To show the NiceTokens values, we will need to import the tokens by using the sm
 For this, click on “Import tokens” and specify the Contract address i.e.`0xdE928AC7259340545Ed8Fa290588a8b0076Ff9F4` that we obtained as an output while deploying the Smart Contract.
 
 ![Import custom crypto token](/static/images/2022/create-cryptocurrency-token-ethereum/import-crypto-token.jpg)
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 ## Conclusion
 

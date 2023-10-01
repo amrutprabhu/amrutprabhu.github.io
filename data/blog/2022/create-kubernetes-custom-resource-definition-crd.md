@@ -29,6 +29,8 @@ Once the scheduler finds that a pod has to be created, it then inserts into the 
 
 Next, Kubelets running on the various worker nodes start calling the API server and check if any pods have to be created on that particular node. Kubelets are nothing but controllers themselves.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 So in this article, we will see how you can create your own Kubernetes CRD, and then create an instance of the CRD.
 
 ## Pre-requisites
@@ -76,6 +78,8 @@ spec:
 This is the most minimalistic definition to create your own Kubernetes CRD.
 
 To understand this, Let’s break it up into two parts.
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 **Part 1**: Define the metadata and definition of the CRD
 
@@ -130,6 +134,8 @@ schema:
         type: object
 ```
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 In this, we define the schema using the Open API version 3 standards. We specify the top level as an object which has some properties.
 
 Now, some of the absolutely required properties are:
@@ -171,6 +177,8 @@ spec:
 ```
 
 ![CRD Instance Apply](/static/images/2022/create-kubernetes-custom-resource-defintion-crd/crd-instance-apply.png)
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 With this, we just created our first Kubernetes CRD and then created our first CRD instance.
 

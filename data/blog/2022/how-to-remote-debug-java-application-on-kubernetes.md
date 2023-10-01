@@ -55,6 +55,8 @@ Now, we will create a docker image of this application with maven using Google�
 </plugin>
 ```
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 There are other plugins to dockerize your application and you can explore some of the popular ones in my article [here](https://refactorfirst.com/3-ways-to-create-spring-boot-docker-images).
 
 Now, when we run `mvn clean verify` , the docker image will be built and pushed to the GitHub repository.
@@ -99,6 +101,8 @@ spec:
 The most important thing for us is the environment variable `JAVA_TOOL_OPTIONS` set in the deployment.
 
 Since we are using OpenJDK images, the JVM will pick up this environment variable to allow you to attach a debugger to the port `5005` .
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 Now, you can deploy the application using `helm install <location of the helm chart>`
 
@@ -145,6 +149,8 @@ To attach a remote debugger using VScode, we need to add a launch configuration 
 To add this launch configuration, go to “Run and Debug” on the left bar, then click on the gear icon on the top to open “launch.json”.
 
 Once this is done, start the configuration and the debugger will be attached. Add your breakpoint and send a request on the endpoint for the debugger to pause the execution as shown below.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ![vscode debugging](/static/images/2022/remote-debugging-java-application/vscode-debug.gif)
 

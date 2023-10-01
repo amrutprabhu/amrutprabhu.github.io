@@ -28,6 +28,8 @@ Nested attributes are like a map of key-value pairs and DynamoDb supports up to 
 
 Now, DynamoDB organizes data on the physical storage as partitions and the data on a partition is identified by a partition key. Let’s look at this.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Understanding DynamoDB Primary Keys
 
 Now to understand the different types of primary keys, let's look at two types of keys that can exist.
@@ -63,6 +65,8 @@ Apart from things like high availability and scalability, DynamoDB provides some
 - **DynamoDB Streams**: DynamoDB provides a stream of an ordered flow of item changes in a table. Whenever you create, update or delete items, DynamoDb sends a stream of records containing changes from “before” and “after” the change.
 
 We looked into some of the key concepts of DynamoDB to get you started. Now let's look at how we can communicate with DynamoDB using a Spring Boot application.
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 # Spring Boot DynamoDB Communication
 
@@ -197,6 +201,8 @@ public class Person {
 }
 ```
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 Here, we use the `PrimaryKey` class as the ID and annotate the getter methods of the individual key components with `DynamoDBHashKey` and `DynamoDBRangeKey` .
 
 > Now, why are we defining this again since we defined it already in the `PrimaryKey` class?
@@ -274,6 +280,8 @@ CreateTableRequest createTableRequest = dynamoDBMapper.generateCreateTableReques
                                                       .withProvisionedThroughput(new ProvisionedThroughput(1l, 1l));
 TableUtils.createTableIfNotExists(amazonDynamoDB, createTableRequest);
 ```
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 or you can add properties that will handle the table creation as below
 
@@ -387,6 +395,8 @@ public class WebController {
     }
 }
 ```
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 Here, we create two endpoints. One to store data and the other one to retrieve the data.
 

@@ -28,6 +28,8 @@ Hence there is always this notion of delivering features without writing tests.
 
 But this does not serve us well when we add new features to our application or make some breaking changes. Even if the tests are written but are not reliable, they serve no value to us.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 There is a famous saying.
 
 **_“Unreliable tests are the same as having no tests at all”._**
@@ -58,6 +60,8 @@ Some of the things I learned from this course are
 - Testing asynchronous handlers, such as consuming messages.
 - Creating custom application slices for testing various application slices.
 - End-to-end test with Selenide with the Testcontainers WebDriver module.
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 Go ahead and explore the [course](https://transactions.sendowl.com/stores/13745/235788) to become better at writing tests and advance your career in the world of Java and Spring Boot.
 

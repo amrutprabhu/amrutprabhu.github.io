@@ -41,6 +41,8 @@ For this, we will use the Spring Cloud AWS dependency management to take care of
 </dependencyManagement>
 ```
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 Next, we will add the following dependency
 
 ```xml
@@ -82,6 +84,8 @@ public class Model {
     //ommited getters and setters from here
 }
 ```
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 ```java
 public interface ModelRepository extends JpaRepository<Model, String> {
@@ -217,6 +221,8 @@ LocalStack does not require any credentials to communicate with it. But to work 
 
 With this, you can now communicate with LocalStack and fetch secrets from LocalStack.
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 ## Integration Test with LocalStack
 
 Every application that you develop needs to have some tests, so you can evolve your application without breaking it.
@@ -307,6 +313,8 @@ void testApplicationLoadsAndServesRequests() throws Exception {
 
 }
 ```
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 Now, this is just one of the ways that you can test your code.
 

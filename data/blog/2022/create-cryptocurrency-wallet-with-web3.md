@@ -23,6 +23,8 @@ For this, we will create a small ReactJS application that will allow you to disp
 
 With this let’s get started.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Creating the ReactJs App
 
 Let's create a new React application using the following command
@@ -62,6 +64,8 @@ const loadWeb3 = async () => {
 };
 ```
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 Once this is done, we can now communicate with the local Ganache Blockchain network using Web3.
 
 ## Fetching Data from the Blockchain Network
@@ -97,6 +101,8 @@ So this is how you can communicate with the Blockchain network and fetch account
 
 Next, let's look at how we can transfer some tokens from one account to the other.
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 ## Transferring Crypto Tokens to another Account Address
 
 For this, I have created a simple form that lists all the account addresses in a drop-down list, displays you the current account balance, and provides you a way to send tokens to another account address using the two text boxes.
@@ -118,6 +124,8 @@ Now after pasting the recipient’s address and amount in the text boxes, we cli
 ![transfer tokens](/static/images/2022/create-cryptocurrency-wallet-with-web3/transfer-tokens.gif)
 
 With this, we just created an Ethereum Cryptocurrency Wallet and send some tokens from one account to another.
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 ## Conclusion
 

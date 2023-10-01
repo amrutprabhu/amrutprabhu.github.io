@@ -38,6 +38,8 @@ public class WebController {
 }
 ```
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 Now, to build our docker image, we will be adding Google’s JIB plugin to the build section.
 
 ```xml
@@ -105,6 +107,8 @@ spec:
               port: http
           resources: { { - toYaml .Values.resources | nindent 12 } }
 ```
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 Next, we will have a service resource to access the service within the cluster.
 
@@ -174,6 +178,8 @@ deploy:
 
 Let’s understand the various parts
 
+<AdsFlows id="adflow3" slot="1404222257" />
+
 Under the build section, you can define how you want to build your artifact. Since we are using JIB, we are adding the project reference which was automatically detected and added.
 
 Skaffold also supports building from DockerFile, Cloud Native WebPacks, and by defining custom scripts. You can read about it [here](https://skaffold.dev/docs/pipeline-stages/builders/).
@@ -211,6 +217,8 @@ skaffold dev --port-forward --tail
 ```
 
 ![Skaffold Dev](/static/images/2022/spring-boot-deployment-with-skaffold/skaffold-dev.gif)
+
+<AdsFlows id="adflow4" slot="2523816518" />
 
 ## Conclusion
 

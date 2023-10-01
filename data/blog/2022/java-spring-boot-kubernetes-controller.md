@@ -31,6 +31,8 @@ Next, you need to add the Kubernetes Java client dependency as below
 </dependency>
 ```
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 With this, we are ready with the setup.
 
 # Generating Java Model Classes For CRD
@@ -69,6 +71,8 @@ It first creates a temp directory to store the generated classes. It then starts
 
 You can always read about this in their documentation [here](https://github.com/kubernetes-client/java/blob/master/docs/generate-model-from-third-party-resources.md#example-commands-for-local-crd-manifests).
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 # Understanding the Use Case
 
 Before we start creating the controller, let’s understand the use case we want to achieve.
@@ -103,6 +107,8 @@ SharedIndexInformer<V1MyCrd> sharedIndexInformer(SharedInformerFactory sharedInf
 ```
 
 So here, we create an index informer, which will be having a reference of an APIClient to look for any created instances of the CRD.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ## Understanding the Reconciler Component
 
@@ -189,6 +195,8 @@ Now let’s look at what happens during the update.
 }
 ```
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 When we receive an update, the index informer just gives us a reference to the updated CRD instance, and we still don't know if the incoming request is for a create or update.
 
 So we proceed with a normal create approach, which fails by throwing an exception with a code 409, which means the resource is already created. We then know that the current request is an update and update the config map.
@@ -206,6 +214,8 @@ Today we created a Spring Boot Kubernetes controller and handled requests for ou
 This article is largely inspired by a presentation from [Cora Iberkleid](https://twitter.com/ciberkleid) and [Josh Long](https://twitter.com/starbuxman) at the [Spring IO conference](https://www.youtube.com/watch?v=5IROOj7sLKg).
 
 You can find the entire code on my GitHub repo [here](https://github.com/amrutprabhu/kubernetes-custom-resource).
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 I keep exploring and learning new things. If you want to know the latest trends and improve your software development skills, then subscribe to my newsletter below and also follow me on [Twitter](https://twitter.com/amrutprabhu42).
 
