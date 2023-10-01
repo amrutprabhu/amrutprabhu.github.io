@@ -111,6 +111,17 @@ Let’s consider we want to create a handler that will transfer an input stream 
 
 So our producer above is emitting events and now we will transform them and send them to a new topic.
 
+  <div>
+      <ins class="adsbygoogle"
+           style={{display:'block', textAlign:'center'}}
+           data-ad-layout="in-article"
+           data-ad-format="fluid"
+           data-ad-client="ca-pub-7490174059724719"
+           data-ad-slot="9474283966"
+           id="adflow2">
+     </ins>
+  </div>
+
 Now the transformation is as simple as defining the following functional bean.
 
 ```java
