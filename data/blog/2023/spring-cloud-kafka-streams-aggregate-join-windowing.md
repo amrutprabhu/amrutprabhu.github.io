@@ -57,8 +57,6 @@ Hence we will create a simple supplier bean that will supply values as a produce
 
 ```
 
-Should appear here:
-
   <div>
       <ins class="adsbygoogle"
            style={{display:'block', textAlign:'center'}}
@@ -106,6 +104,17 @@ Here we set three things:
 You can read this article [here](https://refactorfirst.com/spring-cloud-stream-with-kafka-communication), wherein I explain in detail how these properties are set, what is the meaning of the `-out-` property, and how the bindings work.
 
 I would recommend reading it as it will make it easier to understand the next section in which we will be exploring how we can deal with Kafka Streams or KStreams
+
+  <div>
+      <ins class="adsbygoogle"
+           style={{display:'block', textAlign:'center'}}
+           data-ad-layout="in-article"
+           data-ad-format="fluid"
+           data-ad-client="ca-pub-7490174059724719"
+           data-ad-slot="8168941152"
+           id="adflow2">
+     </ins>
+  </div>
 
 ## Creating a KStream or Kafka Stream Transformation
 
@@ -187,6 +196,17 @@ While the output sent to the topic `second-topic` looks like this:
 ![second-kafka-stream-output](/static/images/2023/spring-cloud-kafka-stream-aggregate-join-window/second-kafka-stream-output.webp)
 
 The images above is using the following format to show the contents of the Kafka topic.
+
+  <div>
+      <ins class="adsbygoogle"
+           style={{display:'block', textAlign:'center'}}
+           data-ad-layout="in-article"
+           data-ad-format="fluid"
+           data-ad-client="ca-pub-7490174059724719"
+           data-ad-slot="8168941152"
+           id="adflow3">
+     </ins>
+  </div>
 
 ```shell
 Partition: <Topic partition number> : Offset: <Topic offset> : <Key> : <Value>
@@ -275,6 +295,17 @@ Here we also provide three things.
 - The binding function definition under the property `spring.cloud.function.definiton`
 - Finally the consumer properties under `spring.cloud.stream.kafka.streams` specifying the key and value serializer and deserializer.
 
+  <div>
+      <ins class="adsbygoogle"
+           style={{display:'block', textAlign:'center'}}
+           data-ad-layout="in-article"
+           data-ad-format="fluid"
+           data-ad-client="ca-pub-7490174059724719"
+           data-ad-slot="8168941152"
+           id="adflow4">
+     </ins>
+  </div>
+
 With this, the data will be produced every 10 seconds on the `third-topic` as shown below.
 
 ![third-kafka-stream-aggregate-output](/static/images/2023/spring-cloud-kafka-stream-aggregate-join-window/third-kafka-stream-aggregate-output.webp)
@@ -359,6 +390,17 @@ spring:
 Here, if you look carefully, in the binding we specify two inputs and one output.
 
 The rest is the same as adding the function definition and the serializer and deserializer properties as we did for the other bindings above.
+
+  <div>
+      <ins class="adsbygoogle"
+           style={{display:'block', textAlign:'center'}}
+           data-ad-layout="in-article"
+           data-ad-format="fluid"
+           data-ad-client="ca-pub-7490174059724719"
+           data-ad-slot="8168941152"
+           id="adflow5">
+     </ins>
+  </div>
 
 When we run this, it produces the following messages on the `fourth-topic`
 
