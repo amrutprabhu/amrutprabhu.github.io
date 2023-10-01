@@ -30,6 +30,8 @@ You can read my previous article on “[A Spring Boot developer’s guide to Mic
 
 In this article, we would be talking about how we can boost the start-up performance using the Micronaut framework for the same example application from the previous article.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 # Performance out of the box
 
 Since Micronaut uses AOT compilation, this technique helps to reduce the start-up time. A normal CRUD application, which uses JPA with Hibernate to communicate with MYSQL takes about 2 secs to starts up.
@@ -55,6 +57,8 @@ To build this native image, I have used GraalVM CE 21.1.0 (build 11.0.11) which 
 This will start building the native image and the build time would take around 3–5 mins depending on the system you have.
 
 Once the build finishes, there will be an executable created in the target folder. You can execute it as any other executable and you don't need a JVM to run it.
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 ## Performance Statistics
 

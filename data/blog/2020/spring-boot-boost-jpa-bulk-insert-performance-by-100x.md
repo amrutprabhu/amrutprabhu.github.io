@@ -34,6 +34,8 @@ For this, you need to set the hibernate property `batch_size=30` .
 spring.jpa.properties.hibernate.jdbc.batch_size=30
 ```
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 Then, I added the following connection string properties:
 
 ```properties
@@ -75,6 +77,8 @@ Initially, I was using the `@GeneratedValue` annotation with strategy i.e `Gener
 
 Hibernate has a disabled batch updates with this strategy because it has to make a select call to get the id from the database to insert each row. You can read more about it [here](https://docs.jboss.org/hibernate/orm/4.3/manual/en-US/html/ch15.html).
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 I changed the strategy to `SEQUENCE` and provided a sequence generator.
 
 ```java
@@ -113,6 +117,8 @@ The most optimal batch size for my case was **1,000**, which took around **4.39*
 Here are the stats I got:
 
 ![jpa-insert-performance-statistics](/static/images/2021/boost-jpa-bulk-insert/stats-table.png)
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 As always, you can find the code on my [GitHub repo.](https://github.com/amrutprabhu/spring-boot-jpa-bulk-insert-performance)
 

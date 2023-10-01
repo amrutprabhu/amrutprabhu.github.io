@@ -22,6 +22,8 @@ Firstly, I describe how I created the API definition, then how I created the ser
 
 As we are adopting microservice-based architectures, API first approach has been gaining some traction. There are quite many advantages to using API first approach and I will discuss a few of them.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Clear Contract Definition
 
 With API first approach, you can create a concrete contract with which you can set clear goals on what will be provided by your application. It also helps to decouple your implementation from the Interface you provide via the API.
@@ -43,6 +45,8 @@ However, I am not a fluent API definition creator, So I learned the way to defin
 To get started, I created a very minimal API definition in which I can create an account using a post request.
 
 ![API definition](/static/images/2021/blog-api-first/api-definition.png)
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 # Generating Code
 
@@ -82,6 +86,8 @@ Now, the code that gets generated from the plugin requires a few more dependenci
 	</dependency>
 
 ```
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 Now comes the main part, i.e., generating the code. After building the code using `mvn clean verify`, there were a few classes that got generated.
 
@@ -131,6 +137,8 @@ You would also require some more dependencies to help you compile the generated 
 	</dependency>
 ```
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 ![openapi client side code](/static/images/2021/blog-api-first/openapi-client-side-code.png)
 
 After the code generation, You can find classes that provide you how to configure the client to talk to the server. It also provides some basic authentication, using bearer token or basic auth.
@@ -147,6 +155,8 @@ There are quite a few bugs in the latest version of the plugin that I was using 
 - Usually, you would define the schema for request and response in the `components` section of the API definition file and then use the reference to these schemas in the API using the `$ref:` property. This is currently not working as excepted. The way to get around it was to define the inline schema for each request and response. Hence the model names get generated with a prefix `Inline*` . You can track this bug [here](https://github.com/OpenAPITools/openapi-generator/issues/7922).
 
 If you use the older version, i.e, `4.3.1` ; it's free from these bugs and the plugin works well as expected.
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 As usual, I have uploaded the code to [GitHub](https://github.com/amrutprabhu/spring-boot-api-first-approach).
 

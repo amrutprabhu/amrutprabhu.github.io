@@ -40,6 +40,8 @@ If you are already familiar with the OpenAPI definition, then these sections are
 
 Now that we have looked at the various sections. Let’s look at a minimal definition.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Example Async API Definition
 
 ```
@@ -115,6 +117,8 @@ This was a little confusing when I was generating the code.
 
 So with this understanding, Let’s generate some code.
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 ## Code generation
 
 AsyncAPI provides templates to create code from the API definition. There are quite a few code generation templates for languages like Java, Nodejs, and Python. You can also generate an HTML page for the API definition using the HTML template. You can find the list of templates [here](https://github.com/asyncapi/generator#list-of-official-generator-templates)
@@ -187,5 +191,7 @@ In this case, We have the `CommandLinePublisher` that publishes a message to Kaf
 In this article, we had a look at what an AsyncAPI definition looks like and also generate code using a code template. Some things can be a bit tricky to understand but they have wonderful documentation which you can refer to [here](https://www.asyncapi.com/docs/specifications/v2.0.0). I feel the code templates need some improvement but I can understand the templates are still in their early stages.
 
 As to how we have OpenAPI as a standard for documenting REST APIs, AsyncAPIs, I guess would become a standard for documenting asynchronous or event-driven architectures.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 As always, I have uploaded the generated code [here](https://github.com/amrutprabhu/async-api-workout).

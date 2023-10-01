@@ -26,6 +26,8 @@ AWS has an open-source library called [AWS Secrets Manager JDBC](https://github.
 
 Let’s see how this works.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 # Solution
 
 Firstly, add the following dependency in the build file. Considering Maven, it would be as follows
@@ -56,6 +58,8 @@ Next, create an AWS secret for the RDS instance using the database credentials s
 
 ![AWS secrets manager secret for RDS](/static/images/2020/aws-secrets-rotation/aws-secrets.jpg)
 
+<AdsFlows id="adflow2" slot="2393870295" />
+
 Next, in the properties file `application.yaml`, specify the secret name you just created as the username and you don’t have to specify any password as it’s now stored in the secrets manager.
 
 Your property file should look something like this.
@@ -79,6 +83,8 @@ Now start the application and it should be able to communicate with AWS Secrets 
 You can test this by clicking on the rotate secret option in the secret which will generate a new password for the database and check the communication with the database.
 
 Here is a [GitHub link](https://github.com/amrutprabhu/spring-boot-aws-rds-password-rotation) to my implementation.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ## Supports Liquibase Integration
 

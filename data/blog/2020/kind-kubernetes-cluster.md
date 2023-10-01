@@ -24,6 +24,8 @@ I came across another local Kubernetes cluster called [Kind](https://kind.sigs.k
 
 [Kind](https://kind.sigs.k8s.io/) is a command-line tool that helps you to create a local Kubernetes cluster. It creates a cluster using docker images and it mimics a Kubernetes cluster on your local system.
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 ## Minikube vs Kind.
 
 The latest version of Minikube uses docker images to create the cluster, But it requires at least 1.8 GB of memory to start. With Kind, I could start the cluster with just 1 GB and could deploy a simple pod that hardly consumed 200 MB of memory.
@@ -58,6 +60,8 @@ Kind load docker-image <custom-image>:<tag>
 Once it’s loaded, You can then reference the image directly in your Kubernetes deployment configuration file or you could also deploy a helm chart containing the custom image without the need to specify any image repository.
 
 ![Loading Custom Docker Image](/static/images/2021/kind/custom-docker-image.png)
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 ## Multi-Node Cluster
 
@@ -105,6 +109,8 @@ nodes:
   - role: worker
     image: kindest/node:v1.16.4
 ```
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 ## Auto Completion
 

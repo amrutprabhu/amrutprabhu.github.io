@@ -26,6 +26,8 @@ Workflows are created using Python scripts, which define how your tasks are exec
 
 ![AirFlow DAG](/static/images/2021/airflow/dag.png)
 
+<AdsFlows id="adflow1" slot="8168941152" />
+
 The workflow execution is based on the schedule you provide, which is as per the Unix cron schedule format. Once you create Python scripts and place them in the dags folder of Airflow, Airflow will automatically create the workflow for you.
 
 How difficult are the Python scripts?
@@ -67,6 +69,8 @@ The official Airflow site provides a [docker-compose file](https://airflow.apach
 ```
 docker-compose up -d
 ```
+
+<AdsFlows id="adflow2" slot="2393870295" />
 
 Once your containers are up and running, a`dags` folder is created on your local machine where you placed the docker-compose.yml file. We are going to use this `dags` folder to place our Python workflows. You can access the Airflow web UI using the URL `localhost:8080`
 
@@ -114,6 +118,8 @@ In our case, we would be using the HTTP connection option. Here we would provide
 ![Airflow Connection Creation](/static/images/2021/airflow/airflow-http-connection.png)
 
 Finally, with this configured, the task is ready to make a call to the URL with the endpoint provided.
+
+<AdsFlows id="adflow3" slot="1404222257" />
 
 So with that, we just created our first task and learned some concepts.
 
@@ -179,6 +185,8 @@ def _processing_user(ti):
     Variable.set("user", processed_user)
 ```
 
+<AdsFlows id="adflow4" slot="2523816518" />
+
 So this function receives a Task Instance (referred as `ti`). We use this task instance to get the information that our task `extracting_user` has pushed to Xcoms, using `xcom_pull` call. We then validate the input and extract some fields as a dictionary. Finally, we normalize the dictionary and add it to something called `Variables`. Let’s look at what are Variables.
 
 # Variables
@@ -224,6 +232,8 @@ is_api_available >> fetch_user >> processing_user >> print_user
 And there we go. We just created a simple Airflow DAG workflow from scratch covering some of the important concepts of Airflow. Now, enable the DAG and hit run. It will start executing.
 
 ![Apache Airflow Successful Execution](/static/images/2021/airflow/airflow-dag-successful-run.png)
+
+<AdsFlows id="adflow5" slot="9474283966" />
 
 As usual, I have uploaded the code on [GitHub](https://github.com/amrutprabhu/airflow-workouts/blob/master/dags/user_data_processing.py). :)
 
